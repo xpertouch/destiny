@@ -1,0 +1,394 @@
+[
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_two.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_two.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_hire.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_hire.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_expert_details.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_expert_details.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/catagories.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/catagories.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/no_connectivity.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/no_connectivity.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_xpert_registration.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_xpert_registration.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_buket.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_buket.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/nav_header_main_frame.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/nav_header_main_frame.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/finally_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/finally_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_report_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_report_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_favourites.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_favourites.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/catagories_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/catagories_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/experts_fav_fragment.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/experts_fav_fragment.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/address_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/address_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/header_logo.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/header_logo.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/home_screen.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/home_screen.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/filter_list_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/filter_list_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_main_frame.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_main_frame.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/spinner_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/spinner_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/my_bucket.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/my_bucket.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_own_choice.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_own_choice.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/experts_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/experts_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/newfeeds_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/newfeeds_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/spinner_adapter_black.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/spinner_adapter_black.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/workspcae.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/workspcae.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/health_bucket.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/health_bucket.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_my_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_my_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_update_app.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_update_app.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_log_out.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_log_out.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_six.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_six.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/bucket_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/bucket_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/general_details.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/general_details.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/my_posts.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/my_posts.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_main.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_main.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/products.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/products.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/post_bucket.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/post_bucket.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/verified_user.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/verified_user.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/posts_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/posts_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/my_calls_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/my_calls_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_own_choice.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_own_choice.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_four.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_four.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/skill_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/skill_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_feedback.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_feedback.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_my_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_my_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_verify_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_verify_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_my_company_posts.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_my_company_posts.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_five_second.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_five_second.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/nav_header_jobs.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/nav_header_jobs.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/login_fragment_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/login_fragment_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/experts_fav_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/experts_fav_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/post_job.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/post_job.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_my_calls.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_my_calls.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/not_verified_user.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/not_verified_user.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_company_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_company_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_skilled.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_skilled.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_register_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_register_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/spinner_drop_down.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/spinner_drop_down.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_jobs.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_jobs.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_jobs.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_jobs.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/education_bucket.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/education_bucket.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_filter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_filter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_terms_of_service.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_terms_of_service.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/backups.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/backups.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_expert_details.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_expert_details.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/offers.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/offers.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/calls_to_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/calls_to_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_five.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_five.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_three.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_three.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/favourite_company_adds.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/favourite_company_adds.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_help_center.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_help_center.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/calls_to_experts.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/calls_to_experts.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/register_fragment_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/register_fragment_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_add_missing_expertise.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_add_missing_expertise.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_settings.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_settings.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/reset_password.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/reset_password.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_more_details.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_more_details.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/post_counts.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/post_counts.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/intro_one.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/intro_one.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/flipper.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/flipper.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_company_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_company_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_terms_of_service.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_terms_of_service.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/education_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/education_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_welcome.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_welcome.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/my_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/my_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/design_register_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/design_register_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_post_add.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_post_add.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/content_main_frame.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/content_main_frame.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/bucket_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/bucket_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/help_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/help_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/app_bar_main_frame.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/app_bar_main_frame.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/app_bar_jobs.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/app_bar_jobs.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/favourite_companies_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/favourite_companies_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/whats_new.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/whats_new.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/my_company_posts_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/my_company_posts_adapter.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/full_description_layout.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/full_description_layout.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/bucket_post_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/bucket_post_adapter.xml"
+    }
+]

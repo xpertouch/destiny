@@ -278,6 +278,7 @@ public class HelpCenter extends AppCompatActivity {
         }
 
 
+
         adapter = new HelpCenterAdapter(HelpCenter.this,questions,solutions);
         helpCenterRV.setAdapter(adapter);
         setFeilds(R.drawable.labours,"Profile","How Can We Help");

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="corp.burenz.expertouch.activities.Profile"
+    >
+
+
+    <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone" />
+
+        <LinearLayout app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="corp.burenz.expertouch.activities.Profile"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/vectorColor">
+
+            <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Getting Started"
+                    android:id="@+id/textView453"
+                    android:textSize="24dp"
+                    android:layout_margin="10dp"
+                    android:textColor="#ffffff"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <LinearLayout app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="corp.burenz.expertouch.activities.Profile"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView158"
+                        android:src="@drawable/office"
+                        android:scaleType="fitCenter"
+                        android:cropToPadding="true"
+                        android:padding="10dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Register Company"
+                            android:id="@+id/textView455"
+                            android:textColor="#ffffff"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView159"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/engineers_experts"
+                        android:cropToPadding="true"
+                        android:padding="10dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Register As Educated Expert"
+                            android:id="@+id/textView459"
+                            android:textColor="#ffffff"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView160"
+                        android:src="@drawable/nav_accounts"
+                        android:cropToPadding="true"
+                        android:padding="10dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Register as Skilled Artisen"
+                            android:id="@+id/textView461"
+                            android:textColor="#ffffff"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="corp.burenz.expertouch.activities.Profile"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="25dp">
+
+            <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView161"
+                    android:src="@drawable/bulb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Why Register?"
+                    android:id="@+id/textView462"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+            <LinearLayout app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="corp.burenz.expertouch.activities.Profile"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Thinking about why Registering your Company??"
+                        android:id="@+id/textView463" />
+                </LinearLayout>
+
+                <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff" />
+
+                <LinearLayout tools:context="corp.burenz.expertouch.activities.Profile"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

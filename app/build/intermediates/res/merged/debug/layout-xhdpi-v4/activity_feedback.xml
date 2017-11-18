@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="corp.burenz.expertouch.activities.FeedbackActivity"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Share your Experience"
+            android:id="@+id/textView473"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="18dp"
+            android:textColor="@color/newVector"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Share your experience, or bug . it helps us to serve you in a  better way."
+            android:id="@+id/textView475"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/newVector"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageView171"
+                android:src="@drawable/like_unlike"
+                android:layout_marginLeft="30dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/myFeedback"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#00000000"
+                    android:hint="Share your experience, idea, or bug "
+                    android:textSize="12dp"
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:textColor="@color/newVector"
+                    android:textColorHint="#8f93b3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView496"
+                    android:background="@color/newVector"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView474"
+        android:background="@color/line" />
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomProgressFeedback" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:id="@+id/linearLayout78"
+            android:nestedScrollingEnabled="false"
+            android:onClick="sendFeedback">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="SUBMIT"
+                android:id="@+id/sendFeedbackButton"
+                android:background="#ffffff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#ffffff">
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/progressBar44" />
+        </LinearLayout>
+
+    </ViewFlipper>
+
+</LinearLayout>

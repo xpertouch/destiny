@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="corp.burenz.expertouch.activities.VerifyCompany"
+    android:padding="0dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linearLayout66"
+        android:visibility="visible"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="top|center"
+            android:id="@+id/verifyPhaseOne"
+            android:visibility="visible">
+
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:cropToPadding="true"
+                android:padding="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="centerCrop"
+                app:iiv_color="#000000"
+                app:iiv_icon="@string/gmd_card_membership"
+                android:id="@+id/testIdIcs" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView222"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/register_cert"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="gone"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Get The Most From 1clickAway"
+                android:id="@+id/textView99"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/abc_input_method_navigation_guard"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="By using the application you agree to our"
+                android:id="@+id/textView641"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:textColor="#4e4e4e"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Terms and Conditions"
+                    android:id="@+id/textView93"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/newVector"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:onClick="tellMeTermsCom" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="and"
+                    android:id="@+id/textView609"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:textColor="#4e4e4e"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Privacy Policey"
+                    android:id="@+id/textView662"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:textColor="@color/newVector"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="In order to verify your Bussiness Please Upload your Registeration Certificate authorised by the Govt. Of india,"
+                android:id="@+id/textView663"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/newVector"
+                        android:gravity="center"
+                        >
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/acceptUpload"
+                            android:background="#00000000"
+                            android:text="ACCEPT AND UPLOAD"
+                            android:textColor="#ffffff"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/textView642"
+                            android:textSize="12dp"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                       app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/line"
+                        android:id="@+id/view11"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:id="@+id/skipUpload"
+                            android:elevation="4dp">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="I ALREADY DID"
+                                android:id="@+id/alreadyDid"
+                                android:background="#00000000"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/textView643"
+                                android:textColor="@color/vectorColor"
+                                android:allowUndo="true" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Currently Signed in  as  Burhan ud din Drabu"
+                    android:id="@+id/signedInAs"
+                    android:textSize="12dp"
+                    android:layout_marginTop="70dp"
+                    android:textColor="@color/newVector" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/verifyPhaseTwo"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/certificatePreview"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@raw/sample"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#90000000"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:background="#7a000000"
+                        android:gravity="center"
+                        android:id="@+id/progressCertificate">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/progressBar42" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Just a Sec"
+                            android:id="@+id/textView657"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="We are uploading your Certificate"
+                            android:id="@+id/textView658"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:id="@+id/initiateUploadLL">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/archieve" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Certificate"
+                            android:id="@+id/uploadRC"
+                            android:background="#00000000"
+                            android:textColor="#ffffff"
+                            android:layout_marginLeft="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/textView655"
+                            android:textColor="#ffffff"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/verifyPhaseThree">
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/companyVerificationFlipper"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible"
+                    android:background="#ffffff">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/imageView182"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/company"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="100dp" />
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/progressBar10"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Requesting Activation Code"
+                            android:id="@+id/textView534"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="14dp"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Please wait for a moment, we are requesting an access code for your Company which will get your company activated "
+                                android:id="@+id/textView546"
+                                android:gravity="center"
+                                android:textSize="12dp"
+                                android:padding="20dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:background="#ffffff">
+
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView196"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="100dp"
+                        app:iiv_color="#58a73d"
+                        app:iiv_icon="@string/gmd_verified_user" />
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Submit Access Code"
+                            android:id="@+id/textView559"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="14dp"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Thank you for registering with us, You would recieve a call from our Customer Care in 12 hours of uploading your certificate"
+                            android:id="@+id/textView560"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:padding="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/ribbon_background"
+                            android:visibility="visible"
+                            android:id="@+id/linearLayout67"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="left" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom" >
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#ffffff"
+                                        android:layout_weight="1" >
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1" >
+
+                                            <EditText
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:inputType="number"
+                                                android:ems="10"
+                                                android:id="@+id/accessCodeET"
+                                                android:layout_gravity="right"
+                                                android:background="#ffffff"
+                                                android:hint="Access Code"
+                                                android:textSize="13dp"
+                                                android:gravity="center"
+                                                android:textColorHint="#d2d1d1"
+                                                android:paddingRight="20dp"
+                                                android:layout_weight="1" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:text="Small Text"
+                                                android:id="@+id/textView561"
+                                                android:background="@color/line" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:text="Small Text"
+                                                android:id="@+id/textView562"
+                                                android:background="@color/line" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="60dp"
+                                            android:layout_height="match_parent" >
+
+                                            <ViewFlipper
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:id="@+id/sendGreenFlagFlipper"
+                                                android:inAnimation="@anim/abc_grow_fade_in_from_bottom" >
+
+                                                <ImageButton
+                                                    style="?android:attr/buttonStyleSmall"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="New Button"
+                                                    android:id="@+id/sendTrueBtn"
+                                                    android:src="@drawable/white_arrow_right"
+                                                    android:background="@color/vectorColor"
+                                                    android:visibility="visible" />
+
+                                                <ProgressBar
+                                                    style="?android:attr/progressBarStyleSmall"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:id="@+id/progressBar12"
+                                                    android:padding="10dp" />
+                                            </ViewFlipper>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout69"
+                            android:visibility="visible"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Didn&apos;t get the Call?"
+                                android:id="@+id/textView566"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/requestCallLL"
+                                android:clickable="true"
+                                android:onClick="pingCust">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Request Again"
+                                    android:id="@+id/textView576"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:textSize="10dp"
+                                    android:textColor="@color/vectorColor" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Request Again "
+                                    android:id="@+id/textView577"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:textColor="#00000000"
+                                    android:background="@color/vectorColor"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

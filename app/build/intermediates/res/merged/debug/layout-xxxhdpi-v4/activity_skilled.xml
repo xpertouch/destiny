@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.SkilledExperts"
+    android:id="@+id/coordinatorLayoutMoreDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/maintoolbarForSkilled"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/newVector"
+                app:layout_scrollFlags="scroll|enterAlways|snap" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:src="@drawable/back_arrow"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:onClick="finishThis" />
+
+    <LinearLayout
+        android:background="@color/newVector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="left|center_vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="skillTitle"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:id="@+id/skillTitle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="subtitle"
+            android:layout_marginLeft="10dp"
+            android:textColor="#f5f5f5"
+            android:textSize="11dp"
+            android:id="@+id/skillSubtitle" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                android:id="@+id/view" >
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/putMeHere">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#ffffff"
+                                android:id="@+id/filterState"
+                                android:layout_weight="1"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" >
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="#ffffff"
+                                        android:layout_weight="1"
+                                        android:gravity="left" >
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/filterSwitch" >
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/imageView38"
+                                                android:src="@drawable/sort_icon"
+                                                android:layout_gravity="center_vertical"
+                                                android:cropToPadding="true"
+                                                android:scaleType="fitCenter"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="15dp"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:id="@+id/stateLine"
+                                            android:background="@color/line"
+                                            android:visibility="invisible" />
+
+                                        <ViewFlipper
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/filterViewFlipper" >
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_gravity="center_vertical"
+                                                android:gravity="center_vertical"
+                                                android:visibility="gone" >
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Filter State"
+                                                    android:id="@+id/textView143"
+                                                    android:gravity="center"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:textSize="12dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="All States"
+                                                    android:id="@+id/currentFilterState"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:textSize="10dp"
+                                                    android:gravity="left" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" >
+
+                                                    <Spinner
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="50dp"
+                                                        android:id="@+id/spinStates"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:visibility="visible"
+                                                        android:minWidth="100dp"
+                                                        android:entries="@array/listOfnewStates" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="right" >
+
+                                                    <ImageButton
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:id="@+id/setFilter"
+                                                        android:src="@drawable/send_filter"
+                                                        android:background="@color/newVector"
+                                                        android:scaleType="center" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                        </ViewFlipper>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#ffffff"
+                                android:id="@+id/filterType"
+                                android:layout_weight="1"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" >
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="#ffffff"
+                                        android:layout_weight="1"
+                                        android:gravity="left" >
+
+                                        <TextView
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:id="@+id/textView145"
+                                            android:background="@color/line" />
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/filterTypeSwitcher" >
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/imageView37"
+                                                android:src="@drawable/swapped_arrows"
+                                                android:layout_gravity="center_vertical"
+                                                android:cropToPadding="true"
+                                                android:scaleType="fitCenter"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="15dp"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:id="@+id/typeLine"
+                                            android:background="@color/line"
+                                            android:visibility="invisible" />
+
+                                        <ViewFlipper
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/filterTypeFlipper" >
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_gravity="center_vertical"
+                                                android:gravity="center_vertical"
+                                                android:visibility="gone" >
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Filter Type"
+                                                    android:id="@+id/textView140"
+                                                    android:gravity="center"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:textSize="12dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="All Catagories"
+                                                    android:id="@+id/currentFilterType"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:textSize="10dp"
+                                                    android:gravity="left" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent" >
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" >
+
+                                                    <Spinner
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="50dp"
+                                                        android:id="@+id/typeSpinner"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:visibility="visible"
+                                                        android:minWidth="100dp"
+                                                        android:entries="@array/listOfStates"
+                                                        android:spinnerMode="dialog" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="right" >
+
+                                                    <ImageButton
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:id="@+id/flipTypeButton"
+                                                        android:src="@drawable/send_filter"
+                                                        android:background="@color/newVector"
+                                                        android:scaleType="center" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </ViewFlipper>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.design.widget.AppBarLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noExpertsLL"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView219"
+                android:layout_margin="10dp"
+                app:iiv_color="#000000"
+                app:iiv_icon="@string/gmd_group"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="No Public Profiles Found"
+                android:id="@+id/noSkillTitile"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Looks like there are no public profiles in this Catagory"
+                android:id="@+id/noSkillSubtitle"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textSize="12dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:id="@+id/button34"
+                android:background="@color/newVector"
+                android:textColor="#ffffff"
+                android:translationZ="5dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/noConnectionSkill"
+        android:visibility="gone">
+
+
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageView172"
+            app:iiv_color="#000000"
+            app:iiv_icon="@string/gmd_signal_wifi_off"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="No Connection"
+            android:id="@+id/textView595"
+            android:textSize="15dp"
+            android:textColor="#393939"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView598"
+            android:layout_gravity="center_horizontal"
+            android:textSize="13dp"
+            android:text="Please review your internet connection"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#313131" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retry"
+            android:id="@+id/retrySkilledBtnn"
+            android:background="@color/newVector"
+            android:textColor="#ffffff"
+            android:translationZ="5dp"
+            android:minWidth="150dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/skilledProgress"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:gravity="center" >
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:foregroundGravity="center" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/progressBar3"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/skilledRV"
+            android:visibility="gone" />
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--tools:context=".activities.SkilledExperts"-->
+    <!--android:padding="0dp"-->
+    <!--android:orientation="vertical">-->
+
+
+
+    <!---->
+
+<!--</LinearLayout>-->

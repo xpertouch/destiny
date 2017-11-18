@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myPostsCoordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayoutMyPosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/callToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/newVector"
+            app:title=" "
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageButton"
+                        android:src="@drawable/back_arrow"
+                        android:background="#00000000" />
+
+                    <LinearLayout
+                        android:background="@color/newVector"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="left|center_vertical" >
+
+                        <TextView
+                            android:text="My Calls"
+                            android:id="@+id/textView139"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:text="You Call Logs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="11dp"
+                            android:id="@+id/textView141"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/myPostsTabView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:tabTextColor="#9003232E"
+            app:tabSelectedTextColor="@color/newVector"
+            app:tabIndicatorColor="@color/vectorColor"
+            app:tabIndicatorHeight="1dp"
+            android:background="#ffffff"
+            android:translationZ="5dp"
+
+            />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myPostsViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#ffffff" />
+
+</android.support.design.widget.CoordinatorLayout>

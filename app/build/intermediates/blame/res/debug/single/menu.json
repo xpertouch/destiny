@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/activity_main_frame_drawer.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/activity_main_frame_drawer.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/jobs.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/jobs.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/menu_my_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_my_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/menu_expert_details.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_expert_details.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/menu_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_profile.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/activity_jobs_drawer.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/activity_jobs_drawer.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/main_frame.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/main_frame.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/menu_terms_of.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_terms_of.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/menu_company_profile.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_company_profile.xml"
+    }
+]

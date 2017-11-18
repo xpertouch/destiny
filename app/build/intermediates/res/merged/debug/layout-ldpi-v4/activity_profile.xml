@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_collapseMode="parallax"
+    tools:context="corp.burenz.expertouch.activities.Profile">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:fitsSystemWindows="true"
+        app:layout_collapseMode="parallax"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:fitsSystemWindows="true"
+            app:statusBarScrim="@null"
+            app:layout_collapseMode="parallax"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@raw/companydef"
+                    android:background="#ffffff"
+                    app:layout_collapseMode="parallax"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/myProfilePic" />
+
+                <ImageView
+                    app:layout_collapseMode="parallax"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@raw/companydef"
+                    android:background="#ffffff"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imagePreview"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#80000000"
+                    android:visibility="invisible"
+                    android:id="@+id/imageProgress">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/progressBar32" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Hang On"
+                        android:id="@+id/textView451"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Updating your Image may take a while"
+                        android:id="@+id/textView452" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="20dp">
+
+                        <ViewFlipper
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/imagePannelFlipper"
+                            android:layout_gravity="center_horizontal"
+                            android:inAnimation="@anim/md_styled_slide_up_slow"
+                            android:outAnimation="@anim/md_styled_slide_down_slow">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical|right" >
+
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/editFlipImage"
+                                    android:src="@drawable/edit_pic_blue"
+                                    android:scaleType="fitCenter"
+                                    android:cropToPadding="true"
+                                    android:layout_gravity="right"
+                                    android:layout_marginRight="10dp"
+                                    android:padding="10dp"
+                                    android:background="#AFFFFFFF" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:padding="5dp"
+                                android:background="#afffffff">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:baselineAligned="false">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <ImageButton
+                                            android:text="Update"
+                                            android:textColor="#ffffff"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/selectFromGallery"
+                                            android:src="@drawable/gallery"
+                                            android:scaleType="fitCenter"
+                                            android:cropToPadding="false"
+                                            android:background="#00000000"
+                                            android:layout_weight="1"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="Gallery"
+                                            android:id="@+id/textView448"
+                                            android:textColor="@color/vectorColor" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <ImageButton
+                                            android:text="Update"
+                                            android:textColor="#ffffff"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/cancelImageButton"
+                                            android:src="@drawable/cancel"
+                                            android:scaleType="fitCenter"
+                                            android:cropToPadding="false"
+                                            android:background="#00000000"
+                                            android:layout_weight="1"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="Cancel"
+                                            android:id="@+id/textView449"
+                                            android:textColor="@color/vectorColor" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <ImageButton
+                                            android:text="Update"
+                                            android:textColor="#ffffff"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/saveImageButton"
+                                            android:src="@drawable/upload"
+                                            android:scaleType="fitCenter"
+                                            android:cropToPadding="false"
+                                            android:background="#00000000"
+                                            android:layout_weight="1"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="Upload"
+                                            android:id="@+id/textView450"
+                                            android:textColor="@color/vectorColor" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"></LinearLayout>
+
+                        </ViewFlipper>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/PopupOverlay"
+                app:title=" "/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_profile" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

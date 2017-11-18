@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/interpolator/decelerate_cubic.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/interpolator/decelerate_cubic.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/interpolator/decelerate_quint.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/interpolator/decelerate_quint.xml"
+    }
+]

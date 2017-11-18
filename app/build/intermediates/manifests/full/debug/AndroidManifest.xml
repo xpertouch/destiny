@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="corp.burenz.expertouch"
+    android:versionCode="3"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="corp.burenz.expertouch.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="corp.burenz.expertouch.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/ClickAwayTheme" >
+        <activity
+            android:name="corp.burenz.expertouch.activities.Registrations"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.MainFrame"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="corp.burenz.expertouch.activities.WelcomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="corp.burenz.expertouch.util.CallPermissions" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.ExpertDetails"
+            android:label="@string/title_activity_expert_details" />
+        <activity android:name="corp.burenz.expertouch.activities.MoreDetails" />
+        <activity android:name="corp.burenz.expertouch.activities.SkilledExperts" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.Jobs"
+            android:label="@string/title_activity_jobs"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity android:name="corp.burenz.expertouch.activities.Hire" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.Profile"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.OwnChoice"
+            android:label="My Profile" />
+        <activity android:name="corp.burenz.expertouch.activities.Filter" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.XpertRegistration"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.CompanyProfile"
+            android:label="@string/title_activity_company_profile" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.PostAdd"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.MyCompany"
+            android:label="@string/title_activity_my_company" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.RegisterCompany"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="corp.burenz.expertouch.activities.UpdateApp" />
+        <activity android:name="corp.burenz.expertouch.activities.MyFavouritesActivity" />
+        <activity android:name="corp.burenz.expertouch.activities.MyCalls" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.SettingsActivity"
+            android:label="@string/title_activity_my_company"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.FeedbackActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="corp.burenz.expertouch.activities.HelpCenter" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.AddMissingExpertise"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="corp.burenz.expertouch.activities.MyIntroActivity" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.VerifyCompany"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="corp.burenz.expertouch.activities.MyCompanyPosts" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.ReportCompany"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="corp.burenz.expertouch.activities.Buket" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.TermsOfService"
+            android:label="@string/title_activity_terms_of_service" />
+        <activity android:name="corp.burenz.expertouch.activities.Workshop" />
+
+        <service android:name="corp.burenz.expertouch.service.MyFirebaseInstanceIDService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="corp.burenz.expertouch.service.MyFirebaseMessagingService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+         FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="corp.burenz.expertouch" />
+            </intent-filter>
+        </receiver>
+        <!--
+ Internal (not exported) receiver used by the app to start its own exported services
+             without risk of being spoofed.
+        -->
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+            android:exported="false" />
+        <!--
+ FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="corp.burenz.expertouch.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

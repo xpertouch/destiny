@@ -1,0 +1,28 @@
+[
+    {
+        "outputFile": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 16,
+                    "endColumn": 16,
+                    "endOffset": 1011
+                },
+                "from": {
+                    "file": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/values-v19/styles.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 8,
+                        "startOffset": 61,
+                        "endLine": 18,
+                        "endColumn": 16,
+                        "endOffset": 1017
+                    }
+                }
+            }
+        ]
+    }
+]

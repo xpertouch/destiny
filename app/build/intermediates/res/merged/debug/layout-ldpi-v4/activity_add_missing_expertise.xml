@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="corp.burenz.expertouch.activities.AddMissingExpertise"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="#ffffff">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView5"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/imageView81"
+                    android:src="@drawable/more_experts_blue"
+                    android:layout_marginTop="70dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Add Your Professions"
+                        android:id="@+id/textView659"
+                        android:layout_gravity="center_horizontal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Tell us what we are missing and we will update it in next version, it helps more people get hired"
+                        android:id="@+id/textView660"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_margin="15dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/addCatagoryED"
+                        android:background="#00000000"
+                        android:hint="Skill Category"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@color/line"
+                    android:layout_marginRight="30dp"></LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="26dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/addTypeED"
+                        android:background="#00000000"
+                        android:hint="Skill Type"
+                        android:textSize="14dp"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:layout_gravity="right"
+                        android:minHeight="50dp"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:layout_marginTop="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Thanks For Supporting us \n we Highly appreciate your valueable Information"
+                        android:id="@+id/textView513"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView510"
+            android:background="#c9c9c9" />
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMissingFlipper" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f5f5f5"
+                android:gravity="center_vertical"
+                android:onClick="sendMissing">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SUBMIT"
+                    android:id="@+id/submitExpertiseLL"
+                    android:background="#ffffff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/progressBar45" />
+            </LinearLayout>
+        </ViewFlipper>
+
+    </LinearLayout>
+</LinearLayout>

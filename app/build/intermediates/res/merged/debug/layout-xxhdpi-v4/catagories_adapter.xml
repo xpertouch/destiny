@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@color/tileBackground"
+            android:visibility="visible"
+            android:layout_marginBottom="1sp"
+            android:id="@+id/takeArtsans">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:cropToPadding="true"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                app:iiv_color="#FFFFFF"
+                app:iiv_icon="@string/gmd_group" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Artisans"
+                android:id="@+id/textView111"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hire Skillfull artisens who are ready to do your job"
+                android:id="@+id/textView112"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_marginBottom="1dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:id="@+id/takeLocalTransport">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_time_to_leave" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Cabs"
+                    android:id="@+id/textView94"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="   Cabs Rikshaws   "
+                    android:id="@+id/textView95"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:id="@+id/takeEngineer"
+                android:layout_weight="1">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_icon="@string/faw_graduation_cap"
+                    android:id="@+id/testIdIconis" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Engineers"
+                    android:id="@+id/textView96"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView97"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Professional Engineers" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@color/tileBackground"
+            android:visibility="visible"
+            android:layout_marginBottom="1sp"
+            android:id="@+id/takeLabours">
+
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:cropToPadding="true"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                app:iiv_color="#FFFFFF"
+                app:iiv_icon="@string/gmd_person_pin_circle" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Labours"
+                android:id="@+id/textView676"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Helpers ready to serve your type of job"
+                android:id="@+id/textView677"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/tileBackground"
+                android:layout_marginRight="1dp"
+                android:id="@+id/takeConsultants">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_local_atm" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Accountants"
+                    android:id="@+id/textView113"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Professional Consultants"
+                    android:id="@+id/textView114"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/tileBackground"
+                android:id="@+id/takeTransporters">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/faw_truck" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Transporters"
+                    android:id="@+id/textView115"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Heavy Duty Transporters"
+                    android:id="@+id/textView116"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_marginTop="1dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:id="@+id/takeBotiques">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="gmd_spa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fashion"
+                    android:id="@+id/textView117"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Hair Stylists"
+                    android:id="@+id/textView118"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:id="@+id/takeDoctor"
+                android:layout_weight="1">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/faw_user_md" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Doctors"
+                    android:id="@+id/textView119"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView120"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Doctors For Your Health" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:id="@+id/takeLaywer">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/faw_gavel" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Lawyers"
+                    android:id="@+id/textView121"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Lawyers at your Service"
+                    android:id="@+id/textView122"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/takeTeachers">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_local_library" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Teachers"
+                    android:id="@+id/textView123"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Surf Great Teacher Profiles"
+                    android:id="@+id/textView124"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/tileBackground"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:id="@+id/takeSoftware">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_phonelink" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Software and Services"
+                    android:id="@+id/textView87"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Software Experts in City"
+                    android:id="@+id/textView88"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/tileBackground"
+                android:layout_marginTop="1dp"
+                android:id="@+id/takeMedia">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_switch_video" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Media"
+                    android:id="@+id/textView91"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Media Persons"
+                    android:id="@+id/textView92"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:id="@+id/takeAgents" >
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/faw_user" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Agents"
+                    android:id="@+id/textView668"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Agents Of All kinds"
+                    android:id="@+id/textView669"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/takeContractors">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_work" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Contractors"
+                    android:id="@+id/textView670"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="State Contractors"
+                    android:id="@+id/textView671"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/tileBackground"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:id="@+id/takeOrderSupplies">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_ac_unit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="General Order Suppliers"
+                    android:id="@+id/textView672"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Suppliers ready to Supply"
+                    android:id="@+id/textView673"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/tileBackground"
+                android:layout_marginTop="1dp"
+                android:id="@+id/takeHealth">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_local_hospital" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Health"
+                    android:id="@+id/textView674"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Health related Professionals"
+                    android:id="@+id/textView675"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:baselineAligned="false"
+            android:layout_marginTop="1dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:id="@+id/takeRepairing"
+                android:visibility="visible"
+                android:layout_marginRight="1dp">
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_build" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Mechanics"
+                    android:id="@+id/textView680"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView681"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Reparing Experts" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/tileBackground"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/takeOthers" >
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    app:iiv_color="#FFFFFF"
+                    app:iiv_size="50dp"
+                    app:iiv_icon="@string/gmd_visibility_off" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView678"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Others" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Hire Professionals not listed above"
+                    android:id="@+id/textView679"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
