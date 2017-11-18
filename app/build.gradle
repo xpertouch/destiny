@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.1'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "corp.burenz.expertouch"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 3
+        versionName "1.0.2"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile('com.github.florent37:materialviewpager:1.2.0@aar') {
+        transitive = true;
+    }
+
+    //    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    
+
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'uk.co.samuelwall:material-tap-target-prompt:1.6.3'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+    compile 'com.mikhaellopez:circularimageview:3.0.1'
+    compile 'com.mikepenz:iconics-core:2.8.2@aar'
+    compile 'com.mikepenz:google-material-typeface:2.2.0.3.original@aar'
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.2@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.7.0.0@aar'
+    compile 'com.mikepenz:octicons-typeface:3.2.0.2@aar'
+    compile 'com.mikepenz:meteocons-typeface:1.1.0.2@aar'
+    compile 'com.mikepenz:community-material-typeface:1.7.22.1@aar'
+    compile 'com.mikepenz:weather-icons-typeface:2.0.10.2@aar'
+    compile 'com.mikepenz:typeicons-typeface:2.0.7.2@aar'
+    compile 'com.mikepenz:entypo-typeface:1.0.0.2@aar'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.mikepenz:devicon-typeface:2.0.0.2@aar'
+    compile 'com.mikepenz:foundation-icons-typeface:3.0.0.2@aar'
+    compile 'com.mikepenz:ionicons-typeface:2.0.1.2@aar'
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'
