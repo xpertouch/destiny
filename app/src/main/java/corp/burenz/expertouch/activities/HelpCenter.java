@@ -275,6 +275,8 @@ public class HelpCenter extends AppCompatActivity {
             ourSplasSound =  MediaPlayer.create(HelpCenter.this,R.raw.profile);
             ourSplasSound.start();
 
+
+
         }
 
 
