@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="corp.burenz.expertouch">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/ClickAwayTheme">
+
+
+        <activity
+            android:name=".activities.Registrations"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+
+        <activity
+            android:name=".activities.MainFrame"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity android:name=".util.CallPermissions" />
+        <activity
+            android:name=".activities.ExpertDetails"
+            android:label="@string/title_activity_expert_details" />
+        <activity android:name=".activities.MoreDetails" />
+        <activity android:name=".activities.SkilledExperts" />
+        <activity
+            android:name=".activities.Jobs"
+            android:label="@string/title_activity_jobs"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity android:name=".activities.Hire" />
+        <activity
+            android:name=".activities.Profile"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name=".activities.OwnChoice"
+            android:label="My Profile" />
+        <activity android:name=".activities.Filter" />
+        <activity
+            android:name=".activities.XpertRegistration"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities.CompanyProfile"
+            android:label="@string/title_activity_company_profile" />
+        <activity
+            android:name=".activities.PostAdd"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities.MyCompany"
+            android:label="@string/title_activity_my_company" />
+        <activity
+            android:name=".activities.RegisterCompany"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".activities.UpdateApp" />
+        <activity android:name=".activities.MyFavouritesActivity" />
+        <activity android:name=".activities.MyCalls" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_my_company"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities.FeedbackActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".activities.HelpCenter" />
+        <activity
+            android:name=".activities.AddMissingExpertise"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".activities.MyIntroActivity" />
+        <activity
+            android:name=".activities.VerifyCompany"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".activities.MyCompanyPosts" />
+        <activity
+            android:name=".activities.ReportCompany"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".activities.Buket" />
+        <activity
+            android:name=".activities.TermsOfService"
+            android:label="@string/title_activity_terms_of_service" />
+
+        <activity android:name=".activities.Workshop"></activity>
+
+        <service
+            android:name=".service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+</manifest>

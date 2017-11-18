@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+                <!-- Customize your theme here. -->
+                <item name="colorPrimary">#000000</item>
+                <item name="colorPrimaryDark">#e20909</item>
+                <item name="colorAccent">#000000</item>
+                <!--<item name="android:textColorPrimaryInverse">@color/vectorColor-->
+                <!--</item>-->
+                <item name="android:textColorPrimary">#000000</item>
+                <item name="android:colorBackground">#ffffff</item>
+                <item name="android:windowTranslucentStatus">true</item>
+                <item name="android:windowBackground">@color/cardview_light_background</item>
+                <item name="android:textColorSecondaryInverse">#000000</item>
+                <item name="android:textColorSecondary">#000000</item>
+                <item name="android:textColorPrimaryInverse">#000000</item>
+        </style>
+
+        </resources>

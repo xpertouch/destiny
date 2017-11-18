@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView99"
+            app:iiv_color="#000000"
+            app:iiv_icon="@string/gmd_signal_wifi_off"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Can&apos;t Connect"
+            android:id="@+id/textView229"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Please check your network connection"
+            android:id="@+id/textView230"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="13dp"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retry"
+            android:id="@+id/reCreate"
+            android:background="@color/newVector"
+            android:textColor="#ffffff"
+            android:translationZ="5dp"
+            android:minWidth="150dp"
+            android:layout_marginTop="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

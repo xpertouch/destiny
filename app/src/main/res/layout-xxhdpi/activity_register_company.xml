@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="corp.burenz.expertouch.activities.RegisterCompany"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@raw/black_new"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/companyTflipper"
+                        android:autoStart="false"
+                        android:inAnimation="@anim/md_styled_slide_up_slow"
+                        android:outAnimation="@anim/abc_slide_out_top" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#84000000"
+                            android:gravity="center"
+                            android:id="@+id/linearLayout50" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Welcome Admin"
+                                android:id="@+id/companyTtitle"
+                                android:textColor="#ffffff"
+                                android:layout_marginBottom="30dp"
+                                android:textSize="25dp"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="You are About to register yourself and then your Profile is visivile to all the companies tied to us and then yuou a alsio recieve calls from compnies if they are intrested in  you"
+                                android:id="@+id/companyTsubtitle"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:textSize="14dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:typeface="serif" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </ViewFlipper>
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/welcomeFlipper"
+                        android:inAnimation="@anim/md_styled_slide_up_slow"
+                        android:outAnimation="@anim/abc_slide_out_top">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/linearLayout40"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#80000000">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/scrollView11">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:layout_margin="20dp" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center" >
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/linearLayout33" >
+
+                                            <ViewFlipper
+                                                android:layout_width="match_parent"
+                                                android:layout_height="150dp"
+                                                android:id="@+id/companyImagesFlipper"
+                                                android:layout_gravity="center_horizontal"
+                                                android:inAnimation="@anim/left_to_right"
+                                                android:layout_marginLeft="10dp"
+                                                android:outAnimation="@anim/right_to_left">
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Enter Company Name"
+                                                        android:id="@+id/textView47"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="#ffffff"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Company Tag"
+                                                        android:id="@+id/textView48"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="@color/textColorForRegister"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Enter Office Number"
+                                                        android:id="@+id/textView52"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="@color/textColorForRegister"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Enter Official Email"
+                                                        android:id="@+id/textView55"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="@color/textColorForRegister"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Company Discription"
+                                                        android:id="@+id/textView57"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="@color/textColorForRegister"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom" >
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Enter Company City"
+                                                        android:id="@+id/textView58"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="@color/textColorForRegister"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="bottom" >
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                                        android:text="Company Landmark"
+                                                        android:id="@+id/textView62"
+                                                        android:layout_gravity="left"
+                                                        android:textColor="@color/textColorForRegister"
+                                                        android:textSize="22dp"
+                                                        android:typeface="serif" />
+                                                </LinearLayout>
+
+                                            </ViewFlipper>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/linearLayout39"
+                                            android:layout_marginLeft="5dp">
+
+                                            <ViewFlipper
+                                                android:layout_width="match_parent"
+                                                android:layout_height="50dp"
+                                                android:id="@+id/companyEditTexts"
+                                                android:layout_gravity="center_horizontal"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_marginRight="5dp"
+                                                android:inAnimation="@anim/left_to_right"
+                                                android:outAnimation="@anim/right_to_left">
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:id="@+id/companyNameE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:background="#00000000"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:hint="Enter Company Name Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView368"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:id="@+id/companyTagE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company Tag Line Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView369"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:ems="10"
+                                                        android:id="@+id/companyOfficeE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company Phone Here"
+                                                        android:inputType="phone" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView370"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:ems="10"
+                                                        android:id="@+id/companyEmailE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company Email Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView361"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:id="@+id/companyDiscriptionE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company About Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView358"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:ems="10"
+                                                        android:id="@+id/companyCityE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company City Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView360"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" >
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress"
+                                                        android:ems="10"
+                                                        android:id="@+id/companyLandmarkE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company landmark Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView382"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone"
+                                                    android:id="@+id/companyWebFeild">
+
+                                                    <EditText
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:inputType="textEmailAddress|textWebEmailAddress"
+                                                        android:ems="10"
+                                                        android:id="@+id/companyVisitE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:textSize="15dp"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textColor="#f1f1f1"
+                                                        android:minHeight="40dp"
+                                                        android:maxLines="1"
+                                                        android:background="#00000000"
+                                                        android:hint="Enter Company Website Here" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView371"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="gone"
+                                                    android:id="@+id/companySTateIf">
+
+                                                    <Spinner
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:id="@+id/companyStateE"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:layout_marginTop="5dp"
+                                                        android:minHeight="40dp"
+                                                        android:spinnerMode="dialog"
+                                                        android:entries="@array/listOfStates"
+                                                        android:background="#ffffff" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                                        android:text="Small Text"
+                                                        android:id="@+id/textView359"
+                                                        android:layout_gravity="center_horizontal"
+                                                        android:background="#ffffff"
+                                                        android:layout_marginRight="10dp"
+                                                        android:visibility="visible" />
+                                                </LinearLayout>
+
+                                            </ViewFlipper>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/linearLayout38"
+                                            android:layout_gravity="left"
+                                            android:layout_marginTop="5dp">
+
+                                            <ViewFlipper
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/companySubtitleFlipper"
+                                                android:layout_gravity="left"
+                                                android:layout_marginRight="20dp"
+                                                android:foregroundGravity="left"
+                                                android:inAnimation="@anim/left_to_right"
+                                                android:layout_marginTop="5dp"
+                                                android:outAnimation="@anim/right_to_left">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Please Enter The name Of Your Company / your Business"
+                                                    android:id="@+id/textView363"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:id="@+id/textView364"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="14dp"
+                                                    android:text="Enter Company Tag Line"
+                                                    android:gravity="left" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Enter Your Company Office Number"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView365"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView366"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:typeface="normal"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left"
+                                                    android:text="Enter Your Company Email" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Enter Short Discription About Your Company"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView373"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView374"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:typeface="normal"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left"
+                                                    android:text="Enter Company City Name" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Enter a Landmark Nearest to Your Company"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView375"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:typeface="normal"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Enter Company Website"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView367"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:typeface="normal"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:text="Select Company State"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:id="@+id/textView376"
+                                                    android:layout_gravity="left"
+                                                    android:textColor="#ffffff"
+                                                    android:typeface="normal"
+                                                    android:textSize="14dp"
+                                                    android:gravity="left"
+                                                    android:visibility="gone" />
+                                            </ViewFlipper>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:minHeight="50dp"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </ScrollView>
+
+                        </LinearLayout>
+
+
+                    </ViewFlipper>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout41">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffffff"></LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" />
+
+                            <ViewFlipper
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/companyButtonsFlipper"
+                                android:layout_weight="1">
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="PRoceed"
+                                    android:id="@+id/iAgree"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="#80000000"
+                                    android:textColor="#ffffff"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <ViewFlipper
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/companyScanFlipper"
+                                        android:inAnimation="@anim/abc_grow_fade_in_from_bottom" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="Check Availibilty"
+                                            android:id="@+id/companyNameB"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp"
+                                            android:background="#50000000"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:gravity="center_vertical" >
+
+                                            <ProgressBar
+                                                style="?android:attr/progressBarStyleSmall"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:id="@+id/progressBar31"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:text="Checking Availibilty"
+                                                android:id="@+id/textView441"
+                                                android:textColor="#ffffff"
+                                                android:textSize="12dp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                    </ViewFlipper>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button16"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView433"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyTagB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button18"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView434"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyPhoneB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button22"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView435"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyEmailB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button32"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView437"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyDiscriptionB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button40"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView439"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyCtiyB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button43"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView440"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companylandmarkB"
+                                            android:text="FINISH"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical" >
+
+                                    <ProgressBar
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:id="@+id/progressBar37"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginLeft="20dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Please wait"
+                                        android:id="@+id/textView616"
+                                        android:textColor="#ffffff" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone"
+                                    android:id="@+id/companyVisistsB">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button28"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView436"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyVistB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/statesCompanyId">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/button36"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:text="Previous"
+                                            android:background="#80000000"
+                                            android:textColor="#9c9c9c"
+                                            android:allowUndo="false"
+                                            android:textStyle="bold"
+                                            android:onClick="goBackBussiness" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView438"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#ffffff"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center" >
+
+                                        <Button
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/companyStateB"
+                                            android:text="Next"
+                                            android:background="#80000000"
+                                            android:textColor="#ffffff"
+                                            android:textStyle="bold"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </ViewFlipper>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

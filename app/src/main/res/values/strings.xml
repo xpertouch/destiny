@@ -1,0 +1,223 @@
+<resources>
+    <string name="app_name">1clickAway</string>
+    <string name="title_activity_main_frame">MainFrame</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="offers">Offers</string>
+    <string name="education">Education</string>
+    <string name="health">Health</string>
+    <string name="products">Products</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_expert_details">ExpertDetails</string>
+    <string name="host">http://xpertouch.pe.hu/ver1.1</string>
+
+
+
+    <!--<string name="host">192.168.137.1/1clickaway.in/ver1.1</string>-->
+    <!--<string name="host">http://1clickaway.in/ver1.1</string>-->
+
+    <string name="large_text">
+        These Terms of Service explain your rights and obligations in using 1clickAway (Mobile App) and related services (Service) developed by 1clickAway Developer ("Developer or “We”). We refer to our Mobile App users as users (Users or “You”) of our Service.
+
+These Terms of Service, together with our Privacy Policy, form the agreement with you regarding the use of the Mobile App (the Agreement).
+
+1. Service availability
+
+Please read the Agreement carefully. By continuing to use the Service, you agree that you have read and are bound by these terms. If you do not agree to these terms, you must not use the Mobile App.
+
+These Terms of Service include important agreements about your rights and the rights of Developer, including a binding agreement about how to resolve any disputes between us connected to the Service.
+
+Please note that these Terms of Service will govern any dispute between us with you in connection with the Agreement as well.
+
+1.1 You agree that our sole offer to you in connection with the Service is to provide the Service as-is and as-available.
+
+1.2 You agree that we may change or discontinue the Service in our sole discretion and without prior notice. You agree that you will not rely on the continued availability of the Services in taking any action, refraining from any action or entering into any commitment.
+
+1.3 By using the Service, you acknowledge you are at least 12 years old. If you are less than 12 years old, you should quit using the Service immediately.
+
+2. Your responsibility
+
+2.1 You are fully responsible for how you use our Services. You agree to indemnify and hold harmless us and our directors, officers, employees, service providers, vendors, and agents from and against any and all losses, liabilities, claims, damages or expenses (including attorneys' fees and court costs and expenses) arising from or related to any use of the Services by you or that occurs because of you.
+
+2.2 You are prohibited from the following actions:
+
+Using the Services or content for the commercial purpose without our prior permission of Developer;
+
+Infringing or causing the infringement of intellectual property rights (like copyrights), reputation damages, and business interruptions of us or any third parties; and
+
+Submitting, uploading, emailing or otherwise transmitting data, information or document may cause the disfunction or shutdown of our Services or Mobile App, such as any data, information or documents that contain spyware, viruses, worms, Trojan horses, adware, ransomware or other malware, or exposes our Services or Mobile App to such programs in an indirect way, corrupts or otherwise destroys any data or software contained in our Mobile App, or which are determined solely by Developer, as illegal, offensive or potentially harmful to others.
+
+3. Copyright infringement
+
+If you believe in good faith that any material provided through the Service infringes upon your copyright, you may send notice to Developer requesting that the material or access to the material be removed, by providing a notice to contact@1clickAway.com containing the following information and documents:
+
+An electronic or physical signature of the copyright owner or person authorized to act on behalf of the copyright owner;
+
+Identification of the allegedly infringing material;
+
+Sufficient information as to the location of the allegedly infringing material so that it may be found and identified;
+
+Your name, address, telephone number and, if possible, email address;
+
+A written statement by you of a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent or the law.
+
+4. Dispute resolution
+
+4.1 This Agreement shall be governed by and construed with the laws of India laws without referencing the rules for conflict of laws.
+
+4.2 You agree to be subject to the jurisdiction of India. You agree that any dispute between you and us will be resolved in India to the exclusion of any other potential venue.
+
+4.3 You and we agree that at the election of either party, any dispute connected with Services between us may be sent to binding individual (non-class) arbitration to be administered by India International Arbitration Center (HKIAC).
+
+5. Limitation of Liability
+
+Identification of the allegedly infringing material;
+
+You agree that our sole obligation to you in connection with the Service is to provide the Service as-is. You agree that unless we do something that is grossly negligent or an act of willful misconduct in connection with the Service, we will not be liable to you or to any third party.
+
+If, for any reason, we are judged liable to you connected with Service, you agree that your recovery will be limited to your direct and actual damages. You agree that you will not ask for any consequential, special, punitive or exemplary damages, or indirect or lost profits. You agree that even if you request these types of damages, a court or arbitrator cannot award them to you. This limitation on liability shall not be construed to apply to any damages or other substantive remedies available via statute.
+
+6. Disclaimer
+
+UNLESS ANY DISCLAIM OF ANY PART OF THIS AGREEMENT IS PROHIBITED BY APPLICABLE LAW, YOU EXPRESSLY AGREE THAT ACCESS TO THE SERVICE BY ANY MEANS IS AT YOUR SOLE RISK, AND THE SERVICE IS PROVIDED AS IS AND AS AVAILABLE.
+
+WE DO NOT MAKE ANY WARRANTIES WHATSOEVER WITH RESPECT TO THE SERVICES, INCLUDING WITHOUT LIMITATION, WARRANTIES, EITHER EXPRESS OR IMPLIED, SUCH AS THE WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, OR THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR FREE OR PROVIDE ADEQUATE, COMPLETE OR TIMELY INFORMATION OR DATA.
+
+7. Force Majeure.
+
+7.1 You also agree that we are not responsible for anything beyond our control. For example, we are not liable: for Service interruptions caused by problems with the communications network; for problems caused by any Internet service provider; for your computer or its programs failing; for the acts of criminal attackers, whether in real-time or automated (e.g., viruses); other technologically harmful material that may infect your computer equipment, computer programs, data or proprietary material due to your use of the Mobile Apps or to your downloading of any content on it, or on any website linked to it; or for errors in information provided to us upon which we reasonably rely. You understand and agree that the above examples are not exhaustive to cover all the circumstances that may occur as Force Majeure Event.
+
+For purpose of this section, “Force Majeure Event” refers to an unforeseeable event or event that, although foreseeable, is unavoidable and impossible to control, including, without limitation, war, riot, strike, lockouts, epidemics, fires, typhoons, earthquakes and nuclear disasters.
+
+8. Third Party Websites and Advertisements
+
+8.1 We assume no responsibility for the content of websites linked on the Mobile App. Such links should not be interpreted as endorsement by us of those linked websites. We will not be liable for any loss or damage that may arise from your use of them, including browsing, downloading, purchasing or any other activities directed by third party websites.
+
+8.2 In order to facilitate the purchase of any goods, content and/or service, our advertisers and their partners may re-direct you to third party websites linked with our Mobile App. By entering any third party websites, you are bound by the relevant terms and policies of such websites.
+
+9. General
+
+9.1 We reserve the right to terminate this Agreement at any time, in our sole discretion.
+
+9.2 These Terms of Service may be updated from time to time. For the latest version of this Agreement, please refer to the revision date first written above. Any updates shall take effect upon publish immediately. By continuing using our Service, you understand and agree to be bound by these updated Terms of Service.
+
+9.3 The governing version of this Agreement is in English. If there is any inconsistency between the English version and any version in another language(s), the English version of this Agreement shall prevail for all purposes.
+
+9.4 Any waiver of our rights under this Agreement may only take effect after with out express written consent. Should we decide at any moment not to demand strict execution of any terms in the Agreement, it may not be interpreted as a definitive waiver of this term. Consequently, we may at any moment demand strict and full execution by you of the terms of the Agreement.
+
+9.5 If any of the terms in the Agreement should turn out to be null and void or unenforceable by virtue of a law or a regulation or further to an enforceable decision by a jurisdiction or competent authority, you agree that the Agreement as a whole shall not be affected should the relevant terms be null and void, unenforceable, illegal or inapplicable.
+
+9.6 We may assign the rights and obligations of this Agreement to any parties without your consent. If an assignment is so occurred, we will update this Agreement to reflect the same promptly.
+
+9.7 If you have any inquiries, complaints or suggestions about our Services or Terms of Service you may contact us at: contact@1clickAway.com
+    </string>
+
+
+    <string name="Statetype0">Select Your State</string>
+    <string name="Statetype1">Andhra Pradesh</string>
+    <string name="Statetype2">Arunachal Pradesh</string>
+    <string name="Statetype3">Assam</string>
+    <string name="Statetype4">Bihar</string>
+    <string name="Statetype5">Chandigarh</string>
+    <string name="Statetype6">Chhattisgarh</string>
+    <string name="Statetype7">Dadra and Nagar Haveli</string>
+    <string name="Statetype8">Daman and Diu</string>
+    <string name="Statetype9">Delhi</string>
+    <string name="Statetype10">Goa</string>
+    <string name="Statetype11">Gujarat</string>
+    <string name="Statetype12">Haryana</string>
+    <string name="Statetype13">Himachal Pradesh</string>
+    <string name="Statetype14">Jammu and Kashmir</string>
+    <string name="Statetype16">Jharkhand</string>
+    <string name="Statetype17">Karnataka</string>
+    <string name="Statetype18">Kerala</string>
+    <string name="Statetype19">Lakshadweep</string>
+    <string name="Statetype20">Madhya Pradesh</string>
+    <string name="Statetype21">Maharashtra</string>
+    <string name="Statetype22">Manipur</string>
+    <string name="Statetype23">Meghalaya</string>
+    <string name="Statetype24">Mizoram</string>
+    <string name="Statetype25">Nagaland</string>
+    <string name="Statetype26">Odisha</string>
+    <string name="Statetype27">Puducherry</string>
+    <string name="Statetype28">Punjab</string>
+    <string name="Statetype29">Rajasthan</string>
+    <string name="Statetype30">Sikkim</string>
+    <string name="Statetype31">Tamil Nadu</string>
+    <string name="Statetype32">Telengana</string>
+    <string name="Statetype33">Tripura</string>
+    <string name="Statetype34">Uttar Pradesh</string>
+    <string name="Statetype35">Uttarakhand</string>
+    <string name="Statetype36">West Bengal</string>
+    <string name="title_activity_test_scrolling">TestScrollingActivity</string>
+    <string name="title_activity_jobs">Jobs</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_own_choice">OwnChoice</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_company_profile">CompanyProfile</string>
+    <string name="title_activity_my_company">MyCompany</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_temp">Temp</string>
+    <string name="title_activity_terms_of_service">TermsOfService</string>
+
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1003313487624",
+    "firebase_url": "https://clickaway-e7e99.firebaseio.com",
+    "project_id": "clickaway-e7e99",
+    "storage_bucket": "clickaway-e7e99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003313487624:android:710246e3dd078d3d",
+        "android_client_info": {
+          "package_name": "corp.burenz.expertouch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003313487624-v4ec1bbpvuc191tegjob5rps1uc9fk0f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "corp.burenz.expertouch",
+            "certificate_hash": "a88658e12e28381394308aa782416bd023aea981"
+          }
+        },
+        {
+          "client_id": "1003313487624-vl83h11l8do8o6edk7nhssp0qnhgbcn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA3J_DpscrFQRthPPicfr8ClGyMAYMgOI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003313487624-vl83h11l8do8o6edk7nhssp0qnhgbcn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/vectorColor</color>
+    <color name="colorPrimaryDark">#DD031D26</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+<!-- Main Registeration pannel  -->
+    <color name="register_left_button">#303F9F</color>
+    <color name="register_right_button">#FFB84C4C</color>
+    <color name="register_button_text_color">#ffffff</color>
+    <color name="textFlipperColor">#ffffff</color>
+
+    <!-- login Fragment Color Schema-->
+
+    <color name="hintColorForLogin">#ffffff</color>
+    <color name="loginButtonColor">#303F9F</color>
+    <color name="button_colors_for_login">#ffffff</color>
+
+    <color name="selectionColor">#BFE8E8E8</color>
+
+    <!-- Register Fragment Color Schema-->
+
+    <color name="textColorForRegister">#ffffff</color>
+    <color name="hintColorForRegister">#fbfbfb</color>
+    <color name="nextButtonTextColor">#ffffff</color>
+    <color name="nextButtonColor">@android:color/holo_blue_dark</color>
+    <color name="vectorColor">#03232e</color>
+
+    <color name="companyColor">#e3eca02f</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="userColor">#c44720d6</color>
+
+
+
+    <!-- Register  MainFrame Fragment Color Schema-->
+    
+    <color name="tabIndicatorColor">#e48762</color>
+    <color name="editTextColor">#000000</color>
+    <color name="border">#72000000</color>
+
+
+
+    <!-- Activation Ribbon Color Schema-->
+
+    <color name="ribbon_background">#ffffff</color>
+    <color name="titleText">#0078d7 </color>
+    <color name="subTitle">#FFC6C6C6</color>
+    <color name="checkText">#607aff</color>
+
+
+    <color name="cellBackground">#ffffff</color>
+
+<color name="line">#f5f5f5</color>
+<color name="newVector">#03232e</color>
+
+    <color name="tileBackground">@color/vectorColor</color>
+    <color name="tileBackground1">#a12222</color>
+
+    <color name="pannelFlipperBack">@color/vectorColor</color>
+
+</resources>

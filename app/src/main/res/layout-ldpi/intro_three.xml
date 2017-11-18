@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fef9c2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView164"
+            android:src="@raw/intro_three"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:minHeight="200dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Hire experts ready to do your Job"
+            android:id="@+id/textView688"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textIsSelectable="false"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Now you can hire any type of experts from your state with a single touch"
+            android:id="@+id/textView689"
+            android:textSize="12dp"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Uses devices Location"
+                android:id="@+id/textView690"
+                android:textSize="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="left" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

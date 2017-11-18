@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="corp.burenz.expertouch.activities.ReportCompany"
+    android:background="#ffffff"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center"
+            android:visibility="gone"
+            android:id="@+id/noConnectionView">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/imageView99s"
+                    app:iiv_color="#000000"
+                    app:iiv_icon="@string/gmd_signal_wifi_off"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Can&apos;t Connect"
+                    android:id="@+id/textView68"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Please check your network connection"
+                    android:id="@+id/textView69"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textSize="13dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView4"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:padding="5dp">
+
+
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:cropToPadding="true"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        app:iiv_color="#871b1b"
+                        app:iiv_icon="@string/gmd_traffic"
+                        android:id="@+id/testIdIconis" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Action Center"
+                        android:id="@+id/textView289"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="If any company is posting useless and fake content, This is where you can stop them"
+                        android:id="@+id/textView607"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_margin="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="if a company gets ten reports from ten diferent users then the said companie&apos;s Post Facility is automatically Disabled"
+                        android:id="@+id/textView654"
+                        android:gravity="left|center"
+                        android:layout_margin="10dp"
+                        android:textSize="12dp"
+                        android:textColor="#cc4732" />
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/companyListFlipper"
+                        android:focusable="false">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="40dp"
+                            android:focusable="false"
+                            android:gravity="center_vertical">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/progressBar43"
+                                android:layout_marginLeft="7dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/textView656"
+                                android:text="Hang on for a second, while we update list"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/companyListS"
+                            android:minHeight="40dp"
+                            android:entries="@array/listOfStates"
+                            android:spinnerMode="dialog" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Connection Slow Please try again Later"
+                                android:id="@+id/textView300"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+
+                    </ViewFlipper>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Select Company"
+                        android:id="@+id/textView638"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/companyMessageE"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Please a mention reason for report"
+                        android:minHeight="40dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="This message stays with us"
+                        android:id="@+id/textView512"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/adminMesssageE"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Drop a message to Company Administrator"
+                        android:minHeight="40dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="This goes to the company administrator, your identity is kept completely Hidden"
+                        android:id="@+id/textView538"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="12dp"
+                        android:layout_marginRight="3dp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/vectorColor"
+                android:background="@color/newVector">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/newVector">
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/sendReportFlipper"
+                        android:background="@color/newVector">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/newVector">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Submit Report"
+                                android:textColor="#ffffff"
+                                android:background="@color/newVector"
+                                android:id="@+id/submitCompanyReport"
+                                android:layout_gravity="center_horizontal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <ProgressBar
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" />
+
+                        </LinearLayout>
+
+
+                    </ViewFlipper>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Mr</item>
+        <item>Miss</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>Select Years</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+
+        </string-array>
+    <string-array name = "months">
+
+
+        <item>Select Months</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+
+    </string-array>
+
+
+
+    <string-array name="age">
+        <item>Select Age</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+    </string-array>
+
+
+
+
+
+
+
+    <string-array name="listOfStates">
+
+
+	    <item>@string/Statetype0</item>
+        <item>@string/Statetype1</item>
+        <item>@string/Statetype2</item>
+        <item>@string/Statetype3</item>
+        <item>@string/Statetype4</item>
+        <item>@string/Statetype5</item>
+        <item>@string/Statetype6</item>
+        <item>@string/Statetype7</item>
+        <item>@string/Statetype8</item>
+        <item>@string/Statetype9</item>
+        <item>@string/Statetype10</item>
+        <item>@string/Statetype11</item>
+        <item>@string/Statetype12</item>
+        <item>@string/Statetype13</item>
+        <item>@string/Statetype14</item>
+        <item>@string/Statetype16</item>
+        <item>@string/Statetype17</item>
+        <item>@string/Statetype18</item>
+        <item>@string/Statetype19</item>
+        <item>@string/Statetype20</item>
+        <item>@string/Statetype21</item>
+        <item>@string/Statetype22</item>
+        <item>@string/Statetype23</item>
+        <item>@string/Statetype24</item>
+        <item>@string/Statetype25</item>
+        <item>@string/Statetype26</item>
+        <item>@string/Statetype27</item>
+        <item>@string/Statetype28</item>
+        <item>@string/Statetype29</item>
+        <item>@string/Statetype30</item>
+        <item>@string/Statetype31</item>
+        <item>@string/Statetype32</item>
+        <item>@string/Statetype33</item>
+        <item>@string/Statetype34</item>
+        <item>@string/Statetype35</item>
+        <item>@string/Statetype36</item>
+    </string-array>
+
+
+
+    <string-array name="listOfnewStates">
+
+
+        <item>@string/Statetype1</item>
+        <item>@string/Statetype2</item>
+        <item>@string/Statetype3</item>
+        <item>@string/Statetype4</item>
+        <item>@string/Statetype5</item>
+        <item>@string/Statetype6</item>
+        <item>@string/Statetype7</item>
+        <item>@string/Statetype8</item>
+        <item>@string/Statetype9</item>
+        <item>@string/Statetype10</item>
+        <item>@string/Statetype11</item>
+        <item>@string/Statetype12</item>
+        <item>@string/Statetype13</item>
+        <item>@string/Statetype14</item>
+        <item>@string/Statetype16</item>
+        <item>@string/Statetype17</item>
+        <item>@string/Statetype18</item>
+        <item>@string/Statetype19</item>
+        <item>@string/Statetype20</item>
+        <item>@string/Statetype21</item>
+        <item>@string/Statetype22</item>
+        <item>@string/Statetype23</item>
+        <item>@string/Statetype24</item>
+        <item>@string/Statetype25</item>
+        <item>@string/Statetype26</item>
+        <item>@string/Statetype27</item>
+        <item>@string/Statetype28</item>
+        <item>@string/Statetype29</item>
+        <item>@string/Statetype30</item>
+        <item>@string/Statetype31</item>
+        <item>@string/Statetype32</item>
+        <item>@string/Statetype33</item>
+        <item>@string/Statetype34</item>
+        <item>@string/Statetype35</item>
+        <item>@string/Statetype36</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verificationBannerFlipper"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/ribbon_background"
+            android:visibility="visible"
+            android:id="@+id/verificationBanner"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView5"
+                    android:src="@raw/companydef"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="VERIFY NOW!!"
+                                android:id="@+id/textView20"
+                                android:textColor="@color/titleText"
+                                android:typeface="normal"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:layout_margin="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <Space
+                                android:layout_width="20px"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/hideVerificationBanner"
+                                android:src="@drawable/abc_ic_clear_material"
+                                android:layout_margin="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Your verification status is pending, Please verify your Account in order to enjoy full features of this app"
+                        android:id="@+id/textView19"
+                        android:textColor="@color/subTitle"
+                        android:layout_gravity="left"
+                        android:textStyle="italic"
+                        android:textSize="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ACTIVATE NOW"
+                        android:id="@+id/activateNow"
+                        android:textColor="@color/vectorColor"
+                        android:typeface="normal"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/ribbon_background"
+            android:visibility="visible"
+            android:id="@+id/activationLayout"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView6"
+                android:src="@raw/companydef"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="left">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="You are one step away from activation"
+                        android:id="@+id/textView133"
+                        android:textSize="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="OTP was sent to :"
+                        android:id="@+id/textView26"
+                        android:textColor="#929292"
+                        android:typeface="normal"
+                        android:textSize="9dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/textView135"
+                                android:textColor="#929292"
+                                android:typeface="monospace"
+                                android:textSize="9dp"
+                                android:textStyle="italic"
+                                android:background="@color/line" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/otpAgainEditText"
+                                android:layout_gravity="right"
+                                android:background="#ffffff"
+                                android:hint="Enter OTP here"
+                                android:textSize="13dp"
+                                android:gravity="center_vertical|right"
+                                android:textColorHint="#d2d1d1"
+                                android:paddingRight="20dp"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="New Button"
+                                android:id="@+id/otpAgainSubmitButton"
+                                android:src="@drawable/white_arrow_right"
+                                android:background="@color/vectorColor" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/whatsNewRecycler">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

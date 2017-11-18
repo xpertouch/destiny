@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="corp.burenz.expertouch.activities.OwnChoice"
+    tools:showIn="@layout/activity_own_choice">
+
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/notVerifiedLayout"
+                android:visibility="visible"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/scrollView8" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:visibility="visible">
+
+
+                            <com.mikepenz.iconics.view.IconicsImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/imageView68"
+                                android:layout_gravity="center_horizontal"
+                                android:scaleType="fitCenter"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="100dp"
+                                app:iiv_color="#811b1b"
+                                app:iiv_icon="@string/gmd_traffic" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Not a Verified User"
+                                android:id="@+id/textView9"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="14dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Verify Your Account To Make Your Own Profile"
+                                android:id="@+id/textView10"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/ribbon_background"
+                                android:visibility="visible"
+                                android:id="@+id/linearLayout7"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:gravity="left" >
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="1dp"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="Verify your Account To Make your own Profile"
+                                            android:id="@+id/textView12"
+                                            android:layout_gravity="center_horizontal"
+                                            android:gravity="center"
+                                            android:textSize="10dp"
+                                            android:textColor="#00000000"
+                                            android:background="#00000000" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="2dp"
+                                            android:background="#ffffff"
+                                            android:layout_gravity="bottom"
+                                            android:gravity="bottom" >
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="bottom" >
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="1dp"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:id="@+id/textView23"
+                                                    android:textColor="#929292"
+                                                    android:typeface="monospace"
+                                                    android:textSize="9dp"
+                                                    android:textStyle="italic"
+                                                    android:background="@color/line" />
+
+                                                <EditText
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="49dp"
+                                                    android:inputType="number"
+                                                    android:ems="10"
+                                                    android:id="@+id/otpEntered"
+                                                    android:layout_gravity="right"
+                                                    android:background="#ffffff"
+                                                    android:hint="Enter OTP here"
+                                                    android:textSize="13dp"
+                                                    android:gravity="center"
+                                                    android:textColorHint="#d2d1d1"
+                                                    android:paddingRight="20dp"
+                                                    android:layout_marginLeft="10dp" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="1dp"
+                                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                                    android:id="@+id/textView11"
+                                                    android:textColor="#929292"
+                                                    android:typeface="monospace"
+                                                    android:textSize="9dp"
+                                                    android:textStyle="italic"
+                                                    android:background="@color/line" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="60dp"
+                                                android:layout_height="match_parent" >
+
+                                                <ViewFlipper
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:id="@+id/codeAccepted"
+                                                    android:inAnimation="@anim/abc_grow_fade_in_from_bottom">
+
+                                                    <ImageButton
+                                                        style="?android:attr/buttonStyleSmall"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:text="New Button"
+                                                        android:id="@+id/submitOtp"
+                                                        android:src="@drawable/white_arrow_right"
+                                                        android:background="@color/vectorColor"
+                                                        android:visibility="visible" />
+
+                                                    <ProgressBar
+                                                        style="?android:attr/progressBarStyleSmall"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:id="@+id/progressBar8"
+                                                        android:padding="10dp" />
+
+                                                </ViewFlipper>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/resendLayout"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Didn&apos;t get the code?"
+                                    android:id="@+id/textView203"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textSize="10dp" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:id="@+id/resendCode">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Resend Code"
+                                        android:id="@+id/textView205"
+                                        android:layout_gravity="center_horizontal"
+                                        android:gravity="center"
+                                        android:textSize="10dp"
+                                        android:textColor="@color/vectorColor" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="1dp"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="Resend Code"
+                                        android:id="@+id/textView204"
+                                        android:layout_gravity="center_horizontal"
+                                        android:gravity="center"
+                                        android:textColor="#00000000"
+                                        android:background="@color/vectorColor"
+                                        android:textSize="9dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Resend code is suspended for 2 minutes , you can resend code after this time period"
+                                android:id="@+id/resendHelperV"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:textSize="12dp"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/vectorColor"
+                    android:visibility="visible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentTop="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imageView69"
+                            android:src="@drawable/register_fingerprint"
+                            android:cropToPadding="true"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/line"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Username"
+                            android:id="@+id/userName"
+                            android:textSize="14dp"
+                            android:textColor="#ffffff" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Associated Phone Number"
+                                android:id="@+id/userEmail"
+                                android:gravity="center"
+                                android:textSize="10dp"
+                                android:textColor="#fff642"
+                                android:layout_marginRight="10dp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/textView304"
+                                android:gravity="center"
+                                android:textSize="10dp"
+                                android:textColor="#fff642"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Change Phone Number"
+                                android:id="@+id/changeEmailAddress"
+                                android:textColor="#ffffff"
+                                android:textSize="10dp"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/verifiedLayout"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView213"
+                        android:scaleType="centerCrop"
+                        android:src="@raw/ownchoice" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#dcffffff">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/imageView176"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <ViewFlipper
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/registerImagezFlipper"
+                                            android:layout_gravity="center_horizontal"
+                                            android:autoStart="false"
+                                            android:inAnimation="@anim/abc_grow_fade_in_from_bottom"
+                                            android:focusable="false">
+
+                                            <ImageView
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:id="@+id/imageView177"
+                                                android:src="@drawable/posts"
+                                                android:scaleType="centerCrop" />
+
+                                            <ImageView
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:id="@+id/imageView178"
+                                                android:src="@drawable/next"
+                                                android:scaleType="centerCrop" />
+
+                                            <ImageView
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:id="@+id/imageView179"
+                                                android:src="@drawable/shutter_up"
+                                                android:scaleType="centerCrop" />
+                                        </ViewFlipper>
+
+                                        <ViewFlipper
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/registerTextFlipper"
+                                            android:layout_gravity="center_horizontal"
+                                            android:foregroundGravity="center"
+                                            android:autoStart="false"
+                                            android:inAnimation="@anim/abc_grow_fade_in_from_bottom">
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:text="Show Your Expertise"
+                                                    android:id="@+id/textView524"
+                                                    android:textSize="19dp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:text="Post Adds"
+                                                    android:id="@+id/textView528"
+                                                    android:textSize="19dp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:text="Get Employed"
+                                                    android:id="@+id/textView529"
+                                                    android:textSize="19dp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                        </ViewFlipper>
+
+                                        <ViewFlipper
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/subtitleRegisterFlipper"
+                                            android:layout_gravity="center"
+                                            android:foregroundGravity="center"
+                                            android:autoStart="false"
+                                            android:inAnimation="@anim/abc_grow_fade_in_from_bottom">
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:text="Let Companies Know What You are good at"
+                                                    android:id="@+id/textView525"
+                                                    android:layout_marginTop="10dp"
+                                                    android:textSize="12dp" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:id="@+id/textView526"
+                                                    android:layout_marginTop="10dp"
+                                                    android:textSize="12dp"
+                                                    android:text="Let People Know about your company" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:text="Make your Profile and get Calls From Companies"
+                                                    android:id="@+id/textView527"
+                                                    android:layout_marginTop="10dp"
+                                                    android:textSize="12dp" />
+                                            </LinearLayout>
+                                        </ViewFlipper>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"></LinearLayout>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Quickly Register as"
+                                    android:id="@+id/textView519"
+                                    android:layout_gravity="center_horizontal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="I WANT TO WORK"
+                                    android:id="@+id/getHiredTextView"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:textColor="#ffffff"
+                                    android:background="@color/newVector"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="OR"
+                                    android:id="@+id/textView518"
+                                    android:layout_gravity="center_horizontal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp">
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView522"
+                                        android:background="@color/border" />
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:id="@+id/hireLayout"
+                                        android:background="#00000000">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:id="@+id/textView520"
+                                            android:background="@color/border" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="I WANT TO HIRE"
+                                            android:id="@+id/textView517"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:gravity="center"
+                                            android:textStyle="bold"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="8dp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:id="@+id/textView521"
+                                            android:background="@color/border" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@+id/textView523"
+                                        android:background="@color/border" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

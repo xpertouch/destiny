@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#00000000"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+        <!--tools:showIn="@layout/activity_company_profile"&#45;&#45;!-->
+
+    <android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/infoProgress"
+            android:visibility="gone"
+            android:layout_marginTop="200dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:foregroundGravity="center"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="xt"
+                    android:id="@+id/textView306"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#9c9c9c"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:visibility="gone">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/progressBar2"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:id="@+id/scrollView14"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="399dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="399dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:id="@+id/infoLayout"
+                android:background="#f5f5f5">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp"
+                    android:layout_margin="2dp"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:visibility="visible"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="companyTitle"
+                                android:id="@+id/companyName"
+                                android:typeface="serif"
+                                android:textStyle="bold"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="----"
+                                android:id="@+id/companyTag"
+                                android:textSize="12dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:typeface="serif"
+                                android:textStyle="italic"
+                                android:textColor="@color/vectorColor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="1dp"
+                    android:layout_margin="2dp"
+                    android:visibility="visible">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="visible"
+                        android:background="#ffffff"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:id="@+id/callCompany">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/imageView105"
+                                    android:src="@drawable/call_blue"
+                                    android:layout_marginTop="7dp"
+                                    android:padding="5dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/line"
+                                android:visibility="visible"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/callTV"
+                                    android:textColor="#919191"
+                                    android:textSize="12dp"
+                                    android:visibility="visible"
+                                    android:layout_gravity="left"
+                                    android:text="Place Call "
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/line"
+                            android:visibility="visible"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:id="@+id/mailCompany">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/imageView110"
+                                    android:src="@drawable/mail"
+                                    android:layout_marginTop="7dp"
+                                    android:padding="5dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/line"
+                                android:visibility="visible"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/mailTV"
+                                    android:textColor="#919191"
+                                    android:textSize="12dp"
+                                    android:visibility="visible"
+                                    android:layout_gravity="left"
+                                    android:text="Drop an Email "
+                                    android:layout_marginLeft="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/line"
+                            android:visibility="visible"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:id="@+id/visitCompany">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/imageView111"
+                                    android:src="@drawable/website"
+                                    android:layout_marginTop="7dp"
+                                    android:padding="5dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/line"
+                                android:visibility="visible"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/visitTV"
+                                    android:textColor="#919191"
+                                    android:textSize="12dp"
+                                    android:visibility="visible"
+                                    android:layout_gravity="left"
+                                    android:text="Visit Official website "
+                                    android:layout_marginLeft="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/line"
+                            android:visibility="visible"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:id="@+id/shareDetails">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/imageView112"
+                                    android:src="@drawable/share"
+                                    android:layout_marginTop="7dp"
+                                    android:padding="5dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/line"
+                                android:visibility="visible"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/shareTV"
+                                    android:textColor="#919191"
+                                    android:textSize="12dp"
+                                    android:visibility="visible"
+                                    android:layout_gravity="left"
+                                    android:text="Suggest Company to a friend"
+                                    android:layout_marginLeft="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="1dp"
+                    android:layout_margin="2dp"
+                    android:visibility="visible">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f5f5f5"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:background="#ffffff"
+                            android:gravity="center"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/imageView109"
+                                    android:src="@drawable/company" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="About Company"
+                                    android:id="@+id/aboutTv"
+                                    android:textColor="#000000"
+                                    android:typeface="serif" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="---------------------------------"
+                                    android:id="@+id/aboutCompany"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textSize="12dp"
+                                    android:textColor="#b1b1b1"
+                                    android:gravity="center"
+                                    android:layout_marginTop="5dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="1dp"
+                    android:layout_margin="2dp"
+                    android:visibility="visible">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#ffffff"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="20dp" >
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:id="@+id/imageView113"
+                                android:src="@drawable/maps"
+                                android:layout_marginBottom="10dp" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Company Addresss"
+                                    android:id="@+id/addressTV"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#000000"
+                                    android:textSize="16dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:typeface="serif" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="----"
+                                    android:id="@+id/addressLine1"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#9a9a9a"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="----"
+                                    android:id="@+id/addressOpp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#9a9a9a"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="----"
+                                    android:id="@+id/addressState"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#9a9a9a"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="3dp"
+                    android:layout_margin="2dp"
+                    android:visibility="visible">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#ffffff"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:layout_marginTop="20dp" >
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/imageView71"
+                                    android:src="@drawable/posts"
+                                    android:layout_marginBottom="10dp"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Post By Company"
+                                        android:id="@+id/postsTV"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#000000"
+                                        android:textSize="16dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:typeface="serif" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:background="#ffffff">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/postsProgress"
+                                android:visibility="gone"
+                                android:layout_marginTop="50dp">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="xt"
+                                        android:id="@+id/textView305"
+                                        android:gravity="center"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#9c9c9c"
+                                        android:textSize="20dp"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:foregroundGravity="center" >
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleLarge"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:id="@+id/progressBar"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_centerHorizontal="true" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                android:id="@+id/companyPostsRV"
+                                android:background="#ffffff"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:gravity="center"
+                                android:id="@+id/noCompanyPosts"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/imageView114"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:src="@drawable/highlight"
+                                    android:scaleType="fitCenter" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="No Posts Found"
+                                    android:id="@+id/noPostsTitle"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Looks Like There are no Vacancies right now"
+                                    android:id="@+id/noPostsSubtitle"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="3dp"
+                    android:layout_margin="2dp"
+                    android:visibility="visible">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#ffffff"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible" >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:layout_marginTop="20dp" >
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/imageView73"
+                                    android:src="@drawable/posts"
+                                    android:layout_marginBottom="10dp"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Bucket Posts"
+                                        android:id="@+id/textView608"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#000000"
+                                        android:textSize="16dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:typeface="serif" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:background="#FFFFFF">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/bucketProgress"
+                                android:visibility="gone"
+                                android:layout_marginTop="50dp" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="xt"
+                                        android:id="@+id/textView628"
+                                        android:gravity="center"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#9c9c9c"
+                                        android:textSize="14dp"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:foregroundGravity="center" >
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleLarge"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:id="@+id/progressBar40"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_centerHorizontal="true" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/companyBucketRV"
+                                android:background="#ffffff"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:gravity="center"
+                                android:id="@+id/noCompanyBucket"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/imageView209"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:src="@drawable/highlight"
+                                    android:scaleType="fitCenter" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="Bucket Empty "
+                                    android:id="@+id/noBucketTitle"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="No Bucket Posts found"
+                                    android:id="@+id/noBucketSubtitle"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+</android.support.v4.widget.NestedScrollView>

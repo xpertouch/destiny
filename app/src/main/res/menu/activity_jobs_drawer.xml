@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Profile and Features">
+
+        <menu>
+            <item
+                android:id="@+id/hire_experts"
+                android:icon="@drawable/hire_new"
+                android:title="Hire Experts"  />
+            <item
+                android:id="@+id/app_bucket"
+                android:icon="@drawable/ic_whatshot_black_24dp"
+                android:title="Bucket Store"  />
+
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/profile"
+                android:title="Profile" />
+
+
+            <item
+                android:id="@+id/my_favourites"
+                android:icon="@drawable/fav_altrer"
+                android:title="My Favourites" />
+
+            <item
+                android:id="@+id/myCalls"
+                android:icon="@drawable/callsmade"
+                android:title="Call Log" />
+        </menu>
+
+    </item>
+
+
+    <item android:title="Accounts">
+        <menu>
+            <item
+                android:id="@+id/log_out"
+                android:icon="@drawable/swapped_arrows"
+                android:title="Switch User" />
+
+
+            <item
+                android:id="@+id/report_company"
+                android:icon="@drawable/traffic"
+                android:title="Action Center" />
+
+            <item
+                android:icon="@drawable/bulb_orange"
+                android:id="@+id/send_a_feedback"
+                android:title="Feedback" />
+
+
+        </menu>
+    </item>
+
+    <item
+        android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/rate_app"
+                android:icon="@drawable/fav_uncecked"
+                android:title="Like Us" />
+            <item
+                android:id="@+id/share_app"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Share App" />
+        </menu>
+    </item>
+
+
+    <group>
+
+            <item
+                android:id="@+id/update_latest"
+                android:title="Update to the latest version" />
+            <item
+                android:id="@+id/add_bussiness"
+                android:title="Add a Misssing Expertise"/>
+        <item
+            android:id="@+id/terms"
+            android:title="Terms Of Service"/>
+            <item
+                android:id="@+id/help_center"
+                android:title="Help Center" />
+
+            <item
+                android:id="@+id/exit_app"
+                android:title="Exit"/>
+    </group>
+
+
+
+</menu>
+
+
+
+
+
+
+
+
+
