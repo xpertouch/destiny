@@ -2,6 +2,7 @@ package corp.burenz.expertouch.service;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.widget.Toast;
@@ -10,6 +11,16 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.util.Config;
 
 
@@ -19,6 +30,7 @@ import corp.burenz.expertouch.util.Config;
  */
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private static final String TAG = MyFirebaseInstanceIDService.class.getSimpleName();
+    String NARRATION = "narrate";
 
     @Override
     public void onTokenRefresh() {
@@ -51,5 +63,70 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         editor.commit();
 
     }
+
+
+    class UpdatFCMToken extends AsyncTask<String, String, String>{
+
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+            String urlToHit = getString(R.string.host) + "/registerations/update_fcm.php";
+            URL url;
+
+            StringBuilder stringBuilder         = new StringBuilder();
+            HttpURLConnection httpURLConnection;
+
+
+            try {
+
+                url = new URL(urlToHit + "?fcm_id=" + URLEncoder.encode(strings[0],"UTF-8") + "&userPhone="+strings[1]);
+                httpURLConnection = (HttpURLConnection) url.openConnection();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+
+                String line = "";
+                while ( (line = bufferedReader.readLine()) != null  ){
+                    stringBuilder.append(line + "\n");
+                }
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            return stringBuilder.toString();
+
+
+        }
+
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+
+            SharedPreferences sharedPreferences = getSharedPreferences(NARRATION, 0);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            if(s.contains("success")){
+                editor.putBoolean("token",true);
+                editor.apply();
+            }else{
+                editor.putBoolean("token",false);
+                editor.apply();
+            }
+
+
+
+
+        }
+    }
+
+
+
 }
 
