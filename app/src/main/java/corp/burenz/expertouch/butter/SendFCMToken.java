@@ -10,18 +10,18 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import corp.burenz.expertouch.R;
+
 /**
  * Created by buren on 19/11/17.
  */
 
 public class SendFCMToken extends AsyncTask<String, String, String> {
 
-    private String  urlToHit;
     private Context context;
 
-    public SendFCMToken(String urlToHit,  Context context){
+    public SendFCMToken(Context context){
 
-        this.urlToHit       = urlToHit;
         this.context        = context;
 
     }
@@ -31,7 +31,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
     protected String doInBackground(String... strings) {
 
         String NARRATION = "narrate";
-        String urlToHit             = this.urlToHit;
+        String urlToHit             = context.getString(R.string.host) + "/registrations/update_fcm.php";
         StringBuilder stringBuilder = new StringBuilder();
 
         URL url;
@@ -39,7 +39,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
 
         try {
 
-            url = new URL( this.urlToHit + "?fcm_id=" + urlToHit + "&userPhone=" + getUserPhoneNumber() );
+            url = new URL( urlToHit + "?fcm_id=" + urlToHit + "&userPhone=" + getUserPhoneNumber() );
             httpURLConnection = (HttpURLConnection) url.openConnection();
 
             BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(httpURLConnection.getInputStream()));

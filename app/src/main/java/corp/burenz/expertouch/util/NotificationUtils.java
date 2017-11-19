@@ -31,6 +31,7 @@ import java.util.Date;
 import java.util.List;
 
 import corp.burenz.expertouch.R;
+import corp.burenz.expertouch.activities.WelcomeActivity;
 
 /**
  * Created by Ravi on 31/03/15.
@@ -95,8 +96,7 @@ public class NotificationUtils {
     private void showSmallNotification(NotificationCompat.Builder mBuilder, int icon, String title, String message, String timeStamp, PendingIntent resultPendingIntent, Uri alarmSound) {
 
 
-        Intent notificationIntent = new Intent(Intent.ACTION_VIEW);
-        notificationIntent.setData(Uri.parse("http://www.wgn.com"));
+        Intent notificationIntent = new Intent(mContext,WelcomeActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(mContext, 0, notificationIntent, 0);
 
 

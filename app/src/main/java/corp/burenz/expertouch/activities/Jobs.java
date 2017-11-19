@@ -74,6 +74,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.FeedsAdapter;
+import corp.burenz.expertouch.butter.SendFCMToken;
 import corp.burenz.expertouch.util.Config;
 import corp.burenz.expertouch.util.NotificationUtils;
 import jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout;
@@ -249,6 +250,17 @@ public class Jobs extends AppCompatActivity
         FirebaseMessaging.getInstance().subscribeToTopic("/topics/news");
 
         Log.e("subscribe","inside subscribe topic");
+
+
+        /*sending token to server*/
+        if(!getSharedPreferences("narrate",0).getBoolean("token",false)){
+
+            new SendFCMToken(Jobs.this).execute();
+        }
+
+
+
+
 
        /* if (!TextUtils.isEmpty(regId))
             Toast.makeText(this, "Firebase Reg Id : "+regId, Toast.LENGTH_SHORT).show();
@@ -553,10 +565,6 @@ public class Jobs extends AppCompatActivity
 
 
     }
-
-
-
-
 
     void fabVisibility(){
 
@@ -2231,77 +2239,7 @@ public class Jobs extends AppCompatActivity
         }
     }
 
-//    class GetCompanyStatus extends AsyncTask< String , String, String >{
-//
-//        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-//        StringBuilder builder = new StringBuilder();
-//        BufferedReader bufferedReader;
-//
-//
-//        @Override
-//        protected String doInBackground(String... params) {
-//
-//
-//            String COMPANY_DETAILS = "myCompanyDetails";
-//            SharedPreferences myCompanyDetails;
-//            myCompanyDetails = getSharedPreferences(COMPANY_DETAILS,0);
-//
-//            nameValuePairs.add(new BasicNameValuePair("companyTitle",myCompanyDetails.getString("companyTitle","nothingHere")));
-//
-//            try {
-//
-//
-//                HttpClient httpClient = new DefaultHttpClient();
-//                HttpPost httpPost = new HttpPost("check_app_version.php");
-//
-//                HttpResponse httpResponse =  (HttpResponse) httpClient.execute(httpPost);
-//
-//                HttpEntity httpEntity = (HttpEntity) httpResponse.getEntity();
-//
-//
-//
-//                bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
-//                String str = "";
-//
-//                while (  (str = bufferedReader.readLine())  != null ){
-//
-//                    builder.append(str);
-//
-//                }
-//
-//
-//            } catch (ClientProtocolException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            } catch (Exception e){
-//
-//            }
-//
-//
-//            return builder.toString();
-//
-//
-//
-//        }
-//
-//
-//        @Override
-//        protected void onPostExecute(String s) {
-//            super.onPostExecute(s);
-//            String COMPANY_DETAILS = "myCompanyDetails";
-//            SharedPreferences myCompanyDetails;
-//            SharedPreferences.Editor editor;
-//
-//            myCompanyDetails = getSharedPreferences(COMPANY_DETAILS,0);
-//            if (s.equals("false")){
-//                editor = myCompanyDetails.edit();
-//                editor.putBoolean("CVERIFIED",false);editor.apply();
-//                editor.apply();
-//            }
-//
-//        }
-//    }
+
 
     void newVersionBanner(){
 
@@ -2404,8 +2342,6 @@ public class Jobs extends AppCompatActivity
 
 
     }
-
-
 
     void switchUser(){
 
@@ -2642,7 +2578,6 @@ public class Jobs extends AppCompatActivity
 
 
     }
-
 
     void switchOnClick(){
 
