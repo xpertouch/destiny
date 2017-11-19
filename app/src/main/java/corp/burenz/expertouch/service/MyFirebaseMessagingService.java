@@ -34,9 +34,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         Log.e(TAG, "From: " + remoteMessage.getFrom());
+        String NARRATION = "narrate";
 
         /* from user settings */
-        SharedPreferences sharedPreferences = getSharedPreferences("narration",0);
+        SharedPreferences sharedPreferences = getSharedPreferences(NARRATION,0);
         if(!sharedPreferences.getBoolean("push",true)){
             return;
         }
