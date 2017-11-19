@@ -255,7 +255,18 @@ public class Jobs extends AppCompatActivity
         /*sending token to server*/
         if(!getSharedPreferences("narrate",0).getBoolean("token",false)){
 
-            new SendFCMToken(Jobs.this).execute();
+            try {
+
+                new SendFCMToken(Jobs.this).execute();
+
+            }catch (Exception e){
+                e.printStackTrace();
+
+            }
+
+
+
+
         }
 
 

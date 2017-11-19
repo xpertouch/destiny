@@ -11,6 +11,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import corp.burenz.expertouch.R;
+import corp.burenz.expertouch.util.Config;
 
 /**
  * Created by buren on 19/11/17.
@@ -39,7 +40,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
 
         try {
 
-            url = new URL( urlToHit + "?fcm_id=" + urlToHit + "&userPhone=" + getUserPhoneNumber() );
+            url = new URL( urlToHit + "?fcm_id=" + getUserToken() + "&userPhone=" + getUserPhoneNumber() );
             httpURLConnection = (HttpURLConnection) url.openConnection();
 
             BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(httpURLConnection.getInputStream()));
@@ -92,6 +93,21 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
         return  sharedPreferences.getString("userPhone","0");
 
     }
+
+
+
+    public String getUserToken(){
+        SharedPreferences sharedPreferences = context
+                .getSharedPreferences(Config.SHARED_PREF,0);
+
+        return  sharedPreferences.getString("regId","no_token");
+
+    }
+
+
+
+
+
 
 
 
