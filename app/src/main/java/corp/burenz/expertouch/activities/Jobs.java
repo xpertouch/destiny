@@ -263,7 +263,7 @@ public class Jobs extends AppCompatActivity
             }catch (Exception e){
                 e.printStackTrace();
 
-                Toast.makeText(this, "Exception updating the token " + e.toString(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Exception updating the token " + e.toString(), Toast.LENGTH_SHORT).show();
 
 
             }
