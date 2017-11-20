@@ -55,11 +55,12 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         Log.e(TAG, "sendRegistrationToServer: " + token);
         FirebaseMessaging.getInstance().subscribeToTopic("news");
 
+
         try {
+            new SendFCMToken(getApplicationContext()).execute();
 
         }catch (Exception e ){
-
-            new SendFCMToken(getApplicationContext()).execute();
+        e.printStackTrace();
 
         }
 

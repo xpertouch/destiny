@@ -3,6 +3,7 @@ package corp.burenz.expertouch.butter;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +32,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String... strings) {
 
-        String NARRATION = "narrate";
+        String NARRATION            = "narrate";
         String urlToHit             = context.getString(R.string.host) + "/registrations/update_fcm.php";
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -71,6 +72,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
         String NARRATION = "narrate";
+        Toast.makeText(context, "from server " + s, Toast.LENGTH_SHORT).show();
 
         SharedPreferences sharedPreferences = context.getSharedPreferences(NARRATION, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -90,7 +92,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
 
         String LOCAL_APP_DATA = "userInformation";
         SharedPreferences sharedPreferences = context.getSharedPreferences(LOCAL_APP_DATA,0);
-        return  sharedPreferences.getString("userPhone","0");
+        return  sharedPreferences.getString("userEmail","0");
 
     }
 
@@ -99,7 +101,6 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
     public String getUserToken(){
         SharedPreferences sharedPreferences = context
                 .getSharedPreferences(Config.SHARED_PREF,0);
-
         return  sharedPreferences.getString("regId","no_token");
 
     }

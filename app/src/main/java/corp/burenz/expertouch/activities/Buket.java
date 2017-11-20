@@ -36,17 +36,7 @@ public class Buket extends AppCompatActivity {
         logoTypeface = Typeface.createFromAsset(Buket.this.getAssets(), "fonts/forte.ttf");
         bucketTitle.setTypeface(logoTypeface);
 
-
-
-
-
-
-
-
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
-
-
-
 
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
 
@@ -56,13 +46,16 @@ public class Buket extends AppCompatActivity {
 
                     case 0:
                         return new Offers();
+
                     case 1:
                         return new EducationBucket();
+
                     case 2:
                         return new Health();
+
                     case 3:
                         return new Products();
-
+                    
                     default:
                         return new Products();
 

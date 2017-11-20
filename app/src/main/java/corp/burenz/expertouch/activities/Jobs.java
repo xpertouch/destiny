@@ -254,13 +254,16 @@ public class Jobs extends AppCompatActivity
 
         /*sending token to server*/
         if(!getSharedPreferences("narrate",0).getBoolean("token",false)){
-
+//            Toast.makeText(this, "Token hasnot been upated yet initiating task", Toast.LENGTH_SHORT).show();
             try {
 
                 new SendFCMToken(Jobs.this).execute();
 
             }catch (Exception e){
                 e.printStackTrace();
+
+                Toast.makeText(this, "Exception updating the token " + e.toString(), Toast.LENGTH_SHORT).show();
+
 
             }
 
@@ -1470,7 +1473,6 @@ public class Jobs extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        displayFirebaseRegId();
 
 //      fireabse code starts here
         // register GCM registration complete receiver

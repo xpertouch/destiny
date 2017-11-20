@@ -439,7 +439,7 @@
                     android:layout_height="1dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Small Text"
-                    android:id="@+id/textView498"
+                    android:id="@+id/textView4989"
                     android:background="@color/line"
                     android:visibility="visible" />
 

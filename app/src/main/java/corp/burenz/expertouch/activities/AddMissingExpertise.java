@@ -67,14 +67,6 @@ public class AddMissingExpertise extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
-
 class AddExpertise extends AsyncTask<String,String,String>{
 
 
