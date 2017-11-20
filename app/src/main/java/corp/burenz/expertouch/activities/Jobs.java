@@ -48,6 +48,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.mikepenz.iconics.Iconics;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
@@ -334,14 +335,14 @@ public class Jobs extends AppCompatActivity
                     // gcm successfully registered
                     // now subscribe to `global` topic to receive app wide notifications
                     FirebaseMessaging.getInstance().subscribeToTopic(Config.TOPIC_GLOBAL);
-                Toast.makeText(context, "inside registeration complete", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "inside registeration complete", Toast.LENGTH_SHORT).show();
 
                 } else if (intent.getAction().equals(Config.PUSH_NOTIFICATION)) {
                     // new push notification is received
 
                     String message = intent.getStringExtra("message");
 
-                    Toast.makeText(getApplicationContext(), "Push notification: " + message, Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(), "Push notification: " + message, Toast.LENGTH_LONG).show();
 
 
                 }

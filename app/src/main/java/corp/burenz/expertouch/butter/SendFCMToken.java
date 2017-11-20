@@ -72,7 +72,7 @@ public class SendFCMToken extends AsyncTask<String, String, String> {
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
         String NARRATION = "narrate";
-        Toast.makeText(context, "from server " + s, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context, "from server " + s, Toast.LENGTH_SHORT).show();
 
         SharedPreferences sharedPreferences = context.getSharedPreferences(NARRATION, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
