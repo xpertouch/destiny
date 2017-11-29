@@ -393,7 +393,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                 //setting Dialog View
                 verificationStatus = userData.getBoolean("VERIFIED", false);
                 if (verificationStatus) {
-                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.verified_user);
                     cancelVerify = (Button) dialog.findViewById(R.id.cancelVerified);
                     callVerify = (Button)dialog.findViewById(R.id.callVerified);

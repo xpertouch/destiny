@@ -38,8 +38,11 @@
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
             android:name="corp.burenz.expertouch.activities.MainFrame"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name="corp.burenz.expertouch.activities.WelcomeActivity" >
+        <activity
+            android:name="corp.burenz.expertouch.activities.WelcomeActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,20 +53,29 @@
         <activity
             android:name="corp.burenz.expertouch.activities.ExpertDetails"
             android:label="@string/title_activity_expert_details" />
-        <activity android:name="corp.burenz.expertouch.activities.MoreDetails" />
-        <activity android:name="corp.burenz.expertouch.activities.SkilledExperts" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.MoreDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.SkilledExperts"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.Jobs"
             android:label="@string/title_activity_jobs"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
-        <activity android:name="corp.burenz.expertouch.activities.Hire" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.Hire"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.Profile"
-            android:label="@string/title_activity_profile" />
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.OwnChoice"
-            android:label="My Profile" />
+            android:label="My Profile"
+            android:screenOrientation="portrait" />
         <activity android:name="corp.burenz.expertouch.activities.Filter" />
         <activity
             android:name="corp.burenz.expertouch.activities.XpertRegistration"
@@ -71,34 +83,47 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="corp.burenz.expertouch.activities.CompanyProfile"
-            android:label="@string/title_activity_company_profile" />
+            android:label="@string/title_activity_company_profile"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.PostAdd"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="corp.burenz.expertouch.activities.MyCompany"
-            android:label="@string/title_activity_my_company" />
+            android:label="@string/title_activity_my_company"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.RegisterCompany"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name="corp.burenz.expertouch.activities.UpdateApp" />
-        <activity android:name="corp.burenz.expertouch.activities.MyFavouritesActivity" />
-        <activity android:name="corp.burenz.expertouch.activities.MyCalls" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.UpdateApp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.MyFavouritesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.MyCalls"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.SettingsActivity"
             android:label="@string/title_activity_my_company"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="corp.burenz.expertouch.activities.FeedbackActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name="corp.burenz.expertouch.activities.HelpCenter" />
         <activity
             android:name="corp.burenz.expertouch.activities.AddMissingExpertise"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name="corp.burenz.expertouch.activities.MyIntroActivity" />
         <activity
             android:name="corp.burenz.expertouch.activities.VerifyCompany"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name="corp.burenz.expertouch.activities.MyCompanyPosts" />
         <activity
@@ -107,7 +132,8 @@
         <activity android:name="corp.burenz.expertouch.activities.Buket" />
         <activity
             android:name="corp.burenz.expertouch.activities.TermsOfService"
-            android:label="@string/title_activity_terms_of_service" />
+            android:label="@string/title_activity_terms_of_service"
+            android:screenOrientation="portrait" />
         <activity android:name="corp.burenz.expertouch.activities.Workshop" />
 
         <service android:name="corp.burenz.expertouch.service.MyFirebaseInstanceIDService" >

@@ -26,8 +26,11 @@
 
         <activity
             android:name=".activities.MainFrame"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activities.WelcomeActivity">
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,19 +44,29 @@
         <activity
             android:name=".activities.ExpertDetails"
             android:label="@string/title_activity_expert_details" />
-        <activity android:name=".activities.MoreDetails" />
-        <activity android:name=".activities.SkilledExperts" />
+        <activity
+            android:name=".activities.MoreDetails"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.SkilledExperts"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Jobs"
             android:label="@string/title_activity_jobs"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
-        <activity android:name=".activities.Hire" />
+
+        <activity
+            android:name=".activities.Hire"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Profile"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_profile" />
         <activity
             android:name=".activities.OwnChoice"
+            android:screenOrientation="portrait"
             android:label="My Profile" />
         <activity android:name=".activities.Filter" />
         <activity
@@ -62,34 +75,46 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities.CompanyProfile"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_company_profile" />
         <activity
             android:name=".activities.PostAdd"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities.MyCompany"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_my_company" />
         <activity
             android:name=".activities.RegisterCompany"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name=".activities.UpdateApp" />
-        <activity android:name=".activities.MyFavouritesActivity" />
-        <activity android:name=".activities.MyCalls" />
+        <activity
+            android:name=".activities.UpdateApp"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.MyFavouritesActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activities.MyCalls" android:screenOrientation="portrait" />
         <activity
             android:name=".activities.SettingsActivity"
             android:label="@string/title_activity_my_company"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities.FeedbackActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".activities.HelpCenter" />
         <activity
             android:name=".activities.AddMissingExpertise"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".activities.MyIntroActivity" />
         <activity
             android:name=".activities.VerifyCompany"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".activities.MyCompanyPosts" />
         <activity
@@ -97,6 +122,7 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".activities.Buket" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activities.TermsOfService"
             android:label="@string/title_activity_terms_of_service" />
 

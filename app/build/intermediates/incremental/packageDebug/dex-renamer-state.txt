@@ -1,4 +1,4 @@
-#Sun Nov 19 22:36:13 IST 2017
+#Wed Nov 29 19:39:33 IST 2017
 base.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e10ecdc72746f58f5a9efdbd3dfd414a7c87050a
 renamed.1=classes2.dex
 renamed.0=classes.dex

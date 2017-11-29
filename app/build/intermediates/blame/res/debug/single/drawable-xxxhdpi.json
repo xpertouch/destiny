@@ -8,12 +8,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_share_black_24dp.png"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/add.png",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/add.png"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/cancel_white.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/cancel_white.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/add.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/add.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/expert.png",
