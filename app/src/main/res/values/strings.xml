@@ -8,6 +8,7 @@
     <string name="education">Education</string>
     <string name="health">Health</string>
     <string name="products">Products</string>
+    <string name="social_handler">app1clickaway</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_expert_details">ExpertDetails</string>

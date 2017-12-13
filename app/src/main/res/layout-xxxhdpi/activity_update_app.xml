@@ -321,7 +321,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:text="Copyright &#169;  1clickaway 2017 All Rights Reserved"
+                android:text="Copyright &#169; 2017 1clickaway All Rights Reserved"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textSize="10dp" />
         </LinearLayout>

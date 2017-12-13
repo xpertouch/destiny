@@ -140,6 +140,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_one.jpg"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/insta.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/insta.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/suppliers.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/suppliers.jpg"
     },

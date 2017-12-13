@@ -9,8 +9,8 @@ android {
         applicationId "corp.burenz.expertouch"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 5
+        versionName "1.0.3"
 
     }
 
@@ -23,6 +23,7 @@ android {
 
 
 }
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile('com.github.florent37:materialviewpager:1.2.0@aar') {

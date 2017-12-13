@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="corp.burenz.expertouch"
-    android:versionCode="3"
-    android:versionName="1.0.2" >
+    android:versionCode="5"
+    android:versionName="1.0.3" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -52,7 +52,8 @@
         <activity android:name="corp.burenz.expertouch.util.CallPermissions" />
         <activity
             android:name="corp.burenz.expertouch.activities.ExpertDetails"
-            android:label="@string/title_activity_expert_details" />
+            android:label="@string/title_activity_expert_details"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.MoreDetails"
             android:screenOrientation="portrait" />
@@ -76,7 +77,9 @@
             android:name="corp.burenz.expertouch.activities.OwnChoice"
             android:label="My Profile"
             android:screenOrientation="portrait" />
-        <activity android:name="corp.burenz.expertouch.activities.Filter" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.Filter"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.XpertRegistration"
             android:screenOrientation="portrait"
@@ -128,6 +131,7 @@
         <activity android:name="corp.burenz.expertouch.activities.MyCompanyPosts" />
         <activity
             android:name="corp.burenz.expertouch.activities.ReportCompany"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name="corp.burenz.expertouch.activities.Buket" />
         <activity

@@ -352,8 +352,6 @@
                 </ViewFlipper>
 
 
-
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -433,6 +431,19 @@
                             android:layout_marginRight="5dp" />
                     </LinearLayout>
                 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 <TextView
@@ -515,6 +526,8 @@
                             android:layout_marginRight="5dp" />
                     </LinearLayout>
                 </LinearLayout>
+
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -689,7 +702,6 @@
                             android:scaleType="center" />
                     </LinearLayout>
                 </LinearLayout>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -698,6 +710,7 @@
                     android:id="@+id/textView645"
                     android:background="@color/line"
                     android:visibility="visible" />
+
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -766,7 +779,6 @@
                             android:scaleType="center" />
                     </LinearLayout>
                 </LinearLayout>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -775,6 +787,85 @@
                     android:id="@+id/textView648"
                     android:background="@color/line"
                     android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp" >
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imageButton1412"
+                            android:background="#00000000"
+                            android:src="@raw/insta"
+                            android:scaleType="fitCenter"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="instagram"
+                            android:id="@+id/textView64s6"
+                            android:textSize="15dp"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Visit our instagram Profile"
+                            android:id="@+id/textView6u47"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" >
+
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/instagram_button"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:background="#00000000"
+                            android:src="@drawable/open_in_browser"
+                            android:scaleType="center" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/textView648"
+                    android:background="@color/line"
+                    android:visibility="visible" />
+
+
             </LinearLayout>
         </ScrollView>
 
@@ -896,7 +987,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="News Letters"
+                            android:text="Update Profile"
                             android:id="@+id/textView501"
                             android:textColor="#ffffff"
                             android:layout_marginLeft="10dp"
@@ -915,7 +1006,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                android:text="You may recieve newsletters from us as well"
+                                android:text="bucket posts are filtered according to your state"
                                 android:id="@+id/textView515"
                                 android:textColor="#ffffff"
                                 android:textIsSelectable="true"

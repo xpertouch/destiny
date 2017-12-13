@@ -43,6 +43,7 @@
         <activity android:name=".util.CallPermissions" />
         <activity
             android:name=".activities.ExpertDetails"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_expert_details" />
         <activity
             android:name=".activities.MoreDetails"
@@ -68,7 +69,10 @@
             android:name=".activities.OwnChoice"
             android:screenOrientation="portrait"
             android:label="My Profile" />
-        <activity android:name=".activities.Filter" />
+        <activity android:name=".activities.Filter"
+            android:screenOrientation="portrait"
+
+            />
         <activity
             android:name=".activities.XpertRegistration"
             android:screenOrientation="portrait"
@@ -96,7 +100,8 @@
             android:name=".activities.MyFavouritesActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".activities.MyCalls" android:screenOrientation="portrait" />
+        <activity android:name=".activities.MyCalls"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.SettingsActivity"
             android:label="@string/title_activity_my_company"
@@ -119,6 +124,7 @@
         <activity android:name=".activities.MyCompanyPosts" />
         <activity
             android:name=".activities.ReportCompany"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".activities.Buket" />
         <activity
