@@ -4,16 +4,24 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/business.mp3"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/healthcare.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/healthcare.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_three.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_three.jpg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/fashion.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/fashion.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/web.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/web.png"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/software.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/software.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_two.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_two.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/insta.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/insta.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hire.mp3",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hire.mp3"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/facebook.png",
@@ -32,104 +40,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/money_saved.jpg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/media.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/media.jpg"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hdp_animm.jpeg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hdp_animm.jpeg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_three.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_three.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/expert_de.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/expert_de.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/labours.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/labours.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/upbeat.mp3",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/upbeat.mp3"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hdp_anim.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hdp_anim.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/progress.gif",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/progress.gif"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/books_shelf.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/books_shelf.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_five.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_five.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/agents.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/agents.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_four.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_four.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/enabled.mp3",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/enabled.mp3"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/companydef.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/companydef.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/accountant.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/accountant.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_part_two.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_part_two.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/mechanics.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/mechanics.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/twitter.png",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/twitter.png"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_one.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_one.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_three.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_three.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/web.png",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/web.png"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_two.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_two.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/doctors.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/doctors.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hire.mp3",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hire.mp3"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/laywers.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/laywers.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/trash.jpg",
@@ -140,12 +56,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_one.jpg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/insta.png",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/insta.png"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/expert_de.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/expert_de.jpg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/suppliers.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/suppliers.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hdp_anim.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hdp_anim.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_six.jpg",
@@ -168,55 +84,63 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/guide.mp3"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/transporters.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/transporters.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/books_shelf.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/books_shelf.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_five.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_five.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_two.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_two.jpg"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_four.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_four.jpg"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/pop.m4a",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/pop.m4a"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/enabled.mp3",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/enabled.mp3"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/ownchoice.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/ownchoice.jpg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/rikshaws.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/rikshaws.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/engineers.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/engineers.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/companydef.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/companydef.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/sample.jpeg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/sample.jpeg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/teachers.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/teachers.jpg"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_five.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_five.jpg"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/artisians.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/artisians.jpg"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/contracrors.jpg",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/contracrors.jpg"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_part_two.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_part_two.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/notific.wav",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/notific.wav"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/twitter.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/twitter.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/bucketstore.mp3",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/bucketstore.mp3"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_one.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_one.jpg"
     }
 ]

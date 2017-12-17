@@ -46,12 +46,12 @@ public class Registrations extends AppCompatActivity {
         // add the HomeScreen Fragment
 
 
-            MediaPlayer ourSplasSound =  MediaPlayer.create(Registrations.this,R.raw.upbeat);
+//            MediaPlayer ourSplasSound =  MediaPlayer.create(Registrations.this,R.raw.upbeat);
 
 
-        //    ourSplasSound.start();
-            ourSplasSound.isPlaying();
-            ourSplasSound.setLooping(true);
+//        //    ourSplasSound.start();
+//            ourSplasSound.isPlaying();
+//            ourSplasSound.setLooping(true);
 
         if (savedInstanceState == null) {
 

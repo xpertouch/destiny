@@ -172,7 +172,7 @@ public class UpdateApp extends AppCompatActivity implements View.OnClickListener
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("version","silicon"));
+            nameValuePairs.add(new BasicNameValuePair("version","v1.0.3"));
 
             try {
                 HttpClient httpClient = new DefaultHttpClient();

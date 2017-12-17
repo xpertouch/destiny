@@ -75,7 +75,9 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.FeedsAdapter;
+import corp.burenz.expertouch.butter.MySharedConfig;
 import corp.burenz.expertouch.butter.SendFCMToken;
+import corp.burenz.expertouch.util.BannerUtils;
 import corp.burenz.expertouch.util.Config;
 import corp.burenz.expertouch.util.NotificationUtils;
 import jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout;
@@ -84,11 +86,10 @@ import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 import static android.content.Context.SEARCH_SERVICE;
 
 public class Jobs extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
 
     SharedPreferences introduceMe;
-    String INTRODUCE_ME = "introduction";
     String APP_VERSION = "appVersion";
     SharedPreferences appVersion;
 
@@ -100,7 +101,6 @@ public class Jobs extends AppCompatActivity
     RecyclerView.Adapter filterRecyclerAdapter;
     Typeface logoTypeface;
     SharedPreferences userData;
-    String LOCAL_APP_DATA = "userInformation";
     SharedPreferences feedsFilter;
     TextView postAddView,viewMyPostView;
     String CURRENT_FILTER = "feedsFilter";
@@ -358,7 +358,7 @@ public class Jobs extends AppCompatActivity
 
 
 
-        introduceMe = getSharedPreferences(INTRODUCE_ME,0);
+        introduceMe = getSharedPreferences(MySharedConfig.IntroPrefs.INTRODUCE_ME,0);
 
 
 
@@ -382,7 +382,7 @@ public class Jobs extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-          userData = getSharedPreferences(LOCAL_APP_DATA,0);
+          userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
 
                 if (userData.getBoolean("VERIFIED",false)){
 
@@ -427,7 +427,7 @@ public class Jobs extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor;
-                introduceMe = getSharedPreferences(INTRODUCE_ME,0);
+                introduceMe = getSharedPreferences(MySharedConfig.IntroPrefs.INTRODUCE_ME,0);
                 editor = introduceMe.edit();
                 editor.putBoolean("tappedPostFab",true);
                 editor.apply();
@@ -494,7 +494,12 @@ public class Jobs extends AppCompatActivity
         noAdverts.startAnimation(animation);
         feedsFilter = getSharedPreferences(CURRENT_FILTER,0);
 
+
         new FeedsLoader(Jobs.this,whatsNewRecycler).execute();
+
+             /*check whether to put custom banner or not*/
+        new BannerUtils(). new IsBannerCustom(Jobs.this).execute();
+        Log.e("Banner","executed bisBannerCustom");
 
         searchView();
 
@@ -579,15 +584,15 @@ public class Jobs extends AppCompatActivity
 
 
 
+
     }
 
     void fabVisibility(){
 
 
         SharedPreferences userData;
-        String LOCAL_APP_DATA = "userInformation";
 
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
         Boolean isCompany =  userData.getBoolean("COMPANY",false);
 
         if (fab.getVisibility() == View.VISIBLE){
@@ -613,7 +618,7 @@ public class Jobs extends AppCompatActivity
                 }
             },1000);
 
-            introduceMe = getSharedPreferences(INTRODUCE_ME,0);
+            introduceMe = getSharedPreferences(MySharedConfig.IntroPrefs.INTRODUCE_ME,0);
             if (!introduceMe.getBoolean("tappedPostFab",false)){
                 new MaterialTapTargetPrompt.Builder(Jobs.this)
                         .setTarget(findViewById(R.id.postAddFab))
@@ -850,7 +855,7 @@ public class Jobs extends AppCompatActivity
                             //startActivity(new Intent(Jobs.this,OwnChoice.class));
 
 
-                            userData = getSharedPreferences(LOCAL_APP_DATA,0);
+                            userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
                             if (userData.getBoolean("VERIFIED",false)){
 
                                 if(userData.getBoolean("EXPERT",false)){
@@ -1064,7 +1069,7 @@ public class Jobs extends AppCompatActivity
 
         TextView userName,userEmail;
         ImageView  statusImage;
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
         userEmail = (TextView)findViewById(R.id.userEmailJobs);
         userName =  (TextView)findViewById(R.id.userNameJobs);
         try {
@@ -1089,7 +1094,7 @@ public class Jobs extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
 
 
 
@@ -1124,7 +1129,7 @@ public class Jobs extends AppCompatActivity
         // Handle navigation view item clicks here.
 
 
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -1272,6 +1277,12 @@ public class Jobs extends AppCompatActivity
 
 
     }
+
+
+
+
+
+
 
     public class FeedsLoader extends AsyncTask<String,String,String>{
 
@@ -2168,7 +2179,7 @@ public class Jobs extends AppCompatActivity
 
     void bannerScanner(){
 
-        userData = Jobs.this.getSharedPreferences(LOCAL_APP_DATA, Context.MODE_PRIVATE);
+        userData = Jobs.this.getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA, Context.MODE_PRIVATE);
 
 
         if (!userData.getBoolean("VERIFIED",false)){
@@ -2359,7 +2370,7 @@ public class Jobs extends AppCompatActivity
 
     void switchUser(){
 
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
         final TextView switchDescribeTop,switchDescribeBottom,cLoggedInAs;
         TextView logOutAccount;
         TextView cancelSwitch;

@@ -861,7 +861,7 @@
                     android:layout_height="1dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Small Text"
-                    android:id="@+id/textView648"
+                    android:id="@+id/textView6948"
                     android:background="@color/line"
                     android:visibility="visible" />
 

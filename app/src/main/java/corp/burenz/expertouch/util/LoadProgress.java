@@ -42,8 +42,8 @@ public class LoadProgress extends View {
 
     private void init(Context context){
 
-            InputStream gifInputStream = context.getResources().openRawResource(R.raw.progress);
-            gifMovie = Movie.decodeStream(gifInputStream);
+//            InputStream gifInputStream = context.getResources().openRawResource(R.raw.progress);
+//            gifMovie = Movie.decodeStream(gifInputStream);
 
             movieWidth = gifMovie.width();
             movieHeight = gifMovie.height();

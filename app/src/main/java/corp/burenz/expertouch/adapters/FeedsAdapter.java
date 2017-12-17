@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.CardView;
@@ -28,6 +29,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.android.volley.toolbox.ImageLoader;
@@ -36,8 +38,10 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.Buket;
@@ -49,8 +53,10 @@ import corp.burenz.expertouch.activities.OwnChoice;
 import corp.burenz.expertouch.activities.Profile;
 import corp.burenz.expertouch.activities.RegisterCompany;
 import corp.burenz.expertouch.activities.XpertRegistration;
+import corp.burenz.expertouch.butter.MySharedConfig;
 import corp.burenz.expertouch.databases.CallLogs;
 import corp.burenz.expertouch.databases.Favourites;
+import corp.burenz.expertouch.util.BannerUtils;
 import corp.burenz.expertouch.util.CallPermissions;
 import corp.burenz.expertouch.util.MySingleton;
 
@@ -60,19 +66,20 @@ import corp.burenz.expertouch.util.MySingleton;
 
 public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHolder> {
 
-    ArrayList<String> titleArray, subtitleArray, postDateArray, websiteArray, emailArray, banners;
-    ArrayList<String> callArray;
-    Context context;
-    SharedPreferences userData;
-    View myView;
-    String LOCAL_APP_DATA = "userInformation";
+    private ArrayList<String> titleArray, subtitleArray, postDateArray, websiteArray, emailArray, banners;
+    private ArrayList<String> callArray, slidingBannerURLS;
+    private Context context;
+    private SharedPreferences userData;
+    private View myView;
+    private String LOCAL_APP_DATA = "userInformation";
+    private SliderLayout sliderLayout;
 
 
-    Intent companyProfileIntent;
-    Animation animation;
-    RecyclerView jobCountsR;
-    RecyclerView.Adapter adapter;
-    String[] finalCount;
+    private Intent companyProfileIntent;
+    private Animation animation;
+    private RecyclerView jobCountsR;
+    private RecyclerView.Adapter adapter;
+    private String[] finalCount;
 
     public FeedsAdapter(Context context, ArrayList<String> title, ArrayList<String> subtitle, ArrayList<String> postDate, ArrayList<String> callArray, ArrayList<String> websiteArray, ArrayList<String> emailArray,ArrayList<String> banners) {
 
@@ -85,7 +92,11 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         this.emailArray = emailArray;
         this.banners = banners;
 
+
     }
+
+
+
 
 
     public static class FeedsViewHolder extends RecyclerView.ViewHolder {
@@ -100,24 +111,25 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         final ViewFlipper offlineFlipper;
         SliderLayout sliderShow;
 
+
         public FeedsViewHolder(View itemView) {
             super(itemView);
-            sliderPannelLL = (LinearLayout) itemView.findViewById(R.id.sliderPannleLL);
-            titleTextView = (TextView) itemView.findViewById(R.id.textViewTitle);
-            mainFrame = (NetworkImageView) itemView.findViewById(R.id.imageViewBirthday);
+            sliderPannelLL  = (LinearLayout) itemView.findViewById(R.id.sliderPannleLL);
+            titleTextView   = (TextView) itemView.findViewById(R.id.textViewTitle);
+            mainFrame       = (NetworkImageView) itemView.findViewById(R.id.imageViewBirthday);
             newsFeedsFlpper = (ViewFlipper) itemView.findViewById(R.id.newsFeedsFlipper);
-            switchFeeds = (ViewFlipper) itemView.findViewById(R.id.switchFeeds);
-            callFeed = (ImageView) itemView.findViewById(R.id.callFeed);
-            mailFeed = (ImageView) itemView.findViewById(R.id.mailFeed);
-            visitFeed = (ImageView) itemView.findViewById(R.id.visitFeed);
-            shareFeed = (ImageView) itemView.findViewById(R.id.shareFeed);
-            textViewDate = (TextView) itemView.findViewById(R.id.textViewDate);
-            companyProfile = (ImageView) itemView.findViewById(R.id.takeMeToProfile);
-            cardView =(CardView)itemView.findViewById(R.id.cardView);
-            jobCountsR = (RecyclerView)itemView.findViewById(R.id.jobCountsR);
-            saveForOffline = (ImageView) itemView.findViewById(R.id.saveForOffline);
-            offlineFlipper = (ViewFlipper)itemView.findViewById(R.id.offlineFlipper);
-            sliderShow = (SliderLayout) itemView.findViewById(R.id.slider);
+            switchFeeds     = (ViewFlipper) itemView.findViewById(R.id.switchFeeds);
+            callFeed        = (ImageView) itemView.findViewById(R.id.callFeed);
+            mailFeed        = (ImageView) itemView.findViewById(R.id.mailFeed);
+            visitFeed       = (ImageView) itemView.findViewById(R.id.visitFeed);
+            shareFeed       = (ImageView) itemView.findViewById(R.id.shareFeed);
+            textViewDate    = (TextView) itemView.findViewById(R.id.textViewDate);
+            companyProfile  = (ImageView) itemView.findViewById(R.id.takeMeToProfile);
+            cardView        = (CardView)itemView.findViewById(R.id.cardView);
+            jobCountsR      =  (RecyclerView)itemView.findViewById(R.id.jobCountsR);
+            saveForOffline  = (ImageView) itemView.findViewById(R.id.saveForOffline);
+            offlineFlipper  = (ViewFlipper)itemView.findViewById(R.id.offlineFlipper);
+            sliderShow      = (SliderLayout) itemView.findViewById(R.id.slider);
         }
     }
 
@@ -136,6 +148,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         final ImageView  callFeed, mailFeed, visitFeed, shareFeed, verifiedImage,companyProfile;
         LinearLayout sliderPannelLL;
         NetworkImageView mainFrame;
+
         final Dialog dialog = new Dialog(context);
         final ViewFlipper newsFeedsFlpper, switchFeeds;
         final TextView verifiedTitle, verifiedSubtitle;
@@ -183,6 +196,9 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         offlineFlipper = holder.offlineFlipper;
         sliderShow = holder.sliderShow;
 
+        this.sliderLayout = sliderShow;
+
+
         companyProfileIntent = new Intent(context,CompanyProfile.class);
 
         cardView.startAnimation(animation);
@@ -200,58 +216,65 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
+
+
+
+
+
+
         if (position == 0){
             sliderPannelLL.setVisibility(View.VISIBLE);
 
-            DefaultSliderView hireSlide = new DefaultSliderView(context);
-            hireSlide
-                    .image(R.raw.banner_one);
+            DefaultSliderView hireSlide             = new DefaultSliderView(context);
+            DefaultSliderView bucketSlide           = new DefaultSliderView(context);
+            DefaultSliderView offlineUsageSlide     = new DefaultSliderView(context);
+            DefaultSliderView registerCompanySide   = new DefaultSliderView(context);
+            DefaultSliderView registerExpertSlide   = new DefaultSliderView(context);
+            DefaultSliderView slide6                = new DefaultSliderView(context);
+
+
+            SharedPreferences sharedPreferences = context.getSharedPreferences(MySharedConfig.BannerPrefs.BANNER_PREF,0);
+            if (sharedPreferences.getBoolean(MySharedConfig.BannerPrefs.IS_CUSTOM_BOOLEAN,false)){
+
+                BannerUtils.BannerMethods bannerUtils = new BannerUtils(). new BannerMethods(context);
+
+                hireSlide           .image(bannerUtils.getBanner1());
+                bucketSlide         .image(bannerUtils.getBanner2());
+                offlineUsageSlide   .image(bannerUtils.getBanner3());
+                registerCompanySide .image(bannerUtils.getBanner4());
+                registerExpertSlide .image(bannerUtils.getBanner5());
+                slide6              .image(bannerUtils.getBanner6());
+
+
+                Log.e("Banners",  bannerUtils.getBanner1() + bannerUtils.getBanner2() + bannerUtils.getBanner3() + bannerUtils.getBanner4() + bannerUtils.getBanner5());
+
+            }else{
+
+                Log.e("Banner","inside deaafult banner");
+
+                hireSlide           .image(R.raw.banner_one);
+                bucketSlide         .image(R.raw.banner_two);
+                offlineUsageSlide   .image(R.raw.banner_three);
+                registerCompanySide .image(R.raw.banner_four);
+                registerExpertSlide .image(R.raw.banner_five);
+                slide6              .image(R.raw.banner_six);
+
+            }
 
             sliderShow.addSlider(hireSlide);
-
-
-
-
-            DefaultSliderView bucketSlide = new DefaultSliderView(context);
-            bucketSlide
-                    .image(R.raw.banner_two);
             sliderShow.addSlider(bucketSlide);
-
-            DefaultSliderView offlineUsageSlide = new DefaultSliderView(context);
-            offlineUsageSlide
-                    .image(R.raw.banner_three);
-
-
             sliderShow.addSlider(offlineUsageSlide);
-
-
-            DefaultSliderView registerCompanySide = new DefaultSliderView(context);
-            registerCompanySide
-                    .image(R.raw.banner_four);
-
-
             sliderShow.addSlider(registerCompanySide);
-
-
-            DefaultSliderView registerExpertSlide = new DefaultSliderView(context);
-            registerExpertSlide
-                    .image(R.raw.banner_five);
-
-
             sliderShow.addSlider(registerExpertSlide);
-
-
-            DefaultSliderView slide6 = new DefaultSliderView(context);
-            slide6
-                    .image(R.raw.banner_six);
-
-
             sliderShow.addSlider(slide6);
 
 
 
             sliderShow.setPresetTransformer(SliderLayout.Transformer.ZoomOutSlide);
             sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+
+
+
 
 
 
@@ -516,8 +539,10 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                         snackbar.show();
 
                     }else {
+                        String current_date = "Saved on : " + DateFormat.getDateTimeInstance().format(new Date());
 
-                        favourites.insertCompany(titleArray.get(position).toString(),postDateArray.get(position).toString(),subtitleArray.get(position).toString(),callArray.get(position).toString(),websiteArray.get(position).toString(),emailArray.get(position).toString(),banners.get(holder.getAdapterPosition()).toString());
+
+                        favourites.insertCompany(titleArray.get(position).toString(),current_date,subtitleArray.get(position).toString(),callArray.get(position).toString(),websiteArray.get(position).toString(),emailArray.get(position).toString(),banners.get(holder.getAdapterPosition()).toString());
 
                         Snackbar.make(v,"Successfully Added to My Favourites",Snackbar.LENGTH_LONG).show();
 //                        Snackbar snackbar = Snackbar.make(v, "Successfully Added To My Favourites", Snackbar.LENGTH_LONG)
@@ -699,6 +724,9 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         return titleArray.size();
     }
+
+
+
 
 
 
