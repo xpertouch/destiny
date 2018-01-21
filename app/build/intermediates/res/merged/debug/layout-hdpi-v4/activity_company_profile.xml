@@ -66,6 +66,7 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
+    <!--7006325318-->
     <include layout="@layout/content_company_profile" />
 
 

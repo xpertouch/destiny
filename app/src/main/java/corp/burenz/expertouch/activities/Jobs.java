@@ -21,15 +21,12 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.LayoutInflaterCompat;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.ActionMenuView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,7 +45,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.mikepenz.iconics.Iconics;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
@@ -76,14 +72,12 @@ import java.util.List;
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.FeedsAdapter;
 import corp.burenz.expertouch.butter.MySharedConfig;
-import corp.burenz.expertouch.butter.SendFCMToken;
+import corp.burenz.expertouch.util.SendFCMToken;
 import corp.burenz.expertouch.util.BannerUtils;
 import corp.burenz.expertouch.util.Config;
 import corp.burenz.expertouch.util.NotificationUtils;
 import jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout;
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
-
-import static android.content.Context.SEARCH_SERVICE;
 
 public class Jobs extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{

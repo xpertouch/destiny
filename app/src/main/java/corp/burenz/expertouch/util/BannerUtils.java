@@ -45,7 +45,7 @@ public class BannerUtils {
             URL url;
 
 
-            String urlToHit             =  "http://xpertouch.pe.hu/banners/is_custom.php";
+            String urlToHit             =  "http://1clickaway.in/banners/is_custom.php";
             StringBuilder stringBuilder = new StringBuilder();
 
             try {
@@ -144,7 +144,7 @@ public class BannerUtils {
 
 
             StringBuilder stringBuilder = new StringBuilder();
-            String urlToHit = "http://xpertouch.pe.hu/banners/get_custom_banners.php";
+            String urlToHit = "http://1clickaway.in/banners/get_custom_banners.php";
 
 
             try {

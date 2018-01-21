@@ -113,6 +113,9 @@ public class Filter extends AppCompatActivity {
             "All Types",
             "Agriculture"
             ,"Animal Husbandry"
+            ,"PWD"
+            ,"PDD"
+            ,"PHE"
             ,"Fisheries"
             ,"Dairies"
             ,"Building Construction"

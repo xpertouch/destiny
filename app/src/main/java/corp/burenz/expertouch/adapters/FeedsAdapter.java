@@ -259,6 +259,113 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                 registerExpertSlide .image(R.raw.banner_five);
                 slide6              .image(R.raw.banner_six);
 
+
+
+
+
+
+                hireSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                    @Override
+                    public void onSliderClick(BaseSliderView slider) {
+                        context.startActivity(new Intent(context,Hire.class));
+                    }
+                });
+
+
+                bucketSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                    @Override
+                    public void onSliderClick(BaseSliderView slider) {
+                        context.startActivity(new Intent(context,Buket.class));
+                    }
+                });
+
+
+
+
+                offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                    @Override
+                    public void onSliderClick(BaseSliderView slider) {
+                        context.startActivity(new Intent(context,MyFavouritesActivity.class));
+                    }
+                });
+
+
+
+                registerCompanySide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                    @Override
+                    public void onSliderClick(BaseSliderView slider) {
+
+
+                        userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
+
+                        if (userData.getBoolean("VERIFIED",false)){
+
+
+                            if(userData.getBoolean("EXPERT",false)){
+
+                                context.startActivity(new Intent(context,Profile.class));
+
+                            }else if (userData.getBoolean("COMPANY",false)){
+
+                                context.startActivity(new Intent(context,MyCompany.class));
+
+                            }else{
+
+                                context.startActivity(new Intent(context,RegisterCompany.class));
+                            }
+
+                        }
+                        else {
+
+                            context.startActivity(new Intent(context,OwnChoice.class));
+                        }
+
+
+                    }
+                });
+
+
+                registerExpertSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                    @Override
+                    public void onSliderClick(BaseSliderView slider) {
+
+
+                        userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
+
+                        if (userData.getBoolean("VERIFIED",false)){
+
+
+                            if(userData.getBoolean("EXPERT",false)){
+
+                                context.startActivity(new Intent(context,Profile.class));
+
+                            }else if (userData.getBoolean("COMPANY",false)){
+
+                                context.startActivity(new Intent(context,MyCompany.class));
+
+                            }else{
+
+                                context.startActivity(new Intent(context,XpertRegistration.class));
+                            }
+
+                        }
+                        else {
+
+                            context.startActivity(new Intent(context,OwnChoice.class));
+                        }
+
+                    }
+                });
+
+//            offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+//                @Override
+//                public void onSliderClick(BaseSliderView slider) {
+//                    context.startActivity(new Intent(context,MyFavouritesActivity.class));
+//                }
+//            });
+
+
+
             }
 
             sliderShow.addSlider(hireSlide);
@@ -274,109 +381,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
             sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
 
 
-
-
-
-
-            hireSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(BaseSliderView slider) {
-                    context.startActivity(new Intent(context,Hire.class));
-                }
-            });
-
-
-            bucketSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(BaseSliderView slider) {
-                    context.startActivity(new Intent(context,Buket.class));
-                }
-            });
-
-
-
-
-            offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(BaseSliderView slider) {
-                    context.startActivity(new Intent(context,MyFavouritesActivity.class));
-                }
-            });
-
-
-
-            registerCompanySide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(BaseSliderView slider) {
-
-
-                    userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
-
-                    if (userData.getBoolean("VERIFIED",false)){
-
-
-                        if(userData.getBoolean("EXPERT",false)){
-
-                            context.startActivity(new Intent(context,Profile.class));
-
-                        }else if (userData.getBoolean("COMPANY",false)){
-
-                            context.startActivity(new Intent(context,MyCompany.class));
-
-                        }else{
-
-                            context.startActivity(new Intent(context,RegisterCompany.class));
-                        }
-
-                    }
-                    else {
-
-                        context.startActivity(new Intent(context,OwnChoice.class));
-                    }
-
-
-                }
-            });
-
-
-            registerExpertSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(BaseSliderView slider) {
-
-
-                    userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
-
-                    if (userData.getBoolean("VERIFIED",false)){
-
-
-                        if(userData.getBoolean("EXPERT",false)){
-
-                            context.startActivity(new Intent(context,Profile.class));
-
-                        }else if (userData.getBoolean("COMPANY",false)){
-
-                            context.startActivity(new Intent(context,MyCompany.class));
-
-                        }else{
-
-                            context.startActivity(new Intent(context,XpertRegistration.class));
-                        }
-
-                    }
-                    else {
-
-                        context.startActivity(new Intent(context,OwnChoice.class));
-                    }
-
-                }
-            });
-
-//            offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-//                @Override
-//                public void onSliderClick(BaseSliderView slider) {
-//                    context.startActivity(new Intent(context,MyFavouritesActivity.class));
-//                }
-//            });
 
 
 

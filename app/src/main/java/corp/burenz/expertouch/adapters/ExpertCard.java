@@ -36,19 +36,19 @@ import corp.burenz.expertouch.util.MySingleton;
 public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolder> {
 
 
-    SharedPreferences userData;
-    String LOCAL_APP_DATA = "userInformation";
-    ArrayList<String> expertCityArray;
-    ArrayList<String> expertNames;
-    ArrayList<String> expertMainExpertise;
-    ArrayList<String> expertCallStatus;
-    ArrayList<String> expertSkillsArray;
-    ArrayList<String> expertPic;
-    ArrayList<String> expertId;
-    LinearLayout expertCard;
-    Animation cardAnimation;
-    NetworkImageView expertAvtarV;
-    CircularImageView circularView;
+    private SharedPreferences userData;
+    private String LOCAL_APP_DATA = "userInformation";
+    private ArrayList<String> expertCityArray;
+    private ArrayList<String> expertNames;
+    private ArrayList<String> expertMainExpertise;
+    private ArrayList<String> expertCallStatus;
+    private ArrayList<String> expertSkillsArray;
+    private ArrayList<String> expertPic;
+    private ArrayList<String> expertId;
+    private LinearLayout expertCard;
+    private Animation cardAnimation;
+    private NetworkImageView expertAvtarV;
+    private CircularImageView circularView;
 
 
     Context context;
@@ -58,13 +58,13 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
     public ExpertCard(Context context,ArrayList<String> expertId,ArrayList<String> expertPic ,ArrayList<String> expertNames, ArrayList<String> expertMainExpertise,ArrayList<String> expertCityArray,ArrayList<String> expertCallStatus,ArrayList<String> expertSkills){
         this.context = context;
 
-        this.expertNames = expertNames;
-        this.expertMainExpertise = expertMainExpertise;
-        this.expertCityArray = expertCityArray;
-        this.expertCallStatus = expertCallStatus;
-        this.expertSkillsArray = expertSkills;
-        this.expertPic = expertPic;
-        this.expertId = expertId;
+        this.expertNames            = expertNames;
+        this.expertMainExpertise    = expertMainExpertise;
+        this.expertCityArray        = expertCityArray;
+        this.expertCallStatus       = expertCallStatus;
+        this.expertSkillsArray      = expertSkills;
+        this.expertPic              = expertPic;
+        this.expertId               = expertId;
 
     }
 
@@ -382,19 +382,19 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
         public ExpertVieweHolder(View itemView) {
             super(itemView);
 
-            statusShutetrFlipper = (ViewFlipper)itemView.findViewById(R.id.statusShutterFlipper);
-            shutterUp = (ImageView)itemView.findViewById(R.id.shutterUpButton);
-            shutterDown = (ImageView)itemView.findViewById(R.id.shutterDown);
-            visitProfile = (TextView)itemView.findViewById(R.id.visitProfile);
-            expertName = (TextView)itemView.findViewById(R.id.expertName);
-            expertExpertise = (TextView)itemView.findViewById(R.id.expertExpertise);
-            expertExperience = (TextView)itemView.findViewById(R.id.expertExperience);
-            expertStatus = (TextView)itemView.findViewById(R.id.expertStatus);
-            expertSkills = (TextView)itemView.findViewById(R.id.expertSkills);
-            expertCard = (LinearLayout) itemView.findViewById(R.id.expertCard);
-            addExpertOfffline = (TextView) itemView.findViewById(R.id.addExpertOffline);
-            expertAvtarV = (NetworkImageView) itemView.findViewById(R.id.expertAvtarIV);
-            circularView = (CircularImageView) itemView.findViewById(R.id.circularView);
+            statusShutetrFlipper    = (ViewFlipper)itemView.findViewById(R.id.statusShutterFlipper);
+            shutterUp               = (ImageView)itemView.findViewById(R.id.shutterUpButton);
+            shutterDown             = (ImageView)itemView.findViewById(R.id.shutterDown);
+            visitProfile            = (TextView)itemView.findViewById(R.id.visitProfile);
+            expertName              = (TextView)itemView.findViewById(R.id.expertName);
+            expertExpertise         = (TextView)itemView.findViewById(R.id.expertExpertise);
+            expertExperience        = (TextView)itemView.findViewById(R.id.expertExperience);
+            expertStatus            = (TextView)itemView.findViewById(R.id.expertStatus);
+            expertSkills            = (TextView)itemView.findViewById(R.id.expertSkills);
+            expertCard              = (LinearLayout) itemView.findViewById(R.id.expertCard);
+            addExpertOfffline       = (TextView) itemView.findViewById(R.id.addExpertOffline);
+            expertAvtarV            = (NetworkImageView) itemView.findViewById(R.id.expertAvtarIV);
+            circularView            = (CircularImageView) itemView.findViewById(R.id.circularView);
 
   //          circularView.setBorderColor(R.color.newVector);
     //        circularView.setBorderWidth(10);
@@ -403,7 +403,7 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
 //            // or with custom param
 //            circularView.setShadowRadius(30);
 //            circularView.setShadowColor(Color.WHITE);
-    circularView.setShadowRadius(50);
+            circularView.setShadowRadius(50);
             circularView.setShadowColor(Color.RED);
 
 

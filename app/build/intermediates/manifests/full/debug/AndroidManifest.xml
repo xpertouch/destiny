@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="corp.burenz.expertouch"
-    android:versionCode="5"
+    android:versionCode="8"
     android:versionName="1.0.3" >
 
     <uses-sdk
@@ -123,7 +123,9 @@
             android:name="corp.burenz.expertouch.activities.AddMissingExpertise"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name="corp.burenz.expertouch.activities.MyIntroActivity" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.MyIntroActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="corp.burenz.expertouch.activities.VerifyCompany"
             android:screenOrientation="portrait"

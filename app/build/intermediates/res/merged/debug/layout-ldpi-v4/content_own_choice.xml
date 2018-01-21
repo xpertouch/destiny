@@ -687,7 +687,7 @@
                                         <TextView
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:text="I WANT TO HIRE"
+                                            android:text="PROMOTE MY BUSINESS"
                                             android:id="@+id/textView517"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_marginLeft="20dp"

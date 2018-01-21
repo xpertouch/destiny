@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-155:12
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-157:12
 	package
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:3:5-37
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
@@ -50,7 +50,7 @@ MERGED from [com.google.firebase:firebase-iid:10.0.1] /home/buren/.android/build
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:11:22-76
 application
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:13:5-153:19
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:13:5-155:19
 MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] /home/buren/.android/build-cache/ee81973c592c526e7875c5ad92a60be6f5e11c1e/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:23.2.0] /home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:cardview-v7:23.3.0] /home/buren/.android/build-cache/1b34718fb2e8c0f4121d12eef69972283467b218/output/AndroidManifest.xml:22:5-20
@@ -275,65 +275,67 @@ ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:116:13-59
 activity#corp.burenz.expertouch.activities.MyIntroActivity
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:119:9-64
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:119:9-121:15
+	android:screenOrientation
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:120:13-49
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:119:19-61
 activity#corp.burenz.expertouch.activities.VerifyCompany
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:120:9-123:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:122:9-125:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:122:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:124:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:123:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:125:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:121:13-53
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:123:13-53
 activity#corp.burenz.expertouch.activities.MyCompanyPosts
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:124:9-63
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:126:9-63
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:124:19-60
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:126:19-60
 activity#corp.burenz.expertouch.activities.ReportCompany
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:125:9-128:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:127:9-130:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:127:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:129:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:128:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:130:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:126:13-53
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:128:13-53
 activity#corp.burenz.expertouch.activities.Buket
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:129:9-54
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:131:9-54
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:129:19-51
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:131:19-51
 activity#corp.burenz.expertouch.activities.TermsOfService
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:130:9-133:71
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:132:9-135:71
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:131:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:133:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:133:13-68
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:135:13-68
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:132:13-54
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:134:13-54
 activity#corp.burenz.expertouch.activities.Workshop
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:135:9-66
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:137:9-66
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:135:19-54
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:137:19-54
 service#corp.burenz.expertouch.service.MyFirebaseInstanceIDService
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:137:9-142:19
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:139:9-144:19
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:138:13-64
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:140:13-64
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:139:13-141:29
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:141:13-143:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:140:17-79
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:142:17-79
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:140:25-77
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:142:25-77
 service#corp.burenz.expertouch.service.MyFirebaseMessagingService
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:144:9-149:19
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:146:9-151:19
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:145:13-63
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:147:13-63
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:146:13-148:29
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:148:13-150:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:147:17-77
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:149:17-77
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:147:25-75
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:149:25-75
 uses-sdk
 INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.github.florent37:materialviewpager:1.2.0] /home/buren/.android/build-cache/6c5adb113ff5e82af1049ea81e7b9c8941d688ca/output/AndroidManifest.xml:7:5-9:41

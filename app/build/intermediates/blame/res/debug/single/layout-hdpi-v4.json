@@ -56,12 +56,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/intro_six.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/content_my_company.xml",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/content_my_company.xml"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/post_job.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/post_job.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/content_my_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/content_my_company.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/my_posts.xml",
@@ -92,12 +92,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/content_terms_of_service.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/intro_three.xml",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/intro_three.xml"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/activity_my_company_posts.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/activity_my_company_posts.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/intro_three.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/intro_three.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/activity_hire.xml",
@@ -144,12 +144,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/activity_company_profile.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/content_jobs.xml",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/content_jobs.xml"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/backups.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/backups.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/content_jobs.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-hdpi/content_jobs.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-hdpi-v4/design_register_company.xml",

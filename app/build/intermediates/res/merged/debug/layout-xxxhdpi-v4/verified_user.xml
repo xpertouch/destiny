@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="You are authorised to call , email, share,this advertiser"
+                android:text="You are authorised to make use of this information"
                 android:id="@+id/verifiedSubtitle"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
