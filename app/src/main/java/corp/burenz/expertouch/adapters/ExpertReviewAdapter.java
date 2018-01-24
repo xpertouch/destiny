@@ -40,6 +40,11 @@ public class ExpertReviewAdapter extends RecyclerView.Adapter<ExpertReviewAdapte
         this.review_stars       =   review_stars;
         this.review_body        =   review_body;
         this.review_user_title  =   review_user_title;
+
+
+
+
+
     }
 
 
