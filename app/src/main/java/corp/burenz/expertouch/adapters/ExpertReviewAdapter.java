@@ -69,8 +69,8 @@ public class ExpertReviewAdapter extends RecyclerView.Adapter<ExpertReviewAdapte
             holder.line_divider_layout.setBackgroundColor(Color.RED);
 
         }else{
-            holder.ratings_holder.setCardBackgroundColor(Color.GREEN);
-            holder.line_divider_layout.setBackgroundColor(Color.GREEN);
+            holder.ratings_holder.setCardBackgroundColor(mContext.getResources().getColor(R.color.green));
+            holder.line_divider_layout.setBackgroundColor( mContext.getResources().getColor(R.color.green));
 
         }
 

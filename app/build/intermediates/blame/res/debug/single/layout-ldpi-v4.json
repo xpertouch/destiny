@@ -16,12 +16,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/catagories.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_xpert_registration.xml",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_xpert_registration.xml"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/no_connectivity.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/no_connectivity.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_xpert_registration.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_xpert_registration.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_buket.xml",
@@ -36,12 +36,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/finally_profile.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_favourites.xml",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_favourites.xml"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_report_company.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_report_company.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/activity_favourites.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-ldpi/activity_favourites.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-ldpi-v4/catagories_adapter.xml",

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_star_black_24dp.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_star_black_24dp.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/edit_pic_white.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-anydpi-v21/edit_pic_white.xml"
     }

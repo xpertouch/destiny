@@ -120,6 +120,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/sample.jpeg"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/demo_image.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/demo_image.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_five.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_five.jpg"
     },
