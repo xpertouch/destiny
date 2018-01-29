@@ -721,9 +721,10 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:visibility="gone"
             android:background="#d60099cc">
 
-            <LinearLayout
+           <!-- <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -762,7 +763,7 @@
                         android:visibility="invisible" />
                 </LinearLayout>
 
-            </LinearLayout>
+            </LinearLayout>-->
 
         </LinearLayout>
 
@@ -789,6 +790,51 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Update Available"
+                            android:id="@+id/textView543"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="You are using an older version of this app.."
+                                android:id="@+id/textView548"
+                                android:textColor="#ffffff" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView183"
+                                android:src="@drawable/close"
+                                android:scaleType="fitStart"
+                                android:padding="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -797,7 +843,12 @@
                         android:id="@+id/textView549"
                         android:layout_gravity="left"
                         android:textSize="12dp"
+                        android:visibility="gone"
                         android:textColor="#ffffff" />
+
+
+
+
                 </LinearLayout>
 
                 <LinearLayout

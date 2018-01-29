@@ -63,7 +63,7 @@ public class ExpertReviewAdapter extends RecyclerView.Adapter<ExpertReviewAdapte
         holder.rb_review_stars      .setText(review_stars.get(position));
         holder.review_user_title    .setText(review_user_title.get(position));
 
-        if( Integer.parseInt(review_stars.get(position)) == 1){
+        if( Float.valueOf(review_stars.get(position)) == 1){
 
             holder.ratings_holder.setCardBackgroundColor(Color.RED);
             holder.line_divider_layout.setBackgroundColor(Color.RED);
@@ -71,6 +71,14 @@ public class ExpertReviewAdapter extends RecyclerView.Adapter<ExpertReviewAdapte
         }else{
             holder.ratings_holder.setCardBackgroundColor(mContext.getResources().getColor(R.color.green));
             holder.line_divider_layout.setBackgroundColor( mContext.getResources().getColor(R.color.green));
+
+        }
+
+        if(review_body.get(position).length() == 0){
+            holder.tv_review_body.setVisibility(View.GONE);
+
+        }else{
+            holder.tv_review_body.setVisibility(View.VISIBLE);
 
         }
 

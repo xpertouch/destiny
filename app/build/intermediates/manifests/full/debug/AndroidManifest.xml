@@ -33,20 +33,16 @@
         android:theme="@style/ClickAwayTheme" >
         <activity
             android:name="corp.burenz.expertouch.activities.RateExpertActivity"
-            android:hardwareAccelerated="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" >
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="corp.burenz.expertouch.util.ExpertReviews"
-            android:hardwareAccelerated="false"
+            android:name="corp.burenz.expertouch.activities.AllExpertReviews"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="corp.burenz.expertouch.activities.ExpertReviews"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|adjustPan" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="corp.burenz.expertouch.activities.Registrations"

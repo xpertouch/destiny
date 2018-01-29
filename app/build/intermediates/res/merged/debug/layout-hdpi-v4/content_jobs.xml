@@ -30,9 +30,6 @@
                 android:id="@+id/main_swipe"
                 android:visibility="visible">
 
-
-
-
                 <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
