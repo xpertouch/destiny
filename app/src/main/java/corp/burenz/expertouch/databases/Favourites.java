@@ -47,7 +47,7 @@ public class Favourites  {
     private final  Context ourContext;
     private SQLiteDatabase sqLiteDatabase;
 
-    Cursor cursor;
+    private Cursor cursor;
 
 
     public Favourites(Context ourContext) {
@@ -71,13 +71,13 @@ public class Favourites  {
 
         ContentValues contentValues = new ContentValues();
         
-        contentValues.put(COMPANY_TITLE,companyTitles);
-        contentValues.put(POST_DATE,postDate);
-        contentValues.put(JOB_INFO,jobInfo);
-        contentValues.put(COMPANY_CALL,companyCall);
-        contentValues.put(MAIL_COMPANY,companyMail);
-        contentValues.put(COMPANY_BANNER,companyBanner);
-        contentValues.put(VISIT_COMPANY,companyVisit);
+        contentValues.put(COMPANY_TITLE,    companyTitles);
+        contentValues.put(POST_DATE,        postDate);
+        contentValues.put(JOB_INFO,         jobInfo);
+        contentValues.put(COMPANY_CALL,     companyCall);
+        contentValues.put(MAIL_COMPANY,     companyMail);
+        contentValues.put(COMPANY_BANNER,   companyBanner);
+        contentValues.put(VISIT_COMPANY,    companyVisit);
 
         return sqLiteDatabase.insert(DATABASE_TABLE,null,contentValues);
 
@@ -106,7 +106,7 @@ public class Favourites  {
   
 
 
-  public String getExpertId(){
+    public String   getExpertId(){
       Cursor cursor;
       String []list = {
             EXPERT_ID,
@@ -119,7 +119,7 @@ public class Favourites  {
         }
         return result;
     }
-    public String getExpertName(){
+    public String   getExpertName(){
         String []list = {
             EXPERT_NAME,
         };
@@ -131,10 +131,7 @@ public class Favourites  {
         }
         return result;
     }
-
-
-
-    public String getExpertExpertise(){
+    public String   getExpertExpertise(){
         String []list = {
                 EXPERT_EXPERTISE
         };
@@ -146,10 +143,7 @@ public class Favourites  {
         }
         return result;
     }
-
-
-
-    public String getExpertExperience(){
+    public String   getExpertExperience(){
 
         String []list = {
 
@@ -176,13 +170,7 @@ public class Favourites  {
 
 
     }
-
-
-
-
-
-
-    public String getExpertPic(){
+    public String   getExpertPic(){
         String []list = {
                 EXPERT_PIC
         };
@@ -194,10 +182,7 @@ public class Favourites  {
         }
         return result;
     }
-
-
-
-    public String getExpertStatus(){
+    public String   getExpertStatus(){
 
         String []list = {
 
@@ -220,8 +205,7 @@ public class Favourites  {
         }
         return result;
     }
-
-    public String getExpertSkills(){
+    public String   getExpertSkills(){
 
         String []list = {
 
@@ -248,14 +232,14 @@ public class Favourites  {
 
 
     }
-    public void deleteExpert(String expertiD){
+    public void     deleteExpert(String expertiD){
 
         String exec = "DELETE FROM "+EXPERT_PROFILES+" WHERE "+EXPERT_ID+"='"+expertiD+"'";
         Log.e("sasa",exec);
         sqLiteDatabase.delete(EXPERT_PROFILES,EXPERT_ID +"='"+expertiD+"'",null);
         sqLiteDatabase.execSQL(exec);
     }
-    public int getExpertCount(){
+    public int      getExpertCount(){
 
         String[] list  = {
                 EXPERT_NAME,
@@ -267,8 +251,7 @@ public class Favourites  {
 //        Toast.makeText(ourContext, "" + i , Toast.LENGTH_SHORT).show();
         return 1;
     }
-
-    public String getCompanyTitle(){
+    public String   getCompanyTitle(){
 
         String[] list  = {
                 COMPANY_TITLE,
@@ -291,7 +274,7 @@ public class Favourites  {
 
 
     }
-    public String getCompanyBanner(){
+    public String   getCompanyBanner(){
 
         String[] list  = {
                 COMPANY_BANNER,
@@ -314,8 +297,7 @@ public class Favourites  {
 
 
     }
-
-    public String getPostDate(){
+    public String   getPostDate(){
         String[] list  = {
                 POST_DATE,
         };
@@ -337,7 +319,7 @@ public class Favourites  {
 
 
     }
-    public String getJobInfo(){
+    public String   getJobInfo(){
         String[] list  = {
                 JOB_INFO,
         };
@@ -360,7 +342,7 @@ public class Favourites  {
 
 
     }
-    public String getmailCompany(){
+    public String   getmailCompany(){
 
 
         String[] list  = {
@@ -386,10 +368,7 @@ public class Favourites  {
 
 
     }
-
-
-
-    public String getvisitCompany(){
+    public String   getvisitCompany(){
         String[] list  = {
                 VISIT_COMPANY,
         };
@@ -411,36 +390,7 @@ public class Favourites  {
 
 
     }
-
-
-//    public String getAddType(){
-//
-//
-//
-//        String[] list  = {
-//                ADD_TYPE,
-//        };
-//        cursor = sqLiteDatabase.query(DATABASE_TABLE,list,null,null,null,null,null);
-//        int iaddType = cursor.getColumnIndex(ADD_TYPE);
-//
-//        String result = "";
-//
-//
-//        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){
-//
-//            result = result + cursor.getString(iaddType)  + " \n";
-//
-//        }
-//
-//
-//        return result;
-//
-//
-//
-//    }
-
-
-    public String getcompanyCall(){
+    public String   getcompanyCall(){
 
         String[] list  = {
                 COMPANY_CALL,
@@ -466,7 +416,6 @@ public class Favourites  {
 
     }
 
-
     public void deletePost(String info){
 
     //    sqLiteDatabase.delete(DATABASE_TABLE,JOB_INFO + "=" + info+"",null );
@@ -474,6 +423,9 @@ public class Favourites  {
         Log.e("exec",exec);
         sqLiteDatabase.execSQL(exec);
     }
+
+
+
     public int getFavouriteCount(){
 
 
@@ -483,7 +435,31 @@ public class Favourites  {
         return 1;
 
     }
-
+//    public String getAddType(){
+//
+//
+//
+//        String[] list  = {
+//                ADD_TYPE,
+//        };
+//        cursor = sqLiteDatabase.query(DATABASE_TABLE,list,null,null,null,null,null);
+//        int iaddType = cursor.getColumnIndex(ADD_TYPE);
+//
+//        String result = "";
+//
+//
+//        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){
+//
+//            result = result + cursor.getString(iaddType)  + " \n";
+//
+//        }
+//
+//
+//        return result;
+//
+//
+//
+//    }
 
 //    public String getData(){
 //
@@ -533,7 +509,6 @@ public class Favourites  {
 //
 //
 //    }
-
     public boolean checkAvailibility(String s) {
 
 
@@ -551,10 +526,6 @@ public class Favourites  {
         return false;
 
     }
-
-
-
-
     public boolean checkExpertAvailibility(String s) {
 
 

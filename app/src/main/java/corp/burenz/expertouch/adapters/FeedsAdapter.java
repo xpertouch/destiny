@@ -11,6 +11,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.CardView;
@@ -45,6 +46,7 @@ import java.util.Date;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.Buket;
+import corp.burenz.expertouch.activities.ChannelSearchView;
 import corp.burenz.expertouch.activities.CompanyProfile;
 import corp.burenz.expertouch.activities.Hire;
 import corp.burenz.expertouch.activities.MyCompany;
@@ -101,15 +103,16 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
     public static class FeedsViewHolder extends RecyclerView.ViewHolder {
 
-        TextView titleTextView, subtitleTextView, textViewDate;
-        ImageView callFeed, mailFeed, visitFeed, shareFeed,companyProfile,saveForOffline;
-        NetworkImageView mainFrame;
-        ViewFlipper newsFeedsFlpper, switchFeeds;
-        CardView cardView;
-        LinearLayout sliderPannelLL;
-        RecyclerView jobCountsR;
-        final ViewFlipper offlineFlipper;
-        SliderLayout sliderShow;
+        TextView            titleTextView, subtitleTextView, textViewDate,showMeMoreTV;
+        ImageView           callFeed, mailFeed, visitFeed, shareFeed,companyProfile,saveForOffline;
+        NetworkImageView    mainFrame;
+        ViewFlipper         newsFeedsFlpper, switchFeeds;
+        CardView            cardView, recommendedCapsulrInjection;
+        LinearLayout        sliderPannelLL;
+        RecyclerView        jobCountsR;
+        final ViewFlipper   offlineFlipper;
+        SliderLayout        sliderShow;
+
 
 
         public FeedsViewHolder(View itemView) {
@@ -130,6 +133,10 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
             saveForOffline  = (ImageView) itemView.findViewById(R.id.saveForOffline);
             offlineFlipper  = (ViewFlipper)itemView.findViewById(R.id.offlineFlipper);
             sliderShow      = (SliderLayout) itemView.findViewById(R.id.slider);
+
+            recommendedCapsulrInjection =   (CardView) itemView.findViewById(R.id.recommended_capsule_injection);
+            showMeMoreTV    =   (TextView)itemView.findViewById(R.id.show_me_more_textview);
+
         }
     }
 
@@ -178,23 +185,23 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         userData = context.getSharedPreferences(LOCAL_APP_DATA, 0);
 
 
-        titleTextView = holder.titleTextView;
-        subtitleTextView = holder.subtitleTextView;
-        mainFrame = holder.mainFrame;
-        switchFeeds = holder.switchFeeds;
-        newsFeedsFlpper = holder.newsFeedsFlpper;
-        companyProfile = holder.companyProfile;
-        sliderPannelLL = holder.sliderPannelLL;
-        jobCountsR = holder.jobCountsR;
-        callFeed = holder.callFeed;
-        shareFeed = holder.shareFeed;
-        visitFeed = holder.visitFeed;
-        mailFeed = holder.mailFeed;
-        cardView = holder.cardView;
-        postDateTextView = holder.textViewDate;
-        saveForOffline = holder.saveForOffline;
-        offlineFlipper = holder.offlineFlipper;
-        sliderShow = holder.sliderShow;
+        titleTextView       = holder.titleTextView;
+        subtitleTextView    = holder.subtitleTextView;
+        mainFrame           = holder.mainFrame;
+        switchFeeds         = holder.switchFeeds;
+        newsFeedsFlpper     = holder.newsFeedsFlpper;
+        companyProfile      = holder.companyProfile;
+        sliderPannelLL      = holder.sliderPannelLL;
+        jobCountsR          = holder.jobCountsR;
+        callFeed            = holder.callFeed;
+        shareFeed           = holder.shareFeed;
+        visitFeed           = holder.visitFeed;
+        mailFeed            = holder.mailFeed;
+        cardView            = holder.cardView;
+        postDateTextView    = holder.textViewDate;
+        saveForOffline      = holder.saveForOffline;
+        offlineFlipper      = holder.offlineFlipper;
+        sliderShow          = holder.sliderShow;
 
         this.sliderLayout = sliderShow;
 
@@ -215,6 +222,31 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         }
 
 
+
+         /*seeting the capsule injection visibility to visible at place 3*/
+
+
+         if(titleArray.size() > 4){
+             if(position == 2){
+
+                 cardView.startAnimation(animation);
+                 holder.recommendedCapsulrInjection.setVisibility(View.VISIBLE);
+                 holder.recommendedCapsulrInjection.startAnimation(animation);
+
+             }else{
+                 holder.recommendedCapsulrInjection.setVisibility(View.GONE);
+
+             }
+
+         }
+
+
+         holder.showMeMoreTV.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 context.startActivity(new Intent(context, ChannelSearchView.class));
+             }
+         });
 
 
 

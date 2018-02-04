@@ -571,6 +571,8 @@
     </LinearLayout>
     </android.support.v7.widget.CardView>
 
+    <include layout="@layout/recomendded_follows_adapter" />
+
 
 </LinearLayout>
 

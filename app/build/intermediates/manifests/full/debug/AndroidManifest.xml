@@ -31,6 +31,13 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/ClickAwayTheme" >
+        <activity android:name="corp.burenz.expertouch.activities.ChannelSearchView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="corp.burenz.expertouch.activities.RateExpertActivity"
             android:screenOrientation="portrait"
@@ -56,11 +63,6 @@
         <activity
             android:name="corp.burenz.expertouch.activities.WelcomeActivity"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="corp.burenz.expertouch.util.CallPermissions" />
         <activity

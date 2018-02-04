@@ -8,10 +8,10 @@ package com.github.ksoichiro.android.observablescrollview;
 
 public final class R {
     public static final class attr {
-        public static final int layoutManager = 0x7f01014b;
-        public static final int reverseLayout = 0x7f01014d;
-        public static final int spanCount = 0x7f01014c;
-        public static final int stackFromEnd = 0x7f01014e;
+        public static final int layoutManager = 0x7f010156;
+        public static final int reverseLayout = 0x7f010158;
+        public static final int spanCount = 0x7f010157;
+        public static final int stackFromEnd = 0x7f010159;
     }
     public static final class dimen {
         public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0b006f;
@@ -20,7 +20,7 @@ public final class R {
         public static final int item_touch_helper_previous_elevation = 0x7f100006;
     }
     public static final class styleable {
-        public static final int[] RecyclerView = { 0x010100c4, 0x7f01014b, 0x7f01014c, 0x7f01014d, 0x7f01014e };
+        public static final int[] RecyclerView = { 0x010100c4, 0x7f010156, 0x7f010157, 0x7f010158, 0x7f010159 };
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_layoutManager = 1;
         public static final int RecyclerView_reverseLayout = 3;
