@@ -242,7 +242,7 @@ public class Jobs extends AppCompatActivity
         String regId = pref.getString("regId", null);
 
         Log.e(TAG, "Firebase reg id: " + regId);
-        FirebaseMessaging.getInstance().subscribeToTopic("/topics/news");
+//        FirebaseMessaging.getInstance().subscribeToTopic("/topics/news");
 
         Log.e("subscribe","inside subscribe topic");
 
@@ -434,8 +434,8 @@ public class Jobs extends AppCompatActivity
         });
         fabVisibility();
 
-        xper.setTypeface(logoTypeface);
-        touch.setTypeface(logoTypeface);
+        xper    .setTypeface(logoTypeface);
+        touch   .setTypeface(logoTypeface);
 
 
 

@@ -54,10 +54,10 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
     String result = "0";
 
 
-    String saleIndex;
+    String  saleIndex;
 
 
-    int postsLength = 0;
+    int     postsLength = 0;
 
     int TIME_OUT = 5000 ;
 
@@ -100,22 +100,22 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
         Button noDontDelete;
 
 
-        bucketPostDate = holder.bucketPostDate;
-        bucketPostTitle = holder.bucketPostTitle;
-        bucketPostSubtitle = holder.bucketPostSubtitle;
-        deleteBucketPost = holder.deleteBucketPost;
-        bucketDeletionFlipper = holder.bucketDeletionFlipper;
-        bucketPostCard = holder.bucketPostCard;
-        totalLikesV = holder.totalLikesV;
-        sureDelete = holder.sureDelete;
-        noDontDelete = holder.noDontDelete;
+        bucketPostDate          = holder.bucketPostDate;
+        bucketPostTitle         = holder.bucketPostTitle;
+        bucketPostSubtitle      = holder.bucketPostSubtitle;
+        deleteBucketPost        = holder.deleteBucketPost;
+        bucketDeletionFlipper   = holder.bucketDeletionFlipper;
+        bucketPostCard          = holder.bucketPostCard;
+        totalLikesV             = holder.totalLikesV;
+        sureDelete              = holder.sureDelete;
+        noDontDelete            = holder.noDontDelete;
 
 
         loonelyCompanyBucket = holder.loonelyCompanyBucket;
 
-        bucketPostDate.setText(postDates.get(position).toString());
-        bucketPostTitle.setText(postTitle.get(position).toString());
-        bucketPostSubtitle.setText(posts.get(position).toString());
+        bucketPostDate.setText(postDates.get(position));
+        bucketPostTitle.setText(postTitle.get(position));
+        bucketPostSubtitle.setText(posts.get(position));
 
 
 
@@ -139,7 +139,7 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
             public void onClick(View v) {
                 bucketDeletionFlipper.showNext();
 
-                new DeleteMyPost().execute(postId.get(holder.getAdapterPosition()).toString());
+                new DeleteMyPost().execute(postId.get(holder.getAdapterPosition()));
 
 
 

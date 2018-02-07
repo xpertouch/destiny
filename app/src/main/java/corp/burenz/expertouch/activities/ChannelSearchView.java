@@ -17,6 +17,9 @@ import android.widget.Toast;
 import android.animation.Animator;
 
 import android.support.v7.widget.DefaultItemAnimator;
+
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import org.cryse.widget.persistentsearch.DefaultVoiceRecognizerDelegate;
 import org.cryse.widget.persistentsearch.PersistentSearchView;
 import org.cryse.widget.persistentsearch.SearchItem;
@@ -53,15 +56,20 @@ import corp.burenz.expertouch.util.SimpleAnimationListener;
 
 public class ChannelSearchView extends AppCompatActivity {
 
-    ArrayList<String> companyBannerArrayList,companyTitleArrayList, companyAdddressArrayList,companyAboutArrayList, isSubscribedByMeArrayList, companyIdArrayList;
-    ArrayList<String> companyBannerArrayListS,companyTitleArrayListS, companyAdddressArrayListS,companyAboutArrayListS, isSubscribedByMeArrayListS, companyIdArrayListS;
-    ChannelAdaper channelAdaper;
-    ArrayList<ChannelHolder> channelHolderList;
-    RecyclerView recyclerView;
-    PersistentSearchView persistentSearchView;
-    private static final int VOICE_RECOGNITION_REQUEST_CODE = 1023;
+    ArrayList<String>           companyBannerArrayList,companyTitleArrayList, companyAdddressArrayList,companyAboutArrayList, isSubscribedByMeArrayList, companyIdArrayList;
+    ArrayList<String>           companyBannerArrayListS,companyTitleArrayListS, companyAdddressArrayListS,companyAboutArrayListS, isSubscribedByMeArrayListS, companyIdArrayListS;
+    ChannelAdaper               channelAdaper;
+    ArrayList<ChannelHolder>    channelHolderList;
+    RecyclerView                recyclerView;
+    PersistentSearchView        persistentSearchView;
+    private static final int    VOICE_RECOGNITION_REQUEST_CODE = 1023;
+    String                      insideQueryString = "";
 
-    private LinearLayout mSearchTintView;
+    private LinearLayout        mSearchTintView;
+
+    LinearLayout showProgressGettingListLinearLayout;
+
+
     void addTemporarly(){
 
 
@@ -187,6 +195,13 @@ public class ChannelSearchView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.works_space_scroll);
 
+
+//        FirebaseMessaging.getInstance().subscribeToTopic("/topics/news");
+
+//        FirebaseMessaging.getInstance().subscribeToTopic("nono");
+
+
+
         recyclerView = (RecyclerView) findViewById(R.id.channelListRecyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -198,6 +213,7 @@ public class ChannelSearchView extends AppCompatActivity {
 
         isSubscribedByMeArrayList            = new ArrayList<>();
         companyIdArrayList                   = new ArrayList<>();
+        companyBannerArrayList               = new ArrayList<>();
 
         companyTitleArrayListS               = new ArrayList<>();
         companyAdddressArrayListS            = new ArrayList<>();
@@ -207,15 +223,16 @@ public class ChannelSearchView extends AppCompatActivity {
         companyIdArrayListS                  = new ArrayList<>();
 
 
-        addTemporarly();
-
-
-
-
+//        addTemporarly();
 
 
         persistentSearchView = (PersistentSearchView) findViewById(R.id.searchview);
         mSearchTintView = (LinearLayout) findViewById(R.id.view_search_tint);
+        showProgressGettingListLinearLayout = (LinearLayout) findViewById(R.id.show_progress_getting_channel);
+
+        new GETChannelList().execute("all");
+
+
 
         assert persistentSearchView != null;
 
@@ -268,9 +285,12 @@ public class ChannelSearchView extends AppCompatActivity {
             @Override
             public void onSearchTermChanged(String term) {
 
+                insideQueryString = term;
+
+                new GETChannelSugesstionList().execute(term.toLowerCase());
 
 
-                new GETChannelSugesstionList().execute(term);
+//                if(term.length() == 0){ new GETChannelList().execute("all");  }
 
 
            /*     if(companyTitleArrayList.size() == 0){doToast("Cannot Search in an empty List");return;}*/
@@ -303,6 +323,7 @@ public class ChannelSearchView extends AppCompatActivity {
                 Log.e("searchVM","onSearchTermChanged term =  " + term);
                 persistentSearchView.setSuggestionBuilder(new SampleSuggestionsBuilder(ChannelSearchView.this,companyTitleArrayList));*/
 
+
             }
 
             @Override
@@ -312,13 +333,15 @@ public class ChannelSearchView extends AppCompatActivity {
 
                 SearchHistory searchHistory = new SearchHistory(ChannelSearchView.this);
                 searchHistory.writer();
-                searchHistory.createHistory(query);
+
+                if (!searchHistory.getHistoryStringArray().contains(query)){ searchHistory.createHistory(query.toLowerCase().trim());}
+
                 searchHistory.close();
 
-                if(query.length() == 0){ new GETChannelList().execute("all"); return; }
-                new GETChannelList().execute("like",query);
+                new GETChannelList().execute("like",query.toLowerCase());
 
-                                
+
+
 
             }
 
@@ -354,17 +377,26 @@ public class ChannelSearchView extends AppCompatActivity {
                             }
                         })
                         .start();
+
+                if(insideQueryString.length() == 0){
+                    Log.e("Channel","No text in the query");
+                    new GETChannelList().execute("all");
+                }
+
+
             }
 
             @Override
             public boolean onSearchEditBackPressed() {
-                Log.e("searchVM","onSearchBacEditPressed called");
 
+                Log.e("searchVM","onSearchBacEditPressed called");
                 return false;
+
             }
 
             @Override
             public void onSearchExit() {
+
 
             }
         });
@@ -397,23 +429,39 @@ public class ChannelSearchView extends AppCompatActivity {
 
 
 
-    private class GETChannelList  extends AsyncTask< String, String , String  > {
+    private class GETChannelList   extends AsyncTask< String, String , String  >      {
 
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            Log.e("channel_l","Inside GETChannelList onPre");
+
+            companyTitleArrayList       .clear();
+            companyAdddressArrayList    .clear();
+            companyAboutArrayList       .clear();
+            isSubscribedByMeArrayList   .clear();
+            companyIdArrayList          .clear();
+            companyBannerArrayList      .clear();
+
+            Log.e("channel","Size in preex fixture " + companyTitleArrayList.size());
 
 
-            companyTitleArrayList.clear();
-            companyAdddressArrayList.clear();
-            companyAboutArrayList.clear();
-            isSubscribedByMeArrayList.clear();
-            companyIdArrayList.clear();
-            companyBannerArrayList.clear();
+                /*set a progress abr visibilty*/
 
 
-            /*set a progress abr visibilty*/
+            showProgressGettingListLinearLayout
+                    .animate()
+                    .setDuration(300)
+                    .setListener(new SimpleAnimationListener(){
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            showProgressGettingListLinearLayout.setVisibility(View.VISIBLE);
+
+                        }
+                    });
 
 
         }
@@ -422,26 +470,47 @@ public class ChannelSearchView extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+//            doToast(" Get Channel List on Post " +s);
 
             /*check the length an hide if 0*/
 
+
+            Log.e("channel","Size before fixture " + companyTitleArrayList.size());
+
             channelAdaper = new ChannelAdaper(ChannelSearchView.this, new ChannelHolder(companyBannerArrayList, companyTitleArrayList, companyAdddressArrayList, companyAboutArrayList, isSubscribedByMeArrayList, companyIdArrayList));
             recyclerView.setAdapter(channelAdaper);
+
+            channelAdaper.notifyDataSetChanged();
+
 
             /*set the adapter for the main recycler view without any chnage in suggestions*/
             /*this clas is called in onSearch and onCreate*/ /* show a progress and then hides it */
             /*if the query length is 0 then  its hould call all the channelm name*/
 
+            showProgressGettingListLinearLayout
+                    .animate()
+                    .setDuration(300)
+                    .setListener(new SimpleAnimationListener(){
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            showProgressGettingListLinearLayout.setVisibility(View.GONE);
+
+                        }
+                    });
+
+
         }
 
         @Override
         protected String doInBackground(String... strings) {
-//
-//            strings[0] = "all/like";
-//            strings[1] = "tech";
 
-            String urlToHit = "http://192.168.43.190/ver1.1/workshop/subscription_utils.php";
-            StringBuilder stringBulder = new StringBuilder();
+            String urlToHit             = "http://192.168.43.190/ver1.1/workshop/subscription_utils.php";
+            StringBuilder stringBulder  = new StringBuilder();
+
+
+            Log.e("channel_l","Inside GETChannelList Getting "+strings[0]);
 
             HttpURLConnection httpUrlConnection;
             URL url;
@@ -452,10 +521,12 @@ public class ChannelSearchView extends AppCompatActivity {
 
                     case "all":
                         url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone=" + URLEncoder.encode(new GuestInformation(ChannelSearchView.this).getGuestNumber(), "UTF-8"));
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone=" + URLEncoder.encode(new GuestInformation(ChannelSearchView.this).getGuestNumber(), "UTF-8") );
                         break;
 
                     case "like":
                         url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone=" + URLEncoder.encode(new GuestInformation(ChannelSearchView.this).getGuestNumber(), "UTF-8") + "&like_k=" + URLEncoder.encode(strings[1], "UTF-8"));
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone=" + URLEncoder.encode(new GuestInformation(ChannelSearchView.this).getGuestNumber(), "UTF-8") + "&like_k=" + URLEncoder.encode(strings[1], "UTF-8"));
                         break;
 
                     default:
@@ -464,16 +535,12 @@ public class ChannelSearchView extends AppCompatActivity {
 
                 }
 
-
                 httpUrlConnection = (HttpURLConnection) url.openConnection();
                 String line = "";
                 BufferedReader bufferReader = new BufferedReader(new InputStreamReader(httpUrlConnection.getInputStream()));
                 while ((line = bufferReader.readLine()) != null) {
-
                     stringBulder.append(line).append("\n");
-
                 }
-
 
                 JSONObject jsonObject;
                 JSONArray jsonArray = new JSONArray(stringBulder.toString());
@@ -482,12 +549,12 @@ public class ChannelSearchView extends AppCompatActivity {
 
                     jsonObject = jsonArray.getJSONObject(i);
 
-                    companyTitleArrayList.add(jsonObject.getString("company_title"));
-                    companyAdddressArrayList.add(jsonObject.getString("company_city"));
-                    companyAboutArrayList.add(jsonObject.getString("company_discription"));
-                    isSubscribedByMeArrayList.add(jsonObject.getString("is_subscribed"));
-                    companyIdArrayList.add(jsonObject.getString("company_id"));
-                    companyBannerArrayList.add(jsonObject.getString("company_banner"));
+                    companyTitleArrayList       .add(jsonObject.getString("company_title"));
+                    companyAdddressArrayList    .add(jsonObject.getString("company_city"));
+                    companyAboutArrayList       .add(jsonObject.getString("company_discription"));
+                    isSubscribedByMeArrayList   .add(jsonObject.getString("is_subscribed"));
+                    companyIdArrayList          .add(jsonObject.getString("company_id"));
+                    companyBannerArrayList      .add(jsonObject.getString("company_banner"));
 
                 }
 
@@ -510,7 +577,6 @@ public class ChannelSearchView extends AppCompatActivity {
 
     }
 
-
     private class GETChannelSugesstionList extends AsyncTask<String, String, String> {
 
         ArrayList<String> companyTitleArrayListSuggestions;
@@ -525,14 +591,15 @@ public class ChannelSearchView extends AppCompatActivity {
 
             /*set a progress abr visibilty*/
 
-
         }
 
 
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+//            doToast( "Channel Suggestions " + s);
 
+//            persistentSearchView.clearSuggestions();
             persistentSearchView.setSuggestionBuilder(new SampleSuggestionsBuilder(ChannelSearchView.this, companyTitleArrayListSuggestions));
 
         }
@@ -551,18 +618,14 @@ public class ChannelSearchView extends AppCompatActivity {
             try {
 
                 url = new URL(urlToHit + "?functionname=" + URLEncoder.encode("suggest", "UTF-8") + "&term=" + URLEncoder.encode(strings[0], "UTF-8"));
-
+                Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode("suggest", "UTF-8") + "&term=" + URLEncoder.encode(strings[0], "UTF-8"));
                 httpUrlConnection = (HttpURLConnection) url.openConnection();
                 String line = "";
                 BufferedReader bufferReader = new BufferedReader(new InputStreamReader(httpUrlConnection.getInputStream()));
                 while ((line = bufferReader.readLine()) != null) {
-
                     stringBulder.append(line).append("\n");
 
                 }
-
-
-                JSONObject jsonObject;
                 JSONArray jsonArray = new JSONArray(stringBulder.toString());
 
                 for (int i = 0; i < jsonArray.length(); i++) {

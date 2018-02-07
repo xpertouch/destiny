@@ -78,8 +78,12 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
 
                     /*subscribe now  pass subscribe in string s[0]*/
 
-                    new SubscriptionUtils(position,holder,1,channelHolderList.getCompanyTitle().get(holder.getAdapterPosition())).execute("subscribe",channelHolderList.getCompanyTitle().get(holder.getAdapterPosition()));
+                    new SubscriptionUtils(position,holder,1,channelHolderList.getCompanyID().get(holder.getAdapterPosition())).execute("sub",channelHolderList.getCompanyID().get(holder.getAdapterPosition()));
+                    try{ FirebaseMessaging.getInstance().subscribeToTopic(channelHolderList.getCompanyID().get(holder.getAdapterPosition())); }catch (Exception e){ Log.e("firebase_b","Exception raised in Subscribing"); e.printStackTrace();}
 
+
+
+                    Log.e("fire_s",channelHolderList.getCompanyID().get(holder.getAdapterPosition()));
                 }
 
 
@@ -93,8 +97,10 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
             public void onClick(View v){
 
                     /*subscribe now  pass unsubscribe in string s[0]*/
-                    new SubscriptionUtils(position,holder,0,channelHolderList.getCompanyTitle().get(holder.getAdapterPosition())).execute("unsubscribe",channelHolderList.getCompanyTitle().get(holder.getAdapterPosition()));
+                    new SubscriptionUtils(position,holder,0,channelHolderList.getCompanyID().get(holder.getAdapterPosition())).execute("unsub",channelHolderList.getCompanyID().get(holder.getAdapterPosition()));
+                try{ FirebaseMessaging.getInstance().unsubscribeFromTopic(channelHolderList.getCompanyID().get(holder.getAdapterPosition())); }catch (Exception e){ Log.e("firebase_b","Exception raised in Subscribing"); e.printStackTrace();}
 
+                Log.e("fire_us",channelHolderList.getCompanyID().get(holder.getAdapterPosition()));
             }
 
 
@@ -112,7 +118,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
         return channelHolderList.getCompanyAbout().size();
     }
 
-    static  class ChannelAdaperViewHolder   extends RecyclerView.ViewHolder {
+    static  class ChannelAdaperViewHolder extends RecyclerView.ViewHolder {
 
       /* NetworkImageView companyBannerView;
       */
@@ -134,7 +140,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
         }
     }
 
-    private class SubscriptionUtils         extends AsyncTask<String, String, String> {
+    private class SubscriptionUtils extends AsyncTask<String, String, String> {
 
         private int FLAG;
         private String channelName;
@@ -161,36 +167,38 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
                 channelAdaperViewHolder.subsscribeNow.setVisibility(View.GONE);
                 channelAdaperViewHolder.unSubscribeNow.setVisibility(View.VISIBLE);
 
-
             }else {
 
                 channelAdaperViewHolder.subsscribeNow.setVisibility(View.VISIBLE);
                 channelAdaperViewHolder.unSubscribeNow.setVisibility(View.GONE);
             }
 
-
             /*set the subscriber button to subscribed*/
-
-
 
         }
 
+
+
+        
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
+            Log.e("channel", "inside adapter from server " + s);
             switch(s.trim()){
 
                 case "success":
-                        /*Dont do anything*/
+
+                    /*Dont do anything*/
 
                         /*subscribe to firebase and register a class here*/
-                        if (FLAG == 0){
-                            try{ FirebaseMessaging.getInstance().subscribeToTopic(channelName.replace(" ","").toLowerCase()); }catch (Exception e){e.printStackTrace();}
+                        /*if (FLAG == 0){
+                            try{ FirebaseMessaging.getInstance().subscribeToTopic(channelName); }catch (Exception e){ Log.e("firebase_b","Exception raised in Subscribing"); e.printStackTrace();}
                         }else {
-                            try{ FirebaseMessaging.getInstance().unsubscribeFromTopic(channelName.replace(" ","").toLowerCase()); }catch (Exception e){e.printStackTrace();}
+                            try{ FirebaseMessaging.getInstance().unsubscribeFromTopic(channelName); }catch (Exception e){Log.e("firebase_b","Exception raised in UnSubscribing");   e.printStackTrace();}
                         }
-                        Log.e("fire",channelName.replace(" ","").toLowerCase());
+                        */
+
+                        Log.e("fire",channelName);
                         setIsSubscribedByMe(channelHolderList.getIsSubscribedByMe(),position,String.valueOf(FLAG));
 
 
@@ -221,11 +229,6 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
                     break;
 
             }
-
-
-
-
-
         }
 
 
@@ -240,10 +243,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
           /*  strings[0]  = whether subscribe or unsubscribe
             strings[1]  = companys id      */
 
-            strings[0] = "sub";
-            strings[1] = "channel_id";
-
-            String          urlToHit            =   "";
+            String          urlToHit            =   "http://192.168.43.190/ver1.1/workshop/subscription_utils.php";
             StringBuilder   stringBuilder       =   new StringBuilder();
 
 
@@ -258,14 +258,17 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
 
                     case "sub":
                         url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(mContext).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[1],"UTF-8") );
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(mContext).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[1],"UTF-8") );
                         break;
 
                     case "unsub":
                         url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(mContext).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[1],"UTF-8") );
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(mContext).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[1],"UTF-8") );
                         break;
 
                     default:
-                        url = new URL(urlToHit + "?functionname=" + URLEncoder.encode("sub", "UTF-8") + "&user_phone="+ URLEncoder.encode(strings[1], "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[2],"UTF-8") );
+                        url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(mContext).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[1],"UTF-8") );
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(strings[0], "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(mContext).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[1],"UTF-8") );
 
                 }
 

@@ -73,19 +73,61 @@ public class SampleSuggestionsBuilder implements SearchSuggestionsBuilder {
     @Override
     public Collection<SearchItem> buildSearchSuggestion(int maxCount, String query) {
         List<SearchItem> items = new ArrayList<SearchItem>();
+        SearchHistory searchHistory = new SearchHistory(mContext);
+
+        searchHistory.writer();
+        String  []searchHistoryArray =  searchHistory.getHistoryStringArray().split("\n");
+//           Toast.makeText(mContext, searchHistory.getHistoryStringArray(), Toast.LENGTH_SHORT).show();
 
 
-        for (int  i = 0; i < companyTitles.size(); i++){
+        searchHistory.close();
 
-            if (companyTitles.get(i).toLowerCase().contains(query)){
+
+        for (String aSearchHistoryArray : searchHistoryArray) {
+
+            if (aSearchHistoryArray.toLowerCase().contains(query)) {
+
                 SearchItem peopleSuggestion = new SearchItem(
-                        companyTitles.get(i) , companyTitles.get(i), SearchItem.TYPE_SEARCH_ITEM_SUGGESTION
+                        aSearchHistoryArray, aSearchHistoryArray, SearchItem.TYPE_SEARCH_ITEM_HISTORY
+
+
                 );
                 items.add(peopleSuggestion);
 
+
             }
 
+
         }
+
+
+        if (companyTitles != null) {
+
+            for (int i = 0; i < companyTitles.size(); i++) {
+
+                if (companyTitles.get(i).toLowerCase().contains(query)) {
+
+                    SearchItem peopleSuggestion = new SearchItem(
+                            companyTitles.get(i), companyTitles.get(i), SearchItem.TYPE_SEARCH_ITEM_SUGGESTION
+
+
+                    );
+                    items.add(peopleSuggestion);
+
+                }
+            }
+
+
+        }
+
+
+/*
+
+*/
+
+
+
+
 
 
 
