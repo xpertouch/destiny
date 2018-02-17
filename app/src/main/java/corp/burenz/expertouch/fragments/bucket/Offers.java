@@ -46,6 +46,8 @@ import corp.burenz.expertouch.adapters.BucketAdapter;
 
 public class Offers extends Fragment {
 
+    SharedPreferences userData;
+
     ArrayList<String> companyTitles;
     ArrayList<String> saleDate;
     ArrayList<String> saleTitle;
@@ -57,7 +59,7 @@ public class Offers extends Fragment {
     ArrayList<String> totalLikes;
     ArrayList<String> attachedBanner;
 
-    SharedPreferences userData;
+
 
     String LOCAL_APP_DATA = "userInformation";
 
