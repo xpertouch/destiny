@@ -16,12 +16,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.mikepenz.iconics.view.IconicsImageView;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -41,6 +43,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.CompanyProfile;
+import corp.burenz.expertouch.fragments.post.flagged.MyBucket;
 import corp.burenz.expertouch.util.MySingleton;
 
 /**
@@ -54,44 +57,98 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
     ArrayList<String> companyTitleArray,companyCityArray,saleTitleArray,saleDiscriptionArray,saleDateArray,saleBannerArray,saleIds,myLikeIds,totalLikes,attachedBanner;
     Context context;
     Integer newCount;
-    String RESULT = "free",USER_EMAIL = "noemail@example.com";
+    String USER_EMAIL = "noemail@example.com";
     String USER_STATE;
     int TIME_OUT = 4000;
-    int ADAPTER_POSITION  = 0;
     SharedPreferences userData;
     String LOCAL_APP_DATA = "userInformation";
-    String LIKES;
-    String PATH;
+
+
+
+    private void setLikesSupport(MyBucketHolder  holder, int position){
+
+
+        if( totalLikes.get(position).equals("0")){
+            holder.textViewSupportTV.setText("");
+            holder.totalLikes.setVisibility(View.GONE);
+        }else{
+
+            holder.totalLikes.setText(totalLikes.get(position));
+            if(totalLikes.get(position).equals("1")){
+                holder.textViewSupportTV.setText("Like");
+            }else{
+                holder.textViewSupportTV.setText("users liked this");
+
+            }
+
+            holder.totalLikes.setVisibility(View.VISIBLE);
+        }
+
+    }
+
+
+
     public BucketAdapter(Context context,ArrayList<String> saleIds,ArrayList<String> companyTitleB,ArrayList<String> companyCity,ArrayList<String> saleTitle,ArrayList<String> saleDiscription,ArrayList<String> saleDate,ArrayList<String> saleBanner,ArrayList<String> myLikeIds,ArrayList<String> totalLikes,ArrayList<String> attachedBanner){
-        this.context = context;
-        this.saleIds = saleIds;
-        this.companyTitleArray = companyTitleB;
-        this.companyCityArray = companyCity;
-        this.saleTitleArray = saleTitle;
-        this.saleDateArray = saleDate;
-        this.saleDiscriptionArray = saleDiscription;
-        this.saleBannerArray = saleBanner;
-        this.myLikeIds = myLikeIds;
-        this.totalLikes = totalLikes;
-        this.attachedBanner = attachedBanner;
+
+        this.context                = context;
+        this.saleIds                = saleIds;
+        this.companyTitleArray      = companyTitleB;
+        this.companyCityArray       = companyCity;
+        this.saleTitleArray         = saleTitle;
+        this.saleDateArray          = saleDate;
+        this.saleDiscriptionArray   = saleDiscription;
+        this.saleBannerArray        = saleBanner;
+        this.myLikeIds              = myLikeIds;
+        this.totalLikes             = totalLikes;
+        this.attachedBanner         = attachedBanner;
     }
 
 
     @Override
     public MyBucketHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.bucket_adapter,parent,false);
-        SharedPreferences userData;
-        String LOCAL_APP_DATA = "userInformation";
-        userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
-        USER_EMAIL = userData.getString("userEmail","noemail@example.com");
-        USER_STATE = userData.getString("userState","Jammu and Kashmir");
-        return new MyBucketHolder(v);
+        return new MyBucketHolder(LayoutInflater.from(context).inflate(R.layout.bucket_adapter,parent,false));
+    }
+
+
+
+
+    private void likeThePost(MyBucketHolder holder, int position){
+
+        MediaPlayer ourSplasSound =  MediaPlayer.create(context,R.raw.pop);
+
+        holder.thumbsUpAdd     .setVisibility(View.GONE);
+        holder.thumbsDownAdd   .startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+        holder.thumbsDownAdd   .setVisibility(View.VISIBLE);
+        ourSplasSound.start();
+        holder.totalLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+        holder.totalLikes.setText(String.valueOf(  Integer.parseInt(holder.totalLikes.getText().toString()) + 1));
+
+        try {
+            myLikeIds.add(saleIds.get(position));
+            totalLikes.set(position,holder.totalLikes.getText().toString());
+
+            setLikesSupport(holder,position);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            Log.e("NEWCOUNT","UNFORTUNATE SLAP ");
+
+        }
+
+        new SortLikes("like",position,holder, holder.totalLikes.getText().toString()).execute("/bucket/like_mech.php",saleIds.get(position));
+
 
     }
 
 
     @Override
     public void onBindViewHolder(MyBucketHolder oriHolder, final int position) {
+
+        SharedPreferences   userData;
+        String LOCAL_APP_DATA = "userInformation";
+        userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
+        USER_EMAIL = userData.getString("userEmail","noemail@example.com");
+        USER_STATE = userData.getString("userState","Jammu and Kashmir");
 
         final MyBucketHolder holder = (MyBucketHolder) oriHolder;
         ViewFlipper thumbsFlipper;
@@ -105,36 +162,32 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         final TextView saleDate;
         final NetworkImageView saleBanner,attachedBannerView;
         final ImageView companyProfileB;
-        final Button shareSaleB;
+        final IconicsImageView shareSaleB;
         LinearLayout styleSheet;
 
 
-        companyTitleB = holder.companyTitleB;
-        companyCity = holder.companyCity;
-        saleTitle = holder.saleTitle;
-        saleDiscription = holder.saleDiscription;
-        saleDate = holder.saleDate;
-        saleBanner = holder.saleBanner;
-        companyProfileB = holder.companyProfileB;
-        shareSaleB = holder.shareSaleB;
-        attachedBannerView = holder.attachedBannerView;
-        styleSheet = holder.styleSheet;
-
-        thumbsUpAdd = holder.thumbsUpAdd;
-        thumbsFlipper = holder.thumbsFlipper;
-        thumbsDownAdd = holder.thumbsDownAdd;
-        totalLikesTV = holder.totalLikes;
-
-
-
-
-        totalLikesTV.setText(totalLikes.get(position));
+        companyTitleB       = holder.companyTitleB;
+        companyCity         = holder.companyCity;
+        saleTitle           = holder.saleTitle;
+        saleDiscription     = holder.saleDiscription;
+        saleDate            = holder.saleDate;
+        saleBanner          = holder.saleBanner;
+        companyProfileB     = holder.companyProfileB;
+        shareSaleB          = holder.shareSaleB;
+        attachedBannerView  = holder.attachedBannerView;
+        styleSheet          = holder.styleSheet;
+        thumbsUpAdd         = holder.thumbsUpAdd;
+        thumbsFlipper       = holder.thumbsFlipper;
+        thumbsDownAdd       = holder.thumbsDownAdd;
+        totalLikesTV        = holder.totalLikes;
 
         ImageLoader imageLoader = MySingleton.getInstance(context).getImageLoader();
+        ImageLoader imageLoaderForBanner = MySingleton.getInstance(context).getImageLoader();
+
         Log.e("ADAPt",""+position);
         int FAV_FLAG = 0;
 
-      //  styleSheet.setBackgroundColor(0xFF000000+new Random().nextInt(0xFFFFFF));
+
 
         for (int i = 0; i < myLikeIds.size();i++){
             if (saleIds.get(position).equals(myLikeIds.get(i))){
@@ -149,13 +202,31 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             thumbsUpAdd.setVisibility(View.VISIBLE);
             thumbsDownAdd.setVisibility(View.GONE);
         }
+
+
+
+        holder.saleBanner.setImageUrl((String) saleBannerArray.get(position), imageLoaderForBanner);
+
+        /*checking the banner and setting visibility accordingly*/
         if (attachedBanner.get(position).contains("banners")){
-            attachedBannerView.setImageUrl((String) attachedBanner.get(position), imageLoader);
-            attachedBannerView.setVisibility(View.VISIBLE);
+
+            holder.attachedeBannerVH.setVisibility(View.VISIBLE);
+            attachedBannerView.setImageUrl((String)         attachedBanner.get(position), imageLoader);
+
+
+            Log.e("sale_banner","Position of sale banner "+position + " "+ saleBannerArray.get(position));
+            Log.e("sale_banner","Position attached banner "+position + " "+ attachedBanner.get(position));
+
+
         }else {
-            attachedBannerView.setVisibility(View.GONE);
+            holder.attachedeBannerVH.setVisibility(View.GONE);
         }
-        saleBanner.setImageUrl((String) saleBannerArray.get(position), imageLoader);
+
+
+
+        setLikesSupport(holder,position);
+
+
 
             companyTitleB.setText(companyTitleArray.get(position));
             companyCity.setText(companyCityArray.get(position));
@@ -168,10 +239,10 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
                 public void onClick(View v) {
 
 
-                    String advert = "Shared via 1clickAway, Find Best Jobs, Experts and Offers from your City and State. Click on the below link to Download Now\nhttps://play.google.com/store/apps/details?id=corp.burenz.expertouch";
-                    String firstString = "Hey i am sharing with you an advertisement from" +
-                            " \n"+ companyTitleB.getText().toString() +" posted on "+saleDateArray.get(position).toString()+"" +
-                            " where they mentioned "+saleTitleArray.get(position).toString()+" \n "+saleDiscriptionArray.get(position).toString() ;
+                    String advert       = "Shared via 1clickAway, Find Best Jobs, Experts and Offers from your City and State. Click on the below link to Download Now\nhttps://play.google.com/store/apps/details?id=corp.burenz.expertouch";
+                    String firstString  = "Hey i am sharing with you an advertisement from" +
+                            " \n"+ companyTitleB.getText().toString() +" posted "+saleDateArray.get(position)+"" +
+                            " where they mentioned "+saleTitleArray.get(position)+" \n "+saleDiscriptionArray.get(position) ;
                     Intent shareIntent = new Intent();
                     shareIntent.setAction(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
@@ -188,7 +259,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
                     Intent companyProfileIntent= new Intent(context,CompanyProfile.class);
                     companyProfileIntent.putExtra("companyName",companyTitleB.getText().toString());
                     companyProfileIntent.putExtra("companyState",USER_STATE);
-                    companyProfileIntent.putExtra("companyBanner",saleBannerArray.get(position).toString());
+                    companyProfileIntent.putExtra("companyBanner",saleBannerArray.get(position));
                     context.startActivity(companyProfileIntent);
                 }
             });
@@ -196,83 +267,41 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-        final MediaPlayer ourSplasSound =  MediaPlayer.create(context,R.raw.pop);
+        MediaPlayer ourSplasSound =  MediaPlayer.create(context,R.raw.pop);
 
         final ViewFlipper otherFipper = thumbsFlipper;
+
+        final boolean[] isDoubleClick = {false};
+
+
+        holder.doubleClickArea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(isDoubleClick[0]){holder.awesomeHeartLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+
+                    if(holder.thumbsDownAdd.getVisibility() != View.VISIBLE)
+                    likeThePost(holder, position);
+
+                    return;}
+                isDoubleClick[0] = true;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        isDoubleClick[0] = false;
+                    }
+                },200);
+
+            }
+        });
+
+
 
         thumbsUpAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PATH = "like";
-                ADAPTER_POSITION = holder.getAdapterPosition();
 
-                thumbsUpAdd.setVisibility(View.GONE);
-                thumbsDownAdd.setVisibility(View.VISIBLE);
-
-                ourSplasSound.start();
-                newCount = Integer.parseInt(totalLikesTV.getText().toString());
-                newCount++;
-                totalLikesTV.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
-                totalLikesTV.setText(String.valueOf(newCount));
-                thumbsDownAdd.setEnabled(false);
-
-
-                        try {
-                            Log.e("NEWCOUNT", saleIds.get(position));
-                            myLikeIds.add(saleIds.get(position));
-                            totalLikes.remove(position);
-                            totalLikes.add(position,totalLikesTV.getText().toString());
-                            LIKES = totalLikesTV.getText().toString();
-                            Log.e("NEWCOUNT","liked new Count = " + myLikeIds.size());
-
-                    }catch (Exception e){
-                    e.printStackTrace();
-                            Log.e("NEWCOUNT","UNFORTUNATE SLAP ");
-
-                        }
-
-
-
-
-                thumbsDownAdd.setEnabled(false);
-
-                new SortLikes().execute("/bucket/like_mech.php",saleIds.get(position));
-
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        if (RESULT.contains("failed")){
-
-                            thumbsUpAdd.setVisibility(View.VISIBLE);
-                            thumbsDownAdd.setVisibility(View.GONE);
-                            newCount = Integer.parseInt(totalLikesTV.getText().toString());
-                            newCount--;
-                            totalLikesTV.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
-                            totalLikesTV.setText(String.valueOf(newCount));
-                        }
-                        thumbsDownAdd.setEnabled(true);
-
-                    }
-                },TIME_OUT);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+               likeThePost(holder, position);
 
             }
         });
@@ -281,56 +310,38 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             @Override
             public void onClick(View v) {
 
-
                 thumbsUpAdd.setVisibility(View.VISIBLE);
                 thumbsDownAdd.setVisibility(View.GONE);
+
                 newCount = Integer.parseInt(totalLikesTV.getText().toString());
                 newCount--;
-                totalLikesTV.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+
+
+                if (newCount != 0){
+                    totalLikesTV.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+                }
+
                 totalLikesTV.setText(String.valueOf(newCount));
+                if( newCount == 0 ){
+                    holder.textViewSupportTV.setText("Be the first to like this post");
+                    holder.totalLikes.setVisibility(View.GONE);
 
-                thumbsUpAdd.setEnabled(false);
+                }
 
+                try {
 
-                PATH = "unlike";
-                ADAPTER_POSITION = holder.getAdapterPosition();
+                                myLikeIds   .remove(saleIds.get(position));
+                                totalLikes  .set(position,totalLikesTV.getText().toString());
+                                setLikesSupport(holder,position);
 
-                            try {
-                                myLikeIds.remove(saleIds.get(position));
-                                totalLikes.remove(position);
-                                totalLikes.add(position,totalLikesTV.getText().toString());
-                                LIKES = totalLikesTV.getText().toString();
-                            }catch (Exception e){
+                }catch (Exception e){
                                 e.printStackTrace();
                             }
 
                             Log.e("NEWCOUNT","Unliked new Count = " + myLikeIds.size());
 
-                new SortLikes().execute("/bucket/unlike_mech.php",saleIds.get(position));
 
-
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        if (RESULT.contains("failed")){
-
-                            thumbsUpAdd.setVisibility(View.GONE);
-                            thumbsDownAdd.setVisibility(View.VISIBLE);
-                            newCount = Integer.parseInt(totalLikesTV.getText().toString());
-                            newCount++;
-                            totalLikesTV.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
-                            totalLikesTV.setText(String.valueOf(newCount));
-
-                        }
-                        thumbsUpAdd.setEnabled(true);
-
-                    }
-                },TIME_OUT);
-
-
-
+                new SortLikes("unlike",position,holder,totalLikesTV.getText().toString()).execute("/bucket/unlike_mech.php",saleIds.get(position));
 
 
 
@@ -350,37 +361,63 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-     static class MyBucketHolder extends RecyclerView.ViewHolder {
+    static class MyBucketHolder extends RecyclerView.ViewHolder {
 
-        TextView companyTitleB,companyCity,saleTitle,saleDiscription,saleDate;
-        NetworkImageView saleBanner,attachedBannerView;
-        LinearLayout styleSheet;
-        ImageView companyProfileB;
-         Button shareSaleB;
-        final private ViewFlipper thumbsFlipper;
-        final private ImageButton thumbsUpAdd,thumbsDownAdd;
-        TextView totalLikes;
+            TextView companyTitleB,companyCity,saleTitle,saleDiscription,saleDate;
+            NetworkImageView saleBanner,attachedBannerView;
+            LinearLayout styleSheet, centralContainer, doubleClickArea ;
+            RelativeLayout attachedeBannerVH;
+            ImageView companyProfileB;
+            IconicsImageView shareSaleB;
+            final private ViewFlipper thumbsFlipper;
+            final private ImageButton thumbsUpAdd,thumbsDownAdd;
+            ImageButton  awesomeHeartLikes;
+            TextView totalLikes, textViewSupportTV;
 
         public MyBucketHolder(View itemView) {
             super(itemView);
-            companyTitleB = (TextView) itemView.findViewById(R.id.companyTitleB);
-            companyCity  = (TextView) itemView.findViewById(R.id.companyCityB);
-            saleTitle = (TextView) itemView.findViewById(R.id.saleTitle);
-            saleDate = (TextView) itemView.findViewById(R.id.saleDate);
-            saleDiscription  = (TextView) itemView.findViewById(R.id.saleDiscription);
-            saleBanner = (NetworkImageView) itemView.findViewById(R.id.saleBanner);
-            companyProfileB = (ImageView) itemView.findViewById(R.id.companyProfileB);
-            shareSaleB = (Button) itemView.findViewById(R.id.shareSalesB);
-            thumbsFlipper = (ViewFlipper) itemView.findViewById(R.id.thumbsFlipper);
-            thumbsUpAdd = (ImageButton) itemView.findViewById(R.id.thumbsUpAdd);
-            thumbsDownAdd = (ImageButton) itemView.findViewById(R.id.thumbsDownAdd);
-            totalLikes = (TextView) itemView.findViewById(R.id.totalLikesTV);
-            styleSheet = (LinearLayout) itemView.findViewById(R.id.styleSheet);
-            attachedBannerView = (NetworkImageView) itemView.findViewById(R.id.attachedBannerView);
+            companyTitleB       = (TextView)            itemView.findViewById(R.id.companyTitleB);
+            companyCity         = (TextView)            itemView.findViewById(R.id.companyCityB);
+            saleTitle           = (TextView)            itemView.findViewById(R.id.saleTitle);
+            saleDate            = (TextView)            itemView.findViewById(R.id.saleDate);
+            saleDiscription     = (TextView)            itemView.findViewById(R.id.saleDiscription);
+            saleBanner          = (NetworkImageView)    itemView.findViewById(R.id.saleBanner);
+            companyProfileB     = (ImageView)           itemView.findViewById(R.id.companyProfileB);
+            shareSaleB          = (IconicsImageView)    itemView.findViewById(R.id.shareSalesB);
+            thumbsFlipper       = (ViewFlipper)         itemView.findViewById(R.id.thumbsFlipper);
+            thumbsUpAdd         = (ImageButton)         itemView.findViewById(R.id.thumbsUpAdd);
+            thumbsDownAdd       = (ImageButton)         itemView.findViewById(R.id.thumbsDownAdd);
+            totalLikes          = (TextView)            itemView.findViewById(R.id.totalLikesTV);
+            styleSheet          = (LinearLayout)        itemView.findViewById(R.id.styleSheet);
+            attachedBannerView  = (NetworkImageView)    itemView.findViewById(R.id.attachedBannerView);
+            textViewSupportTV   = (TextView)            itemView.findViewById(R.id.likes_index_support_tv);
+            centralContainer    = (LinearLayout)        itemView.findViewById(R.id.central_container_bucket_posts);
+            awesomeHeartLikes   = (ImageButton)         itemView.findViewById(R.id.awesome_heart_on_double_click);
+            doubleClickArea     = (LinearLayout)        itemView.findViewById(R.id.double_click_area);
+            attachedeBannerVH   = (RelativeLayout)      itemView.findViewById(R.id.attachedBannerHolder);
+
+
         }
     }
-
     class SortLikes extends AsyncTask<String,String,String>{
+
+
+        String          path;
+        int             position;
+        MyBucketHolder  myBucketHolder;
+        String             likes;
+
+
+        public SortLikes(String path, int position, MyBucketHolder myBucketHolder, String likes) {
+
+            this.path           = path;
+            this.position       = position;
+            this.myBucketHolder = myBucketHolder;
+            this.likes          = likes;
+
+
+
+        }
 
         StringBuilder builder = new StringBuilder();
         BufferedReader bufferedReader;
@@ -427,13 +464,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         }
 
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            RESULT = "busy";
 
-
-        }
 
         @Override
         protected void onPostExecute(String s) {
@@ -441,68 +472,68 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             Log.e("NEWCOUNT","INSIDE ON POST");
 
 
-            if (s.contains("1")){
-                RESULT = "1";
+            if (!s.contains("1")) {
+                if (!s.contains("0")) {
+                    int localLikes;
+                    if (path.equals("like")){
 
-            }else if (s.contains("0")){
+                        try {
+
+                                myLikeIds.remove(saleIds.get(position));
+                                totalLikes.set(position,String.valueOf(Integer.parseInt(likes) - 1));
+
+                                myBucketHolder.thumbsUpAdd     .setVisibility(View.VISIBLE);
+                                myBucketHolder.thumbsDownAdd   .setVisibility(View.GONE);
+                                newCount        = Integer.parseInt(myBucketHolder.totalLikes.getText().toString());
+                                newCount--;
+
+                                myBucketHolder.totalLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+                                myBucketHolder.totalLikes.setText(String.valueOf(newCount));
+
+                                setLikesSupport(myBucketHolder,position);
 
 
 
 
 
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
 
-            } else{
-                RESULT = "failed";
+
+
+                    }else if (path.equals("unlike")) {
+
+                        try {
+                            myLikeIds.add(saleIds.get(position));
+                            totalLikes.set(position, String.valueOf(Integer.parseInt(likes) + 1));
+
+                            Log.e("NEWCOUNT", "UNLIKE FAILED saleID" + saleIds.get(position));
 
 
 
-                int localLikes;
 
-                if (PATH.equals("like")){
-                    try {
+                            myBucketHolder.thumbsUpAdd.setVisibility(View.GONE);
+                            myBucketHolder.thumbsDownAdd.setVisibility(View.VISIBLE);
+                            newCount = Integer.parseInt(myBucketHolder.totalLikes.getText().toString());
+                            newCount++;
+                            myBucketHolder.totalLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+                            myBucketHolder.totalLikes.setText(String.valueOf(newCount));
 
-                        localLikes = Integer.parseInt(LIKES);
-                        localLikes--;
-                        myLikeIds.remove(saleIds.get(ADAPTER_POSITION));
-                        totalLikes.remove(ADAPTER_POSITION);
-                        totalLikes.add(ADAPTER_POSITION,String.valueOf(localLikes));
-                        Log.e("NEWCOUNT","LIKE FAILED saleID" +saleIds.get(ADAPTER_POSITION));
+                            setLikesSupport(myBucketHolder,position);
 
-                    }catch (Exception e){
-                        e.printStackTrace();
+
+
+
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
-                }else if (PATH.equals("unlike")) {
-
-                    try {
-                        localLikes = Integer.parseInt(LIKES);
-                        localLikes++;
-
-                        myLikeIds.add(saleIds.get(ADAPTER_POSITION));
-                        totalLikes.remove(ADAPTER_POSITION);
-                        totalLikes.add(ADAPTER_POSITION, String.valueOf(localLikes));
-                        Log.e("NEWCOUNT", "UNLIKE FAILED saleID" + saleIds.get(ADAPTER_POSITION));
-
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    Toast.makeText(context,"Connection Slow Please Try Again",Toast.LENGTH_LONG).show();
                     }
-                }
-                Toast.makeText(context,"Connection Slow Please Try Again",Toast.LENGTH_LONG).show();
-
-
-
-
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-
-                    }
-                },TIME_OUT);
-
-                }
+            }
 
 
         }
@@ -513,5 +544,6 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 }
+
 
 

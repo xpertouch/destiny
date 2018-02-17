@@ -1,48 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/channelListRecyclerView"
-        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-1dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="-1dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_marginTop="55dp" />
 
     <LinearLayout
+        android:id="@+id/no_channels_result_linear"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#ffffff"
-        android:visibility="gone"
-        android:id="@+id/show_progress_getting_channel"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:visibility="gone">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:cropToPadding="true"
+            android:visibility="visible"
+            android:scaleType="centerCrop"
+            app:iiv_color="@color/vectorColor"
+            app:iiv_size="75dp"
+            app:iiv_icon="@string/gmd_visibility_off" />
+
+        <TextView
+            android:id="@+id/no_channel_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="No Channels Found" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_internet_found_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:cropToPadding="true"
+            android:visibility="visible"
+            android:scaleType="centerCrop"
+            app:iiv_color="@color/vectorColor"
+            app:iiv_size="75dp"
+            app:iiv_icon="@string/gmd_signal_cellular_off" />
+
+        <TextView
+            android:id="@+id/no_internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="No Channels Found" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_progress_getting_channel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
-            android:layout_marginTop="9dp"
-            android:text="Getting Channels List"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Getting Channels List" />
 
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/view_search_tint"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:background="#88000000"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:background="#88000000"
+        android:orientation="horizontal"
+        android:visibility="gone">
 
     </LinearLayout>
 
@@ -51,17 +112,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        app:persistentSV_searchTextColor="?android:textColorPrimary"
-        app:persistentSV_editTextColor="?android:textColorPrimary"
+        app:persistentSV_customToolbarHeight="60dp"
+        app:persistentSV_displayMode="toolbar"
         app:persistentSV_editHintText="Search stores and companies"
         app:persistentSV_editHintTextColor="?android:textColorHint"
-        app:persistentSV_logoString="BrowseChannels"
-        app:persistentSV_displayMode="toolbar"
+        app:persistentSV_editTextColor="?android:textColorPrimary"
         app:persistentSV_homeButtonMode="arrow"
+        app:persistentSV_logoString="BrowseChannels"
         app:persistentSV_searchCardElevation="2dp"
-        app:persistentSV_customToolbarHeight="60dp"
-        tools:layout_editor_absoluteY="4dp"
-        tools:layout_editor_absoluteX="8dp" />
+        app:persistentSV_searchTextColor="?android:textColorPrimary"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="4dp" />
 
 
 </RelativeLayout>

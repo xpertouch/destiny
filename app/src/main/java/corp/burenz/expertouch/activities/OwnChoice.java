@@ -44,21 +44,21 @@ public class OwnChoice extends AppCompatActivity implements View.OnClickListener
 
 
 
-    LinearLayout notVerifiedLayout;
-    EditText otpAgain;
-    ImageButton otpAgainSubmitButton;
-    InputMethodManager im;
-    private String otpEntered,originalOTP;
-    TextView resendHelperV;
-    TextView changeEmailAddress;
+    LinearLayout                notVerifiedLayout;
+    EditText                    otpAgain;
+    ImageButton                 otpAgainSubmitButton;
+    InputMethodManager          im;
+    private String              otpEntered,originalOTP;
+    TextView                    resendHelperV;
+    TextView                    changeEmailAddress;
 
-    SharedPreferences.Editor editor;
-    TextView userName,userEmail;
-    LinearLayout hireButton;
-    TextView getHiredButton;
-    LinearLayout verifiedLayout;
-    ViewFlipper codeAccepted,registerImageFlipper,registerTextFlipper,subtitleRegisterFlipper;
-    LinearLayout resendLayout,resendCode;
+    SharedPreferences.Editor    editor;
+    TextView                    userName,userEmail;
+    LinearLayout                hireButton;
+    TextView                    getHiredButton;
+    LinearLayout                verifiedLayout;
+    ViewFlipper                 codeAccepted,registerImageFlipper,registerTextFlipper,subtitleRegisterFlipper;
+    LinearLayout                resendLayout,resendCode;
 
     String TAG = "OTP";
 
@@ -110,9 +110,9 @@ public class OwnChoice extends AppCompatActivity implements View.OnClickListener
             //check whether he has registered or not
              notVerifiedLayout.setClickable(false);
              verifiedLayout.setVisibility(View.VISIBLE);
-             registerImageFlipper.setFlipInterval(2960);
-             registerTextFlipper.setFlipInterval(2980);
-             subtitleRegisterFlipper.setFlipInterval(3000);
+             registerImageFlipper       .setFlipInterval(3000);
+             registerTextFlipper        .setFlipInterval(3000);
+             subtitleRegisterFlipper    .setFlipInterval(3000);
 
              registerImageFlipper.startFlipping();
              registerTextFlipper.startFlipping();

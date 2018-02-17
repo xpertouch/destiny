@@ -65,37 +65,36 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
     RecyclerView companyPostsRv;
     RecyclerView.Adapter companyPostsAdapter;
 
-    ArrayList<String> postsCompany;
-    ArrayList<String> postDate;
-    ArrayList<String> tagLine;
-    ArrayList<String> companyLandmark;
-    ArrayList<String> aboutCompany;
-    ArrayList<String> companyCity;
-    ArrayList<String> addVisitArray;
-    ArrayList<String> companyPhone,companyEmail;
-    ArrayList<String> saleTitleArray,saleDiscriptionArray,postDateArray,saleID;
-    NetworkImageView companyPicture;
-    RecyclerView companyBucket;
-    RecyclerView.Adapter bucketAdapter;
-    RelativeLayout bucketProgress;
+    ArrayList<String>       postsCompany;
+    ArrayList<String>       postDate;
+    ArrayList<String>       tagLine;
+    ArrayList<String>       companyLandmark;
+    ArrayList<String>       aboutCompany;
+    ArrayList<String>       companyCity;
+    ArrayList<String>       addVisitArray;
+    ArrayList<String>       companyPhone,companyEmail;
+    ArrayList<String>       saleTitleArray,saleDiscriptionArray,postDateArray,saleID;
+    NetworkImageView        companyPicture;
+    RecyclerView            companyBucket;
+    RecyclerView.Adapter    bucketAdapter;
+    RelativeLayout          bucketProgress;
 
-    TextView companyName,companyTag,companyAbout,addressLine1,addressOpp,companyState;
-    LinearLayout callCompany,visitCompany,mailCompany,shareDetails;
-    TextView callTV,shareTV,mailTV,visitTV,adddressTV,postsTV;
+    TextView                companyName,companyTag,companyAbout,addressLine1,addressOpp,companyState;
+    LinearLayout            callCompany,visitCompany,mailCompany,shareDetails;
+    TextView                callTV,shareTV,mailTV,visitTV,adddressTV,postsTV;
 
-    TextView noPostsTitle,noPostsSubtitle,noBucketTitle,noBucketSubtitle;
+    TextView                noPostsTitle,noPostsSubtitle,noBucketTitle,noBucketSubtitle;
 
 
-    String company,tag,address,Opp,state,email,call,picture;
+    String                  company,tag,address,Opp,state,email,call,picture;
 
-    SharedPreferences userData;
-    String LOCAL_APP_DATA = "userInformation";
+    SharedPreferences       userData;
+    String LOCAL_APP_DATA   = "userInformation";
 
-    LinearLayout infoLayout;
-    RelativeLayout infoProgress,postsProgress;
-    Bundle bundle;
-
-    LinearLayout noCompanyPosts,noBucketPosts;
+    LinearLayout            infoLayout;
+    RelativeLayout          infoProgress,postsProgress;
+    Bundle                  bundle;
+    LinearLayout            noCompanyPosts,noBucketPosts;
 
 
 
@@ -136,36 +135,36 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
     public  void initViews(){
 
 
-        companyName = (TextView)findViewById(R.id.companyName);
-        companyTag = (TextView)findViewById(R.id.companyTag);
-        companyAbout = (TextView)findViewById(R.id.aboutCompany);
-        addressLine1 = (TextView)findViewById(R.id.addressLine1);
-        addressOpp = (TextView)findViewById(R.id.addressOpp);
-        companyState = (TextView)findViewById(R.id.addressState);
-        companyPicture = (NetworkImageView) findViewById(R.id.companyPicture);
-        noBucketTitle = (TextView) findViewById(R.id.noBucketTitle);
-        noBucketSubtitle = (TextView) findViewById(R.id.noBucketSubtitle);
-        noPostsTitle = (TextView) findViewById(R.id.noPostsTitle);
-        noPostsSubtitle = (TextView) findViewById(R.id.noPostsSubtitle);
-        noCompanyPosts = (LinearLayout) findViewById(R.id.noCompanyPosts);
-        noBucketPosts = (LinearLayout) findViewById(R.id.noCompanyBucket);
-        companyBucket = (RecyclerView) findViewById(R.id.companyBucketRV);
-        bucketProgress = (RelativeLayout) findViewById(R.id.bucketProgress);
+        companyName         = (TextView)            findViewById(R.id.companyName);
+        companyTag          = (TextView)            findViewById(R.id.companyTag);
+        companyAbout        = (TextView)            findViewById(R.id.aboutCompany);
+        addressLine1        = (TextView)            findViewById(R.id.addressLine1);
+        addressOpp          = (TextView)            findViewById(R.id.addressOpp);
+        companyState        = (TextView)            findViewById(R.id.addressState);
+        companyPicture      = (NetworkImageView)    findViewById(R.id.companyPicture);
+        noBucketTitle       = (TextView)            findViewById(R.id.noBucketTitle);
+        noBucketSubtitle    = (TextView)            findViewById(R.id.noBucketSubtitle);
+        noPostsTitle        = (TextView)            findViewById(R.id.noPostsTitle);
+        noPostsSubtitle     = (TextView)            findViewById(R.id.noPostsSubtitle);
+        noCompanyPosts      = (LinearLayout)        findViewById(R.id.noCompanyPosts);
+        noBucketPosts       = (LinearLayout)        findViewById(R.id.noCompanyBucket);
+        companyBucket       = (RecyclerView)        findViewById(R.id.companyBucketRV);
+        bucketProgress      = (RelativeLayout)      findViewById(R.id.bucketProgress);
 
-        callTV = (TextView)findViewById(R.id.callTV);
-        shareTV = (TextView)findViewById(R.id.shareTV);
-        mailTV = (TextView)findViewById(R.id.mailTV);
-        visitTV = (TextView)findViewById(R.id.visitTV);
-        adddressTV = (TextView)findViewById(R.id.addressTV);
-        postsTV = (TextView)findViewById(R.id.postsTV);
-        callCompany = (LinearLayout)findViewById(R.id.callCompany);
-        visitCompany = (LinearLayout)findViewById(R.id.visitCompany);
-        mailCompany = (LinearLayout)findViewById(R.id.mailCompany);
-        shareDetails = (LinearLayout)findViewById(R.id.shareDetails);
-        infoLayout = (LinearLayout)findViewById(R.id.infoLayout);
-        infoProgress = (RelativeLayout)findViewById(R.id.infoProgress);
-        postsProgress = (RelativeLayout)findViewById(R.id.postsProgress);
-        companyPostsRv = (RecyclerView)findViewById(R.id.companyPostsRV);
+        callTV              = (TextView)            findViewById(R.id.callTV);
+        shareTV             = (TextView)            findViewById(R.id.shareTV);
+        mailTV              = (TextView)            findViewById(R.id.mailTV);
+        visitTV             = (TextView)            findViewById(R.id.visitTV);
+        adddressTV          = (TextView)            findViewById(R.id.addressTV);
+        postsTV             = (TextView)            findViewById(R.id.postsTV);
+        callCompany         = (LinearLayout)        findViewById(R.id.callCompany);
+        visitCompany        = (LinearLayout)        findViewById(R.id.visitCompany);
+        mailCompany         = (LinearLayout)        findViewById(R.id.mailCompany);
+        shareDetails        = (LinearLayout)        findViewById(R.id.shareDetails);
+        infoLayout          = (LinearLayout)        findViewById(R.id.infoLayout);
+        infoProgress        = (RelativeLayout)      findViewById(R.id.infoProgress);
+        postsProgress       = (RelativeLayout)      findViewById(R.id.postsProgress);
+        companyPostsRv      = (RecyclerView)        findViewById(R.id.companyPostsRV);
 
 
     }
@@ -490,15 +489,15 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 //            infoProgress.setVisibility(View.VISIBLE);
 //            infoLayout.setVisibility(View.GONE);
 
-            postsCompany = new ArrayList<>();
-            postDate =  new  ArrayList<>();
-            tagLine = new ArrayList<>();;
-            companyLandmark = new ArrayList<>();;
-            addVisitArray = new ArrayList<>();
-            companyCity = new ArrayList<>();
-            aboutCompany = new ArrayList<>();
-            companyPhone = new ArrayList<>();
-            companyEmail  = new ArrayList<>();
+            postsCompany        = new ArrayList<>();
+            postDate            = new ArrayList<>();
+            tagLine             = new ArrayList<>();;
+            companyLandmark     = new ArrayList<>();;
+            addVisitArray       = new ArrayList<>();
+            companyCity         = new ArrayList<>();
+            aboutCompany        = new ArrayList<>();
+            companyPhone        = new ArrayList<>();
+            companyEmail        = new ArrayList<>();
 
 
 
@@ -510,9 +509,6 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
-
-
 
             if(tagLine.size() == 0 ||  aboutCompany.size() == 0 || companyLandmark.size() == 0 || companyCity.size() == 0 || addVisitArray.size() ==0){
 

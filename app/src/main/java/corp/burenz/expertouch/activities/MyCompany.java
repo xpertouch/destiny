@@ -1398,7 +1398,7 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
                 },300);
 
                 if (s.contains("Large")){
-                    Toast.makeText(MyCompany.this, "File Size is Too Large, file size should be approx. less than 1 MB", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MyCompany.this, "File Size is Too Large, file size should be less than 2 MB", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(MyCompany.this, "We are having trouble connecting to the internet, Please check your Connection ", Toast.LENGTH_SHORT).show();

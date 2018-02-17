@@ -9,13 +9,13 @@ package com.google.android.gms;
 public final class R {
     public static final class id {
         public static final int center = 0x7f10002e;
-        public static final int email = 0x7f1007db;
+        public static final int email = 0x7f1007f5;
         public static final int none = 0x7f100020;
         public static final int normal = 0x7f100018;
-        public static final int progressBar = 0x7f1003d2;
+        public static final int progressBar = 0x7f1003de;
         public static final int radio = 0x7f10007c;
-        public static final int text = 0x7f100751;
-        public static final int text2 = 0x7f10074f;
+        public static final int text = 0x7f10076a;
+        public static final int text2 = 0x7f100768;
         public static final int toolbar = 0x7f10004d;
         public static final int wrap_content = 0x7f10002a;
     }

@@ -76,6 +76,10 @@
         "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable/custom_smart_button.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/drawable/custom_smart_button.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/drawable/abc_switch_thumb_material.xml"
     },

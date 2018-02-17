@@ -674,7 +674,6 @@ public class JobPost extends Fragment implements View.OnClickListener{
                         }
                         typeList.setAdapter(typeAdapter);
 
-
                         Toast.makeText(getActivity(), "Catagory Selected :"+addCatagory, Toast.LENGTH_SHORT).show();
                         selectedCatagory.setText("Category Selected : "+addCatagory);
 
@@ -900,7 +899,6 @@ public class JobPost extends Fragment implements View.OnClickListener{
                     builder.append(str);
 
                 }
-
 
             } catch (ClientProtocolException e) {
                 e.printStackTrace();

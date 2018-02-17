@@ -78,9 +78,7 @@ public class Offers extends Fragment {
 
         View v  = inflater.inflate(R.layout.offers,container,false);
         myBucketRV = (RecyclerView) v.findViewById(R.id.myBucketRV);
-        myBucketRV.setLayoutManager(new LinearLayoutManager(getActivity()));
-        myBucketRV.clearOnScrollListeners();
-        myBucketRV.hasFixedSize();
+        myBucketRV.addItemDecoration(new MaterialViewPagerHeaderDecorator());
 
         loadProgress = (RelativeLayout) v.findViewById(R.id.loadProgressBucket);
         noAdverts  =  (LinearLayout) v.findViewById(R.id.noAdvertsBucket);
@@ -460,10 +458,13 @@ public class Offers extends Fragment {
                 loadProgress.setVisibility(View.GONE);
 
                 adapter = new BucketAdapter(getActivity(),saleID ,companyTitles, companyCity, saleTitle, saleDiscription, saleDate, saleBanner,myLikeIds,totalLikes,attachedBanner);
-                adapter.notifyDataSetChanged();
-                myBucketRV.setHasFixedSize(true);
-                myBucketRV.setAdapter(new RecyclerViewMaterialAdapter(adapter));
+//                adapter.notifyDataSetChanged();
+//                myBucketRV.setHasFixedSize(true);
+                myBucketRV.setLayoutManager(new LinearLayoutManager(getActivity()));
+                myBucketRV.setAdapter(adapter);
+
                 MaterialViewPagerHelper.registerRecyclerView(getActivity(),myBucketRV);
+
 
 
             }

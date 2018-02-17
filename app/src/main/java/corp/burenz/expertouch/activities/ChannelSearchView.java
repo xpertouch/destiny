@@ -67,7 +67,7 @@ public class ChannelSearchView extends AppCompatActivity {
 
     private LinearLayout        mSearchTintView;
 
-    LinearLayout showProgressGettingListLinearLayout;
+    LinearLayout showProgressGettingListLinearLayout, noChannelsFoundLinear, noInternetFounfLinear;
 
 
     void addTemporarly(){
@@ -229,26 +229,18 @@ public class ChannelSearchView extends AppCompatActivity {
         persistentSearchView = (PersistentSearchView) findViewById(R.id.searchview);
         mSearchTintView = (LinearLayout) findViewById(R.id.view_search_tint);
         showProgressGettingListLinearLayout = (LinearLayout) findViewById(R.id.show_progress_getting_channel);
+        noChannelsFoundLinear   =   (LinearLayout) findViewById(R.id.no_channels_result_linear);
+        noInternetFounfLinear   =   (LinearLayout) findViewById(R.id.no_internet_found_linear);
+
+
+
+
 
         new GETChannelList().execute("all");
 
 
 
         assert persistentSearchView != null;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         VoiceRecognitionDelegate delegate = new DefaultVoiceRecognizerDelegate(this, VOICE_RECOGNITION_REQUEST_CODE);
@@ -287,13 +279,11 @@ public class ChannelSearchView extends AppCompatActivity {
 
                 insideQueryString = term;
 
-                new GETChannelSugesstionList().execute(term.toLowerCase());
-
+                new GETChannelSugesstionList().execute(term);
 
 //                if(term.length() == 0){ new GETChannelList().execute("all");  }
 
-
-           /*     if(companyTitleArrayList.size() == 0){doToast("Cannot Search in an empty List");return;}*/
+                /*     if(companyTitleArrayList.size() == 0){doToast("Cannot Search in an empty List");return;}*/
                /* companyTitleArrayListS       .clear();
                 companyAdddressArrayListS    .clear();
                 companyAboutArrayListS       .clear();
@@ -334,11 +324,11 @@ public class ChannelSearchView extends AppCompatActivity {
                 SearchHistory searchHistory = new SearchHistory(ChannelSearchView.this);
                 searchHistory.writer();
 
-                if (!searchHistory.getHistoryStringArray().contains(query)){ searchHistory.createHistory(query.toLowerCase().trim());}
+                if (!searchHistory.getHistoryStringArray().contains(query)){ searchHistory.createHistory(query.trim());}
 
                 searchHistory.close();
 
-                new GETChannelList().execute("like",query.toLowerCase());
+                new GETChannelList().execute("like",query.toLowerCase().trim());
 
 
 
@@ -450,6 +440,10 @@ public class ChannelSearchView extends AppCompatActivity {
                 /*set a progress abr visibilty*/
 
 
+            showProgressGettingListLinearLayout.setVisibility(View.VISIBLE);
+
+
+/*
             showProgressGettingListLinearLayout
                     .animate()
                     .setDuration(300)
@@ -458,10 +452,10 @@ public class ChannelSearchView extends AppCompatActivity {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
-                            showProgressGettingListLinearLayout.setVisibility(View.VISIBLE);
 
                         }
                     });
+*/
 
 
         }
@@ -480,6 +474,8 @@ public class ChannelSearchView extends AppCompatActivity {
             channelAdaper = new ChannelAdaper(ChannelSearchView.this, new ChannelHolder(companyBannerArrayList, companyTitleArrayList, companyAdddressArrayList, companyAboutArrayList, isSubscribedByMeArrayList, companyIdArrayList));
             recyclerView.setAdapter(channelAdaper);
 
+
+
             channelAdaper.notifyDataSetChanged();
 
 
@@ -487,6 +483,18 @@ public class ChannelSearchView extends AppCompatActivity {
             /*this clas is called in onSearch and onCreate*/ /* show a progress and then hides it */
             /*if the query length is 0 then  its hould call all the channelm name*/
 
+            showProgressGettingListLinearLayout.setVisibility(View.GONE);
+
+            if(companyTitleArrayList.size() == 0){
+                noChannelsFoundLinear.setVisibility(View.VISIBLE);
+            }else {
+
+                noChannelsFoundLinear.setVisibility(View.GONE);
+
+            }
+
+
+/*
             showProgressGettingListLinearLayout
                     .animate()
                     .setDuration(300)
@@ -495,10 +503,10 @@ public class ChannelSearchView extends AppCompatActivity {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
-                            showProgressGettingListLinearLayout.setVisibility(View.GONE);
 
                         }
                     });
+*/
 
 
         }

@@ -58,28 +58,29 @@ public class Register extends Fragment implements View.OnClickListener {
     LinearLayout getRegistered;
     ViewFlipper trickRegisterFlipper,feildRegisterFlipper;
 
-    String TAG = "OTP";
-    TextView enterEmail,enterName,enterState,enterpassword,otpTextView,titleOne,titleTwo,titleThree,titleFour;
-    Button firstButton,stateButton,secondButton,thirdButton,skip,submitOtp;
-    EditText emailEditText,nameEditText,passwordEditText,otpEditText;
-    ViewFlipper imageViewGuideLine,textViewGuideLine,titleFlipper,editTextGuideLine,buttonGuideLine,sendingOTPFlipper;
-    String verifyOtp;
-    TextView registreLogo;
-    Spinner registerStateSpinner;
+    String              TAG = "OTP";
+    TextView            enterEmail,enterName,enterState,enterpassword,otpTextView,titleOne,titleTwo,titleThree,titleFour;
+    Button              firstButton,stateButton,secondButton,thirdButton,skip,submitOtp;
+    EditText            emailEditText,nameEditText,passwordEditText,otpEditText;
+    ViewFlipper         imageViewGuideLine,textViewGuideLine,titleFlipper,editTextGuideLine,buttonGuideLine,sendingOTPFlipper;
+    String              verifyOtp;
+    TextView            registreLogo;
+    Spinner             registerStateSpinner;
 
-    Animation animation,bottomAnimation;
-    String userEmail,userState,userName,password,otp;
-    Typeface subtitleTypeface;
-    ArrayList<String> statesArray = new ArrayList<String>();
+    Animation           animation,bottomAnimation;
+    String              userEmail,userState,userName,password,otp;
+
+    Typeface            subtitleTypeface;
+    ArrayList<String>   statesArray = new ArrayList<String>();
 
 
-    Button lookBackOne,lookBackTwo,lookBackThree;
+    Button              lookBackOne,lookBackTwo,lookBackThree;
 
-    InputMethodManager im;
-    TextView sendingOTP;
+    InputMethodManager  im;
+    TextView            sendingOTP;
 
-    TextView registerTrickTitle,registerTrickSubtitle;
-    Button iacceptRegister;
+    TextView            registerTrickTitle,registerTrickSubtitle;
+    Button              iacceptRegister;
 
 
     @Nullable
@@ -104,24 +105,18 @@ public class Register extends Fragment implements View.OnClickListener {
 
         //trickRegisterFlipper.showNext();
 
-        im = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        subtitleTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/subtitle.otf");
+        im                      = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        subtitleTypeface        = Typeface.createFromAsset(getContext().getAssets(), "fonts/subtitle.otf");
         Typeface  titleTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/forte.ttf");
 
         registreLogo.setTypeface(titleTypeface);
-        userData = getActivity().getSharedPreferences(LOCAL_APP_DATA, Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = userData.edit();
+        userData                = getActivity().getSharedPreferences(LOCAL_APP_DATA, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor     = userData.edit();
 
         editor.putString("OTP","9789");
-
         editor.commit();
-
         setTexts();
-
         return v;
-
 
     }
 
@@ -144,35 +139,35 @@ public class Register extends Fragment implements View.OnClickListener {
 
     }
 
-
     void setUpVariables(View v){
 
         // View Flippers
 
-        imageViewGuideLine = (ViewFlipper) v.findViewById(R.id.imageViewGuideLine);
+        imageViewGuideLine      = (ViewFlipper) v.findViewById(R.id.imageViewGuideLine);
+
         imageViewGuideLine.setInAnimation(getActivity(),R.anim.fab_open);
-        textViewGuideLine = (ViewFlipper) v.findViewById(R.id.textViewGuideLine);
-        editTextGuideLine = (ViewFlipper) v.findViewById(R.id.editTextGuideLine);
-        buttonGuideLine = (ViewFlipper) v.findViewById(R.id.buttonGuideLine);
-        titleFlipper = (ViewFlipper)v.findViewById(R.id.titleFlipper);
 
-        trickRegisterFlipper = (ViewFlipper) v.findViewById(R.id.trickRegisterFlipper);
-        feildRegisterFlipper = (ViewFlipper) v.findViewById(R.id.feildsRegisterFlipper);
+        textViewGuideLine       = (ViewFlipper) v.findViewById(R.id.textViewGuideLine);
+        editTextGuideLine       = (ViewFlipper) v.findViewById(R.id.editTextGuideLine);
+        buttonGuideLine         = (ViewFlipper) v.findViewById(R.id.buttonGuideLine);
+        titleFlipper            = (ViewFlipper)v.findViewById(R.id.titleFlipper);
 
-
-        lookBackOne = (Button)v.findViewById(R.id.lookBackOne);
-        lookBackTwo = (Button)v.findViewById(R.id.lookBackTwo);
-        lookBackThree = (Button)v.findViewById(R.id.lookBackThree);
-        iacceptRegister = (Button) v.findViewById(R.id.iacceptRegister);
-
-        sendingOTPFlipper = (ViewFlipper) v.findViewById(R.id.sendingOTPFlipper);
-        sendingOTP = (TextView)v.findViewById(R.id.sendingOTP);
+        trickRegisterFlipper    = (ViewFlipper) v.findViewById(R.id.trickRegisterFlipper);
+        feildRegisterFlipper    = (ViewFlipper) v.findViewById(R.id.feildsRegisterFlipper);
 
 
+        lookBackOne             = (Button)v.findViewById(R.id.lookBackOne);
+        lookBackTwo             = (Button)v.findViewById(R.id.lookBackTwo);
+        lookBackThree           = (Button)v.findViewById(R.id.lookBackThree);
+        iacceptRegister         = (Button) v.findViewById(R.id.iacceptRegister);
 
-        registerTrickTitle = (TextView) v.findViewById(R.id.registerTrickTitle);
-        registerTrickSubtitle = (TextView) v.findViewById(R.id.registerTrickSubtitle);
+        sendingOTPFlipper       = (ViewFlipper) v.findViewById(R.id.sendingOTPFlipper);
+        sendingOTP              = (TextView)v.findViewById(R.id.sendingOTP);
 
+
+
+        registerTrickTitle      = (TextView) v.findViewById(R.id.registerTrickTitle);
+        registerTrickSubtitle   = (TextView) v.findViewById(R.id.registerTrickSubtitle);
 
 
         registerTrickSubtitle.setOnClickListener(new View.OnClickListener() {
@@ -198,16 +193,15 @@ public class Register extends Fragment implements View.OnClickListener {
 
         // TextViews
 
-        enterName = (TextView)v.findViewById(R.id.nameTextView);
-        enterState = (TextView)v.findViewById(R.id.stateTextView);
-        enterEmail = (TextView)v.findViewById(R.id.emailTextView);
-        enterpassword = (TextView)v.findViewById(R.id.passwordTextView);
-        otpTextView = (TextView)v.findViewById(R.id.otpTextView);
-        titleOne = (TextView)v.findViewById(R.id.titleOne);
-        titleTwo = (TextView)v.findViewById(R.id.titleTwo);
-        titleThree = (TextView)v.findViewById(R.id.titleThree);
-        titleFour = (TextView)v.findViewById(R.id.titleFour);
-
+        enterName       = (TextView)v.findViewById(R.id.nameTextView);
+        enterState      = (TextView)v.findViewById(R.id.stateTextView);
+        enterEmail      = (TextView)v.findViewById(R.id.emailTextView);
+        enterpassword   = (TextView)v.findViewById(R.id.passwordTextView);
+        otpTextView     = (TextView)v.findViewById(R.id.otpTextView);
+        titleOne        = (TextView)v.findViewById(R.id.titleOne);
+        titleTwo        = (TextView)v.findViewById(R.id.titleTwo);
+        titleThree      = (TextView)v.findViewById(R.id.titleThree);
+        titleFour       = (TextView)v.findViewById(R.id.titleFour);
 
         // editTexts
 
@@ -250,39 +244,46 @@ public class Register extends Fragment implements View.OnClickListener {
         statesArray.add("West Bengal");
 
 
-        emailEditText = (EditText)v.findViewById(R.id.emailEditText);
+//        14
 
-        registerStateSpinner = (Spinner)v.findViewById(R.id.registerStateSpinner);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity(),R.layout.spinner_adapter,R.id.spinnerText,statesArray);
+
+        emailEditText                   = (EditText)v.findViewById(R.id.emailEditText);
+        registerStateSpinner            = (Spinner)v.findViewById(R.id.registerStateSpinner);
+        ArrayAdapter<String> adapter1   = new ArrayAdapter<String>(getActivity(),R.layout.spinner_adapter,R.id.spinnerText,statesArray);
         registerStateSpinner.setAdapter(adapter1);
-        otpEditText = (EditText)v.findViewById(R.id.otpEditText);
-        nameEditText = (EditText)v.findViewById(R.id.nameEditText);
-        passwordEditText = (EditText)v.findViewById(R.id.passwordEditText);
+
+        registerStateSpinner            .setSelection(statesArray.indexOf("Jammu and Kashmir"));
+        otpEditText                     = (EditText)v.findViewById(R.id.otpEditText);
+        nameEditText                    = (EditText)v.findViewById(R.id.nameEditText);
+        passwordEditText                = (EditText)v.findViewById(R.id.passwordEditText);
 
         //buttons
 
 
-        submitOtp = (Button) v.findViewById(R.id.submitOtp);
-        skip = (Button) v.findViewById(R.id.skipOtp);
-        firstButton = (Button) v.findViewById(R.id.emailNextButton);
-        stateButton = (Button)v.findViewById(R.id.stateNextButton);
-        secondButton = (Button) v.findViewById(R.id.nameNextButton);
-        thirdButton = (Button) v.findViewById(R.id.passwordNextButton);
+        submitOtp       = (Button)  v.findViewById(R.id.submitOtp);
+        skip            = (Button)  v.findViewById(R.id.skipOtp);
+        firstButton     = (Button)  v.findViewById(R.id.emailNextButton);
+        stateButton     = (Button)  v.findViewById(R.id.stateNextButton);
+        secondButton    = (Button)  v.findViewById(R.id.nameNextButton);
+        thirdButton     = (Button)  v.findViewById(R.id.passwordNextButton);
 
         // OnClick litners
 
-        submitOtp.setOnClickListener(this);
-        submitOtp.setOnClickListener(this);
-        firstButton.setOnClickListener(this);
-        stateButton.setOnClickListener(this);
-        secondButton.setOnClickListener(this);
-        thirdButton.setOnClickListener(this);
-        skip.setOnClickListener(this);
-        lookBackOne.setOnClickListener(this);
-        lookBackTwo.setOnClickListener(this);
-        lookBackThree.setOnClickListener(this);
-        iacceptRegister.setOnClickListener(this);
+        submitOtp       .setOnClickListener(this);
+        submitOtp       .setOnClickListener(this);
+        firstButton     .setOnClickListener(this);
+        stateButton     .setOnClickListener(this);
+        secondButton    .setOnClickListener(this);
+        thirdButton     .setOnClickListener(this);
+        skip            .setOnClickListener(this);
+        lookBackOne     .setOnClickListener(this);
+        lookBackTwo     .setOnClickListener(this);
+        lookBackThree   .setOnClickListener(this);
+        iacceptRegister .setOnClickListener(this);
+
+
     }
+
 
     @Override
     public void onClick(View v) {
@@ -298,11 +299,14 @@ public class Register extends Fragment implements View.OnClickListener {
                 trickRegisterFlipper.showNext();
                 feildRegisterFlipper.showNext();
                 buttonGuideLine.showNext();
+
                 registreLogo.startAnimation(AnimationUtils.loadAnimation(getContext(),R.anim.fab_close));
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         registreLogo.setVisibility(View.GONE);
+                        emailEditText.requestFocus();
+
                     }
                 },300);
                 break;
@@ -376,14 +380,14 @@ public class Register extends Fragment implements View.OnClickListener {
 
                     if (emailEditText.getText().toString().contains(" ")){
                         Toast.makeText(getActivity(), "Phone number must not contains any spaces", Toast.LENGTH_SHORT).show();
+
                     }else {
 
-                        userEmail = emailEditText.getText().toString();
-                        editor.putString("userEmail",userEmail);
-                        editor.apply();
-                        im.hideSoftInputFromWindow(emailEditText.getWindowToken(),0);
-                        new CheckAvailability().execute();
-
+                        userEmail   = emailEditText.getText().toString();
+                        editor      .putString("userEmail",userEmail);
+                        editor      .apply();
+                        im          .hideSoftInputFromWindow(emailEditText.getWindowToken(),0);
+                        new         CheckAvailability().execute();
 
                     }
 
@@ -394,21 +398,22 @@ public class Register extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.stateNextButton:
-
-
-
                 if (registerStateSpinner.getSelectedItem().toString().equals("Select Your State")){
+
                     Toast.makeText(getActivity(), "Please Select a Valid State", Toast.LENGTH_SHORT).show();
+
                 }else {
-                    imageViewGuideLine.showNext();
-                    textViewGuideLine.showNext();
-                    editTextGuideLine.showNext();
-                    titleFlipper.showNext();
-                    buttonGuideLine.showNext();
-                    userState = registerStateSpinner.getSelectedItem().toString();
-                    editor.putString("userState",userState);
-                    editor.apply();
-                    enterName.setText("Alright Sparky, Verification Code is on its way to : " + userEmail);
+
+                    imageViewGuideLine  .showNext();
+                    textViewGuideLine   .showNext();
+                    editTextGuideLine   .showNext();
+                    titleFlipper        .showNext();
+                    buttonGuideLine     .showNext();
+                    userState           = registerStateSpinner.getSelectedItem().toString();
+                    editor              .putString("userState",userState);
+                    editor              .apply();
+                    enterName           .setText("Alright Sparky, Verification Code is on its way to : " + userEmail);
+
                 }
 
 
@@ -450,7 +455,7 @@ public class Register extends Fragment implements View.OnClickListener {
                     password = passwordEditText.getText().toString();
                     editor.putString("userPassword",password);
                     editor.apply();
-                    otpTextView.setText("Verification Code was sent to " + userEmail +""  );
+                    otpTextView.setText("Verification Code was sent to " + userEmail + ", In case you didn't get it you can skip for now!");
                 }
                 break;
 
@@ -479,16 +484,15 @@ public class Register extends Fragment implements View.OnClickListener {
 
     public  void lookBack(){
 
-        imageViewGuideLine.showPrevious();
-        editTextGuideLine.showPrevious();
-        titleFlipper.showPrevious();
-        textViewGuideLine.showPrevious();
-        buttonGuideLine.showPrevious();
-
+        imageViewGuideLine  .showPrevious();
+        editTextGuideLine   .showPrevious();
+        titleFlipper        .showPrevious();
+        textViewGuideLine   .showPrevious();
+        buttonGuideLine     .showPrevious();
 
     }
 
-     class RegisterUser extends  AsyncTask< String, String, String> {
+     class RegisterUser extends  AsyncTask< String, String, String>     {
 
         StringBuilder builder = new StringBuilder();
         BufferedReader bufferedReader;
@@ -586,7 +590,7 @@ public class Register extends Fragment implements View.OnClickListener {
 
 
     }
-     class CheckAvailability extends AsyncTask< String, String, String>{
+     class CheckAvailability extends AsyncTask< String, String, String> {
 
 
         StringBuilder builder = new StringBuilder();

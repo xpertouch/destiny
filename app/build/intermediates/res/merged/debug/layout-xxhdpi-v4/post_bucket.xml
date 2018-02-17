@@ -144,13 +144,21 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    android:id="@+id/previewDiscriptionTV"
+                    android:text="This is how this image would look like, Crop feature coming soon..."/>
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="250dp"
                     android:id="@+id/bannerPreview"
                     android:visibility="gone"
                     android:src="@raw/sample"
-                    android:scaleType="fitStart" />
+                    android:scaleType="centerCrop" />
+
             </LinearLayout>
         </ScrollView>
 
@@ -226,10 +234,10 @@
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:id="@+id/attachBanner">
+                            android:gravity="center">
 
                             <ImageButton
+                                android:id="@+id/attachBanner"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="#00000000"

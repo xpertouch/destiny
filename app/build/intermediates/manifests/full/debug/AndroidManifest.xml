@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="corp.burenz.expertouch"
-    android:versionCode="8"
-    android:versionName="1.0.3" >
+    android:versionCode="10"
+    android:versionName="v1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -32,11 +32,6 @@
         android:supportsRtl="true"
         android:theme="@style/ClickAwayTheme" >
         <activity android:name="corp.burenz.expertouch.activities.ChannelSearchView" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="corp.burenz.expertouch.activities.RateExpertActivity"
@@ -63,7 +58,13 @@
         <activity
             android:name="corp.burenz.expertouch.activities.WelcomeActivity"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name="corp.burenz.expertouch.activities.JobPostDetails" />
         <activity android:name="corp.burenz.expertouch.util.CallPermissions" />
         <activity
             android:name="corp.burenz.expertouch.activities.ExpertDetails"
@@ -87,7 +88,8 @@
         <activity
             android:name="corp.burenz.expertouch.activities.Profile"
             android:label="@string/title_activity_profile"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="corp.burenz.expertouch.activities.OwnChoice"
             android:label="My Profile"
@@ -102,7 +104,8 @@
         <activity
             android:name="corp.burenz.expertouch.activities.CompanyProfile"
             android:label="@string/title_activity_company_profile"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="corp.burenz.expertouch.activities.PostAdd"
             android:screenOrientation="portrait"

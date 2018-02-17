@@ -2,5 +2,9 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/mipmap-hdpi/share_rev.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/mipmap-hdpi/share_rev.png"
     }
 ]

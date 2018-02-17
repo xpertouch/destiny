@@ -78,7 +78,6 @@ public class EducationBucket extends Fragment {
         View v  = inflater.inflate(R.layout.education_bucket,container,false);
 
         myBucketRV = (RecyclerView) v.findViewById(R.id.educationBucketRV);
-        myBucketRV.setLayoutManager(new LinearLayoutManager(getActivity()));
         myBucketRV.clearOnScrollListeners();
         myBucketRV.hasFixedSize();
 
@@ -461,6 +460,8 @@ public class EducationBucket extends Fragment {
                 adapter = new BucketAdapter(getActivity(),saleID ,companyTitles, companyCity, saleTitle, saleDiscription, saleDate, saleBanner,myLikeIds,totalLikes,attachedBanner);
                 adapter.notifyDataSetChanged();
                 myBucketRV.setAdapter(new RecyclerViewMaterialAdapter(adapter));
+//                myBucketRV.setAdapter(adapter);
+                myBucketRV.setLayoutManager(new LinearLayoutManager(getActivity()));
                 MaterialViewPagerHelper.registerRecyclerView(getActivity(),myBucketRV);
             }
 

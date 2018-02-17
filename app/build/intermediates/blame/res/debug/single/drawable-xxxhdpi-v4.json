@@ -16,12 +16,12 @@
         "source": "/home/buren/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/res/drawable-xxxhdpi-v4/ic_history_black.png"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_action_mic_black.png",
-        "source": "/home/buren/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/res/drawable-xxxhdpi-v4/ic_action_mic_black.png"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_search_black.png",
         "source": "/home/buren/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/res/drawable-xxxhdpi-v4/ic_search_black.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_action_mic_black.png",
+        "source": "/home/buren/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/res/drawable-xxxhdpi-v4/ic_action_mic_black.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/side_nav_bar.xml",

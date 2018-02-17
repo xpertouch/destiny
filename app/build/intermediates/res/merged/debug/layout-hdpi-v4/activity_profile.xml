@@ -114,18 +114,32 @@
                                 android:layout_gravity="center_vertical"
                                 android:gravity="center_vertical|right" >
 
-                                <ImageButton
+                                <RelativeLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/editFlipImage"
-                                    android:src="@drawable/edit_pic_blue"
-                                    android:scaleType="fitCenter"
-                                    android:cropToPadding="true"
-                                    android:layout_gravity="right"
                                     android:layout_marginRight="10dp"
-                                    android:padding="10dp"
-                                    android:background="#AFFFFFFF" />
-                            </LinearLayout>
+                                    android:layout_marginLeft="3dp"
+                                    android:gravity="center">
+
+                                    <ImageButton
+                                        android:id="@+id/imageView16"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:background="#00000000"
+                                        android:scaleType="centerCrop"
+                                        app:srcCompat="@drawable/edit_pic_white" />
+
+                                    <ImageButton
+                                        android:id="@+id/editFlipImage"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:background="#00000000"
+                                        app:srcCompat="@drawable/edit_pic_blue" />
+
+                                </RelativeLayout>
+
+
+                                   </LinearLayout>
 
                             <LinearLayout
                                 android:orientation="vertical"

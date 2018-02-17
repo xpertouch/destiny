@@ -58,6 +58,12 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
 
     int TIME_OUT = 5000 ;
 
+
+    public void removePost(ArrayList<String> postDates, int position){
+        postDates.set(position,"removed");
+    }
+
+
     @Override
     public MyPostsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -72,10 +78,10 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
 
     public MyCompanyPostsAdapter(Context context,ArrayList<String> postDates, ArrayList<String> posts,ArrayList<String> postId){
 
-        this.postDates = postDates;
-        this.posts= posts;
-        this.context = context;
-        this.postId = postId;
+        this.postDates      = postDates;
+        this.posts          = posts;
+        this.context        = context;
+        this.postId         = postId;
 
     }
 
@@ -84,43 +90,52 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
 
 
     @Override
-    public void onBindViewHolder(final MyPostsHolder holder, int position) {
+    public void onBindViewHolder(final MyPostsHolder holder, final int position) {
 
 
-        final ViewFlipper deletionProgressFlipper;
-        TextView myPostDateV;
-        final ImageButton deleteMyPostsLL;
-        RecyclerView myPostsInMyPosts;
-        RecyclerView.Adapter adapter;
-        final CardView deleteMyPostsCardView;
-        LinearLayout emptyCompany;
-        Button yesMSure,noDont;
+        final ViewFlipper           deletionProgressFlipper;
+        TextView                    myPostDateV;
+        final ImageButton           deleteMyPostsLL;
+        RecyclerView                myPostsInMyPosts;
+        RecyclerView.Adapter        adapter;
+        final CardView              deleteMyPostsCardView;
+        LinearLayout                emptyCompany;
+        Button                      yesMSure,noDont;
 
-        myPostsInMyPosts = holder.myPostsInMyPosts;
-        myPostDateV = holder.myPostDateV;
-        deleteMyPostsLL = holder.deleteMyPostsLL;
-        deleteMyPostsCardView = holder.deleteMyPostsCardView;
-        deletionProgressFlipper = holder.deletionProgressFlipper;
-        yesMSure = holder.yesMSure;
-        noDont = holder.noDont;
+        myPostsInMyPosts            = holder.myPostsInMyPosts;
+        myPostDateV                 = holder.myPostDateV;
+        deleteMyPostsLL             = holder.deleteMyPostsLL;
+        deleteMyPostsCardView       = holder.deleteMyPostsCardView;
+        deletionProgressFlipper     = holder.deletionProgressFlipper;
+        yesMSure                    = holder.yesMSure;
+        noDont                      = holder.noDont;
 
         cardCount = postId.size();
 
-        myPostDateV.setText(postDates.get(position).toString());
-        adapter = new AddCounts(posts.get(position).toString().split("3xt3"));
+        myPostDateV.setText(postDates.get(position));
+
+        adapter = new AddCounts(posts.get(position).split("3xt3"));
 
         myPostsInMyPosts.setLayoutManager(new LinearLayoutManager(context));
         myPostsInMyPosts.setAdapter(adapter);
+        final String removePostId = postId.get(position);
 
-        final String removePostId = postId.get(position).toString();
+
+
+        if(postId.get(position).contains("removed")){
+            deleteMyPostsCardView.setVisibility(View.GONE);
+        }else {
+            deleteMyPostsCardView.setVisibility(View.VISIBLE);
+        }
+
+
 
         yesMSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-
-                new DeleteMyPost().execute(removePostId);
+                new DeleteMyPost(holder,position).execute(removePostId);
 
 
                 deletionProgressFlipper.setClickable(false);
@@ -135,11 +150,12 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
                 deletionProgressFlipper.showNext();
 
 
-                new Handler().postDelayed(new Runnable() {
+
+               /* new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
 
-                        if (result.equals("deleted")){
+                      *//*  if (result.equals("deleted")){
 
                             deleteMyPostsCardView.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_close));
                             new Handler().postDelayed(new Runnable() {
@@ -174,11 +190,11 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
                             deleteMyPostsLL.setClickable(true);
                             deleteMyPostsLL.setEnabled(true);
                         }
-
+*//*
 
                     }
                 },TIME_OUT);
-
+*/
 
 
 
@@ -237,14 +253,14 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
         public MyPostsHolder(View itemView) {
             super(itemView);
 
-            myPostDateV = (TextView) itemView.findViewById(R.id.myPostDateV);
-            deleteMyPostsLL  = (ImageButton) itemView.findViewById(R.id.deleteMyJobPostLL);
-            myPostsInMyPosts = (RecyclerView) itemView.findViewById(R.id.myPostInMyPostsRV);
-            deleteMyPostsCardView = (CardView) itemView.findViewById(R.id.deleteMypostCardView);
-            deletionProgressFlipper = (ViewFlipper) itemView.findViewById(R.id.deletionProgerssFlipper);
-            emptyCompany = (LinearLayout) itemView.findViewById(R.id.emptyJobs);
-            yesMSure = (Button)itemView.findViewById(R.id.yesMSure);
-            noDont = (Button)itemView.findViewById(R.id.noDont);
+            myPostDateV                 = (TextView) itemView.findViewById(R.id.myPostDateV);
+            deleteMyPostsLL             = (ImageButton) itemView.findViewById(R.id.deleteMyJobPostLL);
+            myPostsInMyPosts            = (RecyclerView) itemView.findViewById(R.id.myPostInMyPostsRV);
+            deleteMyPostsCardView       = (CardView) itemView.findViewById(R.id.deleteMypostCardView);
+            deletionProgressFlipper     = (ViewFlipper) itemView.findViewById(R.id.deletionProgerssFlipper);
+            emptyCompany                = (LinearLayout) itemView.findViewById(R.id.emptyJobs);
+            yesMSure                    = (Button)itemView.findViewById(R.id.yesMSure);
+            noDont                      = (Button)itemView.findViewById(R.id.noDont);
 
         }
 
@@ -256,7 +272,17 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
 
 
 
+
+
     private class DeleteMyPost extends AsyncTask<String,String,String>{
+
+        MyPostsHolder myPostsHolder;
+        int position;
+
+        public DeleteMyPost(MyPostsHolder myPostsHolder, int position) {
+            this.myPostsHolder  = myPostsHolder;
+            this.position       = position;
+        }
 
 
         StringBuilder builder = new StringBuilder();
@@ -314,14 +340,52 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
             if (s.equals("1")){
 
                 result = "deleted";
                 cardCount--;
+                removePost(postId,position);
+//                myPostsHolder.deleteMyPostsCardView.set
+
+
+
+
+                myPostsHolder.deleteMyPostsCardView.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_close));
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        myPostsHolder.deleteMyPostsCardView.setVisibility(View.GONE);
+
+
+                        if (cardCount == 0){
+
+                            myPostsHolder.emptyCompany.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_open));
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    myPostsHolder.emptyCompany.setVisibility(View.VISIBLE);
+                                }
+                            },300);
+                        }
+
+
+
+
+                    }
+                },300);
+
 
 
             }else {
                 result = "error";
+
+
+                myPostsHolder.deletionProgressFlipper.showNext();
+                myPostsHolder.deletionProgressFlipper.setClickable(true);
+                myPostsHolder.deletionProgressFlipper.setEnabled(true);
+                myPostsHolder.deleteMyPostsLL.setClickable(true);
+                myPostsHolder.deleteMyPostsLL.setEnabled(true);
             }
 
 

@@ -29,6 +29,7 @@ import org.apache.http.message.BasicNameValuePair;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,9 +87,18 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
 
 
 
+    private void removePost(ArrayList<String> postIDArray, int position){
+
+        postIDArray.set(position,"removed");
+
+    }
+
+
+
+
 
     @Override
-    public void onBindViewHolder(final MyPostsHolder holder, int position) {
+    public void onBindViewHolder(final MyPostsHolder holder, final int position) {
 
 
         TextView bucketPostDate,bucketPostTitle,bucketPostSubtitle,totalLikesV;
@@ -134,53 +144,25 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
 
 
 
+        if(postId.get(position).contains("removed")){
+
+            holder.bucketPostCard.setVisibility(View.GONE);
+
+        }else{
+
+            holder.bucketPostCard.setVisibility(View.VISIBLE);
+
+
+        }
+
+
+
         sureDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bucketDeletionFlipper.showNext();
 
-                new DeleteMyPost().execute(postId.get(holder.getAdapterPosition()));
-
-
-
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        if (result.equals("deleted")){
-
-                            bucketPostCard.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_close));
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-
-//                                    if (postsLength == 1){
-//
-//                                        loonelyCompanyBucket.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_open));
-//                                        new Handler().postDelayed(new Runnable() {
-//                                            @Override
-//                                            public void run() {
-//                                                loonelyCompanyBucket.setVisibility(View.VISIBLE);
-//                                            }
-//                                        },300);
-//                                    }
-                                    bucketPostCard.setVisibility(View.GONE);
-
-
-                                }
-                            },300);
-
-                        }else{
-                            Toast.makeText(context, "Operation Timed out", Toast.LENGTH_SHORT).show();
-                            bucketDeletionFlipper.setClickable(true);
-                            bucketDeletionFlipper.showNext();
-
-                        }
-
-
-                    }
-                },TIME_OUT);
+                try {new DeleteMyPost(holder, position).execute(postId.get(holder.getAdapterPosition()));}catch (Exception e){ e.printStackTrace();}
 
 
 
@@ -267,10 +249,20 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
 
     class DeleteMyPost extends AsyncTask<String,String,String>{
 
+        MyPostsHolder holder;
+        int position;
 
         StringBuilder builder = new StringBuilder();
         BufferedReader bufferedReader;
         List<NameValuePair> nameValuePairList = new ArrayList<>();
+
+        public DeleteMyPost(MyPostsHolder holder, int position) {
+
+            this.holder         = holder;
+            this.position       = position;
+
+
+        }
 
         @Override
         protected String doInBackground(String... params) {
@@ -331,8 +323,72 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
 
                 result = "deleted";
 
+                removePost(postId,position);
+
+
+                            holder.bucketPostCard.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_close));
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    try {
+
+                                        if (postId.size() == 1){
+
+                                            holder.loonelyCompanyBucket.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_open));
+                                            new Handler().postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    holder.loonelyCompanyBucket.setVisibility(View.VISIBLE);
+                                                }
+                                            },300);
+                                        }
+
+
+
+                                    }catch (Exception e){
+
+                                    }
+
+
+
+                                    holder.bucketPostCard.setVisibility(View.GONE);
+
+
+                                }
+                            },300);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }else {
+
                 result = "error";
+
+                Toast.makeText(context, "Operation Timed out", Toast.LENGTH_SHORT).show();
+                holder.bucketDeletionFlipper.setClickable(true);
+                holder.bucketDeletionFlipper.showNext();
+
 
             }
 

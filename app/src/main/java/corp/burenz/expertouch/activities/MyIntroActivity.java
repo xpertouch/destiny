@@ -4,6 +4,7 @@ package corp.burenz.expertouch.activities;
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -36,10 +37,14 @@ import corp.burenz.expertouch.fragments.intro.Third;
 public class MyIntroActivity extends AppCompatActivity {
 
 
-    LinearLayout layerOne,layerTwo,layerThree,layerFour,layerFive,layerSix,layerSeven,mDone;
-    LinearLayout upperHalfintro,lowerHalfIntro;
-    Button letsGetGoing,letsGoFinally;
-    Animation slide_up,slide_down,fab_open,fab_close,card_animation;
+    LinearLayout    layerOne,layerTwo,layerThree,layerFour,layerFive,layerSix,layerSeven,mDone;
+    LinearLayout    upperHalfintro,lowerHalfIntro;
+    Button          letsGetGoing,letsGoFinally;
+    Animation       slide_up,slide_down,fab_open,fab_close,card_animation;
+    Typeface        logoTypeface;
+    TextView        nowAnythingTV,clickAwayTV,jobsLocalTV;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -248,24 +253,50 @@ public class MyIntroActivity extends AppCompatActivity {
 
 
     void initViews(){
-        layerOne = (LinearLayout) findViewById(R.id.layerOne);
-        upperHalfintro = (LinearLayout) findViewById(R.id.upperHalfIntro);
-        lowerHalfIntro = (LinearLayout) findViewById(R.id.lowerHalfIntro);
-        layerTwo = (LinearLayout) findViewById(R.id.layerTwoIntro);
-        layerThree  = (LinearLayout) findViewById(R.id.layerThreeIntro);
-        layerFour = (LinearLayout) findViewById(R.id.layerFour);
-        layerFive = (LinearLayout) findViewById(R.id.layerFive);
-        layerSix = (LinearLayout) findViewById(R.id.layerSix);
-        layerSeven = (LinearLayout) findViewById(R.id.layerSeven);
-        mDone = (LinearLayout) findViewById(R.id.mDone);
-        letsGetGoing = (Button) findViewById(R.id.letsGetGoing);
 
-        letsGoFinally = (Button) findViewById(R.id.letsGoFinally);
-        slide_up = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_up_slow);
-        slide_down = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_down_slow);
-        card_animation = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation);
-        fab_open = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.fab_open);
-        fab_close = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.fab_close);
+
+
+        layerOne            = (LinearLayout)    findViewById(R.id.layerOne);
+        upperHalfintro      = (LinearLayout)    findViewById(R.id.upperHalfIntro);
+        lowerHalfIntro      = (LinearLayout)    findViewById(R.id.lowerHalfIntro);
+        layerTwo            = (LinearLayout)    findViewById(R.id.layerTwoIntro);
+        layerThree          = (LinearLayout)    findViewById(R.id.layerThreeIntro);
+        layerFour           = (LinearLayout)    findViewById(R.id.layerFour);
+        layerFive           = (LinearLayout)    findViewById(R.id.layerFive);
+        layerSix            = (LinearLayout)    findViewById(R.id.layerSix);
+        layerSeven          = (LinearLayout)    findViewById(R.id.layerSeven);
+        mDone               = (LinearLayout)    findViewById(R.id.mDone);
+        letsGetGoing        = (Button)          findViewById(R.id.letsGetGoing);
+
+        letsGoFinally       = (Button) findViewById(R.id.letsGoFinally);
+        slide_up            = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_up_slow);
+        slide_down          = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_down_slow);
+        card_animation      = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation);
+        fab_open            = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.fab_open);
+        fab_close           = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.fab_close);
+
+        logoTypeface        = Typeface.createFromAsset(MyIntroActivity.this.getAssets(), "fonts/forte.ttf");
+
+        nowAnythingTV       =  (TextView)       findViewById(R.id.now_anything_text_view);
+        clickAwayTV         =  (TextView)       findViewById(R.id.clickaway_text_view);
+        jobsLocalTV         =  (TextView)       findViewById(R.id.jobs_local_text_view);
+
+
+        try{
+            assert nowAnythingTV != null;
+            assert clickAwayTV != null;
+            assert jobsLocalTV != null;
+
+            nowAnythingTV.setTypeface(logoTypeface);
+            clickAwayTV.setTypeface(logoTypeface);
+            jobsLocalTV.setTypeface(logoTypeface);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+
     }
 
 

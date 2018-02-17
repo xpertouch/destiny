@@ -31,6 +31,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
@@ -71,18 +72,19 @@ public class BucketPost extends Fragment {
     String type = "offer";
     String title,discription;
 
+    TextView previewDiscriptionTV;
     String COMPANY_ADD  = "companyAdd";
     SharedPreferences companyAdd;
     SharedPreferences.Editor editor;
 
-    public static final int GALLERY_PICTURE = 1;
-    public static final int READ_GALLERY_PERMISSIONS_REQUEST = 2;
-    public static final int  REQUEST_IMAGE_CROP = 3;
+    public static final int     GALLERY_PICTURE = 1;
+    public static final int     READ_GALLERY_PERMISSIONS_REQUEST = 2;
+    public static final int     REQUEST_IMAGE_CROP = 3;
     Bitmap myBitmap;
     Intent imageIntent;
 
     ImageView bannerPreview;
-    LinearLayout attachBanner;
+    ImageButton attachBanner;
 
     ImageButton selectFromGallery;
     String base64 = "EMPTY";
@@ -96,16 +98,17 @@ public class BucketPost extends Fragment {
 
         View v = inflater.inflate(R.layout.post_bucket,container,false);
 
-        promotionTitle = (EditText) v.findViewById(R.id.promotionTitle);
-        promotionDiscription = (EditText) v.findViewById(R.id.promotionDiscription);
-        offerRB = (RadioButton) v.findViewById(R.id.offerRB);
-        productRB = (RadioButton) v.findViewById(R.id.productRB);
-        flagPromotion = (LinearLayout) v.findViewById(R.id.flagPromotion);
-        promotionFlipper = (ViewFlipper) v.findViewById(R.id.promotionFlipper);
-        healthRB = (RadioButton) v.findViewById(R.id.healthRB);
-        educationRb = (RadioButton) v.findViewById(R.id.educationRB);
-        attachBanner = (LinearLayout) v.findViewById(R.id.attachBanner);
-        bannerPreview = (ImageView) v.findViewById(R.id.bannerPreview);
+        promotionTitle          = (EditText) v.findViewById(R.id.promotionTitle);
+        promotionDiscription    = (EditText) v.findViewById(R.id.promotionDiscription);
+        offerRB                 = (RadioButton) v.findViewById(R.id.offerRB);
+        productRB               = (RadioButton) v.findViewById(R.id.productRB);
+        flagPromotion           = (LinearLayout) v.findViewById(R.id.flagPromotion);
+        promotionFlipper        = (ViewFlipper) v.findViewById(R.id.promotionFlipper);
+        healthRB                = (RadioButton) v.findViewById(R.id.healthRB);
+        educationRb             = (RadioButton) v.findViewById(R.id.educationRB);
+        previewDiscriptionTV    = (TextView) v.findViewById(R.id.previewDiscriptionTV);
+        attachBanner            = (ImageButton) v.findViewById(R.id.attachBanner);
+        bannerPreview           = (ImageView) v.findViewById(R.id.bannerPreview);
 
         attachBanner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,15 +121,11 @@ public class BucketPost extends Fragment {
         offerRB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 type = "offer";
                 offerRB.setChecked(true);
                 healthRB.setChecked(false);
                 productRB.setChecked(false);
                 educationRb.setChecked(false);
-
-
             }
         });
 
@@ -296,7 +295,14 @@ public class BucketPost extends Fragment {
 
             if (s.contains("0")){
 
-                Toast.makeText(getActivity(), "Network Failure, Please try Again", Toast.LENGTH_SHORT).show();
+                if (s.contains("Too Large")){
+                    Toast.makeText(getActivity(), "File Size is Too Large, file size should be approx. less than 2 MB", Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Toast.makeText(getActivity(), "We are having trouble connecting to the internet, Please check your Connection ", Toast.LENGTH_SHORT).show();
+
+                }
+
                 promotionFlipper.showNext();
 
             }else if (s.contains("1")){
@@ -333,7 +339,7 @@ public class BucketPost extends Fragment {
             }else {
 
                 if (s.contains("Large")){
-                    Toast.makeText(getActivity(), "File Size is Too Large, file size should be approx. less than 1 MB", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "File Size is Too Large, file size should be approx. less than 2 MB", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(getActivity(), "We are having trouble connecting to the internet, Please check your Connection ", Toast.LENGTH_SHORT).show();
@@ -432,6 +438,7 @@ public class BucketPost extends Fragment {
             String selectedImagePath = getPath(selectedImageUri);
 
             myBitmap = BitmapFactory.decodeFile(selectedImagePath);
+            previewDiscriptionTV.setVisibility(View.VISIBLE);
             bannerPreview.setVisibility(View.VISIBLE);
             bannerPreview.setImageBitmap(myBitmap);
 
@@ -569,7 +576,7 @@ public class BucketPost extends Fragment {
     public void sendImage(View view) {
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, byteArrayOutputStream);
+        myBitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteArrayOutputStream);
         byte[] byteArray = byteArrayOutputStream .toByteArray();
         base64= new String(Base64.encodeBase64(byteArray));
 

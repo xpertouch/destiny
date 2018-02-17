@@ -64,15 +64,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     TextView takeMetoHelpCenter;
     LinearLayout loginContainer;
 
-    TextView progressTitleV,progressSubtitleV;
-    String COMPANY_DETAILS = "myCompanyDetails";
-    SharedPreferences myCompanyDetails;
+    TextView            progressTitleV  ,progressSubtitleV;
+    String              COMPANY_DETAILS = "myCompanyDetails";
+    SharedPreferences   myCompanyDetails;
     SharedPreferences.Editor editor;
     Typeface logoTypeface;
 
     String MY_PROFILE_DATA = "myProfileInfo";
     SharedPreferences myProfile;
     SharedPreferences.Editor myProfileEditor;
+
     ArrayList<String> userState,userName,profile;
     ArrayList<String> companyName,companyTag,companyPhone,companyEmail,companyVisit,companyDiscription,companyState,companyCity,companyLandark,companyBanner,verified;
     ArrayList<String> fullName,mainExpertise,status,textStatus,noticePeriod,call,email,shortBio,myCurrentState,myExperience,myAge,myExperienceMonths,gender,expertCity,expertSkills,expertProfType,expertProfession,expertPic,expertVisibilty;
@@ -93,7 +94,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             }
         },300);
 
-
         logoTypeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/forte.ttf");
 
 
@@ -104,6 +104,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         loginTitle.setTypeface(logoTypeface);
 
         loginUser.setOnClickListener(this);
+
         createNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,19 +119,22 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     public void inItViews(View v){
 
-        loginContainer = (LinearLayout) v.findViewById(R.id.loginContainer);
-        loginUser = (Button) v.findViewById(R.id.loginUser);
-		im = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-		iForgotMyPassword = (TextView) v.findViewById(R.id.iForgotMyPassword);
-		iForgotMyPassword.setOnClickListener(this);
-        createNew = (Button) v.findViewById(R.id.createNew);
-		progerssLayout = (LinearLayout) v.findViewById(R.id.progressLayout);
-        proceedLoginFlipper = (ViewFlipper) v.findViewById(R.id.proceedLoginFlipper);
-        userEmailE = (EditText) v.findViewById(R.id.enterEmail);
-        userPasswordE = (EditText) v.findViewById(R.id.enterPassword);
+        loginContainer      = (LinearLayout)    v.findViewById(R.id.loginContainer);
+        loginUser           = (Button)          v.findViewById(R.id.loginUser);
+		iForgotMyPassword   = (TextView)        v.findViewById(R.id.iForgotMyPassword);
 
-        progressTitleV = (TextView) v.findViewById(R.id.progressTitleV);
-        progressSubtitleV = (TextView)  v.findViewById(R.id.progressSubtitleV);
+        createNew           = (Button)          v.findViewById(R.id.createNew);
+		progerssLayout      = (LinearLayout)    v.findViewById(R.id.progressLayout);
+        proceedLoginFlipper = (ViewFlipper)     v.findViewById(R.id.proceedLoginFlipper);
+        userEmailE          = (EditText)        v.findViewById(R.id.enterEmail);
+
+        userPasswordE       = (EditText)        v.findViewById(R.id.enterPassword);
+        progressTitleV      = (TextView)        v.findViewById(R.id.progressTitleV);
+        progressSubtitleV   = (TextView)        v.findViewById(R.id.progressSubtitleV);
+
+        im                  = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        iForgotMyPassword   .setOnClickListener(this);
+        userEmailE.requestFocus();
 
     }
 
@@ -301,10 +305,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         class CheckAvailability extends AsyncTask< String, String, String>{
 
 
-        StringBuilder builder = new StringBuilder();
-        BufferedReader bufferedReader;
+        StringBuilder   builder             = new StringBuilder();
+        BufferedReader  bufferedReader;
 
-        List<NameValuePair> nameValuePairs = new ArrayList<>();
+        List<NameValuePair> nameValuePairs  = new ArrayList<>();
             String USER_EMAIL;
 
         @Override
@@ -542,8 +546,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                           //  progerssLayout.startAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.abc_fade_in));
 //
 
-                             progressTitleV.setText("Welcome Back "+ userData.getString("userName","Expert"));
-                            progressSubtitleV.setText("Please wait while we Setup Your Expert Profile registered with us, This Process may take a while");
+                                progressTitleV.setText("Welcome Back "+ userData.getString("userName","Expert"));
+                                progressSubtitleV.setText("Please wait while we Setup Your Expert Profile registered with us, This Process may take a while");
 
 
 
@@ -657,24 +661,23 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 //             },500);
 
 
-             companyName = new ArrayList<String>();
-             companyTag = new ArrayList<String>();
-             companyPhone = new ArrayList<String>();
-             companyEmail = new ArrayList<String>();
-             companyVisit = new ArrayList<String>();
+             companyName        = new ArrayList<String>();
+             companyTag         = new ArrayList<String>();
+             companyPhone       = new ArrayList<String>();
+             companyEmail       = new ArrayList<String>();
+             companyVisit       = new ArrayList<String>();
              companyDiscription = new ArrayList<String>();
-             companyState = new ArrayList<String>();
-             companyCity  = new ArrayList<String>();
-             companyLandark = new ArrayList<String>();
-             companyBanner = new ArrayList<String>();
-             verified = new ArrayList<String>();
+             companyState       = new ArrayList<String>();
+             companyCity        = new ArrayList<String>();
+             companyLandark     = new ArrayList<String>();
+             companyBanner      = new ArrayList<String>();
+             verified           = new ArrayList<String>();
          }
 
          protected String doInBackground(String... params) {
 
 
             userNamePassword.add(new BasicNameValuePair("userPhone", userEmail));
-
 
             try {
 
@@ -701,17 +704,18 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
                 jsonObject = jsonArray.getJSONObject(0);
-                companyName.add(jsonObject.getString("companyTitle"));
-                companyTag.add(jsonObject.getString("companyTag"));
-                companyPhone.add(jsonObject.getString("companyPhone"));
-                companyEmail.add(jsonObject.getString("companyEmail"));
-                companyVisit.add(jsonObject.getString("companyVisit"));
-                companyDiscription.add(jsonObject.getString("companyDiscription"));
-                companyState.add(jsonObject.getString("companyState"));
-                companyLandark.add(jsonObject.getString("companyLandmark"));
-                companyCity.add(jsonObject.getString("companyCity"));
-                companyBanner.add(jsonObject.getString("companyBanner"));
-                verified.add(jsonObject.getString("verified"));
+
+                companyName         .add(jsonObject.getString("companyTitle"));
+                companyTag          .add(jsonObject.getString("companyTag"));
+                companyPhone        .add(jsonObject.getString("companyPhone"));
+                companyEmail        .add(jsonObject.getString("companyEmail"));
+                companyVisit        .add(jsonObject.getString("companyVisit"));
+                companyDiscription  .add(jsonObject.getString("companyDiscription"));
+                companyState        .add(jsonObject.getString("companyState"));
+                companyLandark      .add(jsonObject.getString("companyLandmark"));
+                companyCity         .add(jsonObject.getString("companyCity"));
+                companyBanner       .add(jsonObject.getString("companyBanner"));
+                verified            .add(jsonObject.getString("verified"));
 
 
 
@@ -862,25 +866,25 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
 
-             fullName = new ArrayList<String>();
-             status = new ArrayList<String>();
-             textStatus = new ArrayList<String>();
-             noticePeriod = new ArrayList<String>();
-             call = new ArrayList<String>();
-             email = new ArrayList<String>();
-             shortBio = new ArrayList<String>();
-             myCurrentState = new ArrayList<String>();
-             myExperience = new ArrayList<String>();
-             mainExpertise = new ArrayList<String>();
+             fullName           = new ArrayList<String>();
+             status             = new ArrayList<String>();
+             textStatus         = new ArrayList<String>();
+             noticePeriod       = new ArrayList<String>();
+             call               = new ArrayList<String>();
+             email              = new ArrayList<String>();
+             shortBio           = new ArrayList<String>();
+             myCurrentState     = new ArrayList<String>();
+             myExperience       = new ArrayList<String>();
+             mainExpertise      = new ArrayList<String>();
              myExperienceMonths = new ArrayList<String>();
-             myAge = new ArrayList<String>();
-             gender = new ArrayList<String>();
-             expertCity = new ArrayList<String>();
-             expertSkills = new ArrayList<String>();
-             expertProfType = new ArrayList<String>();
-             expertProfession = new ArrayList<String>();
-             expertPic = new ArrayList<String>();
-             expertVisibilty = new ArrayList<String>();
+             myAge              = new ArrayList<String>();
+             gender             = new ArrayList<String>();
+             expertCity         = new ArrayList<String>();
+             expertSkills       = new ArrayList<String>();
+             expertProfType     = new ArrayList<String>();
+             expertProfession   = new ArrayList<String>();
+             expertPic          = new ArrayList<String>();
+             expertVisibilty    = new ArrayList<String>();
 
 
 
@@ -919,25 +923,25 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
                 jsonObject = jsonArray.getJSONObject(0);
 
-                fullName.add(jsonObject.getString("myFullName"));
-                mainExpertise.add(jsonObject.getString("myMainExpertise"));
-                status.add(jsonObject.getString("myStatus"));
-                textStatus.add(jsonObject.getString("myTextStatus"));
-                noticePeriod.add(jsonObject.getString("myNoticePeriod"));
-                call.add(jsonObject.getString("myCall"));
-                email.add(jsonObject.getString("myEmail"));
-                shortBio.add(jsonObject.getString("myShortBio"));
-                myCurrentState.add(jsonObject.getString("myState"));
-                myExperience.add(jsonObject.getString("myExperience"));
-                myAge.add(jsonObject.getString("myAge"));
-                myExperienceMonths.add(jsonObject.getString("myMonthsExperience"));
-                gender.add(jsonObject.getString("gender"));
-                expertCity.add(jsonObject.getString("expertCity"));
-                expertSkills.add(jsonObject.getString("expertSkills"));
-                expertProfType.add(jsonObject.getString("expertProfType"));
-                expertProfession.add(jsonObject.getString("expertProfession"));
-                expertPic.add(jsonObject.getString("expertPic"));
-                expertVisibilty.add(jsonObject.getString("visibility"));
+                fullName            .add(jsonObject.getString("myFullName"));
+                mainExpertise       .add(jsonObject.getString("myMainExpertise"));
+                status              .add(jsonObject.getString("myStatus"));
+                textStatus          .add(jsonObject.getString("myTextStatus"));
+                noticePeriod        .add(jsonObject.getString("myNoticePeriod"));
+                call                .add(jsonObject.getString("myCall"));
+                email               .add(jsonObject.getString("myEmail"));
+                shortBio            .add(jsonObject.getString("myShortBio"));
+                myCurrentState      .add(jsonObject.getString("myState"));
+                myExperience        .add(jsonObject.getString("myExperience"));
+                myAge               .add(jsonObject.getString("myAge"));
+                myExperienceMonths  .add(jsonObject.getString("myMonthsExperience"));
+                gender              .add(jsonObject.getString("gender"));
+                expertCity          .add(jsonObject.getString("expertCity"));
+                expertSkills        .add(jsonObject.getString("expertSkills"));
+                expertProfType      .add(jsonObject.getString("expertProfType"));
+                expertProfession    .add(jsonObject.getString("expertProfession"));
+                expertPic           .add(jsonObject.getString("expertPic"));
+                expertVisibilty     .add(jsonObject.getString("visibility"));
 
                 // getVisibility here
             }catch (ClientProtocolException e) {
@@ -984,12 +988,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             myProfileEditor.putString("myExperience", myExperience.get(0));
             myProfileEditor.putString("myAge", myAge.get(0));
             myProfileEditor.putString("myMonthsExperience", myExperienceMonths.get(0));
-            myProfileEditor.putString("myGender", gender.get(0));
+            myProfileEditor.putString("myGender", gender.get(0).trim());
             myProfileEditor.putString("myCurrentCity", expertCity.get(0));
             myProfileEditor.putString("mySkills", expertSkills.get(0));
             myProfileEditor.putString("expertProfType", expertProfType.get(0));
             myProfileEditor.putString("myMainProf", expertProfession.get(0));
-            myProfileEditor.putString("myProfilePic", expertPic.get(0));
+            myProfileEditor.putString("myProfilePic", expertPic.get(0).trim());
 
             if (expertVisibilty.get(0).equals("companies")){
                 myProfileEditor.putString("visibility","0");

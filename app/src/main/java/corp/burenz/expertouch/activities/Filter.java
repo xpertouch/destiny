@@ -103,15 +103,25 @@ public class Filter extends AppCompatActivity {
             "Managers",
             "Administrators",
             "Clerks",
-            "Statistical Assistant"
+            "Statistical Assistant",
+            "Others"
 
     };
 
 
     final String []govermentTypes = {
 
-            "All Types",
-            "Agriculture"
+            "All Types"
+            ,"JKSSB"
+            ,"JKPSC"
+            ,"Staff Selection Commission"
+            ,"UPSC"
+            ,"Railway"
+            ,"Ministry Of Human Affairs"
+            ,"Police Defence"
+            ,"Education"
+            ,"Health"
+            ,"Agriculture"
             ,"Animal Husbandry"
             ,"PWD"
             ,"PDD"
@@ -157,6 +167,7 @@ public class Filter extends AppCompatActivity {
             ,"Welfare"
             ,"Schedule Caste & Schedule Tribe"
             ,"Youth, Art & Culture"
+            ,"Others"
 
     };
 

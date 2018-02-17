@@ -38,6 +38,7 @@ public class Buket extends AppCompatActivity {
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
 
+        assert mViewPager != null;
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
 
             @Override

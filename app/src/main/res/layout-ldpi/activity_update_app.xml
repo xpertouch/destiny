@@ -118,7 +118,7 @@
                     android:gravity="center_vertical|right">
 
                     <TextView
-                        android:id="@+id/textView481"
+                        android:id="@+id/current_version_text_View"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -321,7 +321,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:text="Copyright &#169; 2017 1clickaway All Rights Reserved"
+                android:text="Copyright &#169; 2018 1clickaway All Rights Reserved"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textSize="10dp" />
         </LinearLayout>

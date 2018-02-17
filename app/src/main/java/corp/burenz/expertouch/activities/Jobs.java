@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
@@ -110,16 +112,9 @@ public class Jobs extends AppCompatActivity
     SharedPreferences companyAdds;
     InputMethodManager im;
     Boolean isFabVisible;
-    ArrayList<String> companyTitles ;
-    ArrayList<String> postDate;
-    ArrayList<String> callArray;
-    ArrayList<String> emailArray;
-    ArrayList<String> websiteArray;
-    ArrayList<String> jobInfo;
-    ArrayList<String> banners;
-    ArrayList<String> addState;
-    ArrayList<String> addCatagory;
-    ArrayList<String> addType;
+
+    ArrayList<String> companyTitles,postDate,callArray,emailArray, websiteArray,jobInfo,banners, addState,addCatagory, addType, postId;
+
     TextView dontShowAgain,helpCenter;
     ViewFlipper verificationBulbFl;
     LinearLayout smartBottom;
@@ -136,13 +131,9 @@ public class Jobs extends AppCompatActivity
     String TAG = "Development";
     LinearLayout whyVerify;
     ViewFlipper showTimeFlipper;
-    ArrayList<String> companyTitlesNew ;
-    ArrayList<String> postDateNew;
-    ArrayList<String> callArrayNew;
-    ArrayList<String> emailArrayNew;
-    ArrayList<String> websiteArrayNew;
-    ArrayList<String> jobInfoNew;
-    ArrayList<String> bannersNew;
+    ArrayList<String> companyTitlesNew ,postDateNew,callArrayNew,emailArrayNew,websiteArrayNew,jobInfoNew,bannersNew,
+    postIdNew;
+
     private BroadcastReceiver mRegistrationBroadcastReceiver;
 
     LinearLayout noAdverts;
@@ -247,24 +238,10 @@ public class Jobs extends AppCompatActivity
         Log.e("subscribe","inside subscribe topic");
 
 
+
         /*sending token to server*/
         if(!getSharedPreferences("narrate",0).getBoolean("token",false)){
-//            Toast.makeText(this, "Token hasnot been upated yet initiating task", Toast.LENGTH_SHORT).show();
-            try {
-
-                new SendFCMToken(Jobs.this).execute();
-
-            }catch (Exception e){
-                e.printStackTrace();
-
-//                Toast.makeText(this, "Exception updating the token " + e.toString(), Toast.LENGTH_SHORT).show();
-
-
-            }
-
-
-
-
+            try {new SendFCMToken(Jobs.this).execute(); }catch (Exception e){e.printStackTrace();}
         }
 
 
@@ -488,11 +465,13 @@ public class Jobs extends AppCompatActivity
         noAdverts.startAnimation(animation);
         feedsFilter = getSharedPreferences(CURRENT_FILTER,0);
 
+        try {new FeedsLoader(Jobs.this,whatsNewRecycler).execute();}catch (Exception e){e.printStackTrace();}
 
-        new FeedsLoader(Jobs.this,whatsNewRecycler).execute();
+        try {    new BannerUtils(). new IsBannerCustom(Jobs.this).execute();   }catch (Exception e){e.printStackTrace();}
 
              /*check whether to put custom banner or not*/
-        new BannerUtils(). new IsBannerCustom(Jobs.this).execute();
+
+
         Log.e("Banner","executed bisBannerCustom");
 
         searchView();
@@ -526,8 +505,17 @@ public class Jobs extends AppCompatActivity
 
         }else {
 
-            if (updateInfo.getBoolean("check",false)){
-                new GetCurrentVersion().execute();
+            if (updateInfo.getBoolean("check",true)){
+
+                try {
+                    PackageInfo packageInfo  = getPackageManager().getPackageInfo(getPackageName(),0);
+                    String version           = String.valueOf(packageInfo.versionCode).trim();
+                    new GetCurrentVersion().execute(version);
+                    Log.e("finale","current version " + version);
+
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
 
             }
 
@@ -537,7 +525,7 @@ public class Jobs extends AppCompatActivity
         mWaveSwipeRefreshLayout.setOnRefreshListener(new WaveSwipeRefreshLayout.OnRefreshListener() {
             @Override public void onRefresh() {
                 // Do work to refresh the list here.
-                new FeedsLoader(Jobs.this,whatsNewRecycler).execute();
+                try {new FeedsLoader(Jobs.this,whatsNewRecycler).execute();}catch (Exception e ){e.printStackTrace();}
 
             }
         });
@@ -1345,16 +1333,17 @@ public class Jobs extends AppCompatActivity
             mWaveSwipeRefreshLayout.setRefreshing(true);
             loadProgress.setVisibility(View.VISIBLE);
 
-            companyTitles = new ArrayList<>();
-            postDate = new ArrayList<>();
-            callArray = new ArrayList<>();
-            emailArray = new ArrayList<>();
-            websiteArray = new ArrayList<>();
-            jobInfo = new ArrayList<>();
-            banners = new ArrayList<>();
-            addState = new ArrayList<>();
-            addCatagory = new ArrayList<>();
-            addType = new ArrayList<>();
+            companyTitles       = new ArrayList<>();
+            postDate            = new ArrayList<>();
+            callArray           = new ArrayList<>();
+            emailArray          = new ArrayList<>();
+            websiteArray        = new ArrayList<>();
+            jobInfo             = new ArrayList<>();
+            banners             = new ArrayList<>();
+            addState            = new ArrayList<>();
+            addCatagory         = new ArrayList<>();
+            addType             = new ArrayList<>();
+            postId              = new ArrayList<>();
 
           // loadProgress.setVisibility(View.VISIBLE);
           //  whatsNewRecycler.setVisibility(View.GONE);
@@ -1369,7 +1358,7 @@ public class Jobs extends AppCompatActivity
         try {
 
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(getString(R.string.host)+"/jobs/get_jobs.php");
+            HttpPost httpPost = new HttpPost(getString(R.string.host)+"/jobs/get_jobs_with_id.php");
             HttpResponse httpResponse = (HttpResponse)httpClient.execute(httpPost);
 
             HttpEntity httpEntity = httpResponse.getEntity();
@@ -1401,7 +1390,7 @@ public class Jobs extends AppCompatActivity
                 addState.       add(jsonObject.getString("companyState"));
                 addCatagory.    add(jsonObject.getString("addCatagory"));
                 addType.        add(jsonObject.getString("addType"));
-
+                postId         .add(jsonObject.getString("postId"));
             }
 
         } catch (HttpHostConnectException e)
@@ -1439,7 +1428,7 @@ public class Jobs extends AppCompatActivity
 
                         try{
 
-                    whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners);
+                    whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId);
                     whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
                         }catch(Exception e){
                             e.printStackTrace();
@@ -1525,7 +1514,7 @@ public class Jobs extends AppCompatActivity
 
 
              try{
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
             }catch (Exception e){
                 e.printStackTrace();
@@ -1537,13 +1526,13 @@ public class Jobs extends AppCompatActivity
         }else if (!feedsFilter.getString("currentState","All States").equals("All States") && feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types") ){
 
             companyTitlesNew = new ArrayList<>();
-            postDateNew = new ArrayList<>();
-            callArrayNew = new ArrayList<>();
-            emailArrayNew = new ArrayList<>();
-            websiteArrayNew = new ArrayList<>();
-            jobInfoNew = new ArrayList<>();
-            bannersNew = new ArrayList<>();
-
+            postDateNew             = new ArrayList<>();
+            callArrayNew            = new ArrayList<>();
+            emailArrayNew           = new ArrayList<>();
+            websiteArrayNew         = new ArrayList<>();
+            jobInfoNew              = new ArrayList<>();
+            bannersNew              = new ArrayList<>();
+            postIdNew               = new ArrayList<>();
             clearList();
 
 
@@ -1551,13 +1540,15 @@ public class Jobs extends AppCompatActivity
 
                 if ( addState.get(i).contains(feedsFilter.getString("currentState","a")  ) ){
 
-                    companyTitlesNew.add(companyTitles.get(i));
-                    postDateNew.add(postDate.get(i));
-                    jobInfoNew.add(jobInfo.get(i));
-                    callArrayNew.add(callArray.get(i));
-                    emailArrayNew.add(emailArray.get(i));
-                    websiteArrayNew.add(addState.get(i));
-                    bannersNew.add(banners.get(i));
+                    companyTitlesNew    .add(companyTitles.get(i));
+                    postDateNew         .add(postDate.get(i));
+                    jobInfoNew          .add(jobInfo.get(i));
+                    callArrayNew        .add(callArray.get(i));
+                    emailArrayNew       .add(emailArray.get(i));
+                    websiteArrayNew     .add(addState.get(i));
+                    bannersNew          .add(banners.get(i));
+                    postIdNew           .add(postId.get(i));
+
                 }
 
 
@@ -1584,7 +1575,7 @@ public class Jobs extends AppCompatActivity
             Log.e(TAG,"Filtering State , Rest ALL");
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
 
             }catch(Exception e){
@@ -1593,26 +1584,32 @@ public class Jobs extends AppCompatActivity
 
         }else if (feedsFilter.getString("currentState","All States").equals("All States") && !feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types") ){
 
-            companyTitlesNew = new ArrayList<>();
-            postDateNew = new ArrayList<>();
-            callArrayNew = new ArrayList<>();
-            emailArrayNew = new ArrayList<>();
-            websiteArrayNew = new ArrayList<>();
-            jobInfoNew = new ArrayList<>();
-            bannersNew = new ArrayList<>();
+            companyTitlesNew    = new ArrayList<>();
+            postDateNew         = new ArrayList<>();
+            callArrayNew        = new ArrayList<>();
+            emailArrayNew       = new ArrayList<>();
+            websiteArrayNew     = new ArrayList<>();
+            bannersNew          = new ArrayList<>();
+            jobInfoNew          = new ArrayList<>();
+            postIdNew           = new ArrayList<>();
+
+
 
             clearList();
 
             for (int i = 0; i < companyTitles.size(); i++){
 
                 if ( addCatagory.get(i).contains(feedsFilter.getString("currentCatagory","a")  ) ){
-                    companyTitlesNew.add(companyTitles.get(i));
-                    postDateNew.add(postDate.get(i));
-                    jobInfoNew.add(jobInfo.get(i));
-                    callArrayNew.add(callArray.get(i));
-                    emailArrayNew.add(emailArray.get(i));
-                    websiteArrayNew.add(addState.get(i));
-                    bannersNew.add(banners.get(i));
+                    companyTitlesNew    .add(companyTitles.get(i));
+                    postDateNew         .add(postDate.get(i));
+                    jobInfoNew          .add(jobInfo.get(i));
+                    callArrayNew        .add(callArray.get(i));
+                    emailArrayNew       .add(emailArray.get(i));
+                    websiteArrayNew     .add(addState.get(i));
+                    bannersNew          .add(banners.get(i));
+                    postIdNew           .add(postId.get(i));
+
+
 
                 }
 
@@ -1637,7 +1634,7 @@ public class Jobs extends AppCompatActivity
 
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
 
             }catch(Exception e){
@@ -1648,12 +1645,13 @@ public class Jobs extends AppCompatActivity
         else if (!feedsFilter.getString("currentState","All States").equals("All States") && !feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types") ){
 
             companyTitlesNew = new ArrayList<>();
-            postDateNew = new ArrayList<>();
-            callArrayNew = new ArrayList<>();
-            emailArrayNew = new ArrayList<>();
-            websiteArrayNew = new ArrayList<>();
-            jobInfoNew = new ArrayList<>();
-            bannersNew = new ArrayList<>();
+            postDateNew         = new ArrayList<>();
+            callArrayNew        = new ArrayList<>();
+            emailArrayNew       = new ArrayList<>();
+            websiteArrayNew     = new ArrayList<>();
+            jobInfoNew          = new ArrayList<>();
+            bannersNew          = new ArrayList<>();
+            postIdNew           = new ArrayList<>();
 
             clearList();
 
@@ -1665,12 +1663,13 @@ public class Jobs extends AppCompatActivity
                     if (addCatagory.get(i).contains(feedsFilter.getString("currentCatagory","a"))){
 
                         companyTitlesNew.add(companyTitles.get(i));
-                        postDateNew.add(postDate.get(i));
-                        jobInfoNew.add(jobInfo.get(i));
-                        callArrayNew.add(callArray.get(i));
-                        emailArrayNew.add(emailArray.get(i));
-                        websiteArrayNew.add(addState.get(i));
-                        bannersNew.add(banners.get(i));
+                        postDateNew         .add(postDate.get(i));
+                        jobInfoNew          .add(jobInfo.get(i));
+                        callArrayNew        .add(callArray.get(i));
+                        emailArrayNew       .add(emailArray.get(i));
+                        websiteArrayNew     .add(addState.get(i));
+                        bannersNew          .add(banners.get(i));
+                        postIdNew           .add(postId.get(i));
 
 
                     }
@@ -1707,7 +1706,7 @@ public class Jobs extends AppCompatActivity
             try{
 
             Log.e(TAG,"STACATA , COOL MAN");
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
         
             }catch(Exception e){
@@ -1718,13 +1717,15 @@ public class Jobs extends AppCompatActivity
 
         }else if (feedsFilter.getString("currentState","All States").equals("All States") && !feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && !feedsFilter.getString("currentType","All Types").equals("All Types") ){
 
-            companyTitlesNew = new ArrayList<>();
-            postDateNew = new ArrayList<>();
-            callArrayNew = new ArrayList<>();
-            emailArrayNew = new ArrayList<>();
-            websiteArrayNew = new ArrayList<>();
-            jobInfoNew = new ArrayList<>();
-            bannersNew = new ArrayList<>();
+            companyTitlesNew    = new ArrayList<>();
+            postDateNew         = new ArrayList<>();
+            callArrayNew        = new ArrayList<>();
+            emailArrayNew       = new ArrayList<>();
+            websiteArrayNew     = new ArrayList<>();
+            jobInfoNew          = new ArrayList<>();
+            bannersNew          = new ArrayList<>();
+            postIdNew           = new ArrayList<>();
+
 
             clearList();
 
@@ -1735,13 +1736,14 @@ public class Jobs extends AppCompatActivity
                     if (addType.get(i).contains(feedsFilter.getString("currentType","a"))){
 
 
-                        companyTitlesNew.add(companyTitles.get(i));
-                        postDateNew.add(postDate.get(i));
-                        jobInfoNew.add(jobInfo.get(i));
-                        callArrayNew.add(callArray.get(i));
-                        emailArrayNew.add(emailArray.get(i));
-                        websiteArrayNew.add(addState.get(i));
-                        bannersNew.add(banners.get(i));
+                        companyTitlesNew    .add(companyTitles.get(i));
+                        postDateNew         .add(postDate.get(i));
+                        jobInfoNew          .add(jobInfo.get(i));
+                        callArrayNew        .add(callArray.get(i));
+                        emailArrayNew       .add(emailArray.get(i));
+                        websiteArrayNew     .add(addState.get(i));
+                        bannersNew          .add(banners.get(i));
+                        postIdNew           .add(postId.get(i));
 
 
                     }
@@ -1777,7 +1779,7 @@ public class Jobs extends AppCompatActivity
             
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew, postIdNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
         
             }catch(Exception e){
@@ -1788,12 +1790,13 @@ public class Jobs extends AppCompatActivity
         else if (!feedsFilter.getString("currentState","All States").equals("All States") && !feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && !feedsFilter.getString("currentType","All Types").equals("All Types") ){
 
             companyTitlesNew = new ArrayList<>();
-            postDateNew = new ArrayList<>();
-            callArrayNew = new ArrayList<>();
-            emailArrayNew = new ArrayList<>();
-            websiteArrayNew = new ArrayList<>();
-            jobInfoNew = new ArrayList<>();
-            bannersNew = new ArrayList<>();
+            postDateNew         = new ArrayList<>();
+            callArrayNew        = new ArrayList<>();
+            emailArrayNew       = new ArrayList<>();
+            websiteArrayNew     = new ArrayList<>();
+            jobInfoNew          = new ArrayList<>();
+            bannersNew          = new ArrayList<>();
+            postIdNew           = new ArrayList<>();
 
 
 
@@ -1808,13 +1811,15 @@ public class Jobs extends AppCompatActivity
 
 
                         if ( addType.get(i).contains(feedsFilter.getString("currentType","a"))  ){
-                            companyTitlesNew.add(companyTitles.get(i));
-                            postDateNew.add(postDate.get(i));
-                            jobInfoNew.add(jobInfo.get(i));
-                            callArrayNew.add(callArray.get(i));
-                            emailArrayNew.add(emailArray.get(i));
-                            websiteArrayNew.add(addState.get(i));
-                            bannersNew.add(banners.get(i));
+
+                            companyTitlesNew    .add(companyTitles.get(i));
+                            postDateNew         .add(postDate.get(i));
+                            jobInfoNew          .add(jobInfo.get(i));
+                            callArrayNew        .add(callArray.get(i));
+                            emailArrayNew       .add(emailArray.get(i));
+                            websiteArrayNew     .add(addState.get(i));
+                            bannersNew          .add(banners.get(i));
+                            postIdNew           .add(postId.get(i));
 
 
                         }
@@ -1851,7 +1856,7 @@ public class Jobs extends AppCompatActivity
             Log.e(TAG,"ITMSTACATA , FIRE IN THE HOLE");
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
            
         }catch(Exception e){
@@ -1876,6 +1881,7 @@ public class Jobs extends AppCompatActivity
         websiteArrayNew.clear();
         jobInfoNew.clear();
         bannersNew.clear();
+        postIdNew.clear();
 
 
 
@@ -2031,12 +2037,13 @@ public class Jobs extends AppCompatActivity
 
 
                 ArrayList<String> finalCompanyTitlesNew = new ArrayList<>();
-                ArrayList<String> finalPostDateNew = new ArrayList<>();
-                ArrayList<String> finalJobInfoNew = new ArrayList<>();
-                ArrayList<String> finalEmailArrayNew = new ArrayList<>();
-                ArrayList<String> finalWebsiteArrayNew = new ArrayList<>();
-                ArrayList<String> finalCallArrayNew = new ArrayList<>();
-                ArrayList<String> finalBannerArrayNew = new ArrayList<>();
+                ArrayList<String> finalPostDateNew      = new ArrayList<>();
+                ArrayList<String> finalJobInfoNew       = new ArrayList<>();
+                ArrayList<String> finalEmailArrayNew    = new ArrayList<>();
+                ArrayList<String> finalWebsiteArrayNew  = new ArrayList<>();
+                ArrayList<String> finalCallArrayNew     = new ArrayList<>();
+                ArrayList<String> finalBannerArrayNew   = new ArrayList<>();
+                ArrayList<String> finalPostIdNew        = new ArrayList<>();
 
                 if (feedsFilter.getString("currentState","All States").equals("All States") && feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types") ) {
 
@@ -2061,7 +2068,7 @@ public class Jobs extends AppCompatActivity
                                 finalEmailArrayNew.add(emailArray.get(i));
                                 finalWebsiteArrayNew.add(addState.get(i));
                                 finalBannerArrayNew.add(banners.get(i));
-
+                                finalPostIdNew.add(postId.get(i));
                             }
 
 
@@ -2120,6 +2127,7 @@ public class Jobs extends AppCompatActivity
                                 finalEmailArrayNew.add(emailArray.get(i));
                                 finalWebsiteArrayNew.add(addState.get(i));
                                 finalBannerArrayNew.add(banners.get(i));
+                                finalPostIdNew.add(postId.get(i));
 
                             }
 
@@ -2152,7 +2160,7 @@ public class Jobs extends AppCompatActivity
 
                 try{
 
-                whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,finalCompanyTitlesNew,finalJobInfoNew,finalPostDateNew,finalCallArrayNew,finalWebsiteArrayNew,finalEmailArrayNew,finalBannerArrayNew);
+                whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,finalCompanyTitlesNew,finalJobInfoNew,finalPostDateNew,finalCallArrayNew,finalWebsiteArrayNew,finalEmailArrayNew,finalBannerArrayNew,finalPostIdNew);
                 whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
                 whatsNewRecyclerAdapter.notifyDataSetChanged();
 
@@ -2206,7 +2214,7 @@ public class Jobs extends AppCompatActivity
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("version","silicon"));
+            nameValuePairs.add(new BasicNameValuePair("version",params[0]));
 
             try {
                 HttpClient httpClient = new DefaultHttpClient();
@@ -2246,6 +2254,8 @@ public class Jobs extends AppCompatActivity
             SharedPreferences.Editor editor;
             updateInfo = getSharedPreferences(UPDATE_INFO,0);
             editor = updateInfo.edit();
+            Log.e("finale","version update from jobs response from server  = " + s);
+
 
             if (s.equals("1")){
                 editor.putBoolean("updateAvailable",true);

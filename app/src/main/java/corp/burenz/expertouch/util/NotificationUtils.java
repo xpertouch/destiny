@@ -29,6 +29,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.WelcomeActivity;
@@ -48,6 +49,7 @@ public class NotificationUtils {
 
     public void showNotificationMessage(String title, String message, String timeStamp, Intent intent) {
         showNotificationMessage(title, message, timeStamp, intent, null);
+
     }
 
     public void showNotificationMessage(final String title, final String message, final String timeStamp, Intent intent, String imageUrl) {
@@ -91,6 +93,13 @@ public class NotificationUtils {
             showSmallNotification(mBuilder, icon, title, message, timeStamp, resultPendingIntent, alarmSound);
 //            playNotificationSound();
         }
+    }
+
+
+    public int createID(){
+        Date now = new Date();
+        int id = Integer.parseInt(new SimpleDateFormat("ddHHmmss",  Locale.US).format(now));
+        return id;
     }
 
 
@@ -140,7 +149,16 @@ public class NotificationUtils {
         }
         NotificationManager notificationManager =
                 (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(Config.NOTIFICATION_ID, notification);
+
+        try{
+            notificationManager.notify(createID(), notification);
+        }catch (Exception e){
+            notificationManager.notify(Config.NOTIFICATION_ID, notification);
+
+        }
+
+
+
 
 
 

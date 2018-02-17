@@ -2,6 +2,8 @@ package corp.burenz.expertouch.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -20,6 +22,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
@@ -41,7 +44,7 @@ public class UpdateApp extends AppCompatActivity implements View.OnClickListener
     String UPDATE_INFO = "updateInfo";
     SharedPreferences.Editor editor;
     ImageView goBackUpdates;
-    TextView checkForUpadtes;
+    TextView checkForUpadtes, currentVersionTextView;
     ViewFlipper progressFlipper;
 
 
@@ -55,9 +58,27 @@ public class UpdateApp extends AppCompatActivity implements View.OnClickListener
 
 
 
-        checkForUpadtes = (TextView) findViewById(R.id.checkForUpdates);
-        progressFlipper = (ViewFlipper) findViewById(R.id.progressFlipper);
-        goBackUpdates = (ImageView) findViewById(R.id.goBackUpdates);
+        checkForUpadtes         = (TextView)    findViewById(R.id.checkForUpdates);
+        progressFlipper         = (ViewFlipper) findViewById(R.id.progressFlipper);
+        goBackUpdates           = (ImageView)   findViewById(R.id.goBackUpdates);
+        currentVersionTextView  = (TextView)    findViewById(R.id.current_version_text_View);
+
+
+
+        try {
+            PackageInfo packageInfo  = getPackageManager().getPackageInfo(getPackageName(),0);
+            String version           = packageInfo.versionName;
+
+            currentVersionTextView.setText(version);
+
+
+        } catch (PackageManager.NameNotFoundException e) {
+
+             e.printStackTrace();
+        }
+
+
+
 
 
         goBackUpdates.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +141,20 @@ public class UpdateApp extends AppCompatActivity implements View.OnClickListener
                 }
                 else{
 
-                    new GetCurrentVersion().execute();
+                    try {
+                        PackageInfo packageInfo  = getPackageManager().getPackageInfo(getPackageName(),0);
+                        String version           = String.valueOf(packageInfo.versionCode).trim();
+
+                        new GetCurrentVersion().execute(version);
+                        Log.e("finale","send from phone in update activity"+ version);
+                        Log.e("update",version);
+
+
+                    } catch (PackageManager.NameNotFoundException e) {
+
+                        e.printStackTrace();
+                    }
+
 
                 }
 
@@ -172,14 +206,15 @@ public class UpdateApp extends AppCompatActivity implements View.OnClickListener
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("version","v1.0.3"));
+            nameValuePairs.add(new BasicNameValuePair("version",params[0]));
+            Log.e("version_update",params[0]);
 
             try {
+
                 HttpClient httpClient = new DefaultHttpClient();
                 HttpPost httpPost = new HttpPost(getString(R.string.host)+"/jobs/app_version.php");
-
+                httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 HttpResponse httpResponse =  (HttpResponse) httpClient.execute(httpPost);
-
                 HttpEntity httpEntity = (HttpEntity) httpResponse.getEntity();
 
 
@@ -216,6 +251,7 @@ public class UpdateApp extends AppCompatActivity implements View.OnClickListener
             SharedPreferences.Editor editor;
             updateInfo = getSharedPreferences(UPDATE_INFO,0);
             editor = updateInfo.edit();
+            Log.e("finale","resposne from server in update activity"+ s);
 
 
             if (s.equals("1")){

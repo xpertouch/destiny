@@ -75,50 +75,51 @@ import corp.burenz.expertouch.util.MySingleton;
 
 public class Profile extends AppCompatActivity implements View.OnClickListener   {
 
-    ViewFlipper infoFlipper,statusFlipepr,locationFlipper,experienceFlipper,bioFlipper,callFlipper,emailFlipper,skillFlipper;
-    ImageView editFlipInfo,editFlipStatus,editFlipLocation,editFlipExperience,editFlipBio,editFlipCall,editFlipemail,editFlipSkill;
-    ImageButton editFlipImage,saveImageButton;
-    ViewFlipper infoPannelFlipper,statusPannelFlipper,locationPannelFlipper,experiencePannelFlipper,bioPannelFlipper,callPannelFlipper,emailPannelFlipper,skillPannelFlipper,imagePannelFlipper;
-    Button saveInfoBtn,saveStatusBtn,saveLocationBtn,saveExperienceBtn,saveBioBtn,saveCallBtn,saveEmailBtn,saveSkillButton,cancelInfoBtn,cancelStatusBtn,cancelLocationBtn,cancelExperienceBtn,cancelBioBtn,cancelCallBtn,cancelEmailBtn,cancelSkillButton;
-    ImageButton cancelImageButton;
-    RecyclerView skilledRV;
-    Animation fadeIn,fadeOut;
+    ViewFlipper     infoFlipper,statusFlipepr,locationFlipper,experienceFlipper,bioFlipper,callFlipper,emailFlipper,skillFlipper;
+    ImageView       editFlipInfo,editFlipStatus,editFlipLocation,editFlipExperience,editFlipBio,editFlipCall,editFlipemail,editFlipSkill;
+    ImageButton     editFlipImage,saveImageButton;
+    ViewFlipper     infoPannelFlipper,statusPannelFlipper,locationPannelFlipper,experiencePannelFlipper,bioPannelFlipper,callPannelFlipper,emailPannelFlipper,skillPannelFlipper,imagePannelFlipper;
+    Button          saveInfoBtn,saveStatusBtn,saveLocationBtn,saveExperienceBtn,saveBioBtn,saveCallBtn,saveEmailBtn,saveSkillButton,cancelInfoBtn,cancelStatusBtn,cancelLocationBtn,cancelExperienceBtn,cancelBioBtn,cancelCallBtn,cancelEmailBtn,cancelSkillButton;
+    ImageButton     cancelImageButton;
+    RecyclerView    skilledRV;
+    Animation       fadeIn,fadeOut;
 
-    ArrayList<String> lawyerTypes = new ArrayList<>();
-    ArrayList<String> artizensType = new ArrayList<>();
-    ArrayList<String> teacherTypes = new ArrayList<>();
-    ArrayList<String> doctorsType = new ArrayList<>();
-    ArrayList<String> mediaTypes = new ArrayList<>();
-    ArrayList<String> healthTypes = new ArrayList<>();
-    ArrayList<String> agentTypes = new ArrayList<>();
-    ArrayList<String> contractorTypes = new ArrayList<>();
-    ArrayList<String> otherTypes = new ArrayList<>();
-    ArrayList<String> engineersType = new ArrayList<>();
-    ArrayList<String> fashion = new ArrayList<>();
-    ArrayList<String> mechanics = new ArrayList<>();
-    ArrayList<String> accountants = new ArrayList<>();
-    ArrayList<String> transporters = new ArrayList<>();
-    ArrayList<String> localTransPort = new ArrayList<>();
-    ArrayList<String> orderSuppliesTypes = new ArrayList<String>();
+    ArrayList<String> lawyerTypes           = new ArrayList<>();
+    ArrayList<String> artizensType          = new ArrayList<>();
+    ArrayList<String> teacherTypes          = new ArrayList<>();
+    ArrayList<String> doctorsType           = new ArrayList<>();
+    ArrayList<String> mediaTypes            = new ArrayList<>();
+    ArrayList<String> healthTypes           = new ArrayList<>();
+    ArrayList<String> agentTypes            = new ArrayList<>();
+    ArrayList<String> contractorTypes       = new ArrayList<>();
+    ArrayList<String> otherTypes            = new ArrayList<>();
+    ArrayList<String> engineersType         = new ArrayList<>();
+    ArrayList<String> fashion               = new ArrayList<>();
+    ArrayList<String> mechanics             = new ArrayList<>();
+    ArrayList<String> accountants           = new ArrayList<>();
+    ArrayList<String> transporters          = new ArrayList<>();
+    ArrayList<String> localTransPort        = new ArrayList<>();
+    ArrayList<String> orderSuppliesTypes    = new ArrayList<String>();
 
-    ArrayList<String> statesArray = new ArrayList<String>();
+    ArrayList<String>           statesArray = new ArrayList<String>();
 
-    Switch availibilitySwitch;
-    CardView fullNameCard,callStatusCard,addressCard,experienceCard,skillCard,bioCard,callCard,mailCard;
-    RadioButton companiesRB,publicRB;
-    NetworkImageView myProfilePic;
-    ConnectivityManager connectivityManager;
-    NetworkInfo networkInfo;
-    boolean connectionStatus;
-    String MY_PROFILE_DATA = "myProfileInfo";
-    SharedPreferences myProfile;
-    SharedPreferences.Editor updateEditor;
-    Animation cardAnimation;
+    Switch                      availibilitySwitch;
+    CardView                    fullNameCard,callStatusCard,addressCard,experienceCard,skillCard,bioCard,callCard,mailCard;
+    RadioButton                 companiesRB,publicRB;
+    NetworkImageView            myProfilePic;
+    ConnectivityManager         connectivityManager;
+    NetworkInfo                 networkInfo;
+    boolean                     connectionStatus;
+    String MY_PROFILE_DATA      = "myProfileInfo";
+    SharedPreferences           myProfile;
+    SharedPreferences.Editor    updateEditor;
+    Animation                   cardAnimation;
 
     //Image Cake
     public static final int GALLERY_PICTURE = 1;
     public static final int READ_GALLERY_PERMISSIONS_REQUEST = 2;
     public static final int  REQUEST_IMAGE_CROP = 3;
+
     Intent imageIntent;
     ImageButton selectFromGallery;
     ImageView imagePreview;
@@ -163,9 +164,9 @@ public class Profile extends AppCompatActivity implements View.OnClickListener  
 
 
     //Profile Fifth Cake // Skills
-    TextView myEnteredSkillsV;
-    EditText myEnteredSkillsE;
-    Bitmap myBitmap;
+    TextView    myEnteredSkillsV;
+    EditText    myEnteredSkillsE;
+    Bitmap      myBitmap;
 
     // Profile sixth  Cake  // Bio
     TextView myShortBioV;
@@ -786,16 +787,17 @@ initArrays();
 
         //ImageView
 
-        editFlipInfo = (ImageView)findViewById(R.id.editFlipInfo);
-        editFlipStatus = (ImageView)findViewById(R.id.editFlipStatus);
-        editFlipLocation = (ImageView)findViewById(R.id.editFlipAddress);
-        editFlipExperience = (ImageView)findViewById(R.id.editFlipExperience);
-        editFlipBio = (ImageView)findViewById(R.id.editFlipBio);
-        editFlipCall = (ImageView)findViewById(R.id.editFlipCall);
-        editFlipemail = (ImageView)findViewById(R.id.editFlipEmail);
-        editFlipSkill = (ImageView)findViewById(R.id.editFlipSkill);
-        editFlipImage = (ImageButton)findViewById(R.id.editFlipImage);
-        imagePreview = (ImageView) findViewById(R.id.imagePreview);
+        editFlipInfo            = (ImageView)findViewById(R.id.editFlipInfo);
+        editFlipStatus          = (ImageView)findViewById(R.id.editFlipStatus);
+        editFlipLocation        = (ImageView)findViewById(R.id.editFlipAddress);
+        editFlipExperience      = (ImageView)findViewById(R.id.editFlipExperience);
+        editFlipBio             = (ImageView)findViewById(R.id.editFlipBio);
+        editFlipCall            = (ImageView)findViewById(R.id.editFlipCall);
+        editFlipemail           = (ImageView)findViewById(R.id.editFlipEmail);
+        editFlipSkill           = (ImageView)findViewById(R.id.editFlipSkill);
+        editFlipImage           = (ImageButton)findViewById(R.id.editFlipImage);
+        imagePreview            = (ImageView) findViewById(R.id.imagePreview);
+
         imagePreview.setVisibility(View.GONE);
 
 
@@ -803,70 +805,70 @@ initArrays();
 
         //PannelFlipper
 
-        infoPannelFlipper = (ViewFlipper)findViewById(R.id.infoPannelFlipper);
-        statusPannelFlipper = (ViewFlipper)findViewById(R.id.statusPannelFlipper);
-        locationPannelFlipper = (ViewFlipper)findViewById(R.id.addressPannelFlipper);
-        experiencePannelFlipper = (ViewFlipper)findViewById(R.id.experiencePannelFlipper);
-        bioPannelFlipper = (ViewFlipper)findViewById(R.id.bioPannelFlipper);
-        callPannelFlipper = (ViewFlipper)findViewById(R.id.callPannelFlipper);
-        emailPannelFlipper = (ViewFlipper)findViewById(R.id.emailPannelFlipper);
-        skillPannelFlipper = (ViewFlipper)findViewById(R.id.skillPannelFlipper);
-        imagePannelFlipper = (ViewFlipper)findViewById(R.id.imagePannelFlipper);
+        infoPannelFlipper           = (ViewFlipper)findViewById(R.id.infoPannelFlipper);
+        statusPannelFlipper         = (ViewFlipper)findViewById(R.id.statusPannelFlipper);
+        locationPannelFlipper       = (ViewFlipper)findViewById(R.id.addressPannelFlipper);
+        experiencePannelFlipper     = (ViewFlipper)findViewById(R.id.experiencePannelFlipper);
+        bioPannelFlipper            = (ViewFlipper)findViewById(R.id.bioPannelFlipper);
+        callPannelFlipper           = (ViewFlipper)findViewById(R.id.callPannelFlipper);
+        emailPannelFlipper          = (ViewFlipper)findViewById(R.id.emailPannelFlipper);
+        skillPannelFlipper          = (ViewFlipper)findViewById(R.id.skillPannelFlipper);
+        imagePannelFlipper          = (ViewFlipper)findViewById(R.id.imagePannelFlipper);
 
 
         // save buttons
 
-        saveInfoBtn = (Button)findViewById(R.id.saveInfoBT);
-        saveStatusBtn = (Button)findViewById(R.id.saveStatusBtn);
-        saveLocationBtn = (Button)findViewById(R.id.saveLocationBtn);
-        saveExperienceBtn = (Button)findViewById(R.id.saveExperienceBtn);
-        saveBioBtn = (Button)findViewById(R.id.saveBioBtn);
-        saveCallBtn = (Button)findViewById(R.id.saveCallBtn);
-        saveEmailBtn = (Button)findViewById(R.id.saveEmailBtn);
-        saveSkillButton = (Button)findViewById(R.id.saveSkillButton);
+        saveInfoBtn             = (Button)findViewById(R.id.saveInfoBT);
+        saveStatusBtn           = (Button)findViewById(R.id.saveStatusBtn);
+        saveLocationBtn         = (Button)findViewById(R.id.saveLocationBtn);
+        saveExperienceBtn       = (Button)findViewById(R.id.saveExperienceBtn);
+        saveBioBtn              = (Button)findViewById(R.id.saveBioBtn);
+        saveCallBtn             = (Button)findViewById(R.id.saveCallBtn);
+        saveEmailBtn            = (Button)findViewById(R.id.saveEmailBtn);
+        saveSkillButton         = (Button)findViewById(R.id.saveSkillButton);
 
 
 
         //LinearLayouts
 
 
-        saveImageButton= (ImageButton)findViewById(R.id.saveImageButton);
-        cancelImageButton = (ImageButton)findViewById(R.id.cancelImageButton);
-        selectFromGallery = (ImageButton) findViewById(R.id.selectFromGallery);
+        saveImageButton         = (ImageButton)findViewById(R.id.saveImageButton);
+        cancelImageButton       = (ImageButton)findViewById(R.id.cancelImageButton);
+        selectFromGallery       = (ImageButton) findViewById(R.id.selectFromGallery);
 
 
         selectFromGallery.setOnClickListener(this);
 
         // cancel Buttons
 
-        cancelInfoBtn = (Button)findViewById(R.id.cancelInfoBtn);
-        cancelStatusBtn = (Button)findViewById(R.id.cancelStatusBtn);
-        cancelLocationBtn = (Button)findViewById(R.id.cancelLocationBtn);
-        cancelExperienceBtn = (Button)findViewById(R.id.cancelExperienceBtn);
-        cancelBioBtn = (Button)findViewById(R.id.cancelBioBtn);
-        cancelCallBtn = (Button)findViewById(R.id.cancelCallBtn);
-        cancelEmailBtn = (Button)findViewById(R.id.cancelEmailBtn);
-        cancelSkillButton = (Button)findViewById(R.id.cancelSkillButton);
+        cancelInfoBtn           = (Button)findViewById(R.id.cancelInfoBtn);
+        cancelStatusBtn         = (Button)findViewById(R.id.cancelStatusBtn);
+        cancelLocationBtn       = (Button)findViewById(R.id.cancelLocationBtn);
+        cancelExperienceBtn     = (Button)findViewById(R.id.cancelExperienceBtn);
+        cancelBioBtn            = (Button)findViewById(R.id.cancelBioBtn);
+        cancelCallBtn           = (Button)findViewById(R.id.cancelCallBtn);
+        cancelEmailBtn          = (Button)findViewById(R.id.cancelEmailBtn);
+        cancelSkillButton       = (Button)findViewById(R.id.cancelSkillButton);
 
         // Recycler View
-        skilledRV = (RecyclerView)findViewById(R.id.skilledRV);
+        skilledRV               = (RecyclerView)findViewById(R.id.skilledRV);
 
         //RadioButtons
 
-        companiesRB = (RadioButton)findViewById(R.id.companiesRB);
-        publicRB = (RadioButton) findViewById(R.id.publicRB);
+        companiesRB             = (RadioButton)findViewById(R.id.companiesRB);
+        publicRB                = (RadioButton) findViewById(R.id.publicRB);
 
         companiesRB.setOnClickListener(this);
         publicRB.setOnClickListener(this);
 
-         gender = myProfile.getString("myGender","0");
-         noticePeriod = myProfile.getString("myNoticePeriod","0");
-         available  = myProfile.getString("available","0");
+         gender                 = myProfile.getString("myGender","1");
+         noticePeriod           = myProfile.getString("myNoticePeriod","0");
+         available              = myProfile.getString("available","0");
 
         //Switches
 
-        availibilitySwitch = (Switch)findViewById(R.id.availableSwitch);
-        myGenderS = (Spinner) findViewById(R.id.myGenderS);
+        availibilitySwitch      = (Switch)findViewById(R.id.availableSwitch);
+        myGenderS               = (Spinner) findViewById(R.id.myGenderS);
 
 
     }
@@ -1391,7 +1393,7 @@ initArrays();
         
         
         
-        if (myProfile.getString("expertGender","Update Your Name ").equals("1")){
+        if (myProfile.getString("myGender","Update Your Name ").equals("1")){
             myMaleRD.setChecked(true);
             myFemaleRD.setChecked(false);
             genderSrc.setImageResource(R.drawable.male);
@@ -1525,24 +1527,23 @@ initArrays();
 
            // profile NAMEEXPERTISE TAGS
 
-        myFullNameV = (TextView) findViewById(R.id.myFullNameV);
-        myMainExpertiseV = (TextView)findViewById(R.id.myMainExpertiseV);
-        myNoticePeiodV = (TextView)findViewById(R.id.myNoticePeriodV);
-        genderSrc =  (ImageView)findViewById(R.id.myGenderSrc);
+        myFullNameV         = (TextView) findViewById(R.id.myFullNameV);
+        myMainExpertiseV    = (TextView)findViewById(R.id.myMainExpertiseV);
+        myNoticePeiodV      = (TextView)findViewById(R.id.myNoticePeriodV);
+        genderSrc           = (ImageView)findViewById(R.id.myGenderSrc);
 
-        myFullNameE = (EditText) findViewById(R.id.myFullNameE);
-        myMainExpertiseE = (EditText) findViewById(R.id.myMainExpertiseE);
-        myCurrentCityE  =(EditText) findViewById(R.id.myCurrentCityE);
-        myCurrentCityV = (TextView) findViewById(R.id.myCurrentCityV);
-        imageProgress = (LinearLayout)findViewById(R.id.imageProgress);
-        myProfTypeS = (Spinner)findViewById(R.id.myNoticePeriodS);
+        myFullNameE         = (EditText) findViewById(R.id.myFullNameE);
+        myMainExpertiseE    = (EditText) findViewById(R.id.myMainExpertiseE);
+        myCurrentCityE      = (EditText) findViewById(R.id.myCurrentCityE);
+        myCurrentCityV      = (TextView) findViewById(R.id.myCurrentCityV);
+        imageProgress       = (LinearLayout)findViewById(R.id.imageProgress);
+        myProfTypeS         = (Spinner)findViewById(R.id.myNoticePeriodS);
 
+        myMaleRD            = (RadioButton) findViewById(R.id.myMaleRD);
+        myFemaleRD          = (RadioButton) findViewById(R.id.myFemaleRD);
 
-        myMaleRD = (RadioButton) findViewById(R.id.myMaleRD);
-        myFemaleRD = (RadioButton) findViewById(R.id.myFemaleRD);
-
-        partTimeRBP = (RadioButton) findViewById(R.id.partTimeRBP);
-        fullTimeRBP = (RadioButton) findViewById(R.id.fullTimeRBP);
+        partTimeRBP         = (RadioButton) findViewById(R.id.partTimeRBP);
+        fullTimeRBP         = (RadioButton) findViewById(R.id.fullTimeRBP);
 
         partTimeRBP.setOnClickListener(this);
         fullTimeRBP.setOnClickListener(this);
@@ -1681,7 +1682,7 @@ initArrays();
 
 
 
-    class UpdateFirstCake extends AsyncTask<String , String, String>{
+    private class UpdateFirstCake extends AsyncTask<String , String, String>{
 
 
         StringBuilder builder = new StringBuilder();
@@ -1713,7 +1714,6 @@ initArrays();
 
             nameValuePair.add(new BasicNameValuePair("userPhone",USER_EMAIL));
             nameValuePair.add(new BasicNameValuePair("expertProfType",PROF_SUBTYPE));
-            Log.e("Failure",gender);
             nameValuePair.add(new BasicNameValuePair("expertGender",gender));
             nameValuePair.add(new BasicNameValuePair("expertName",FULLNAME));
             nameValuePair.add(new BasicNameValuePair("expertExpertise",MAINEXPERTISE));
@@ -1769,7 +1769,7 @@ Log.e("RESULt","ompost"+s);
                 myProfTypeS.setEnabled(true);
                 myGenderS.setEnabled(true);
 
-                updateEditor.putString("expertGender",gender);
+                updateEditor.putString("myGender",gender);
                 Log.e("RESULt",gender);
 
                 updateEditor.putString("myFullName",myFullNameE.getText().toString());
@@ -1802,7 +1802,7 @@ Log.e("RESULt","ompost"+s);
 
         }
     }
-    class UpdatePhone extends AsyncTask< String, String, String >{
+    private class UpdatePhone       extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -1893,7 +1893,7 @@ Log.e("RESULt","ompost"+s);
         }
 
     }
-    class UpdateEmail extends AsyncTask< String, String, String > {
+    private class UpdateEmail       extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -1986,7 +1986,7 @@ Log.e("RESULt","ompost"+s);
         }
 
     }
-    class UpdateBio extends AsyncTask< String, String, String >{
+    private class UpdateBio         extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -2080,7 +2080,7 @@ Log.e("RESULt","ompost"+s);
 
 
     }
-    class UpdateSkills extends AsyncTask< String, String, String >{
+    private class UpdateSkills      extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -2168,7 +2168,7 @@ Log.e("RESULt","ompost"+s);
         }
 
     }
-    class UpdateAddress extends AsyncTask< String, String, String >{
+    private class UpdateAddress     extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -2267,7 +2267,7 @@ Log.e("RESULt","ompost"+s);
 
 
     }
-    class UpdateStatus extends AsyncTask< String, String, String >{
+    private class UpdateStatus      extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -2360,8 +2360,8 @@ Log.e("RESULt","ompost"+s);
 
 
 
-    } 
-    class UpdateVisibility extends AsyncTask<String,String,String> {
+    }
+    private class UpdateVisibility  extends AsyncTask< String, String, String> {
 
 
         StringBuilder builder = new StringBuilder();
@@ -2457,7 +2457,7 @@ Log.e("RESULt","ompost"+s);
 
 
     }
-    class UpdateExperience extends AsyncTask< String, String, String >{
+    private class UpdateExperience  extends AsyncTask< String, String, String >{
 
 
         StringBuilder builder = new StringBuilder();
@@ -2786,7 +2786,8 @@ Log.e("RESULt","ompost"+s);
     public void sendImage(View view) {
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, byteArrayOutputStream);
+        myBitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteArrayOutputStream);
+
         byte[] byteArray = byteArrayOutputStream .toByteArray();
         base64= new String(Base64.encodeBase64(byteArray));
 
@@ -2794,7 +2795,7 @@ Log.e("RESULt","ompost"+s);
 
     }
 
-    class UpdateImage extends AsyncTask<String,String,String>{
+    private class UpdateImage extends AsyncTask<String,String,String>{
 
         StringBuilder builder = new StringBuilder();
         BufferedReader bufferedReader;
@@ -2818,6 +2819,9 @@ Log.e("RESULt","ompost"+s);
         @Override
         protected void onPostExecute(final String s) {
             super.onPostExecute(s);
+
+            Log.e("post_size_bug",s);
+
 
 
 
@@ -2859,6 +2863,7 @@ Log.e("RESULt","ompost"+s);
                 updateEditor.apply();
                 setImage();
                 imagePannelFlipper.showNext();
+
             }else if (s.contains("no64")){
 
                 imageProgress.startAnimation(fadeOut);
@@ -2881,22 +2886,31 @@ Log.e("RESULt","ompost"+s);
                     @Override
             public void run() {
                 imageProgress.setVisibility(View.GONE);
+
+
+
                 }
         },300);
 
 
                     if (s.contains("Large")){
-                        Toast.makeText(Profile.this, "File Size is Too Large, file size should be approx. less than 1 MB", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Profile.this, "File Size is Too Large, file size should be less than 2 MB", Toast.LENGTH_SHORT).show();
 
                     }else {
                         Toast.makeText(Profile.this, "We are having trouble connecting to the internet, Please check your Connection ", Toast.LENGTH_SHORT).show();
 
                     }
+                            /*testing here*/
+                    imagePannelFlipper.showPrevious();
 
 
 
                 }
              },1000);
+
+
+
+
             }
         }
 
@@ -2909,6 +2923,7 @@ Log.e("RESULt","ompost"+s);
 
             nameValuePairs.add(new BasicNameValuePair("userPhone",USER_EMAIL));
             nameValuePairs.add(new BasicNameValuePair("base64",base64));
+            Log.e("post_size_base64","length = " + base64.length());
 
 
             try{

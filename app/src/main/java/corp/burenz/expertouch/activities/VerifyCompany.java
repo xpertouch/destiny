@@ -850,7 +850,7 @@ Log.e("MYRC",s);
                         },300);
 
                        if (s.contains("Large")){
-                           Toast.makeText(VerifyCompany.this, "File Size is Too Large, file size should be approx. less than 1 MB", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(VerifyCompany.this, "File Size is Too Large, file size should be less than 2 MB", Toast.LENGTH_SHORT).show();
 
                        }else {
                            Toast.makeText(VerifyCompany.this, "We are having trouble connecting to the internet, Please check your Connection ", Toast.LENGTH_SHORT).show();

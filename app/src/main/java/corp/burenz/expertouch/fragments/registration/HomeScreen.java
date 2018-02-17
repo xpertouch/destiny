@@ -24,9 +24,12 @@ import corp.burenz.expertouch.util.GifView;
 public class HomeScreen extends Fragment implements View.OnClickListener {
 
     ViewFlipper textInfoFlipper;
-    Button signup,login;
-    Typeface logoTypeface;
+    Button  signup,login;
+
+    Typeface    logoTypeface;
+
     GifView gifView;
+
 
     String COUNT = "exitCount";
     SharedPreferences isHome;

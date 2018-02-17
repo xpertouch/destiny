@@ -1118,7 +1118,6 @@ public class ExpertDetails extends AppCompatActivity {
         if (expert_identity != null){  try{ new ExpertDetails.GetIndividualRatings().execute(expert_identity); }catch (Exception e){e.printStackTrace();}}
     }
 
-
 }
 
 

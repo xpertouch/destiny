@@ -433,7 +433,7 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004a;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f02004b;
         public static final int abc_textfield_search_material = 0x7f02004c;
-        public static final int indicator_corner_bg = 0x7f0200b6;
+        public static final int indicator_corner_bg = 0x7f0200b8;
     }
     public static final class id {
         public static final int Accordion = 0x7f100050;
@@ -475,19 +475,19 @@ public final class R {
         public static final int contentPanel = 0x7f100072;
         public static final int custom = 0x7f100078;
         public static final int customPanel = 0x7f100077;
-        public static final int daimajia_indicator_wrapper = 0x7f100699;
-        public static final int daimajia_slider_image = 0x7f10080c;
-        public static final int daimajia_slider_viewpager = 0x7f100843;
+        public static final int daimajia_indicator_wrapper = 0x7f1006a2;
+        public static final int daimajia_slider_image = 0x7f100826;
+        public static final int daimajia_slider_viewpager = 0x7f10085d;
         public static final int decor_content_parent = 0x7f100080;
         public static final int default_activity_button = 0x7f100068;
-        public static final int default_bottom_left_indicator = 0x7f100846;
-        public static final int default_bottom_right_indicator = 0x7f100845;
-        public static final int default_center_bottom_indicator = 0x7f100844;
-        public static final int default_center_top_indicator = 0x7f100847;
-        public static final int default_center_top_left_indicator = 0x7f100849;
-        public static final int default_center_top_right_indicator = 0x7f100848;
-        public static final int description = 0x7f10080f;
-        public static final int description_layout = 0x7f10080e;
+        public static final int default_bottom_left_indicator = 0x7f100860;
+        public static final int default_bottom_right_indicator = 0x7f10085f;
+        public static final int default_center_bottom_indicator = 0x7f10085e;
+        public static final int default_center_top_indicator = 0x7f100861;
+        public static final int default_center_top_left_indicator = 0x7f100863;
+        public static final int default_center_top_right_indicator = 0x7f100862;
+        public static final int description = 0x7f100829;
+        public static final int description_layout = 0x7f100828;
         public static final int disableHome = 0x7f10001e;
         public static final int edit_query = 0x7f100084;
         public static final int end = 0x7f100031;
@@ -501,7 +501,7 @@ public final class R {
         public static final int invisible = 0x7f100048;
         public static final int listMode = 0x7f10001c;
         public static final int list_item = 0x7f100069;
-        public static final int loading_bar = 0x7f10080d;
+        public static final int loading_bar = 0x7f100827;
         public static final int middle = 0x7f100042;
         public static final int multiply = 0x7f100037;
         public static final int never = 0x7f100046;
@@ -576,14 +576,14 @@ public final class R {
         public static final int abc_search_dropdown_item_icons_2line = 0x7f040016;
         public static final int abc_search_view = 0x7f040017;
         public static final int abc_select_dialog_material = 0x7f040018;
-        public static final int indicator_layout = 0x7f04006c;
-        public static final int render_type_default = 0x7f04009b;
-        public static final int render_type_text = 0x7f04009c;
-        public static final int select_dialog_item_material = 0x7f04009f;
-        public static final int select_dialog_multichoice_material = 0x7f0400a0;
-        public static final int select_dialog_singlechoice_material = 0x7f0400a1;
-        public static final int slider_layout = 0x7f0400a3;
-        public static final int support_simple_spinner_dropdown_item = 0x7f0400a7;
+        public static final int indicator_layout = 0x7f04006e;
+        public static final int render_type_default = 0x7f04009f;
+        public static final int render_type_text = 0x7f0400a0;
+        public static final int select_dialog_item_material = 0x7f0400a3;
+        public static final int select_dialog_multichoice_material = 0x7f0400a4;
+        public static final int select_dialog_singlechoice_material = 0x7f0400a5;
+        public static final int slider_layout = 0x7f0400a7;
+        public static final int support_simple_spinner_dropdown_item = 0x7f0400ab;
     }
     public static final class string {
         public static final int abc_action_bar_home_description = 0x7f090000;

@@ -156,7 +156,9 @@ public class SkilledExperts extends AppCompatActivity {
                             public void run() {
                                 noConnectionSkilled.setVisibility(View.GONE);
                                 noExpertLL.setVisibility(View.GONE);
-                                new GetExperts(SkilledExperts.this, skilledRV).execute();
+
+                                try { new GetExperts(SkilledExperts.this, skilledRV).execute(); }catch (Exception e ){e.printStackTrace();}
+
                             }
                         }, 300);
 
@@ -210,7 +212,9 @@ public class SkilledExperts extends AppCompatActivity {
             if (networkInfo != null && networkInfo.isConnected()) {
                 noConnectionSkilled.setVisibility(View.GONE);
                 noExpertLL.setVisibility(View.GONE);
-                new GetExperts(SkilledExperts.this, skilledRV).execute();
+
+                try {new GetExperts(SkilledExperts.this, skilledRV).execute(); }catch (Exception e ){e.printStackTrace();}
+
             } else {
                 skilledRV.setVisibility(View.GONE);
                 noExpertLL.setVisibility(View.GONE);
@@ -311,7 +315,9 @@ public class SkilledExperts extends AppCompatActivity {
                     if (networkInfo != null && networkInfo.isConnected()) {
                         noConnectionSkilled.setVisibility(View.GONE);
                         noExpertLL.setVisibility(View.GONE);
-                        new GetExperts(SkilledExperts.this, skilledRV).execute();
+                        try { new GetExperts(SkilledExperts.this, skilledRV).execute(); }catch (Exception e ){e.printStackTrace();}
+
+
                     } else {
                         skilledRV.setVisibility(View.GONE);
                         noExpertLL.setVisibility(View.GONE);
@@ -372,7 +378,9 @@ public class SkilledExperts extends AppCompatActivity {
                     if (networkInfo != null && networkInfo.isConnected()) {
                         noConnectionSkilled.setVisibility(View.GONE);
                         noExpertLL.setVisibility(View.GONE);
-                        new GetExperts(SkilledExperts.this, skilledRV).execute();
+
+                        try {new GetExperts(SkilledExperts.this, skilledRV).execute(); }catch (Exception e ){e.printStackTrace();}
+
                     } else {
                         skilledRV.setVisibility(View.GONE);
                         noExpertLL.setVisibility(View.GONE);

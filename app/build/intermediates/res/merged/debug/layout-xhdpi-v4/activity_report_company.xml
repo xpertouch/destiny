@@ -114,25 +114,35 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/textView607"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="If any company is posting useless and fake content, This is where you can stop them"
-                        android:id="@+id/textView607"
-                        android:textSize="12dp"
+                        android:layout_margin="10dp"
                         android:gravity="center"
-                        android:layout_margin="10dp" />
+                        android:text="If a company is posting useless and fake content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/textView84"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="This is where you can stop them"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/vectorColor"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/textView654"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="if a company gets ten reports from ten diferent users then the said companie&apos;s Post Facility is automatically Disabled"
-                        android:id="@+id/textView654"
-                        android:gravity="left|center"
                         android:layout_margin="10dp"
-                        android:textSize="12dp"
-                        android:textColor="#cc4732" />
+                        android:gravity="left|center"
+                        android:text="if a company gets ten reports from ten diferent users then the  company&apos;s post facility is automatically disabled"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#cc4732"
+                        android:textSize="12dp" />
 
                     <ViewFlipper
                         android:layout_width="match_parent"

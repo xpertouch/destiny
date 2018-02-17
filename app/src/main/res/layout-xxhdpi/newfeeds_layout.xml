@@ -479,7 +479,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="IAC SOFTWARE SOLUTIONS"
+                        android:text="1clickaway Ofiicial"
                         android:id="@+id/textViewTitle"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
@@ -571,8 +571,8 @@
     </LinearLayout>
     </android.support.v7.widget.CardView>
 
-    <include layout="@layout/recomendded_follows_adapter" />
-
+  <!--  <include layout="@layout/recomendded_follows_adapter" />
+-->
 
 </LinearLayout>
 

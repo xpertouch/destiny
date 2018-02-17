@@ -95,13 +95,13 @@ public class CallPermissions extends AppCompatActivity {
                 finish();
 
             } else {
-                Toast.makeText(CallPermissions.this, "You have restricted xperTouch app to access to Calling Feature", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CallPermissions.this, "You have restricted "+getString(R.string.host)+  " app to access to Calling Feature", Toast.LENGTH_SHORT).show();
 
                 android.support.v7.app.AlertDialog alertDialog = null;
                 android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(CallPermissions.this,R.style.AppTheme);
                 builder.setTitle("Want to Call Expert From Phone");
-                builder.setMessage("Allow xperTouch app to Call experts from phone. This enables you to Call experts and companies directly from your phone. " +
-                        "Go to Settings to turn on Call Access.\n\nTo enable this, click xpertouch App Settings below and activate Phone under the permissions menu.");
+                builder.setMessage("Allow "+getString(R.string.host)+  " app to Call experts from phone. This enables you to Call experts and companies directly from your phone. " +
+                        "Go to Settings to turn on Call Access.\n\nTo enable this, click "+getString(R.string.host)+  " App Settings below and activate Phone under the permissions menu.");
 
                 builder.setPositiveButton("App Settings", new DialogInterface.OnClickListener() {
                     @Override

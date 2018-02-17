@@ -84,19 +84,19 @@
                                 android:layout_height="match_parent">
 
                                 <EditText
+                                    android:id="@+id/enterEmail"
                                     android:layout_width="match_parent"
                                     android:layout_height="60dp"
-                                    android:ems="10"
-                                    android:id="@+id/enterEmail"
                                     android:layout_gravity="center"
-                                    android:hint="Phone Number"
-                                    android:foregroundGravity="center"
                                     android:layout_marginLeft="20dp"
                                     android:layout_marginRight="20dp"
-                                    android:textColorHighlight="#ffffff"
+                                    android:ems="10"
+                                    android:foregroundGravity="center"
+                                    android:hint="Phone Number"
+                                    android:inputType="phone"
                                     android:textColor="#ffffff"
-                                    android:textColorHint="#d5d5d5"
-                                    android:inputType="phone" />
+                                    android:textColorHighlight="#ffffff"
+                                    android:textColorHint="#d5d5d5" />
 
                                 <EditText
                                     android:layout_width="match_parent"

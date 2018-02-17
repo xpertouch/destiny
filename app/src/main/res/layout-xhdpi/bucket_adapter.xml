@@ -1,109 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:id="@+id/central_container_bucket_posts"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#00000000">
+    android:layout_marginTop="5dp"
+    android:background="#00000000"
+    android:orientation="vertical">
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        app:cardElevation="2dp"
-        android:layout_height="wrap_content"
         android:id="@+id/view13"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginRight="3dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:visibility="visible"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#efffffff"
-                android:baselineAligned="false">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <com.android.volley.toolbox.NetworkImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:id="@+id/saleBanner"
-                        android:scaleType="centerCrop"
-                        android:layout_margin="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="#00000000"
-                    android:layout_weight="1"
-                    android:baselineAligned="false">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Burenz Corporation"
-                            android:id="@+id/companyTitleB"
-                            android:layout_marginTop="5dp"
-                            android:textSize="12dp"
-                            android:textStyle="bold"
-                            android:typeface="serif"
-                            android:textColor="#000000" />
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="Posted on : "
-                                android:id="@+id/textView313"
-                                android:textSize="10dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="Nov 24 2016"
-                                android:id="@+id/saleDate"
-                                android:textColor="#a0a0a0"
-                                android:textSize="10dp"
-                                android:typeface="serif" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"></LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -111,144 +29,459 @@
                 android:gravity="bottom">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <com.android.volley.toolbox.NetworkImageView
+                    <RelativeLayout
+                        android:id="@+id/attachedBannerHolder"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/attachedBannerView"
-                        android:src="@raw/sample"
-                        android:adjustViewBounds="true"
-                        android:visibility="gone" />
+                        android:layout_height="250dp"
+                        android:visibility="visible">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/attachedBannerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:scaleType="centerCrop"
+                            android:src="@raw/sample" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/double_click_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/awesome_heart_on_double_click"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/love_checked"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/gradient_decencent"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="#b3fcfdfd"
+                                    android:backgroundTint="#00000008"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:minHeight="45dp"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible">
+
+
+                                        <ImageButton
+                                            android:id="@+id/thumbsUpAdd"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center"
+                                            android:background="#00000000"
+                                            android:cropToPadding="true"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/love_unchecked"
+                                            android:visibility="gone" />
+
+                                        <ImageButton
+                                            android:id="@+id/thumbsDownAdd"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center"
+                                            android:background="#00000000"
+                                            android:cropToPadding="true"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/love_checked"
+                                            android:visibility="gone" />
+
+                                        <ViewFlipper
+                                            android:id="@+id/thumbsFlipper"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:autoStart="false"
+                                            android:inAnimation="@anim/card_animation"
+                                            android:outAnimation="@anim/abc_popup_exit"
+                                            android:soundEffectsEnabled="false"
+                                            android:visibility="gone">
+
+                                        </ViewFlipper>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/line"
+                                        android:orientation="vertical"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="10dp"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textStyle="bold"
+                                                android:typeface="monospace" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageView218"
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:scaleType="centerInside"
+                                                android:src="@drawable/thumbsup" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/line"
+                                        android:orientation="vertical"
+                                        android:visibility="gone"></LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="40dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center"
+                                            android:background="#00000000"
+                                            android:cropToPadding="true"
+                                            android:padding="4dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/share"
+                                            android:visibility="gone" />
+
+
+                                        <com.mikepenz.iconics.view.IconicsImageView
+                                            android:id="@+id/shareSalesB"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:cropToPadding="true"
+                                            android:padding="10dp"
+                                            android:scaleType="centerCrop"
+                                            app:iiv_color="#000000"
+                                            app:iiv_icon="@string/faw_share"
+                                            app:iiv_size="30dp" />
+
+
+                                        <ImageButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="#00000000"
+                                            android:src="@drawable/reply_reverse"
+                                            android:visibility="gone" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/line"
+                                        android:orientation="vertical"
+                                        android:visibility="invisible" />
+
+                                    <LinearLayout
+                                        android:layout_width="40dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <ImageButton
+                                            android:id="@+id/companyProfileB"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center"
+                                            android:background="#00000000"
+                                            android:cropToPadding="true"
+                                            android:padding="4dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/add_company" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="fill_parent"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
+                        android:orientation="vertical"
                         android:visibility="visible" />
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="100dp"
-                        android:measureWithLargestChild="false">
+                        android:layout_height="75dp"
+                        android:background="#efffffff"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
 
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="bottom" >
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.android.volley.toolbox.NetworkImageView
+                                android:id="@+id/saleBanner"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="10dp"
+                                android:scaleType="centerCrop" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:gravity="bottom"
-                            android:background="#b3fcfdfd"
-                            android:id="@+id/styleSheet">
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
 
                             <LinearLayout
-                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/companyTitleB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:text="Burenz Corporation"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    android:typeface="serif" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/companyCityB"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Cheeni Chowk Anantnag Jammu and Kashmir"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="@color/cardview_dark_background"
+                                        android:textSize="10dp"
+                                        android:typeface="serif" />
+
+                                    <TextView
+                                        android:id="@+id/textView313"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Posted on : "
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textSize="10dp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/saleDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Nov 24 2016"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="#a0a0a0"
+                                        android:textSize="10dp"
+                                        android:typeface="serif" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/totalLikesTV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="3dp"
+                                            android:text="0"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#000000"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold"
+                                            android:typeface="normal"
+                                            android:visibility="visible" />
+
+
+                                        <TextView
+                                            android:id="@+id/likes_index_support_tv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="Like this"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textSize="10sp"
+                                            android:typeface="normal"
+                                            android:visibility="visible" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:measureWithLargestChild="false"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/styleSheet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#b3fcfdfd"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="5dp">
+                                android:layout_marginBottom="5dp"
+                                android:gravity="top"
+                                android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/saleTitle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:text="xpertCity with a header"
-                                    android:id="@+id/saleTitle"
-                                    android:textColor="#000000"
-                                    android:typeface="serif"
-                                    android:textStyle="bold"
                                     android:layout_marginLeft="10dp"
-                                    android:layout_marginTop="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:textSize="15dp" />
+                                    android:text="xpertCity with a header"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#000000"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:typeface="serif" />
 
                                 <TextView
+                                    android:id="@+id/textView302"
                                     android:layout_width="wrap_content"
                                     android:layout_height="1dp"
-                                    android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:id="@+id/textView302"
-                                    android:textColor="#00000000"
-                                    android:typeface="serif"
-                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:textSize="15dp"
-                                    android:text="xpertCity"
-                                    android:background="#e96656"
                                     android:layout_marginTop="2dp"
-                                    android:layout_marginBottom="5dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Cheeni Chowk Anantnag Jammu and Kashmir"
-                                    android:id="@+id/companyCityB"
-                                    android:layout_marginLeft="10dp"
-                                    android:textColor="@color/cardview_dark_background"
-                                    android:textSize="10dp"
-                                    android:layout_marginBottom="5dp"
+                                    android:background="#e96656"
+                                    android:text="xpertCity"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#00000000"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
                                     android:typeface="serif" />
+
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/saleDiscription"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="Well Gone are the days when you actually had to call all of your  Corporation has gifted us with an awesome Application that shall help you get you work done in seconds. The team of xpertCity wishes yiou all the very Best"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="Well Gone are the days when you actually had to call all of your accuqvantities to tell tell which expert you could hire for your job, Now The team of Burenz Corporation has gifted us with an awesome Application that shall help you get you work done in seconds. The team of xpertCity wishes yiou all the very Best"
-                                android:id="@+id/saleDiscription"
-                                android:layout_margin="10dp"
                                 android:textColor="@color/cardview_dark_background"
                                 android:textSize="12dp"
                                 android:typeface="sans" />
 
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:id="@+id/totalLikesTV"
-                                    android:typeface="normal"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="0"
-                                    android:textSize="12dp"
-                                    android:layout_marginBottom="5dp" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:id="@+id/textView98"
-                                    android:typeface="normal"
-                                    android:layout_marginLeft="5dp"
-                                    android:text="people like this"
-                                    android:textSize="12dp"
-                                    android:layout_marginBottom="5dp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/line" />
+                            android:background="@color/line"
+                            android:orientation="vertical" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -256,192 +489,14 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="#b3fcfdfd">
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:visibility="visible"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:minHeight="45dp">
-
-                    <ImageButton
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/thumbsUpAdd"
-                        android:scaleType="center"
-                        android:layout_gravity="center"
-                        android:cropToPadding="true"
-                        android:background="#00000000"
-                        android:padding="5dp"
-                        android:src="@drawable/thumbsup_gray"
-                        android:visibility="gone" />
-
-                    <ImageButton
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/thumbsDownAdd"
-                        android:scaleType="center"
-                        android:layout_gravity="center"
-                        android:cropToPadding="true"
-                        android:background="#00000000"
-                        android:padding="5dp"
-                        android:src="@drawable/thumbsup"
-                        android:visibility="gone" />
-
-                    <ViewFlipper
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/thumbsFlipper"
-                        android:inAnimation="@anim/card_animation"
-                        android:autoStart="false"
-                        android:soundEffectsEnabled="false"
-                        android:outAnimation="@anim/abc_popup_exit"
-                        android:visibility="gone">
-
-                    </ViewFlipper>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/line"
-                    android:visibility="gone" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:visibility="gone" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textStyle="bold"
-                            android:typeface="monospace" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center" >
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:id="@+id/imageView218"
-                            android:src="@drawable/thumbsup"
-                            android:scaleType="centerInside" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/line"
-                    android:visibility="gone"></LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:background="@color/line"></LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:visibility="visible"
-                    android:gravity="center"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/share"
-                        android:scaleType="centerInside"
-                        android:layout_gravity="center"
-                        android:cropToPadding="true"
-                        android:background="#00000000"
-                        android:padding="4dp"
-                        android:visibility="gone" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="share"
-                        android:id="@+id/shareSalesB"
-                        android:background="#00000000" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/line"
-                    android:visibility="invisible" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:visibility="gone"
-                    android:gravity="center"
-                    android:layout_marginRight="10dp">
-
-                    <ImageButton
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:id="@+id/companyProfileB"
-                        android:src="@drawable/add_company"
-                        android:scaleType="centerInside"
-                        android:layout_gravity="center"
-                        android:background="#00000000"
-                        android:cropToPadding="true"
-                        android:padding="4dp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/line" />
+                android:background="@color/line"
+                android:orientation="vertical" />
 
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
 
-    </LinearLayout>
+</LinearLayout>

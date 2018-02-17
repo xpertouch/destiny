@@ -371,150 +371,167 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
+                android:id="@+id/verifiedLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/verifiedLayout"
-                android:visibility="gone"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="0dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="0dp"
-                android:background="#ffffff">
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/imageView213"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/imageView213"
                         android:scaleType="centerCrop"
                         android:src="@raw/ownchoice" />
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#dcffffff">
+                        android:background="#dcffffff"
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/imageView176"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/imageView176"
                                     android:scaleType="centerCrop" />
 
                                 <LinearLayout
-                                    android:orientation="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:layout_alignParentTop="true"
                                     android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true">
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
 
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:gravity="center">
+                                        android:gravity="center"
+                                        android:orientation="vertical">
 
                                         <ViewFlipper
+                                            android:id="@+id/registerImagezFlipper"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/registerImagezFlipper"
                                             android:layout_gravity="center_horizontal"
                                             android:autoStart="false"
-                                            android:inAnimation="@anim/abc_grow_fade_in_from_bottom"
-                                            android:focusable="false">
+                                            android:focusable="false"
+                                            android:inAnimation="@anim/abc_grow_fade_in_from_bottom">
 
-                                            <ImageView
-                                                android:layout_width="80dp"
-                                                android:layout_height="80dp"
-                                                android:id="@+id/imageView177"
-                                                android:src="@drawable/posts"
-                                                android:scaleType="centerCrop" />
+                                            <com.mikepenz.iconics.view.IconicsImageView
+                                                android:layout_width="70dp"
+                                                android:layout_height="70dp"
+                                                android:layout_gravity="left"
+                                                android:cropToPadding="true"
+                                                android:padding="10dp"
+                                                android:scaleType="centerCrop"
+                                                android:visibility="gone"
+                                                app:iiv_color="@color/vectorColor"
+                                                app:iiv_icon="@string/faw_podcast"
+                                                app:iiv_size="45dp" />
 
-                                            <ImageView
-                                                android:layout_width="80dp"
-                                                android:layout_height="80dp"
-                                                android:id="@+id/imageView178"
-                                                android:src="@drawable/next"
-                                                android:scaleType="centerCrop" />
+                                            <com.mikepenz.iconics.view.IconicsImageView
+                                                android:layout_width="70dp"
+                                                android:layout_height="70dp"
+                                                android:layout_gravity="left"
+                                                android:cropToPadding="true"
+                                                android:padding="10dp"
+                                                android:scaleType="centerCrop"
+                                                android:visibility="gone"
+                                                app:iiv_color="@color/vectorColor"
+                                                app:iiv_icon="@string/faw_paper_plane"
+                                                app:iiv_size="45dp" />
 
-                                            <ImageView
-                                                android:layout_width="80dp"
-                                                android:layout_height="80dp"
-                                                android:id="@+id/imageView179"
-                                                android:src="@drawable/shutter_up"
-                                                android:scaleType="centerCrop" />
+                                            <com.mikepenz.iconics.view.IconicsImageView
+                                                android:layout_width="70dp"
+                                                android:layout_height="70dp"
+                                                android:layout_gravity="left"
+                                                android:cropToPadding="true"
+                                                android:padding="10dp"
+                                                android:scaleType="centerCrop"
+                                                android:visibility="gone"
+                                                app:iiv_color="@color/vectorColor"
+                                                app:iiv_icon="@string/faw_briefcase"
+                                                app:iiv_size="45dp" />
+
+
                                         </ViewFlipper>
 
                                         <ViewFlipper
+                                            android:id="@+id/registerTextFlipper"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/registerTextFlipper"
                                             android:layout_gravity="center_horizontal"
-                                            android:foregroundGravity="center"
                                             android:autoStart="false"
+                                            android:foregroundGravity="center"
                                             android:inAnimation="@anim/abc_grow_fade_in_from_bottom">
 
                                             <LinearLayout
-                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:gravity="center">
+                                                android:gravity="center"
+                                                android:orientation="vertical">
 
                                                 <TextView
+                                                    android:id="@+id/textView524"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:textAppearance="?android:attr/textAppearanceSmall"
                                                     android:text="Show Your Expertise"
-                                                    android:id="@+id/textView524"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
                                                     android:textSize="19dp"
                                                     android:textStyle="bold" />
                                             </LinearLayout>
 
                                             <LinearLayout
-                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:gravity="center">
+                                                android:gravity="center"
+                                                android:orientation="vertical">
 
                                                 <TextView
+                                                    android:id="@+id/textView528"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:text="Post Offers"
                                                     android:textAppearance="?android:attr/textAppearanceSmall"
-                                                    android:text="Post Adds"
-                                                    android:id="@+id/textView528"
                                                     android:textSize="19dp"
                                                     android:textStyle="bold" />
                                             </LinearLayout>
 
                                             <LinearLayout
-                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:gravity="center">
+                                                android:gravity="center"
+                                                android:orientation="vertical">
 
                                                 <TextView
+                                                    android:id="@+id/textView529"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:textAppearance="?android:attr/textAppearanceSmall"
                                                     android:text="Get Employed"
-                                                    android:id="@+id/textView529"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
                                                     android:textSize="19dp"
                                                     android:textStyle="bold" />
                                             </LinearLayout>
@@ -522,196 +539,196 @@
                                         </ViewFlipper>
 
                                         <ViewFlipper
+                                            android:id="@+id/subtitleRegisterFlipper"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/subtitleRegisterFlipper"
                                             android:layout_gravity="center"
-                                            android:foregroundGravity="center"
                                             android:autoStart="false"
+                                            android:foregroundGravity="center"
                                             android:inAnimation="@anim/abc_grow_fade_in_from_bottom">
 
                                             <LinearLayout
-                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:gravity="center">
+                                                android:gravity="center"
+                                                android:orientation="vertical">
 
                                                 <TextView
+                                                    android:id="@+id/textView525"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                                    android:text="Let Companies Know What You are good at"
-                                                    android:id="@+id/textView525"
                                                     android:layout_marginTop="10dp"
+                                                    android:text="Let companies know what you are good at"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
                                                     android:textSize="12dp" />
                                             </LinearLayout>
 
                                             <LinearLayout
-                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:gravity="center">
+                                                android:gravity="center"
+                                                android:orientation="vertical">
 
                                                 <TextView
+                                                    android:id="@+id/textView526"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                                    android:id="@+id/textView526"
                                                     android:layout_marginTop="10dp"
-                                                    android:textSize="12dp"
-                                                    android:text="Let People Know about your company" />
+                                                    android:text="Reach to more potential custumers"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:textSize="12dp" />
                                             </LinearLayout>
 
                                             <LinearLayout
-                                                android:orientation="vertical"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:gravity="center">
+                                                android:gravity="center"
+                                                android:orientation="vertical">
 
                                                 <TextView
+                                                    android:id="@+id/textView527"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                                    android:text="Make your Profile and get Calls From Companies"
-                                                    android:id="@+id/textView527"
                                                     android:layout_marginTop="10dp"
+                                                    android:text="Get calls from companies directly"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
                                                     android:textSize="12dp" />
                                             </LinearLayout>
                                         </ViewFlipper>
                                     </LinearLayout>
 
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="match_parent"
-                                        android:layout_height="20dp"></LinearLayout>
+                                        android:layout_height="20dp"
+                                        android:orientation="vertical"></LinearLayout>
 
                                 </LinearLayout>
                             </RelativeLayout>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp" >
+                            android:layout_height="150dp"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="20dp">
+                                android:layout_height="20dp"
+                                android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/textView519"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:layout_gravity="center_horizontal"
                                     android:text="Quickly Register as"
-                                    android:id="@+id/textView519"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1">
+                                android:layout_weight="1"
+                                android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/getHiredTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="I WANT TO WORK"
-                                    android:id="@+id/getHiredTextView"
                                     android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_marginLeft="20dp"
                                     android:layout_marginRight="20dp"
-                                    android:textColor="#ffffff"
-                                    android:background="@color/newVector"
                                     android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/newVector"
                                     android:gravity="center"
+                                    android:text="I WANT TO WORK"
+                                    android:textColor="#ffffff"
                                     android:textStyle="bold" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:gravity="center">
+                                android:gravity="center"
+                                android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/textView518"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:layout_gravity="center_horizontal"
                                     android:text="OR"
-                                    android:id="@+id/textView518"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical|center"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="5dp">
+                                android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:orientation="horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp">
+                                    android:layout_marginRight="20dp"
+                                    android:orientation="horizontal">
 
                                     <TextView
+                                        android:id="@+id/textView522"
                                         android:layout_width="1dp"
                                         android:layout_height="match_parent"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:id="@+id/textView522"
-                                        android:background="@color/border" />
+                                        android:background="@color/border"
+                                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                                     <LinearLayout
-                                        android:orientation="vertical"
+                                        android:id="@+id/hireLayout"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:id="@+id/hireLayout"
-                                        android:background="#00000000">
+                                        android:background="#00000000"
+                                        android:orientation="vertical">
 
                                         <TextView
+                                            android:id="@+id/textView520"
                                             android:layout_width="match_parent"
                                             android:layout_height="1dp"
-                                            android:textAppearance="?android:attr/textAppearanceSmall"
-                                            android:id="@+id/textView520"
-                                            android:background="@color/border" />
+                                            android:background="@color/border"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
 
                                         <TextView
+                                            android:id="@+id/textView517"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:text="PROMOTE MY BUSINESS"
-                                            android:id="@+id/textView517"
                                             android:layout_gravity="center_horizontal"
+                                            android:layout_marginBottom="8dp"
                                             android:layout_marginLeft="20dp"
                                             android:layout_marginRight="20dp"
-                                            android:gravity="center"
-                                            android:textStyle="bold"
-                                            android:layout_weight="1"
                                             android:layout_marginTop="8dp"
-                                            android:layout_marginBottom="8dp" />
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="PROMOTE MY BUSINESS"
+                                            android:textStyle="bold" />
 
                                         <TextView
+                                            android:id="@+id/textView521"
                                             android:layout_width="match_parent"
                                             android:layout_height="1dp"
-                                            android:textAppearance="?android:attr/textAppearanceSmall"
-                                            android:id="@+id/textView521"
-                                            android:background="@color/border" />
+                                            android:background="@color/border"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
                                     </LinearLayout>
 
                                     <TextView
+                                        android:id="@+id/textView523"
                                         android:layout_width="1dp"
                                         android:layout_height="match_parent"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:id="@+id/textView523"
-                                        android:background="@color/border" />
+                                        android:background="@color/border"
+                                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                                 </LinearLayout>
 

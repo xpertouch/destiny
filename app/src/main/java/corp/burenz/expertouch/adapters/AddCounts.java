@@ -1,12 +1,20 @@
 package corp.burenz.expertouch.adapters;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import corp.burenz.expertouch.R;
+import corp.burenz.expertouch.activities.CompanyProfile;
+import corp.burenz.expertouch.activities.JobPostDetails;
+import corp.burenz.expertouch.fragments.post.flag.JobPost;
 
 
 /**
@@ -16,7 +24,7 @@ import corp.burenz.expertouch.R;
 
 public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
 
-
+    boolean FROM_JOBS = false;
 
     String[] textsIGotS;
 
@@ -35,18 +43,62 @@ public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
 
 
 
+    private String companyTitle, jobInformation, postDate, companyBanner, postId;
+    private Context mContext;
 
-    public AddCounts(String[] textsIGot){
+    AddCounts(String[] textsIGot){
         this.textsIGotS = textsIGot;
     }
+
+
+    public AddCounts(String[] textsIGot, boolean FROM_JOBS){
+
+        this.textsIGotS = textsIGot;
+        this.FROM_JOBS  = FROM_JOBS;
+
+    }
+
+    AddCounts(Context mContext, String[] textsIGot, boolean FROM_JOBS, String companyTitle, String postDate, String jobInformation, String companyBanner, String postId){
+
+        this.textsIGotS         = textsIGot;
+        this.FROM_JOBS          = FROM_JOBS;
+        this.mContext           = mContext;
+        this.companyTitle       = companyTitle;
+        this.postDate           = postDate;
+        this.jobInformation     = jobInformation;
+        this.companyBanner      = companyBanner;
+        this.postId             = postId;
+
+    }
+
+
+
 
     @Override
     public void onBindViewHolder(AddCounts.CompanyAdds holder, int position) {
 
-        TextView textsIGot;
+        holder.textsIGot.setText(Html.fromHtml(textsIGotS[position]));
 
-        textsIGot = holder.textsIGot;
-        textsIGot.setText(textsIGotS[position]);
+        if(FROM_JOBS){
+
+            /*setting blue color to predict links*/
+//            if (textsIGotS[position].contains("...")){holder.textsIGot.setTextColor(Color.GRAY);}else{holder.textsIGot.setTextColor(Color.BLACK);}
+
+
+
+            holder.textsIGot.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Log.e("finale","im listening add counts adapter");
+                    mContext.startActivity(new Intent(mContext, JobPostDetails.class).putExtra("companyTitle",companyTitle).putExtra("postDate", postDate).putExtra("jobInfo",jobInformation).putExtra("companyBanner",companyBanner).putExtra("postId",postId));
+
+                }
+            });
+
+        }
+
+
 
     }
 

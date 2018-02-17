@@ -70,10 +70,12 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
     private ArrayList<String> titleArray, subtitleArray, postDateArray, websiteArray, emailArray, banners;
     private ArrayList<String> callArray, slidingBannerURLS;
+    ArrayList<String> postId;
     private Context context;
     private SharedPreferences userData;
     private View myView;
     private String LOCAL_APP_DATA = "userInformation";
+
     private SliderLayout sliderLayout;
 
 
@@ -83,16 +85,17 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
     private RecyclerView.Adapter adapter;
     private String[] finalCount;
 
-    public FeedsAdapter(Context context, ArrayList<String> title, ArrayList<String> subtitle, ArrayList<String> postDate, ArrayList<String> callArray, ArrayList<String> websiteArray, ArrayList<String> emailArray,ArrayList<String> banners) {
+    public FeedsAdapter(Context context, ArrayList<String> title, ArrayList<String> subtitle, ArrayList<String> postDate, ArrayList<String> callArray, ArrayList<String> websiteArray, ArrayList<String> emailArray,ArrayList<String> banners, ArrayList<String> postId) {
 
-        this.context = context;
-        this.titleArray = title;
-        this.subtitleArray = subtitle;
-        this.postDateArray = postDate;
-        this.callArray = callArray;
-        this.websiteArray = websiteArray;
-        this.emailArray = emailArray;
-        this.banners = banners;
+        this.context            = context;
+        this.titleArray         = title;
+        this.subtitleArray      = subtitle;
+        this.postDateArray      = postDate;
+        this.callArray          = callArray;
+        this.websiteArray       = websiteArray;
+        this.emailArray         = emailArray;
+        this.banners            = banners;
+        this.postId             = postId;
 
 
     }
@@ -134,9 +137,9 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
             offlineFlipper  = (ViewFlipper)itemView.findViewById(R.id.offlineFlipper);
             sliderShow      = (SliderLayout) itemView.findViewById(R.id.slider);
 
-            recommendedCapsulrInjection =   (CardView) itemView.findViewById(R.id.recommended_capsule_injection);
+            /*recommendedCapsulrInjection =   (CardView) itemView.findViewById(R.id.recommended_capsule_injection);
             showMeMoreTV    =   (TextView)itemView.findViewById(R.id.show_me_more_textview);
-
+*/
         }
     }
 
@@ -170,7 +173,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         final ViewFlipper offlineFlipper;
 
     try {
-        String add = subtitleArray.get(holder.getAdapterPosition()).toString();
+        String add = subtitleArray.get(holder.getAdapterPosition());
         finalCount = add.split("3xt3");
 
     }catch (IndexOutOfBoundsException e){
@@ -210,23 +213,24 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         cardView.startAnimation(animation);
 
-        adapter = new AddCounts(finalCount);
+
+
+
+
+
+
+//        adapter = new AddCounts(context,finalCount,true,);
+        adapter =   new AddCounts(context, finalCount, true, titleArray.get(position),postDateArray.get(position),subtitleArray.get(position),banners.get(position), postId.get(position));
+
         jobCountsR.setLayoutManager(new LinearLayoutManager(context));
         jobCountsR.hasFixedSize();
         jobCountsR.setAdapter(adapter);
-
-        if (titleArray.get(position).toString().equals("Microsoft")){
-            offlineFlipper.showNext();
-
-
-        }
-
 
 
          /*seeting the capsule injection visibility to visible at place 3*/
 
 
-         if(titleArray.size() > 4){
+ /*        if(titleArray.size() > 4){
              if(position == 2){
 
                  cardView.startAnimation(animation);
@@ -239,14 +243,14 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
              }
 
          }
+*/
 
-
-         holder.showMeMoreTV.setOnClickListener(new View.OnClickListener() {
+      /*   holder.showMeMoreTV.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  context.startActivity(new Intent(context, ChannelSearchView.class));
              }
-         });
+         });*/
 
 
 
@@ -706,7 +710,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                     String advert = "Shared via 1clickAway, Find Best Jobs, Experts and Offers from your City and State. Click on the below link to Download Now\nhttps://play.google.com/store/apps/details?id=corp.burenz.expertouch";
                     String firstString = "Hey i am sharing with you an advertisement from" +
-                                " \n"+ titleArray.get(position).toString() +" posted on "+postDateArray.get(position).toString()+"" +
+                                " \n"+ titleArray.get(position).toString() +" posted "+postDateArray.get(position).toString()+"" +
                                 " where they mentioned "+subtitleArray.get(position).toString().replace("3xt3","\n")+"." +
                                 " Here are their contact Details\nPhone:"+callArray.get(position).toString()+"\nEmail:"+emailArray.get(position).toString()+"";
                         Intent shareIntent = new Intent();
