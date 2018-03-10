@@ -16,8 +16,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01383f6e-def6-4a2c-bdb9-4c7699eebcb2" name="Default" comment="">
+    <list default="true" id="01383f6e-def6-4a2c-bdb9-4c7699eebcb2" name="Default" comment="resolving unversioned files phase 2">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java" />
     </list>
     <list id="cac22c8b-1650-4743-8fd9-2d9998ebfef0" name="Failed commit: Default" comment="initiial commit">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/merchent_app-release.apk" afterPath="" />
@@ -71,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="298" column="0" lean-forward="true" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+              <caret line="298" column="0" lean-forward="false" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
               <folding>
                 <element signature="method#attachBaseContext#0;class#Jobs#0" expanded="false" />
                 <element signature="method#displayFirebaseRegId#0;class#Jobs#0" expanded="false" />
@@ -116,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/BucketPost.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
-              <caret line="349" column="0" lean-forward="true" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+              <caret line="349" column="0" lean-forward="false" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/RegisterCompany.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="113">
-              <caret line="458" column="0" lean-forward="true" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
+              <caret line="458" column="0" lean-forward="false" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,9 +136,13 @@
       <file leaf-file-name="ScanAndGo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="322">
+              <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+              <folding>
+                <element signature="method#onCreate#0;class#ScanAndGo#0" expanded="false" />
+                <element signature="class#SubscribeFromQR#0;class#ScanAndGo#0" expanded="false" />
+                <element signature="class#GetCurrentStatus#0;class#ScanAndGo#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,7 +171,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/new_profile.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="34" />
+              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -186,7 +191,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+              <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -2402,7 +2407,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/PointsOverlayView.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/scan_and_go.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/links_layout_adapter.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/bucket/Food.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java" />
@@ -2433,6 +2437,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/JobPost.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/BucketPost.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/RegisterCompany.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java" />
       </list>
     </option>
   </component>
@@ -2675,7 +2680,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520667716853" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520669731753" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2723,7 +2728,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520667716853" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520669731753" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2906,7 +2911,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520667716854" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520669731755" />
       </method>
     </configuration>
     <list size="1">
@@ -2966,7 +2971,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520667409720</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="resolving unversioned files phase 2">
+      <created>1520667826681</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1520667826681</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2992,7 +3004,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49520767" sideWeight="0.50276244" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3062352" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34340224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290735" sideWeight="0.4882445" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.4882445" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49520767" sideWeight="0.49723756" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3092,7 +3104,8 @@
     <MESSAGE value="smartBottom" />
     <MESSAGE value="smartBottom upgraded" />
     <MESSAGE value="resolving unversioned files phase 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolving unversioned files phase 1" />
+    <MESSAGE value="resolving unversioned files phase 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolving unversioned files phase 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3402,29 +3415,29 @@
         <state relative-caret-position="317">
           <caret line="190" column="37" lean-forward="false" selection-start-line="190" selection-start-column="37" selection-end-line="190" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11857#12121#0" expanded="true" />
-            <element signature="e#12120#12121#0" expanded="true" />
-            <element signature="e#12179#12444#0" expanded="true" />
-            <element signature="e#12443#12444#0" expanded="true" />
-            <element signature="e#12510#12790#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
-            <element signature="e#12857#13869#0" expanded="true" />
-            <element signature="e#13868#13869#0" expanded="true" />
-            <element signature="e#13935#14948#0" expanded="true" />
-            <element signature="e#14947#14948#0" expanded="true" />
-            <element signature="e#15966#16468#0" expanded="true" />
-            <element signature="e#16467#16468#0" expanded="true" />
-            <element signature="e#17277#19292#0" expanded="true" />
-            <element signature="e#19291#19292#0" expanded="true" />
-            <element signature="e#23035#24532#0" expanded="true" />
-            <element signature="e#24531#24532#0" expanded="true" />
-            <element signature="e#24573#26157#0" expanded="true" />
-            <element signature="e#26156#26157#0" expanded="true" />
-            <element signature="e#26198#28272#0" expanded="true" />
-            <element signature="e#28271#28272#0" expanded="true" />
-            <element signature="e#28536#28738#0" expanded="true" />
-            <element signature="e#28737#28738#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#11857#12121#0" expanded="false" />
+            <element signature="e#12120#12121#0" expanded="false" />
+            <element signature="e#12179#12444#0" expanded="false" />
+            <element signature="e#12443#12444#0" expanded="false" />
+            <element signature="e#12510#12790#0" expanded="false" />
+            <element signature="e#12789#12790#0" expanded="false" />
+            <element signature="e#12857#13869#0" expanded="false" />
+            <element signature="e#13868#13869#0" expanded="false" />
+            <element signature="e#13935#14948#0" expanded="false" />
+            <element signature="e#14947#14948#0" expanded="false" />
+            <element signature="e#15966#16468#0" expanded="false" />
+            <element signature="e#16467#16468#0" expanded="false" />
+            <element signature="e#17277#19292#0" expanded="false" />
+            <element signature="e#19291#19292#0" expanded="false" />
+            <element signature="e#23035#24532#0" expanded="false" />
+            <element signature="e#24531#24532#0" expanded="false" />
+            <element signature="e#24573#26157#0" expanded="false" />
+            <element signature="e#26156#26157#0" expanded="false" />
+            <element signature="e#26198#28272#0" expanded="false" />
+            <element signature="e#28271#28272#0" expanded="false" />
+            <element signature="e#28536#28738#0" expanded="false" />
+            <element signature="e#28737#28738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3448,7 +3461,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/new_profile.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="34" />
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -3464,7 +3477,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -3475,7 +3488,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="298" column="0" lean-forward="true" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+          <caret line="298" column="0" lean-forward="false" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
           <folding>
             <element signature="method#attachBaseContext#0;class#Jobs#0" expanded="false" />
             <element signature="method#displayFirebaseRegId#0;class#Jobs#0" expanded="false" />
@@ -3532,7 +3545,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/BucketPost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="349" column="0" lean-forward="true" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+          <caret line="349" column="0" lean-forward="false" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3540,16 +3553,20 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/RegisterCompany.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
-          <caret line="458" column="0" lean-forward="true" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
+          <caret line="458" column="0" lean-forward="false" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="322">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding>
+            <element signature="method#onCreate#0;class#ScanAndGo#0" expanded="false" />
+            <element signature="class#SubscribeFromQR#0;class#ScanAndGo#0" expanded="false" />
+            <element signature="class#GetCurrentStatus#0;class#ScanAndGo#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

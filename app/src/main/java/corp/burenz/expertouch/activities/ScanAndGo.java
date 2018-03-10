@@ -55,7 +55,6 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
     String channelId;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,8 +156,7 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
 
     @Override
     public void onQRCodeRead(String text, PointF[] points) {
-//        resultTextView.setText(text);
-        pointsOverlayView.setVisibility(View.VISIBLE);
+       pointsOverlayView.setVisibility(View.VISIBLE);
         pointsOverlayView.setPoints(points);
 
 
@@ -166,10 +164,8 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
         doneScanning = 2;
         if (text.contains("1clickaway.in") && text.contains("channel_id")){
 
-
             channelId  = String.valueOf(text.charAt(88)) ;
-//            Toast.makeText(this, channelId, Toast.LENGTH_SHORT).show();
-            new GetCurrentStatus().execute(channelId);
+           new GetCurrentStatus().execute(channelId);
 
             finalURL = text;
             try {
@@ -418,9 +414,6 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if (s.contains("subscribed")){subscribeToCompanyBT.setText("Unsubscribe");}else {subscribeToCompanyBT.setText("Subscribe");}
-
-//            Toast.makeText(ScanAndGo.this, s, Toast.LENGTH_SHORT).show();
-
             Log.e("server out ", s);
 
         }
