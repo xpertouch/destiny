@@ -456,6 +456,7 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
                 }
 
 
+
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             } catch (ClientProtocolException e) {
