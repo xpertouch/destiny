@@ -20,7 +20,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="cac22c8b-1650-4743-8fd9-2d9998ebfef0" name="Failed commit: Default" comment="initiial commit">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/merchent_app-release.apk" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-11-18-22-47-41-281.rawproto" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-11-18-22-50-35-458.rawproto" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
@@ -135,8 +134,8 @@
       <file leaf-file-name="ScanAndGo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state relative-caret-position="424">
+              <caret line="171" column="57" lean-forward="true" selection-start-line="171" selection-start-column="57" selection-end-line="171" selection-end-column="57" />
               <folding>
                 <element signature="method#onCreate#0;class#ScanAndGo#0" expanded="false" />
                 <element signature="class#SubscribeFromQR#0;class#ScanAndGo#0" expanded="false" />
@@ -2679,7 +2678,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520669937013" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670131480" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2727,7 +2726,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520669937013" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670131481" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2910,7 +2909,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520669937015" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670131489" />
       </method>
     </configuration>
     <list size="1">
@@ -2984,7 +2983,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520669834570</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="resolving unversioned files phase 2">
+      <created>1520669998088</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1520669998088</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3566,8 +3572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state relative-caret-position="424">
+          <caret line="171" column="57" lean-forward="true" selection-start-line="171" selection-start-column="57" selection-end-line="171" selection-end-column="57" />
           <folding>
             <element signature="method#onCreate#0;class#ScanAndGo#0" expanded="false" />
             <element signature="class#SubscribeFromQR#0;class#ScanAndGo#0" expanded="false" />
