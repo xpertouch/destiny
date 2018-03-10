@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_hire"
+        android:icon="@drawable/hire_new"
+        android:title="Hire" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/new_profile"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/navigation_scanqr"
+        android:icon="@drawable/dashboard_ic"
+        android:title="ScanQR" />
+
+
+    <item
+        android:id="@+id/navigation_offline"
+        android:icon="@drawable/fav_altrer"
+        android:title="Favourites" />
+
+
+    <item
+        android:id="@+id/navigation_bucket"
+        android:icon="@drawable/hot_b"
+        android:title="Bucket Store" />
+
+
+</menu>
