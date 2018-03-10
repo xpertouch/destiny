@@ -134,8 +134,8 @@
       <file leaf-file-name="ScanAndGo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="171" column="57" lean-forward="true" selection-start-line="171" selection-start-column="57" selection-end-line="171" selection-end-column="57" />
+            <state relative-caret-position="390">
+              <caret line="139" column="34" lean-forward="true" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
               <folding>
                 <element signature="method#onCreate#0;class#ScanAndGo#0" expanded="false" />
                 <element signature="class#SubscribeFromQR#0;class#ScanAndGo#0" expanded="false" />
@@ -2678,7 +2678,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670131480" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670302656" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2726,7 +2726,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670131481" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670302657" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2909,7 +2909,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670131489" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520670302658" />
       </method>
     </configuration>
     <list size="1">
@@ -2990,7 +2990,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520669998088</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="resolving unversioned files phase 4">
+      <created>1520670200962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1520670200962</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3117,7 +3124,8 @@
     <MESSAGE value="smartBottom upgraded" />
     <MESSAGE value="resolving unversioned files phase 1" />
     <MESSAGE value="resolving unversioned files phase 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolving unversioned files phase 2" />
+    <MESSAGE value="resolving unversioned files phase 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolving unversioned files phase 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3572,8 +3580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="171" column="57" lean-forward="true" selection-start-line="171" selection-start-column="57" selection-end-line="171" selection-end-column="57" />
+        <state relative-caret-position="390">
+          <caret line="139" column="34" lean-forward="true" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
           <folding>
             <element signature="method#onCreate#0;class#ScanAndGo#0" expanded="false" />
             <element signature="class#SubscribeFromQR#0;class#ScanAndGo#0" expanded="false" />
