@@ -574,6 +574,9 @@ public class Filter extends AppCompatActivity {
                 editor.putString("currentType",selectedType);
                 editor.commit();
                 Filter.this.finish();
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
             }
         });
 
@@ -581,6 +584,8 @@ public class Filter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Filter.this.finish();
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }
         });
 
@@ -627,4 +632,12 @@ public class Filter extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
+    }
 }

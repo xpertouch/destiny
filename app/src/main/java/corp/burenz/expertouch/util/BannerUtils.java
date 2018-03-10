@@ -55,6 +55,8 @@ public class BannerUtils {
 
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
 
+
+
                 String line = "";
 
                 while ( (line = bufferedReader.readLine() ) != null ){

@@ -120,22 +120,22 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         public FeedsViewHolder(View itemView) {
             super(itemView);
-            sliderPannelLL  = (LinearLayout) itemView.findViewById(R.id.sliderPannleLL);
-            titleTextView   = (TextView) itemView.findViewById(R.id.textViewTitle);
-            mainFrame       = (NetworkImageView) itemView.findViewById(R.id.imageViewBirthday);
-            newsFeedsFlpper = (ViewFlipper) itemView.findViewById(R.id.newsFeedsFlipper);
-            switchFeeds     = (ViewFlipper) itemView.findViewById(R.id.switchFeeds);
-            callFeed        = (ImageView) itemView.findViewById(R.id.callFeed);
-            mailFeed        = (ImageView) itemView.findViewById(R.id.mailFeed);
-            visitFeed       = (ImageView) itemView.findViewById(R.id.visitFeed);
-            shareFeed       = (ImageView) itemView.findViewById(R.id.shareFeed);
-            textViewDate    = (TextView) itemView.findViewById(R.id.textViewDate);
-            companyProfile  = (ImageView) itemView.findViewById(R.id.takeMeToProfile);
-            cardView        = (CardView)itemView.findViewById(R.id.cardView);
-            jobCountsR      =  (RecyclerView)itemView.findViewById(R.id.jobCountsR);
-            saveForOffline  = (ImageView) itemView.findViewById(R.id.saveForOffline);
-            offlineFlipper  = (ViewFlipper)itemView.findViewById(R.id.offlineFlipper);
-            sliderShow      = (SliderLayout) itemView.findViewById(R.id.slider);
+            sliderPannelLL  = (LinearLayout)        itemView.findViewById(R.id.sliderPannleLL);
+            titleTextView   = (TextView)            itemView.findViewById(R.id.textViewTitle);
+            mainFrame       = (NetworkImageView)    itemView.findViewById(R.id.imageViewBirthday);
+            newsFeedsFlpper = (ViewFlipper)         itemView.findViewById(R.id.newsFeedsFlipper);
+            switchFeeds     = (ViewFlipper)         itemView.findViewById(R.id.switchFeeds);
+            callFeed        = (ImageView)           itemView.findViewById(R.id.callFeed);
+            mailFeed        = (ImageView)           itemView.findViewById(R.id.mailFeed);
+            visitFeed       = (ImageView)           itemView.findViewById(R.id.visitFeed);
+            shareFeed       = (ImageView)           itemView.findViewById(R.id.shareFeed);
+            textViewDate    = (TextView)            itemView.findViewById(R.id.textViewDate);
+            companyProfile  = (ImageView)           itemView.findViewById(R.id.takeMeToProfile);
+            cardView        = (CardView)            itemView.findViewById(R.id.cardView);
+            jobCountsR      =  (RecyclerView)       itemView.findViewById(R.id.jobCountsR);
+            saveForOffline  = (ImageView)           itemView.findViewById(R.id.saveForOffline);
+            offlineFlipper  = (ViewFlipper)         itemView.findViewById(R.id.offlineFlipper);
+            sliderShow      = (SliderLayout)        itemView.findViewById(R.id.slider);
 
             /*recommendedCapsulrInjection =   (CardView) itemView.findViewById(R.id.recommended_capsule_injection);
             showMeMoreTV    =   (TextView)itemView.findViewById(R.id.show_me_more_textview);
@@ -569,14 +569,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                     if (isAvailable){
 
-                        Snackbar snackbar = Snackbar.make(v, "Add Already exists in My Favourites", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null);
-                        View sbView = snackbar.getView();
-                        TextView tv = (TextView)sbView.findViewById(android.support.design.R.id.snackbar_text);
-                        tv.setGravity(Gravity.CENTER);
-                        tv.setTextColor(Color.WHITE);
-                        sbView.setBackgroundColor(Color.RED);
-                        snackbar.show();
+                        Toast.makeText(context, "Add Already exists in My Favourites", Toast.LENGTH_SHORT).show();
 
                     }else {
                         String current_date = "Saved on : " + DateFormat.getDateTimeInstance().format(new Date());
@@ -584,15 +577,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                         favourites.insertCompany(titleArray.get(position).toString(),current_date,subtitleArray.get(position).toString(),callArray.get(position).toString(),websiteArray.get(position).toString(),emailArray.get(position).toString(),banners.get(holder.getAdapterPosition()).toString());
 
-                        Snackbar.make(v,"Successfully Added to My Favourites",Snackbar.LENGTH_LONG).show();
-//                        Snackbar snackbar = Snackbar.make(v, "Successfully Added To My Favourites", Snackbar.LENGTH_LONG)
-//                                .setAction("Action", null);
-//                        View sbView = snackbar.getView();
-//                        TextView tv = (TextView)sbView.findViewById(android.support.design.R.id.snackbar_text);
-//                        tv.setGravity(Gravity.CENTER);
-//                        tv.setTextColor(Color.WHITE);
-//                        sbView.setBackgroundColor(Color.GREEN);
-//                        snackbar.show();
+                        Toast.makeText(context, "Successfully Added to My Favourites", Toast.LENGTH_SHORT).show();
 
                     }
                         favourites.close();
@@ -607,7 +592,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                         offlineFlipper.showNext();
                     }else{
-                        Snackbar.make(v,"Couldn't add to My Favourites",Snackbar.LENGTH_LONG).show();
+                        Toast.makeText(context, "Couldn't add to My Favourites", Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -676,7 +661,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                         context.startActivity(i);
                     }
                     else {
-                        Snackbar.make(v,"No Internet Connection",Snackbar.LENGTH_SHORT).show();
+                        Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show();
                     }
 
 

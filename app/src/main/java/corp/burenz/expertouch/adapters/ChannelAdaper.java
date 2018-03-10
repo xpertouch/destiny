@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.toolbox.NetworkImageView;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.BufferedReader;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.util.ChannelHolder;
+import corp.burenz.expertouch.util.MySingleton;
 
 /**
  * Created by buren on 30/1/18.
@@ -38,8 +40,8 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
     ChannelAdaperViewHolder         holder;
 
     public ChannelAdaper(Context mContext, ChannelHolder channelHolderlist){
-        this.channelHolderList  = channelHolderlist;
         this.mContext           = mContext;
+        this.channelHolderList  = channelHolderlist;
     }
 
     @Override
@@ -56,6 +58,9 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
             holder.companyTitleTV.setText(channelHolderList.getCompanyTitle().get(position));
             holder.companyLocationTV.setText(channelHolderList.getCompanyAddress().get(position));
             holder.companyAboutTV.setText(channelHolderList.getCompanyAbout().get(position));
+            holder.companyBannerView.setImageUrl(channelHolderList.getCompanyBannerURL().get(position), MySingleton.getInstance(mContext).getImageLoader());
+            Log.e("channel","" +channelHolderList.getCompanyBannerURL());
+
 
             if(channelHolderList.getIsSubscribedByMe().get(position).equals("0")){
                 holder.subsscribeNow.setVisibility(View.VISIBLE);
@@ -122,8 +127,9 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
 
       /* NetworkImageView companyBannerView;
       */
-        TextView    companyTitleTV, companyLocationTV, companyAboutTV;
-        Button      subsscribeNow, unSubscribeNow;
+        TextView            companyTitleTV, companyLocationTV, companyAboutTV;
+        Button              subsscribeNow, unSubscribeNow;
+        NetworkImageView    companyBannerView;
 
 
 
@@ -132,11 +138,12 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
         ChannelAdaperViewHolder(View v) {
             super(v);
 
-            companyTitleTV          =   (TextView) v.findViewById(R.id.companyTitleTVC);
-            companyLocationTV       =   (TextView) v.findViewById(R.id.companyLocationTVC);
-            companyAboutTV          =   (TextView) v.findViewById(R.id.companyAboutTVC);
-            subsscribeNow           =   (Button)   v.findViewById(R.id.subsCribeChannelBtnC);
-            unSubscribeNow          =   (Button)   v.findViewById(R.id.unsubscribefromChannelButton);
+            companyTitleTV          =   (TextView)          v.findViewById(R.id.companyTitleTVC);
+            companyLocationTV       =   (TextView)          v.findViewById(R.id.companyLocationTVC);
+            companyAboutTV          =   (TextView)          v.findViewById(R.id.companyAboutTVC);
+            subsscribeNow           =   (Button)            v.findViewById(R.id.subsCribeChannelBtnC);
+            unSubscribeNow          =   (Button)            v.findViewById(R.id.unsubscribefromChannelButton);
+            companyBannerView       =   (NetworkImageView)  v.findViewById(R.id.realCompanyNetworkImage);
         }
     }
 
@@ -243,7 +250,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
           /*  strings[0]  = whether subscribe or unsubscribe
             strings[1]  = companys id      */
 
-            String          urlToHit            =   "http://192.168.43.190/ver1.1/workshop/subscription_utils.php";
+            String          urlToHit            =   mContext.getString(R.string.host) + "/workshop/subscription_utils.php";
             StringBuilder   stringBuilder       =   new StringBuilder();
 
 

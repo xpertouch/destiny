@@ -55,6 +55,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.MyCompanyPosts;
+import corp.burenz.expertouch.butter.CompanyInformation;
 
 /**
  * Created by xperTouch on 10/12/2016.
@@ -335,6 +336,7 @@ public class BucketPost extends Fragment {
             }else if (s.contains("crook")){
                 Toast.makeText(getActivity(), "Your Post Facility has been disabled, Please Contact our Customer Care ", Toast.LENGTH_SHORT).show();
                 promotionFlipper.showNext();
+                getActivity().getSharedPreferences(CompanyInformation.COMPANY_DETAILS,0).edit().putBoolean(CompanyInformation.VERIFICATION_STATUS,false).apply();
 
             }else {
 

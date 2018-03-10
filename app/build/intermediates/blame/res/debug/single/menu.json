@@ -16,6 +16,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_expert_details.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/bottom_navigation.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/bottom_navigation.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/menu/menu_profile.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/menu/menu_profile.xml"
     },

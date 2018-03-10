@@ -49,6 +49,7 @@ import java.util.List;
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.MyCompanyPosts;
 import corp.burenz.expertouch.adapters.FilterListAdapter;
+import corp.burenz.expertouch.butter.CompanyInformation;
 
 /**
  * Created by xperTouch on 10/12/2016.
@@ -959,6 +960,8 @@ public class JobPost extends Fragment implements View.OnClickListener{
             } else if (s.contains("crook")) {
                 Toast.makeText(getActivity(), "Your Post Facility has been disabled, Please Contact our Customer Care ", Toast.LENGTH_SHORT).show();
                 flagPostFlipper.showNext();
+                /*now make him verify his identity*/
+                getActivity().getSharedPreferences(CompanyInformation.COMPANY_DETAILS,0).edit().putBoolean(CompanyInformation.VERIFICATION_STATUS,false).apply();
 
             } else {
 

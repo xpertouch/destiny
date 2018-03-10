@@ -2,5 +2,9 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/side_nav_bar.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/drawable-ldpi/side_nav_bar.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/welcome_screen_gradient.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/drawable-ldpi/welcome_screen_gradient.xml"
     }
 ]

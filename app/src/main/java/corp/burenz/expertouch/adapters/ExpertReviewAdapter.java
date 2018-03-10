@@ -58,6 +58,8 @@ public class ExpertReviewAdapter extends RecyclerView.Adapter<ExpertReviewAdapte
 
         holder.tv_review_user_name  .setText(review_user_name.get(position));
         holder.tv_review_date       .setText(review_date.get(position));
+
+        if( review_body.get(position).length() == 0 ){ holder.tv_review_body.setVisibility(View.GONE); }else { holder.tv_review_body.setVisibility(View.VISIBLE); }
         holder.tv_review_body       .setText(review_body.get(position));
         holder.iv_review_user_pic   .setImageUrl(review_user_pic.get(position), MySingleton.getInstance(mContext).getImageLoader());
         holder.rb_review_stars      .setText(review_stars.get(position));

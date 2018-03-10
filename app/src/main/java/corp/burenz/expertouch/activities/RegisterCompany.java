@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import corp.burenz.expertouch.R;
+import corp.burenz.expertouch.butter.CompanyInformation;
 
 
 public class RegisterCompany extends AppCompatActivity implements View.OnClickListener {
@@ -96,31 +97,31 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
 
 
         //Flippers
-        welcomeFlipper = (ViewFlipper)findViewById(R.id.welcomeFlipper);
-        companyButtonsFlipper = (ViewFlipper)findViewById(R.id.companyButtonsFlipper);
-        companyImagesFlipper = (ViewFlipper)findViewById(R.id.companyImagesFlipper);
-        companyEditTextFlipper = (ViewFlipper)findViewById(R.id.companyEditTexts);
-        companySubtitleFlipper =(ViewFlipper)findViewById(R.id.companySubtitleFlipper);
-        companyScanFlipper = (ViewFlipper) findViewById(R.id.companyScanFlipper);
+        welcomeFlipper          = (ViewFlipper)findViewById(R.id.welcomeFlipper);
+        companyButtonsFlipper   = (ViewFlipper)findViewById(R.id.companyButtonsFlipper);
+        companyImagesFlipper    = (ViewFlipper)findViewById(R.id.companyImagesFlipper);
+        companyEditTextFlipper  = (ViewFlipper)findViewById(R.id.companyEditTexts);
+        companySubtitleFlipper  =(ViewFlipper)findViewById(R.id.companySubtitleFlipper);
+        companyScanFlipper      = (ViewFlipper) findViewById(R.id.companyScanFlipper);
 
         //Buttons
-        companyNameB = (Button)findViewById(R.id.companyNameB);
-        companyTagB = (Button)findViewById(R.id.companyTagB);
-        companyPhoneB = (Button)findViewById(R.id.companyPhoneB);
-        companyEmailB = (Button)findViewById(R.id.companyEmailB);
-        companyVisitB = (Button)findViewById(R.id.companyVistB);
+        companyNameB        = (Button)findViewById(R.id.companyNameB);
+        companyTagB         = (Button)findViewById(R.id.companyTagB);
+        companyPhoneB       = (Button)findViewById(R.id.companyPhoneB);
+        companyEmailB       = (Button)findViewById(R.id.companyEmailB);
+        companyVisitB       = (Button)findViewById(R.id.companyVistB);
         companyDiscriptionB = (Button)findViewById(R.id.companyDiscriptionB);
-        companyStateB = (Button)findViewById(R.id.companyStateB);
-        companyCityB = (Button)findViewById(R.id.companyCtiyB);
-        companyLandmarkB = (Button)findViewById(R.id.companylandmarkB);
+        companyStateB       = (Button)findViewById(R.id.companyStateB);
+        companyCityB        = (Button)findViewById(R.id.companyCtiyB);
+        companyLandmarkB    = (Button)findViewById(R.id.companylandmarkB);
 
 
         //Tricky Layout
 
-        companyTflipper = (ViewFlipper) findViewById(R.id.companyTflipper);
-        companyTtitle = (TextView) findViewById(R.id.companyTtitle);
-        companyTsubtitle = (TextView) findViewById(R.id.companyTsubtitle);
-        iAgree = (Button)findViewById(R.id.iAgree);
+        companyTflipper     = (ViewFlipper) findViewById(R.id.companyTflipper);
+        companyTtitle       = (TextView) findViewById(R.id.companyTtitle);
+        companyTsubtitle    = (TextView) findViewById(R.id.companyTsubtitle);
+        iAgree              = (Button)findViewById(R.id.iAgree);
 
 
 
@@ -128,26 +129,26 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
 
 
 
-        companyNameE = (EditText)findViewById(R.id.companyNameE);
-        companyTagE = (EditText)findViewById(R.id.companyTagE);
-        companyPhoneE = (EditText)findViewById(R.id.companyOfficeE);
-        companyEmailE = (EditText)findViewById(R.id.companyEmailE);
-        companyVisitE = (EditText)findViewById(R.id.companyVisitE);
+        companyNameE        = (EditText)findViewById(R.id.companyNameE);
+        companyTagE         = (EditText)findViewById(R.id.companyTagE);
+        companyPhoneE       = (EditText)findViewById(R.id.companyOfficeE);
+        companyEmailE       = (EditText)findViewById(R.id.companyEmailE);
+        companyVisitE       = (EditText)findViewById(R.id.companyVisitE);
         companyDiscriptionE = (EditText)findViewById(R.id.companyDiscriptionE);
-        companyStateE = (Spinner)findViewById(R.id.companyStateE);
-        companyCityE = (EditText)findViewById(R.id.companyCityE);
-        companyLandmarkE = (EditText)findViewById(R.id.companyLandmarkE);
+        companyStateE       = (Spinner)findViewById(R.id.companyStateE);
+        companyCityE        = (EditText)findViewById(R.id.companyCityE);
+        companyLandmarkE    = (EditText)findViewById(R.id.companyLandmarkE);
 
-        companyNameB.setOnClickListener(this);
-        companyTagB.setOnClickListener(this);
-        companyPhoneB.setOnClickListener(this);
-        companyEmailB.setOnClickListener(this);
-        companyVisitB.setOnClickListener(this);
-        companyDiscriptionB.setOnClickListener(this);
-        companyStateB.setOnClickListener(this);
-        companyCityB.setOnClickListener(this);
-        companyLandmarkB.setOnClickListener(this);
-        iAgree.setOnClickListener(this);
+        companyNameB        .setOnClickListener(this);
+        companyTagB         .setOnClickListener(this);
+        companyPhoneB       .setOnClickListener(this);
+        companyEmailB       .setOnClickListener(this);
+        companyVisitB       .setOnClickListener(this);
+        companyDiscriptionB .setOnClickListener(this);
+        companyStateB       .setOnClickListener(this);
+        companyCityB        .setOnClickListener(this);
+        companyLandmarkB    .setOnClickListener(this);
+        iAgree              .setOnClickListener(this);
 
 
 
@@ -427,6 +428,12 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
             editor.putString("companyCity",companyCity);
             editor.putString("companyLandmark",companylandmark);
             editor.putString("companyBanner",getString(R.string.host)+"/mycompany/defaults/company_default.jpg");
+
+
+            /*setting the store verified by default*/
+            editor.putBoolean(CompanyInformation.VERIFICATION_STATUS,true);
+            /*setting to verified ends here*/
+
             editor.apply();
 
 

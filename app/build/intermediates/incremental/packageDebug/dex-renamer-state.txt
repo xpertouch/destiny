@@ -1,4 +1,7 @@
-#Sat Feb 17 09:33:04 IST 2018
-base.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+#Sat Mar 10 01:26:12 IST 2018
+base.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e10ecdc72746f58f5a9efdbd3dfd414a7c87050a
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f6c23a9c49d0af6746b8a457fa70f3d1af61a995/classes.dex
+base.1=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f6c23a9c49d0af6746b8a457fa70f3d1af61a995
+file.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e10ecdc72746f58f5a9efdbd3dfd414a7c87050a/classes.dex

@@ -13,6 +13,9 @@
 
     <!-- login Fragment Color Schema-->
 
+    <color name="black">#000000</color>
+
+
     <color name="hintColorForLogin">#ffffff</color>
     <color name="loginButtonColor">#303F9F</color>
     <color name="button_colors_for_login">#ffffff</color>

@@ -14,6 +14,7 @@ import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.fragments.bucket.EducationBucket;
+import corp.burenz.expertouch.fragments.bucket.Food;
 import corp.burenz.expertouch.fragments.bucket.Health;
 import corp.burenz.expertouch.fragments.bucket.Offers;
 import corp.burenz.expertouch.fragments.bucket.Products;
@@ -46,19 +47,23 @@ public class Buket extends AppCompatActivity {
                 switch (position % 4) {
 
                     case 0:
-                        return new Offers();
+                        return new Food();
 
                     case 1:
-                        return new EducationBucket();
+                        return new Offers();
 
                     case 2:
-                        return new Health();
+                        return new EducationBucket();
 
                     case 3:
-                        return new Products();
+                        return new Health();
                     
+                    case 4:
+                        return new Products();
+
                     default:
                         return new Products();
+
 
                 }
             }
@@ -72,12 +77,14 @@ public class Buket extends AppCompatActivity {
             public CharSequence getPageTitle(int position) {
                 switch (position % 4) {
                     case 0:
-                        return "Offers";
+                        return "Food";
                     case 1:
-                        return "Education";
+                        return "Offers";
                     case 2:
-                        return "Health";
+                        return "Education";
                     case 3:
+                        return "Health";
+                    case 4:
                         return "New Releases";
                 }
                 return "";
@@ -90,20 +97,27 @@ public class Buket extends AppCompatActivity {
                 switch (page) {
                     case 0:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.blue,
-                                getString(R.string.host)+"/other/sale.jpg");
+                                R.color.red,
+                                getString(R.string.host)+"/other/lifestyle.jpg");
+
                     case 1:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.blue,
-                                getString(R.string.host)+"/other/education.jpg");
+                                getString(R.string.host)+"/other/sale.jpg");
                     case 2:
+                        return HeaderDesign.fromColorResAndUrl(
+                                R.color.blue,
+                                getString(R.string.host)+"/other/education.jpg");
+                    case 3:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.cyan,
                                 getString(R.string.host)+"/other/health.jpg");
-                    case 3:
+                    case 4:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.red,
                                 getString(R.string.host)+"/other/lifestyle.jpg");
+
+
                 }
 
                 //execute others actions if needed (ex : modify your header logo)

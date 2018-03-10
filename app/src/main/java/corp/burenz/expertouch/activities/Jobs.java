@@ -1,7 +1,9 @@
 package corp.burenz.expertouch.activities;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.SearchManager;
+import android.app.usage.NetworkStats;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -18,8 +20,12 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.LayoutInflaterCompat;
@@ -51,6 +57,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.mikepenz.iconics.Iconics;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
 import com.mikepenz.iconics.context.IconicsLayoutInflater;
+import com.mikepenz.iconics.view.IconicsImageView;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -68,11 +75,14 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.FeedsAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.butter.MySharedConfig;
 import corp.burenz.expertouch.util.SendFCMToken;
 import corp.burenz.expertouch.util.BannerUtils;
@@ -85,82 +95,76 @@ public class Jobs extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
 
-    SharedPreferences introduceMe;
-    String APP_VERSION = "appVersion";
-    SharedPreferences appVersion;
-
-
-    String currentAppVersion = "silicon";
-    RecyclerView whatsNewRecycler;
-
-    RecyclerView.Adapter whatsNewRecyclerAdapter;
-    RecyclerView.Adapter filterRecyclerAdapter;
-    Typeface logoTypeface;
-    SharedPreferences userData;
-    SharedPreferences feedsFilter;
-    TextView postAddView,viewMyPostView;
-    String CURRENT_FILTER = "feedsFilter";
-    ViewFlipper switchBulbF;
-
-
-    LinearLayout searchJobOppurtunities,noConnectionLL;
-
-    Window window;
-    LinearLayout subOne,subTwo;
-    SharedPreferences.Editor editor;
-    Boolean isFabOpen = false;
-    SharedPreferences companyAdds;
-    InputMethodManager im;
-    Boolean isFabVisible;
-
-    ArrayList<String> companyTitles,postDate,callArray,emailArray, websiteArray,jobInfo,banners, addState,addCatagory, addType, postId;
-
-    TextView dontShowAgain,helpCenter;
-    ViewFlipper verificationBulbFl;
-    LinearLayout smartBottom;
-    String COMPANY_DETAILS = "myCompanyDetails";
-    SharedPreferences myCompanyDetails;
-
-
-    LinearLayout newVersionFoundLL;
-    LinearLayout switchUserLL;
-    FeedsLoader feedsLoader;
-
-    SharedPreferences updateInfo;
-    String UPDATE_INFO = "updateInfo";
-    String TAG = "Development";
-    LinearLayout whyVerify;
-    ViewFlipper showTimeFlipper;
-    ArrayList<String> companyTitlesNew ,postDateNew,callArrayNew,emailArrayNew,websiteArrayNew,jobInfoNew,bannersNew,
-    postIdNew;
-
-    private BroadcastReceiver mRegistrationBroadcastReceiver;
-
-    LinearLayout noAdverts;
-
-    ProgressBar progressBar;
-    android.widget.SearchView searchViewJobs;
-    TextView pdStyle;
-
-    // Bottom Banner
-    LinearLayout bottomBanner,bannerRoom;
-    ViewFlipper verifyNowFlipper;
-    TextView noThanksLverify,verifyNow;
-    LinearLayout jobsLayout;
-    RelativeLayout loadProgress;
-    Animation animation;
-    TextView textView638;
-    WaveSwipeRefreshLayout mWaveSwipeRefreshLayout;
+    SharedPreferences           introduceMe;
+    String APP_VERSION =        "appVersion";
+    SharedPreferences           appVersion;
+    LinearLayout                noFollowersView;
+    private static final int    MY_CAMERA_REQUEST_CODE = 100;
 
 
 
-    ImageButton smartHireLL,smartProfileLL,smartFavouritesLL,smartBucketLL;
+    private static int  FADE_TIME_OUT = 300;
+
+    String currentAppVersion =  "silicon";
+    RecyclerView                whatsNewRecycler;
+
+    RecyclerView.Adapter        whatsNewRecyclerAdapter;
+    RecyclerView.Adapter        filterRecyclerAdapter;
+    Typeface                    logoTypeface;
+    SharedPreferences           userData;
+    SharedPreferences           feedsFilter;
+    TextView                    postAddView,viewMyPostView;
+    String CURRENT_FILTER =     "feedsFilter";
+    ViewFlipper                 switchBulbF;
 
 
+    LinearLayout                searchJobOppurtunities,noConnectionLL;
 
+    Window                      window;
+    LinearLayout                subOne,subTwo;
+    SharedPreferences.Editor    editor;
+    Boolean isFabOpen =         false;
+    SharedPreferences           companyAdds;
+    InputMethodManager          im;
+    Boolean                     isFabVisible;
+    ArrayList<String>           companyTitles,postDate,callArray,emailArray, websiteArray,jobInfo,banners, addState,addCatagory, addType, postId;
 
-    Animation fab_open, fab_close, rotate_forward, rotate_backward;
-    FloatingActionButton fab,fab1,fab2;
+    TextView                    dontShowAgain,helpCenter;
+    ViewFlipper                 verificationBulbFl;
+    BottomNavigationView        smartBottom;
+    String COMPANY_DETAILS =    "myCompanyDetails";
+    SharedPreferences           myCompanyDetails;
+
+    LinearLayout                newVersionFoundLL;
+    LinearLayout                switchUserLL;
+    FeedsLoader                 feedsLoader;
+
+    SharedPreferences           updateInfo;
+    String UPDATE_INFO =        "updateInfo";
+    String TAG =                "Development";
+    LinearLayout                whyVerify;
+    ViewFlipper                 showTimeFlipper;
+    ArrayList<String>           companyTitlesNew ,postDateNew,callArrayNew,emailArrayNew,websiteArrayNew,jobInfoNew,bannersNew,
+                                postIdNew;
+
+    private BroadcastReceiver   mRegistrationBroadcastReceiver;
+    LinearLayout                noAdverts;
+    ProgressBar                 progressBar;
+    android.widget.SearchView   searchViewJobs;
+    TextView                    pdStyle;
+
+    LinearLayout                bottomBanner,bannerRoom;
+    ViewFlipper                 verifyNowFlipper;
+    TextView                    noThanksLverify,verifyNow;
+    LinearLayout                jobsLayout;
+    RelativeLayout              loadProgress;
+    Animation                   animation;
+    TextView                    textView638;
+    WaveSwipeRefreshLayout      mWaveSwipeRefreshLayout;
+
+    ImageButton                 smartHireLL,smartProfileLL,smartFavouritesLL,smartBucketLL;
+    Animation                   fab_open, fab_close, rotate_forward, rotate_backward;
+    FloatingActionButton        fab,fab1,fab2;
 
     final  int VERIFY_BANNER_TIMEOUT = 6000;
 
@@ -182,31 +186,31 @@ public class Jobs extends AppCompatActivity
 
     void initViews(){
 
-        fab               = (FloatingActionButton) findViewById(R.id.postAddFab);
-        fab1              = (FloatingActionButton) findViewById(R.id.fab1);
-        fab2              = (FloatingActionButton) findViewById(R.id.fab2);
-        postAddView       = (TextView) findViewById(R.id.postAddView);
-        viewMyPostView    = (TextView) findViewById(R.id.myPostsView);
-        noConnectionLL    = (LinearLayout) findViewById(R.id.noConnectionLinear);
-        jobsLayout        = (LinearLayout) findViewById(R.id.jobsLayout);
-        noAdverts         = (LinearLayout)findViewById(R.id.noAdverts);
-        loadProgress      = (RelativeLayout)findViewById(R.id.loadProgress);
-        fab1              = (FloatingActionButton) findViewById(R.id.fab1);
-        fab2              = (FloatingActionButton) findViewById(R.id.fab2);
-        subOne            = (LinearLayout) findViewById(R.id.subOne);
-        bottomBanner      = (LinearLayout) findViewById(R.id.bottomBanner);
-        subTwo            = (LinearLayout) findViewById(R.id.subTwo);
-        switchUserLL      = (LinearLayout) findViewById(R.id.switchUserLL);
+        fab                     = (FloatingActionButton) findViewById(R.id.postAddFab);
+        fab1                    = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2                    = (FloatingActionButton) findViewById(R.id.fab2);
+        postAddView             = (TextView) findViewById(R.id.postAddView);
+        viewMyPostView          = (TextView) findViewById(R.id.myPostsView);
+        noConnectionLL          = (LinearLayout) findViewById(R.id.noConnectionLinear);
+        jobsLayout              = (LinearLayout) findViewById(R.id.jobsLayout);
+        noAdverts               = (LinearLayout)findViewById(R.id.noAdverts);
+        loadProgress            = (RelativeLayout)findViewById(R.id.loadProgress);
+        fab1                    = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2                    = (FloatingActionButton) findViewById(R.id.fab2);
+        subOne                  = (LinearLayout) findViewById(R.id.subOne);
+        bottomBanner            = (LinearLayout) findViewById(R.id.bottomBanner);
+        subTwo                  = (LinearLayout) findViewById(R.id.subTwo);
+        switchUserLL            = (LinearLayout) findViewById(R.id.switchUserLL);
 
-        newVersionFoundLL = (LinearLayout) findViewById(R.id.newVersionFoundLL);
-        smartBucketLL     = (ImageButton) findViewById(R.id.smartBucketLL);
-        smartFavouritesLL = (ImageButton) findViewById(R.id.smartFavouritesLL);
-        smartHireLL       =  (ImageButton) findViewById(R.id.smartHireLL);
-        smartProfileLL    = (ImageButton) findViewById(R.id.smartProfileLL);
-        smartBottom       = (LinearLayout) findViewById(R.id.smartBottom);
+        newVersionFoundLL       = (LinearLayout) findViewById(R.id.newVersionFoundLL);
+        smartBucketLL           = (ImageButton) findViewById(R.id.smartBucketLL);
+        smartFavouritesLL       = (ImageButton) findViewById(R.id.smartFavouritesLL);
+        smartHireLL             =  (ImageButton) findViewById(R.id.smartHireLL);
+        smartProfileLL          = (ImageButton) findViewById(R.id.smartProfileLL);
+        smartBottom             = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 
-        searchJobOppurtunities = (LinearLayout) findViewById(R.id.searchJobOppurtunities);
-        verificationBulbFl = (ViewFlipper) findViewById(R.id.verificationBulbF);
+        searchJobOppurtunities  = (LinearLayout) findViewById(R.id.searchJobOppurtunities);
+        verificationBulbFl      = (ViewFlipper) findViewById(R.id.verificationBulbF);
 
 
         mWaveSwipeRefreshLayout = (WaveSwipeRefreshLayout) findViewById(R.id.main_swipe);
@@ -214,6 +218,9 @@ public class Jobs extends AppCompatActivity
         mWaveSwipeRefreshLayout.setWaveARGBColor(255,3,35,46);
 
 
+        noFollowersView         = (LinearLayout) findViewById(R.id.noFollowersView);
+
+
 
 
 
@@ -221,25 +228,26 @@ public class Jobs extends AppCompatActivity
 
     }
 
+
+    /*iconocs methods*/
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
     }
 
 
-
+    /*firebase methods*/
     private void displayFirebaseRegId() {
-        SharedPreferences pref = getApplicationContext().getSharedPreferences(Config.SHARED_PREF, 0);
-        String regId = pref.getString("regId", null);
+        SharedPreferences pref  = getApplicationContext().getSharedPreferences(Config.SHARED_PREF, 0);
+        String regId            = pref.getString("regId", null);
 
         Log.e(TAG, "Firebase reg id: " + regId);
 //        FirebaseMessaging.getInstance().subscribeToTopic("/topics/news");
 
         Log.e("subscribe","inside subscribe topic");
 
-
-
         /*sending token to server*/
+
         if(!getSharedPreferences("narrate",0).getBoolean("token",false)){
             try {new SendFCMToken(Jobs.this).execute(); }catch (Exception e){e.printStackTrace();}
         }
@@ -253,6 +261,9 @@ public class Jobs extends AppCompatActivity
         else
         Toast.makeText(this, "Firebase Reg Id is not received yet!", Toast.LENGTH_SHORT).show();*/
     }
+
+
+
 
 
     @Override
@@ -269,18 +280,164 @@ public class Jobs extends AppCompatActivity
 
 
 
-        im = (InputMethodManager)Jobs.this.getSystemService(INPUT_METHOD_SERVICE);
-        TextView xper = (TextView) findViewById(R.id.xperJobs);
-        TextView touch = (TextView) findViewById(R.id.touchJobs);
+        im              = (InputMethodManager)Jobs.this.getSystemService(INPUT_METHOD_SERVICE);
+        TextView xper   = (TextView) findViewById(R.id.xperJobs);
+        TextView touch  = (TextView) findViewById(R.id.touchJobs);
+        logoTypeface    = Typeface.createFromAsset(Jobs.this.getAssets(), "fonts/forte.ttf");
+        pdStyle         = (TextView) findViewById(R.id.pdStyle);
 
-        logoTypeface = Typeface.createFromAsset(Jobs.this.getAssets(), "fonts/forte.ttf");
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
 
 
-        pdStyle = (TextView) findViewById(R.id.pdStyle);
+                switch (item.getItemId()){
+
+                    case R.id.navigation_bucket:
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                startActivity(new Intent(Jobs.this,Buket.class));
+                                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                            }
+                        },FADE_TIME_OUT);
+
+
+                        return true;
+
+
+                    case R.id.navigation_hire:
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                startActivity(new Intent(Jobs.this,Hire.class));
+                                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                            }
+                        },FADE_TIME_OUT);
+                        return true;
+
+
+                    case R.id.navigation_offline:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                startActivity(new Intent(Jobs.this,MyFavouritesActivity.class));
+                                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                            }
+                        },FADE_TIME_OUT);
+
+                        return true;
+
+
+                    case R.id.navigation_scanqr:
+                        new Handler().postDelayed(new Runnable() {
+                            @RequiresApi(api = Build.VERSION_CODES.M)
+                            @Override
+                            public void run() {
+                                if (ContextCompat.checkSelfPermission(Jobs.this, Manifest.permission.CAMERA)
+                                == PackageManager.PERMISSION_DENIED){
+                    checkCameraPermissions();
+
+                                }else {
+
+                                    startActivity(new Intent(Jobs.this,ScanAndGo.class));
+                                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+                }
+
+
+                            }
+                        },100);
+                        return true;
+
+
+                    case R.id.navigation_profile:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
+
+                                if (userData.getBoolean("VERIFIED",false)){
+
+
+                                    if(userData.getBoolean("EXPERT",false)){
+
+                                        startActivity(new Intent(Jobs.this,Profile.class));
+                                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                                    }else if (userData.getBoolean("COMPANY",false)){
+
+                                        startActivity(new Intent(Jobs.this,MyCompany.class));
+                                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                                    }else{
+
+                                        startActivity(new Intent(Jobs.this,OwnChoice.class));
+                                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                                    }
+
+                                }
+                                else {
+
+                                    startActivity(new Intent(Jobs.this,OwnChoice.class));
+                                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+                                }
+
+
+
+                            }
+                        },FADE_TIME_OUT);
+                        return true;
+
+
+
+
+
+                }
+
+
+
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+//        IconicsImageView scanQRIB = (IconicsImageView) findViewById(R.id.scanQRIB);
+//        scanQRIB.setOnClickListener(new View.OnClickListener(){
+//
+//            @RequiresApi(api = Build.VERSION_CODES.M)
+//            @Override
+//            public void onClick(View view) {
+//
+//                if (ContextCompat.checkSelfPermission(Jobs.this, Manifest.permission.CAMERA)
+//                        == PackageManager.PERMISSION_DENIED){
+//                    checkCameraPermissions();
+//                }else {
+//                    startActivity(new Intent(Jobs.this,ScanAndGo.class));
+//                }
+//
+//
+//            }
+//        });
+
         pdStyle.setTypeface(logoTypeface);
         progressBar = (ProgressBar)findViewById(R.id.testBar);
-        toolbarTypeFace();
+//        toolbarTypeFace();
 
 
 
@@ -288,7 +445,6 @@ public class Jobs extends AppCompatActivity
         smartBucketLL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(Jobs.this,Buket.class));
             }
         });
@@ -384,17 +540,14 @@ public class Jobs extends AppCompatActivity
 
 
 
-        fab_open = AnimationUtils.loadAnimation(this, R.anim.fab_open);
-        fab_close = AnimationUtils.loadAnimation(this, R.anim.fab_close);
-        rotate_forward = AnimationUtils.loadAnimation(this, R.anim.rotate_forward);
-        rotate_backward = AnimationUtils.loadAnimation(this, R.anim.rotate_backward);
-
-        whyVerify  = (LinearLayout) findViewById(R.id.whyVerifyLL);
+        fab_open            = AnimationUtils.loadAnimation(this, R.anim.fab_open);
+        fab_close           = AnimationUtils.loadAnimation(this, R.anim.fab_close);
+        rotate_forward      = AnimationUtils.loadAnimation(this, R.anim.rotate_forward);
+        rotate_backward     = AnimationUtils.loadAnimation(this, R.anim.rotate_backward);
+        whyVerify           = (LinearLayout) findViewById(R.id.whyVerifyLL);
 
 
         fab.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor;
@@ -402,11 +555,7 @@ public class Jobs extends AppCompatActivity
                 editor = introduceMe.edit();
                 editor.putBoolean("tappedPostFab",true);
                 editor.apply();
-
-
-                        animateFAB();
-
-
+                animateFAB();
             }
         });
         fabVisibility();
@@ -420,20 +569,25 @@ public class Jobs extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Jobs.this,MyCompanyPosts.class));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }
         });
 
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String COMPANY_DETAILS = "myCompanyDetails";
                 SharedPreferences myCompanyDetails;
                 myCompanyDetails = getSharedPreferences(COMPANY_DETAILS,0);
                 if (myCompanyDetails.getBoolean("CVERIFIED",false)){
                     startActivity(new Intent(Jobs.this,PostAdd.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                 }else{
                     startActivity(new Intent(Jobs.this,VerifyCompany.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                 }
             }
         });
@@ -448,8 +602,12 @@ public class Jobs extends AppCompatActivity
                 myCompanyDetails = getSharedPreferences(COMPANY_DETAILS,0);
                 if (myCompanyDetails.getBoolean("CVERIFIED",false)){
                     startActivity(new Intent(Jobs.this,PostAdd.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                 }else{
                     startActivity(new Intent(Jobs.this,VerifyCompany.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                 }
 
             }
@@ -458,12 +616,12 @@ public class Jobs extends AppCompatActivity
 
 
 
-        whatsNewRecycler = (RecyclerView)findViewById(R.id.jobsRv);
+        whatsNewRecycler        = (RecyclerView)findViewById(R.id.jobsRv);
         whatsNewRecycler.setLayoutManager(new LinearLayoutManager(Jobs.this));
-        animation = AnimationUtils.loadAnimation(Jobs.this,R.anim.card_animation);
+        animation               = AnimationUtils.loadAnimation(Jobs.this,R.anim.card_animation);
 
         noAdverts.startAnimation(animation);
-        feedsFilter = getSharedPreferences(CURRENT_FILTER,0);
+        feedsFilter             = getSharedPreferences(CURRENT_FILTER,0);
 
         try {new FeedsLoader(Jobs.this,whatsNewRecycler).execute();}catch (Exception e){e.printStackTrace();}
 
@@ -482,6 +640,8 @@ public class Jobs extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Jobs.this,MyCompanyPosts.class));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }
         });
 
@@ -565,7 +725,7 @@ public class Jobs extends AppCompatActivity
         displayFirebaseRegId();
 
 
-
+//        displayPromptsInJobs();
 
     }
 
@@ -657,6 +817,30 @@ public class Jobs extends AppCompatActivity
 
 
 
+    private void displayPromptsInJobs(){
+
+        new MaterialTapTargetPrompt.Builder(Jobs.this)
+                .setTarget(findViewById(R.id.channeL_search_view))
+                .setPrimaryText("Now See Jobs only you are interested in")
+                .setSecondaryText("Tap the icon to Browse channels for subscription")
+                .setAutoDismiss(false)
+                .setOnHidePromptListener(new MaterialTapTargetPrompt.OnHidePromptListener() {
+                    @Override
+                    public void onHidePrompt(MotionEvent event, boolean tappedTarget) {
+                        //Do something such as storing a value so that this prompt is never shown again
+
+                    }
+
+                    @Override
+                    public void onHidePromptComplete() {
+
+                    }
+                })
+                .show();
+
+
+    }
+
     public void animateFAB() {
 
         LinearLayout fabForeground;
@@ -706,21 +890,17 @@ public class Jobs extends AppCompatActivity
 
         fab.setVisibility(View.GONE);
         whyVerify.setVisibility(View.VISIBLE);
-        verifyNowFlipper = (ViewFlipper) findViewById(R.id.verifyNowFlipper);
-        showTimeFlipper = (ViewFlipper)  findViewById(R.id.showTimeFlipper);
-        noThanksLverify = (TextView) findViewById(R.id.noThanksLverify);
-        verifyNow = (TextView) findViewById(R.id.verifyNow);
-        bannerRoom = (LinearLayout) findViewById(R.id.bannerRoom);
+        verifyNowFlipper    = (ViewFlipper) findViewById(R.id.verifyNowFlipper);
+        showTimeFlipper     = (ViewFlipper)  findViewById(R.id.showTimeFlipper);
+        noThanksLverify     = (TextView) findViewById(R.id.noThanksLverify);
+        verifyNow           = (TextView) findViewById(R.id.verifyNow);
+        bannerRoom          = (LinearLayout) findViewById(R.id.bannerRoom);
         bottomBanner.setVisibility(View.VISIBLE);
-
-
         verifyNowFlipper.showNext();
-
-
         showTimeFlipper.setFlipInterval(3000);
         showTimeFlipper.startFlipping();
-        dontShowAgain = (TextView) findViewById(R.id.dontShowAgain);
-        helpCenter = (TextView) findViewById(R.id.helpCenter);
+        dontShowAgain       = (TextView) findViewById(R.id.dontShowAgain);
+        helpCenter          = (TextView) findViewById(R.id.helpCenter);
 
         smartBottom.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_down_slow));
         new Handler().postDelayed(new Runnable() {
@@ -730,7 +910,6 @@ public class Jobs extends AppCompatActivity
                 smartBottom.setVisibility(View.GONE);
             }
         },500);
-
 
         dontShowAgain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -776,6 +955,8 @@ public class Jobs extends AppCompatActivity
                     @Override
                     public void run() {
                         startActivity(new Intent(Jobs.this,HelpCenter.class).putExtra("from","verify"));
+                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                         bottomBanner.setVisibility(View.GONE);
 
                         smartBottom.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_up_slow));
@@ -803,6 +984,8 @@ public class Jobs extends AppCompatActivity
                     @Override
                     public void run() {
                         startActivity(new Intent(Jobs.this,HelpCenter.class).putExtra("from","verify"));
+                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                         bottomBanner.setVisibility(View.GONE);
 
                         smartBottom.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_up_slow));
@@ -831,11 +1014,7 @@ public class Jobs extends AppCompatActivity
                         @Override
                         public void run() {
 
-
-
-
                             //startActivity(new Intent(Jobs.this,OwnChoice.class));
-
 
                             userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
                             if (userData.getBoolean("VERIFIED",false)){
@@ -843,24 +1022,27 @@ public class Jobs extends AppCompatActivity
                                 if(userData.getBoolean("EXPERT",false)){
 
                                     startActivity(new Intent(Jobs.this,Profile.class));
+                                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                                 }else if (userData.getBoolean("COMPANY",false)){
 
                                     startActivity(new Intent(Jobs.this,MyCompany.class));
+                                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                                 }else{
 
                                     startActivity(new Intent(Jobs.this,OwnChoice.class));
+                                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                                 }
 
                             }
                             else {
 
                                 startActivity(new Intent(Jobs.this,OwnChoice.class));
+                                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                             }
-
-
-
 
 
                             bottomBanner.setVisibility(View.GONE);
@@ -1047,27 +1229,15 @@ public class Jobs extends AppCompatActivity
     }
 
 
-    void setters(){
 
-        TextView userName,userEmail;
-        ImageView  statusImage;
-        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
-        userEmail = (TextView)findViewById(R.id.userEmailJobs);
-        userName =  (TextView)findViewById(R.id.userNameJobs);
-        try {
-            userEmail.setText(userData.getString("userEmail","email@example.com"));
-            userName.setText(userData.getString("userName","userName"));
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+    /*navigation drawer */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.jobs, menu);
 
+//        displayPromptsInJobs();
         setters();
 
         return true;
@@ -1089,6 +1259,8 @@ public class Jobs extends AppCompatActivity
 
             if (companyTitles.size() > 0){
                 startActivity(new Intent(Jobs.this,Filter.class));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }else{
                 Toast.makeText(Jobs.this, "Cannot Filter Empty List", Toast.LENGTH_SHORT).show();
             }
@@ -1098,6 +1270,14 @@ public class Jobs extends AppCompatActivity
         else if(id == R.id.settings){
 
             startActivity(new Intent(Jobs.this,SettingsActivity.class));
+            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
+
+        }else if(id == R.id.channeL_search_view){
+
+            startActivity(new Intent(Jobs.this,ChannelSearchView.class));
+            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
 
         }
@@ -1123,8 +1303,6 @@ public class Jobs extends AppCompatActivity
             public void run() {
 
                 if (id == R.id.app_bucket) {
-
-
                     startActivity(new Intent(Jobs.this,Buket.class));
                     // Handle the camera action
                 } else if (id == R.id.hire_experts) {
@@ -1259,211 +1437,28 @@ public class Jobs extends AppCompatActivity
 
 
     }
+    void setters(){
 
-
-
-
-
-
-
-    public class FeedsLoader extends AsyncTask<String,String,String>{
-
-
-
-        Context context;
-        JSONObject jsonObject;
-        JSONArray jsonArray;
-
-
-        StringBuilder line = new StringBuilder();
-        BufferedReader bufferedReader;
-
-        RecyclerView recyclerView;
-        RecyclerView.Adapter adapter;
-
-        public FeedsLoader(Context context, RecyclerView recyclerView){
-            this.context = context;
-            this.recyclerView = recyclerView;
-        }
-
-
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-
-            ConnectivityManager connectivityManager  = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-
-            boolean isTrue = networkInfo!= null && networkInfo.isConnected();
-
-            if (!isTrue ) {
-
-                noConnectionLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.shakeanim));
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        noConnectionLL.setVisibility(View.VISIBLE);
-
-                    }
-                },300);
-
-
-            }else {
-
-                noConnectionLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.fab_close));
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        noConnectionLL.setVisibility(View.GONE);
-                    }
-                },300);
-
-
-            }
-
-
-
-
-                noAdverts.setVisibility(View.GONE);
-            mWaveSwipeRefreshLayout.setRefreshing(true);
-            loadProgress.setVisibility(View.VISIBLE);
-
-            companyTitles       = new ArrayList<>();
-            postDate            = new ArrayList<>();
-            callArray           = new ArrayList<>();
-            emailArray          = new ArrayList<>();
-            websiteArray        = new ArrayList<>();
-            jobInfo             = new ArrayList<>();
-            banners             = new ArrayList<>();
-            addState            = new ArrayList<>();
-            addCatagory         = new ArrayList<>();
-            addType             = new ArrayList<>();
-            postId              = new ArrayList<>();
-
-          // loadProgress.setVisibility(View.VISIBLE);
-          //  whatsNewRecycler.setVisibility(View.GONE);
-
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-
-//            doForSome();
-
+        TextView userName,userEmail;
+        ImageView  statusImage;
+        userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
+        userEmail = (TextView)findViewById(R.id.userEmailJobs);
+        userName =  (TextView)findViewById(R.id.userNameJobs);
         try {
+            userEmail.setText(userData.getString("userEmail","email@example.com"));
+            userName.setText(userData.getString("userName","userName"));
 
-            HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(getString(R.string.host)+"/jobs/get_jobs_with_id.php");
-            HttpResponse httpResponse = (HttpResponse)httpClient.execute(httpPost);
-
-            HttpEntity httpEntity = httpResponse.getEntity();
-            bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
-            String str = "";
-
-
-
-            while ((str = bufferedReader.readLine()) != null){
-                line.append(str);
-            }
-
-
-            jsonObject = new JSONObject();
-            jsonArray = new JSONArray(line.toString());
-
-            int length = jsonArray.length();
-
-            for (int i = 0; i < length; i++){
-
-                jsonObject = jsonArray.getJSONObject(i);
-
-                companyTitles.  add(jsonObject.getString("companyTitle"));
-                postDate.       add(jsonObject.getString("postDate"));
-                callArray.      add(jsonObject.getString("companyPhone"));
-                emailArray.     add(jsonObject.getString("companyEmail"));
-                jobInfo.        add(jsonObject.getString("jobInfo"));
-                banners.        add(jsonObject.getString("companyBanner"));
-                addState.       add(jsonObject.getString("companyState"));
-                addCatagory.    add(jsonObject.getString("addCatagory"));
-                addType.        add(jsonObject.getString("addType"));
-                postId         .add(jsonObject.getString("postId"));
-            }
-
-        } catch (HttpHostConnectException e)
-        {
-      //      Toast.makeText(context, "Error While connecting to the server", Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e) {
-       //     Toast.makeText(context, "Something Went Wrong"+e.toString(), Toast.LENGTH_SHORT).show();
-
-        }
-            return line.toString();
-        }
-
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-
-            if (feedsFilter.getString("currentState","All States").equals("All States") && feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types")){
-
-                if (companyTitles.size() == 0){
-                    mWaveSwipeRefreshLayout.setRefreshing(false);
-                    loadProgress.setVisibility(View.GONE);
-                    whatsNewRecycler.setVisibility(View.GONE);
-                    noAdverts.setVisibility(View.VISIBLE);
-                    Log.e(TAG,"ORIGINAL LIST 0 CHECK , ENABLE AT DEPLOYMENT");
-                    return;
-                }else {
-                        whatsNewRecycler.setVisibility(View.VISIBLE);
-                        whatsNewRecycler.hasFixedSize();
-//                        textView638.setVisibility(View.VISIBLE);
-
-                        noAdverts.setVisibility(View.GONE);
-
-
-                        try{
-
-                    whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId);
-                    whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
-                        }catch(Exception e){
-                            e.printStackTrace();
-                        }
-                    Log.e(TAG,"Loading onPostExcute Adapter");
-
-                }
-
-
-            }else {
-
-                try{
-                    onResume();
-                }catch (Exception e){
-                e.printStackTrace();
-                }
-
-
-            }
-
-
-
-            mWaveSwipeRefreshLayout.setRefreshing(false);
-
-            loadProgress.setVisibility(View.GONE);
-            whatsNewRecycler.setVisibility(View.VISIBLE);
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
+
 
     @Override
     protected void onPause() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
         super.onPause();
     }
-
 
     @Override
     protected void onResume() {
@@ -1967,10 +1962,7 @@ public class Jobs extends AppCompatActivity
         addType.add("Electrical");
     }
 
-    void toolbarTypeFace(){
 
-
-    }
 
     public void searchView(){
 
@@ -2179,6 +2171,8 @@ public class Jobs extends AppCompatActivity
 
     }
 
+
+    /*methods for bottom style sheets*/
     void bannerScanner(){
 
         userData = Jobs.this.getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA, Context.MODE_PRIVATE);
@@ -2202,74 +2196,6 @@ public class Jobs extends AppCompatActivity
 
 
     }
-
-    class GetCurrentVersion extends AsyncTask< String , String, String >{
-
-        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        StringBuilder builder = new StringBuilder();
-        BufferedReader bufferedReader;
-
-
-
-        @Override
-        protected String doInBackground(String... params) {
-
-            nameValuePairs.add(new BasicNameValuePair("version",params[0]));
-
-            try {
-                HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/jobs/app_version.php");
-                httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-                HttpResponse httpResponse =  (HttpResponse) httpClient.execute(httpPost);
-
-                HttpEntity httpEntity = (HttpEntity) httpResponse.getEntity();
-
-                bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
-                String str = "";
-
-                while (  (str = bufferedReader.readLine())  != null ){
-
-                    builder.append(str);
-
-                }
-
-
-            } catch (ClientProtocolException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (Exception e){
-
-            }
-
-            return builder.toString();
-
-        }
-
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            SharedPreferences.Editor editor;
-            updateInfo = getSharedPreferences(UPDATE_INFO,0);
-            editor = updateInfo.edit();
-            Log.e("finale","version update from jobs response from server  = " + s);
-
-
-            if (s.equals("1")){
-                editor.putBoolean("updateAvailable",true);
-                editor.apply();
-                newVersionBanner();
-            }else {
-                Log.e("Version", "You are currently Using the latest Version");
-            }
-
-        }
-    }
-
-
-
     void newVersionBanner(){
 
         LinearLayout updateAppNow;
@@ -2351,6 +2277,8 @@ public class Jobs extends AppCompatActivity
                         newVersionFoundLL.setVisibility(View.GONE);
                         Uri uri = Uri.parse("market://details?id="+getPackageName());
                         startActivity(new Intent(Intent.ACTION_VIEW,uri));
+                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                         smartBottom.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_up_slow));
                         new Handler().postDelayed(new Runnable() {
@@ -2371,7 +2299,6 @@ public class Jobs extends AppCompatActivity
 
 
     }
-
     void switchUser(){
 
         userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
@@ -2529,6 +2456,9 @@ public class Jobs extends AppCompatActivity
                         editor.apply();
                         startActivity(new Intent(Jobs.this,Registrations.class));
                         Jobs.this.finish();
+                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
 
                     }
                 },500);
@@ -2607,7 +2537,6 @@ public class Jobs extends AppCompatActivity
 
 
     }
-
     void switchOnClick(){
 
         switchUserLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_down_slow));
@@ -2638,11 +2567,317 @@ public class Jobs extends AppCompatActivity
 
 
                 startActivity(new Intent(Jobs.this,HelpCenter.class).putExtra("from","switch"));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }
         },500);
 
 
     }
+
+
+    /*camera permissions for scannong QR CODE methods */
+
+    private void checkCameraPermissions(){
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.CAMERA)
+                    != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.CAMERA},
+                        MY_CAMERA_REQUEST_CODE);
+            }
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == MY_CAMERA_REQUEST_CODE) {
+
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                startActivity(new Intent(Jobs.this,ScanAndGo.class));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+            } else {
+
+                Toast.makeText(this, "Cannot Scan QR Without Camera Permissions", Toast.LENGTH_LONG).show();
+
+            }
+
+        }
+
+    }
+
+    private class FeedsLoader extends AsyncTask<String,String,String>{
+
+
+        Context context;
+        JSONObject jsonObject;
+        JSONArray jsonArray;
+
+
+        StringBuilder line = new StringBuilder();
+        BufferedReader bufferedReader;
+
+        RecyclerView recyclerView;
+        RecyclerView.Adapter adapter;
+
+        public FeedsLoader(Context context, RecyclerView recyclerView){
+            this.context = context;
+            this.recyclerView = recyclerView;
+        }
+
+
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+
+            ConnectivityManager connectivityManager  = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+            boolean isTrue = networkInfo!= null && networkInfo.isConnected();
+
+            if (!isTrue ) {
+
+                noConnectionLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.shakeanim));
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        noConnectionLL.setVisibility(View.VISIBLE);
+
+                    }
+                },300);
+
+
+            }else {
+
+                noConnectionLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.fab_close));
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        noConnectionLL.setVisibility(View.GONE);
+                    }
+                },300);
+
+
+            }
+
+
+
+
+            noAdverts.setVisibility(View.GONE);
+            mWaveSwipeRefreshLayout.setRefreshing(true);
+            loadProgress.setVisibility(View.VISIBLE);
+
+            companyTitles       = new ArrayList<>();
+            postDate            = new ArrayList<>();
+            callArray           = new ArrayList<>();
+            emailArray          = new ArrayList<>();
+            websiteArray        = new ArrayList<>();
+            jobInfo             = new ArrayList<>();
+            banners             = new ArrayList<>();
+            addState            = new ArrayList<>();
+            addCatagory         = new ArrayList<>();
+            addType             = new ArrayList<>();
+            postId              = new ArrayList<>();
+
+            // loadProgress.setVisibility(View.VISIBLE);
+            //  whatsNewRecycler.setVisibility(View.GONE);
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+
+//            doForSome();
+
+            try {
+
+                String urlToHit  = getString(R.string.host) + "/workshop/generate_my_feed.php";
+
+                HttpURLConnection httpURLConnection;
+                URL url;
+
+                url  = new URL(urlToHit + "?phone_number=" + new GuestInformation(Jobs.this).getGuestNumber());
+                Log.e("channel",urlToHit + "?phone_number=" + new GuestInformation(Jobs.this).getGuestNumber());
+                httpURLConnection = (HttpURLConnection) url.openConnection();
+
+                bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+                String str = "";
+
+                while ((str = bufferedReader.readLine()) != null){
+                    line.append(str);
+                }
+
+
+                jsonObject = new JSONObject();
+                jsonArray = new JSONArray(line.toString());
+
+                int length = jsonArray.length();
+
+                for (int i = 0; i < length; i++){
+
+                    jsonObject = jsonArray.getJSONObject(i);
+
+                    companyTitles.  add(jsonObject.getString("companyTitle"));
+                    postDate.       add(jsonObject.getString("postDate"));
+                    callArray.      add(jsonObject.getString("companyPhone"));
+                    emailArray.     add(jsonObject.getString("companyEmail"));
+                    jobInfo.        add(jsonObject.getString("jobInfo"));
+                    banners.        add(jsonObject.getString("companyBanner"));
+                    addState.       add(jsonObject.getString("companyState"));
+                    addCatagory.    add(jsonObject.getString("addCatagory"));
+                    addType.        add(jsonObject.getString("addType"));
+                    postId         .add(jsonObject.getString("postId"));
+                }
+
+            } catch (HttpHostConnectException e)
+            {
+                //      Toast.makeText(context, "Error While connecting to the server", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e) {
+                //     Toast.makeText(context, "Something Went Wrong"+e.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+            return line.toString();
+        }
+
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            if (feedsFilter.getString("currentState","All States").equals("All States") && feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types")){
+
+                if (companyTitles.size() == 0){
+                    mWaveSwipeRefreshLayout.setRefreshing(false);
+                    loadProgress.setVisibility(View.GONE);
+                    whatsNewRecycler.setVisibility(View.GONE);
+                    noAdverts.setVisibility(View.VISIBLE);
+                     /*see if there are no subscriptions */
+                    if (s.contains("no1here")){ noAdverts.setVisibility(View.GONE); noFollowersView.setVisibility(View.VISIBLE);}else {noFollowersView.setVisibility(View.GONE); noAdverts.setVisibility(View.VISIBLE);}
+
+                    Log.e(TAG,"ORIGINAL LIST 0 CHECK , ENABLE AT DEPLOYMENT");
+                    return;
+                }else {
+                    noFollowersView.setVisibility(View.GONE);
+                    whatsNewRecycler.setVisibility(View.VISIBLE);
+                    whatsNewRecycler.hasFixedSize();
+//                        textView638.setVisibility(View.VISIBLE);
+
+                    noAdverts.setVisibility(View.GONE);
+
+
+                    try{
+
+                        whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId);
+                        whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
+                    Log.e(TAG,"Loading onPostExcute Adapter");
+
+                }
+
+
+            }else {
+
+
+
+                try{
+                    onResume();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
+            }
+
+
+
+            mWaveSwipeRefreshLayout.setRefreshing(false);
+
+            loadProgress.setVisibility(View.GONE);
+            whatsNewRecycler.setVisibility(View.VISIBLE);
+        }
+    }
+    private class GetCurrentVersion extends AsyncTask< String , String, String >{
+
+        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        StringBuilder builder = new StringBuilder();
+        BufferedReader bufferedReader;
+
+
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            nameValuePairs.add(new BasicNameValuePair("version",params[0]));
+
+            try {
+                HttpClient httpClient = new DefaultHttpClient();
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/jobs/app_version.php");
+                httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                HttpResponse httpResponse =  (HttpResponse) httpClient.execute(httpPost);
+
+                HttpEntity httpEntity = (HttpEntity) httpResponse.getEntity();
+
+                bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
+                String str = "";
+
+                while (  (str = bufferedReader.readLine())  != null ){
+
+                    builder.append(str);
+
+                }
+
+
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e){
+
+            }
+
+            return builder.toString();
+
+        }
+
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            SharedPreferences.Editor editor;
+            updateInfo = getSharedPreferences(UPDATE_INFO,0);
+            editor = updateInfo.edit();
+            Log.e("finale","version update from jobs response from server  = " + s);
+
+
+            if (s.equals("1")){
+                editor.putBoolean("updateAvailable",true);
+                editor.apply();
+                newVersionBanner();
+            }else {
+                Log.e("Version", "You are currently Using the latest Version");
+            }
+
+        }
+    }
+
+
+
 
 
 }

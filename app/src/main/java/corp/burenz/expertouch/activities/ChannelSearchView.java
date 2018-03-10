@@ -154,6 +154,7 @@ public class ChannelSearchView extends AppCompatActivity {
         companyIdArrayList.add("12");
 
     }
+
     void doToast(String s){
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
@@ -202,9 +203,8 @@ public class ChannelSearchView extends AppCompatActivity {
 
 
 
-        recyclerView = (RecyclerView) findViewById(R.id.channelListRecyclerView);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView    = (RecyclerView) findViewById(R.id.channelListRecyclerView);
+        recyclerView    .setLayoutManager(new LinearLayoutManager(this));
 
         channelHolderList                    = new ArrayList<>();
         companyTitleArrayList                = new ArrayList<>();
@@ -255,6 +255,8 @@ public class ChannelSearchView extends AppCompatActivity {
             public void onHomeButtonClick() {
                 //Hamburger has been clicked
                 finish();
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }
 
         });
@@ -368,6 +370,8 @@ public class ChannelSearchView extends AppCompatActivity {
                         })
                         .start();
 
+
+
                 if(insideQueryString.length() == 0){
                     Log.e("Channel","No text in the query");
                     new GETChannelList().execute("all");
@@ -414,6 +418,8 @@ public class ChannelSearchView extends AppCompatActivity {
             persistentSearchView.cancelEditing();
         } else {
             super.onBackPressed();
+            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
         }
     }
 
@@ -514,7 +520,7 @@ public class ChannelSearchView extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
 
-            String urlToHit             = "http://192.168.43.190/ver1.1/workshop/subscription_utils.php";
+            String urlToHit             = getString(R.string.host)+  "/workshop/subscription_utils.php";
             StringBuilder stringBulder  = new StringBuilder();
 
 
@@ -616,7 +622,7 @@ public class ChannelSearchView extends AppCompatActivity {
         protected String doInBackground(String... strings) {
 
 
-            String urlToHit = "http://192.168.43.190/ver1.1/workshop/subscription_utils.php";
+            String urlToHit = getString(R.string.host)+  "/workshop/subscription_utils.php";
             StringBuilder stringBulder = new StringBuilder();
 
             HttpURLConnection httpUrlConnection;

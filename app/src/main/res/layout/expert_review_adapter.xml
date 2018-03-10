@@ -44,14 +44,16 @@
                         android:layout_height="38dp"
                         android:layout_gravity="top"
                         android:layout_margin="10dp"
+                        android:visibility="gone"
                         android:src="@raw/demo_image" />
 
                     <com.android.volley.toolbox.NetworkImageView
                         android:id="@+id/review_user_pic"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="20dp"
-                        android:visibility="gone" />
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="top"
+                        android:layout_margin="10dp"
+                        android:visibility="visible" />
 
                 </LinearLayout>
 
@@ -91,7 +93,7 @@
                             <LinearLayout
                                 android:id="@+id/star_holder"
                                 android:layout_width="35dp"
-                                android:layout_height="16dp"
+                                android:layout_height="20dp"
                                 android:orientation="horizontal">
 
                                 <LinearLayout
@@ -165,7 +167,8 @@
                             android:id="@+id/review_body"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:visibility="visible" />
                     </LinearLayout>
 
                     <LinearLayout

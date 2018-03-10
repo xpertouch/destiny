@@ -4,12 +4,12 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/business.mp3"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/web.png",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/web.png"
-    },
-    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_three.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_three.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/web.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/web.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_two.jpg",
@@ -74,6 +74,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/black_new.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/black_new.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/scan.mp3",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/scan.mp3"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/profile.mp3",

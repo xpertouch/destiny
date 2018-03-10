@@ -1,19 +1,19 @@
 [
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_navigation_menu_item.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_navigation_item_separator.xml"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_navigation_item_header.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_navigation_item_separator.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_mode_bar.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_navigation_item_header.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_pagertitlestrip_newstand.xml",
@@ -28,24 +28,36 @@
         "source": "/home/buren/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/res/layout/layout_searchview.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_media_custom.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/psts_tab.xml",
         "source": "/home/buren/.android/build-cache/ee81973c592c526e7875c5ad92a60be6f5e11c1e/output/res/layout/psts_tab.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_list_menu_item_icon.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_menu_item_layout.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_menu_item_layout.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/select_dialog_singlechoice_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_moving_header.xml",
@@ -53,11 +65,11 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_navigation_item.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_navigation_item.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/indicator_layout.xml",
@@ -69,15 +81,19 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_screen_simple.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/scan_and_go.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/scan_and_go.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/temp_bottom_two.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/temp_bottom_two.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/expert_review_adapter.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/expert_review_adapter.xml"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/render_type_text.xml",
@@ -85,15 +101,15 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_screen_toolbar.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_navigation_menu.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_navigation_menu.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_activity_chooser_view.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/render_type_default.xml",
@@ -101,23 +117,27 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/select_dialog_multichoice_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_template_part_chronometer.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/job_post_details.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/job_post_details.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_text_input_password_icon.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_dialog_title_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_menu_item_action_area.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_menu_item_action_area.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/recomendded_follows_adapter.xml",
@@ -129,7 +149,7 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/layout_searchitem.xml",
@@ -137,11 +157,15 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_select_dialog_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_bottom_navigation_item.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_mode_close_item_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_imageview_header.xml",
@@ -157,11 +181,11 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_menu_layout.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/rectify.xml",
@@ -169,23 +193,23 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_layout_snackbar.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_layout_snackbar.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_bottom_sheet_dialog.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_search_view.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_screen_content_include.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_list_menu_item_layout.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/inverse_layout.xml",
@@ -196,20 +220,28 @@
         "source": "/home/buren/.android/build-cache/6c5adb113ff5e82af1049ea81e7b9c8941d688ca/output/res/layout/material_view_pager_layout.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_bar_up_container.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_layout_snackbar_include.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_layout_snackbar_include.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_alert_dialog_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/activity_channel_search_view.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/activity_channel_search_view.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/base_intro_temp.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/base_intro_temp.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/tools_list_item_card_big.xml",
@@ -217,15 +249,15 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_popup_menu_item_layout.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/base_intro_temp.xml",
-        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/base_intro_temp.xml"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_navigation_item_subheader.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_placeholder.xml",
@@ -237,11 +269,11 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_list_menu_item_checkbox.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_expanded_menu_layout.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_expanded_menu_layout.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/channel_card_container.xml",
@@ -249,11 +281,11 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_layout_tab_text.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_template_lines.xml"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_action.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/works_space_scroll.xml",
@@ -261,7 +293,7 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
-        "source": "/home/buren/.android/build-cache/c23a06d5a345820412176845050d5a6d738b2849/output/res/layout/design_layout_tab_icon.xml"
+        "source": "/home/buren/.android/build-cache/2198070a82dd25002ca4f9fe90086b698bef59d3/output/res/layout/design_layout_tab_icon.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/slider_layout.xml",
@@ -277,47 +309,47 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_template_media.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_template_part_time.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_media_cancel_action.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_action_bar_title_item.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_activity_chooser_view_list_item.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/channel_adapter.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/channel_adapter.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/notification_action_tombstone.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/support_simple_spinner_dropdown_item.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_template_big_media.xml"
-    },
-    {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/temp_bottom.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/temp_bottom.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_viewpager.xml",
         "source": "/home/buren/.android/build-cache/6c5adb113ff5e82af1049ea81e7b9c8941d688ca/output/res/layout/material_view_pager_viewpager.xml"
     },
     {
-        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/notification_template_big_media_narrow.xml"
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_pagertitlestrip_standard.xml",
@@ -325,6 +357,6 @@
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/home/buren/.android/build-cache/c99988db11f005825ffb9e078acedd10d94ccac7/output/res/layout/select_dialog_item_material.xml"
+        "source": "/home/buren/.android/build-cache/0b03fe08df88d7b3772e3a3455d01000f9b8fc74/output/res/layout/select_dialog_item_material.xml"
     }
 ]

@@ -1117,8 +1117,6 @@ initArrays();
 
 
 
-
-
     public void setProfileTexts(){
         myProfile = getSharedPreferences(MY_PROFILE_DATA,0);
 
