@@ -22,6 +22,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -47,6 +48,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -55,49 +59,48 @@ import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.BucketCompanyAdapter;
 import corp.burenz.expertouch.adapters.PostsCompany;
 
+import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.databases.CallLogs;
 import corp.burenz.expertouch.util.CallPermissions;
 import corp.burenz.expertouch.util.MySingleton;
 
-public class CompanyProfile extends AppCompatActivity implements View.OnClickListener{
+public class CompanyProfile extends AppCompatActivity implements View.OnClickListener {
 
+    String companyTagLineS, companyAboutS, addVisitS, companyLandmarkS, companyCityS, companyEmailS, companyOppsiteS, companyPhoneS, companyBannerS, companyTitleS, companyStateS;
 
     RecyclerView companyPostsRv;
     RecyclerView.Adapter companyPostsAdapter;
 
-    ArrayList<String>       postsCompany;
-    ArrayList<String>       postDate;
-    ArrayList<String>       tagLine;
-    ArrayList<String>       companyLandmark;
-    ArrayList<String>       aboutCompany;
-    ArrayList<String>       companyCity;
-    ArrayList<String>       addVisitArray;
-    ArrayList<String>       companyPhone,companyEmail;
-    ArrayList<String>       saleTitleArray,saleDiscriptionArray,postDateArray,saleID;
-    NetworkImageView        companyPicture;
-    RecyclerView            companyBucket;
-    RecyclerView.Adapter    bucketAdapter;
-    RelativeLayout          bucketProgress;
+    ArrayList<String> postDateArrayJ,jobPostIdArray, jobInfoArray;
 
-    TextView                companyName,companyTag,companyAbout,addressLine1,addressOpp,companyState;
-    LinearLayout            callCompany,visitCompany,mailCompany,shareDetails;
-    TextView                callTV,shareTV,mailTV,visitTV,adddressTV,postsTV;
+    ArrayList<String> saleTitleArray, saleDiscriptionArray, postDateArrayB, saleID;
 
-    TextView                noPostsTitle,noPostsSubtitle,noBucketTitle,noBucketSubtitle;
+    NetworkImageView companyPicture;
+    RecyclerView companyBucket;
+    RecyclerView.Adapter bucketAdapter;
+    RelativeLayout bucketProgress;
+
+    TextView companyName, companyTag, companyAbout, addressLine1, addressOpp, companyState;
+    ImageButton callCompany;
+    ImageButton visitCompany;
+    ImageButton mailCompany;
+    LinearLayout shareDetails;
+    TextView callTV, shareTV, mailTV, visitTV, adddressTV, postsTV;
+
+    TextView noPostsTitle, noPostsSubtitle, noBucketTitle, noBucketSubtitle;
 
 
-    String                  company,tag,address,Opp,state,email,call,picture;
+    String tag, address, Opp, email, call;
 
-    SharedPreferences       userData;
-    String LOCAL_APP_DATA   = "userInformation";
+    SharedPreferences userData;
+    String LOCAL_APP_DATA = "userInformation";
 
-    LinearLayout            infoLayout;
-    RelativeLayout          infoProgress,postsProgress;
-    Bundle                  bundle;
-    LinearLayout            noCompanyPosts,noBucketPosts;
-
+    LinearLayout infoLayout;
+    RelativeLayout infoProgress, postsProgress;
+    LinearLayout noCompanyPosts, noBucketPosts;
 
 
+    Button subscribeFromProfle, unsubscribeFromProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,136 +108,138 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_company_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarCompany);
         setSupportActionBar(toolbar);
-
-
-
-
-        bundle = getIntent().getExtras();
-
-        if (bundle == null){
-
-            return;
-
-        }
-
         initViews();
-        getExtras();
-        settingViews();
-        onClickListners();
-        ImageLoader imageLoader = MySingleton.getInstance(CompanyProfile.this).getImageLoader();
-        companyPicture.setImageUrl((String) picture, imageLoader);
+
+        if (getIntent().getExtras() == null) {return;}
+
+        /*get company inforamtion from compnayid*/
 
 
-        new GetCompanyInfo().execute();
-        new GetCompanyPosts().execute();
-        new GetCompanyBucket().execute();
-
-
-    }
-
-    public  void initViews(){
-
-
-        companyName         = (TextView)            findViewById(R.id.companyName);
-        companyTag          = (TextView)            findViewById(R.id.companyTag);
-        companyAbout        = (TextView)            findViewById(R.id.aboutCompany);
-        addressLine1        = (TextView)            findViewById(R.id.addressLine1);
-        addressOpp          = (TextView)            findViewById(R.id.addressOpp);
-        companyState        = (TextView)            findViewById(R.id.addressState);
-        companyPicture      = (NetworkImageView)    findViewById(R.id.companyPicture);
-        noBucketTitle       = (TextView)            findViewById(R.id.noBucketTitle);
-        noBucketSubtitle    = (TextView)            findViewById(R.id.noBucketSubtitle);
-        noPostsTitle        = (TextView)            findViewById(R.id.noPostsTitle);
-        noPostsSubtitle     = (TextView)            findViewById(R.id.noPostsSubtitle);
-        noCompanyPosts      = (LinearLayout)        findViewById(R.id.noCompanyPosts);
-        noBucketPosts       = (LinearLayout)        findViewById(R.id.noCompanyBucket);
-        companyBucket       = (RecyclerView)        findViewById(R.id.companyBucketRV);
-        bucketProgress      = (RelativeLayout)      findViewById(R.id.bucketProgress);
-
-        callTV              = (TextView)            findViewById(R.id.callTV);
-        shareTV             = (TextView)            findViewById(R.id.shareTV);
-        mailTV              = (TextView)            findViewById(R.id.mailTV);
-        visitTV             = (TextView)            findViewById(R.id.visitTV);
-        adddressTV          = (TextView)            findViewById(R.id.addressTV);
-        postsTV             = (TextView)            findViewById(R.id.postsTV);
-        callCompany         = (LinearLayout)        findViewById(R.id.callCompany);
-        visitCompany        = (LinearLayout)        findViewById(R.id.visitCompany);
-        mailCompany         = (LinearLayout)        findViewById(R.id.mailCompany);
-        shareDetails        = (LinearLayout)        findViewById(R.id.shareDetails);
-        infoLayout          = (LinearLayout)        findViewById(R.id.infoLayout);
-        infoProgress        = (RelativeLayout)      findViewById(R.id.infoProgress);
-        postsProgress       = (RelativeLayout)      findViewById(R.id.postsProgress);
-        companyPostsRv      = (RecyclerView)        findViewById(R.id.companyPostsRV);
+        try {new GetCompanyInfo().execute(getIntent().getExtras().getString("companyID", "1"));  } catch (Exception e) {e.printStackTrace();}
+        try {new GetCompanyPosts().execute(getIntent().getExtras().getString("companyID", "1")); } catch (Exception e) {e.printStackTrace();}
+        try {new GetCompanyBucket().execute(getIntent().getExtras().getString("companyID", "1"));} catch (Exception e) {e.printStackTrace();}
 
 
     }
 
-    public void settingViews(){
+    public void initViews() {
 
 
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
-        companyName.setText(company);
+        companyName         = (TextView) findViewById(R.id.companyName);
+        companyTag          = (TextView) findViewById(R.id.companyTag);
+        companyAbout        = (TextView) findViewById(R.id.aboutCompany);
+        addressLine1        = (TextView) findViewById(R.id.addressLine1);
+        addressOpp          = (TextView) findViewById(R.id.addressOpp);
+        companyState        = (TextView) findViewById(R.id.addressState);
+        companyPicture      = (NetworkImageView) findViewById(R.id.companyPicture);
+        noBucketTitle       = (TextView) findViewById(R.id.noBucketTitle);
+        noBucketSubtitle    = (TextView) findViewById(R.id.noBucketSubtitle);
+        noPostsTitle        = (TextView) findViewById(R.id.noPostsTitle);
+        noPostsSubtitle     = (TextView) findViewById(R.id.noPostsSubtitle);
+        noCompanyPosts      = (LinearLayout) findViewById(R.id.noCompanyPosts);
+        noBucketPosts       = (LinearLayout) findViewById(R.id.noCompanyBucket);
+        companyBucket       = (RecyclerView) findViewById(R.id.companyBucketRV);
+        bucketProgress      = (RelativeLayout) findViewById(R.id.bucketProgress);
 
+        subscribeFromProfle = (Button) findViewById(R.id.subscribeFProfile);
+        unsubscribeFromProfile = (Button) findViewById(R.id.unsubscribeFProfile);
 
+        subscribeFromProfle.setVisibility(View.VISIBLE);
+        unsubscribeFromProfile.setVisibility(View.GONE);
 
-    }
+        subscribeFromProfle.setOnClickListener(this);
+        unsubscribeFromProfile.setOnClickListener(this);
 
-    public void getExtras(){
+//        callTV = (TextView) findViewById(R.id.callTV);
+//        shareTV = (TextView) findViewById(R.id.shareTV);
+        mailTV = (TextView) findViewById(R.id.mailTV);
+//        visitTV = (TextView) findViewById(R.id.visitTV);
+        adddressTV = (TextView) findViewById(R.id.addressTV);
+        postsTV = (TextView) findViewById(R.id.postsTV);
+        callCompany     = (ImageButton) findViewById(R.id.callFromProifleIB);
+        visitCompany    = (ImageButton) findViewById(R.id.visitFromProfileIB);
+        mailCompany     = (ImageButton) findViewById(R.id.mailFromProfileIB);
 
-        company = bundle.getString("companyName");
-        picture = bundle.getString("companyBanner");
-        state  = bundle.getString("companyState");
+        shareDetails = (LinearLayout) findViewById(R.id.shareDetails);
+        infoLayout = (LinearLayout) findViewById(R.id.infoLayout);
+        infoProgress = (RelativeLayout) findViewById(R.id.infoProgress);
+        postsProgress = (RelativeLayout) findViewById(R.id.postsProgress);
+        companyPostsRv = (RecyclerView) findViewById(R.id.companyPostsRV);
 
-    }
+        userData = getSharedPreferences(LOCAL_APP_DATA, 0);
 
-    public void onClickListners(){
 
         callCompany.setOnClickListener(this);
         mailCompany.setOnClickListener(this);
         visitCompany.setOnClickListener(this);
         shareDetails.setOnClickListener(this);
 
+
     }
+
 
     @Override
     public void onClick(View v) {
 
-        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+        userData = getSharedPreferences(LOCAL_APP_DATA, 0);
 
 
-        switch (v.getId()){
+        switch (v.getId()) {
 
 
-            case R.id.callCompany:
+            case R.id.subscribeFProfile:
+                subscribeFromProfle.setVisibility(View.GONE);
+                unsubscribeFromProfile.setVisibility(View.VISIBLE);
 
+                break;
+
+
+
+            case R.id.unsubscribeFProfile:
+                subscribeFromProfle.setVisibility(View.VISIBLE);
+                unsubscribeFromProfile.setVisibility(View.GONE);
+
+                break;
+
+            case R.id.callFromProifleIB:
 
 
                 final Dialog dialog = new Dialog(CompanyProfile.this);
-                    Button cancelVerify, callVerify, iUnderStand;
+                Button cancelVerify, callVerify, iUnderStand;
 
 
-                        boolean verificationStatus;
-                        //setting Dialog View
-                        verificationStatus = userData.getBoolean("VERIFIED", false);
-                        if (verificationStatus) {
-                            dialog.setContentView(R.layout.verified_user);
-                            cancelVerify = (Button) dialog.findViewById(R.id.cancelVerified);
-                            callVerify = (Button)dialog.findViewById(R.id.callVerified);
+                boolean verificationStatus;
+                //setting Dialog View
+                verificationStatus = userData.getBoolean("VERIFIED", false);
+                if (verificationStatus) {
+                    dialog.setContentView(R.layout.verified_user);
+                    cancelVerify = (Button) dialog.findViewById(R.id.cancelVerified);
+                    callVerify = (Button) dialog.findViewById(R.id.callVerified);
 
-                            callVerify.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
+                    callVerify.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
 
 
-                                    Intent intent = new Intent(Intent.ACTION_CALL);
-                                    intent.setData(Uri.parse("tel:" + companyPhone.get(0)));
+                            Intent intent = new Intent(Intent.ACTION_CALL);
+                            intent.setData(Uri.parse("tel:" + companyPhoneS));
 
-                                    Log.e("TAG","Ready to CAll "+company);
+                            Log.e("TAG", "Ready to CAll " + companyTitleS);
 
-                                    if (companyPhone.get(0).length() == 10){
+                            if (companyPhoneS.length() == 10) {
 
-                                        try{
-                                            CompanyProfile.this.startActivity(intent);
+                                try {
+                                    if (ActivityCompat.checkSelfPermission(CompanyProfile.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                                        // TODO: Consider calling
+                                        //    ActivityCompat#requestPermissions
+                                        // here to request the missing permissions, and then overriding
+                                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                        //                                          int[] grantResults)
+                                        // to handle the case where the user grants the permission. See the documentation
+                                        // for ActivityCompat#requestPermissions for more details.
+                                        return;
+                                    }
+                                    CompanyProfile.this.startActivity(intent);
                                         }catch(Exception e){
                                             Toast.makeText(CompanyProfile.this, "Please wait while we are retrieving the information ", Toast.LENGTH_SHORT).show();
 
@@ -256,11 +261,11 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                                         try{
                                             CallLogs callLogs = new CallLogs(CompanyProfile.this);
                                             callLogs.writer();
-                                            callLogs.updateCompanyCall(company,java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime()),call);
+                                            callLogs.updateCompanyCall(companyTitleS,java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime()),call);
                                             callLogs.close();
 
                                         }catch (Exception e){
-                                            Log.e("TAG",company+" Not Added" + e.toString());
+                                            Log.e("TAG",companyTitleS+" Not Added" + e.toString());
 
                                         }
                                         try {
@@ -277,12 +282,12 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                                     try{
                                         CallLogs callLogs = new CallLogs(CompanyProfile.this);
                                         callLogs.writer();
-                                        callLogs.updateCompanyCall(company,java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime()),call);
+                                        callLogs.updateCompanyCall(companyTitleS,java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime()),call);
                                         callLogs.close();
-                                        Log.e("TAG",company+" added to call logs");
+                                        Log.e("TAG",companyTitleS+" added to call logs");
 
                                     }catch (Exception e){
-                                        Log.e("TAG",company+" Not Added" + e.toString());
+                                        Log.e("TAG",companyTitleS+" Not Added" + e.toString());
 
                                     }
 
@@ -325,7 +330,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
 
 
-            case R.id.mailCompany:
+            case R.id.mailFromProfileIB:
                 final Dialog dialog1;
 
                 dialog1 = new Dialog(CompanyProfile.this);
@@ -333,7 +338,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                 if (verificationStatus){
 
                     Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                            "mailto",companyEmail.get(0), null));
+                            "mailto",companyEmailS, null));
                     emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Enter email subject here...");
                     emailIntent.putExtra(Intent.EXTRA_TEXT, "Enter Your feedback or query here...");
                     CompanyProfile.this.startActivity(Intent.createChooser(emailIntent, "Send an Email via..."));
@@ -363,7 +368,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
 
 
-            case R.id.visitCompany:
+            case R.id.visitFromProfileIB:
 
 
                 final Dialog dialog2 = new Dialog(CompanyProfile.this);
@@ -389,12 +394,12 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                         // startActivity(i);
 
 
-                         String url = "http://"+addVisitArray.get(0);
+                         String url = "http://"+addVisitS;
                         Intent i = new Intent(Intent.ACTION_VIEW);
                         i.setData(Uri.parse(url));
 
 
-                        if (addVisitArray.contains("please update your website here")){
+                        if (addVisitS.contains("please update your website here")){
                             Toast.makeText(CompanyProfile.this, "Website Not Updated Yet", Toast.LENGTH_SHORT).show();
                         }else {
                             startActivity(i);
@@ -436,7 +441,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
                     String advert = "Shared via 1clickAway, Find Best Jobs, Experts and Offers from your City and State. Click on the below link to Download Now\n" +
                             "https://play.google.com/store/apps/details?id=corp.burenz.expertouch";
-                    String firstString = "Hey there i recommend you to check out "+companyName.getText().toString()+"\n Contact information \n Email : "+companyEmail.get(0)+" \n Phone : "+companyPhone.get(0)+"";
+                    String firstString = "Hey there i recommend you to check out "+companyName.getText().toString()+"\n Contact information \n Email : "+companyEmailS +" \n Phone : "+companyPhoneS+"";
                     Intent shareIntent = new Intent();
                     shareIntent.setAction(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
@@ -473,115 +478,75 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
     private   class GetCompanyInfo extends AsyncTask<String,String,String>{
 
 
-        JSONObject jsonObject;
-        JSONArray jsonArray;
 
-        StringBuilder builder = new StringBuilder();
-        BufferedReader bufferedReader;
-
-        List<NameValuePair> nameValuePairs = new ArrayList<>();
 
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-//            infoProgress.setVisibility(View.VISIBLE);
-//            infoLayout.setVisibility(View.GONE);
-
-            postsCompany        = new ArrayList<>();
-            postDate            = new ArrayList<>();
-            tagLine             = new ArrayList<>();;
-            companyLandmark     = new ArrayList<>();;
-            addVisitArray       = new ArrayList<>();
-            companyCity         = new ArrayList<>();
-            aboutCompany        = new ArrayList<>();
-            companyPhone        = new ArrayList<>();
-            companyEmail        = new ArrayList<>();
-
-
-
-
-
+            /* to prevent null pointer exception on clicks*/
+            companyPhoneS           = "0000000000";
+            companyEmailS           = "mail.1clickaway@gmail.com";
+            addVisitS               = "http://1clickaway.in";
 
         }
 
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-
-            if(tagLine.size() == 0 ||  aboutCompany.size() == 0 || companyLandmark.size() == 0 || companyCity.size() == 0 || addVisitArray.size() ==0){
-
-                Toast.makeText(CompanyProfile.this, "Connection Slow, Please Connect to networks and try again", Toast.LENGTH_SHORT).show();
-                tagLine.add("----");
-                aboutCompany.add("----");
-                companyLandmark.add("----");
-                companyCity.add("-----");
-                addVisitArray.add("-----");
-            }
-
-            companyTag.setText(tagLine.get(0).toString().toLowerCase());
-            companyAbout.setText(aboutCompany.get(0).toString());
-            addressLine1.setText(companyCity.get(0).toString());
-            addressOpp.setText(companyLandmark.get(0).toString());
-            companyState.setText(state);
-
-
-
-        }
 
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("companyTitle",company));
+            StringBuilder builder               = new StringBuilder();
 
             try {
 
-            HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/company_profiles.php");
-            httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+                HttpURLConnection httpURLConnection;
+                URL url;
 
-            HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
-            HttpEntity  httpEntity = (HttpEntity) httpResponse.getEntity();
+                url = new URL( getString(R.string.host)+"/profile/get_company_info_from_id.php?company_id=" + URLEncoder.encode(params[0],"UTF-8"));
+                httpURLConnection = (HttpURLConnection) url.openConnection();
+
+                BufferedReader  bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+                String str = "";
+
+                while ((str = bufferedReader.readLine()) != null){
+                    builder.append(str);
+                }
 
 
-            bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
-            String str = "";
+                JSONObject jsonObject = new JSONArray(builder.toString()).getJSONObject(0);
 
-            while ((str = bufferedReader.readLine()) != null){
-                builder.append(str);
+                companyBannerS          = jsonObject.getString("companyBanner");
+
+                companyTitleS           = jsonObject.getString("companyTitle");
+                companyTagLineS         = jsonObject.getString("companyTag");
+
+                companyPhoneS           = jsonObject.getString("companyPhone");
+                companyEmailS           = jsonObject.getString("companyEmail");
+                addVisitS               = jsonObject.getString("companyVisit");
+
+                companyAboutS           = jsonObject.getString("companyDiscription");
+
+                companyCityS            = jsonObject.getString("companyCity");
+                companyLandmarkS        = jsonObject.getString("companyLandmark");
+                companyStateS           = jsonObject.getString("companyState");
+
+
+
+
+
+
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }catch (Exception e ){
+
             }
-
-
-            jsonObject = new JSONObject();
-            jsonArray = new JSONArray(builder.toString());
-
-            int len = jsonArray.length();
-
-            for(int u = 0; u < len; u++){
-
-                jsonObject = jsonArray.getJSONObject(u);
-                tagLine.add(jsonObject.getString("companyTag"));
-                aboutCompany.add(jsonObject.getString("aboutCompany"));
-                companyLandmark.add(jsonObject.getString("companyLandmark"));
-                companyCity.add(jsonObject.getString("companyCity"));
-                addVisitArray.add(jsonObject.getString("companyVisit"));
-                companyEmail.add(jsonObject.getString("companyEmail"));
-                companyPhone.add(jsonObject.getString("companyPhone"));
-
-            }
-
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }catch (Exception e ){
-
-        }
 
 
             return builder.toString();
@@ -593,31 +558,58 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         }
 
 
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
 
 
 
+            if(companyTagLineS == null||  companyAboutS == null || companyLandmarkS == null || companyCityS == null || addVisitS == null){
+
+                Toast.makeText(CompanyProfile.this, "Connection too slow, Please Connect to networks and try again " + s, Toast.LENGTH_SHORT).show();
+                /*finish activity if data  == null*/
+//                finish();
+//                return;
+
+            }
+
+
+            ImageLoader imageLoader = MySingleton.getInstance(CompanyProfile.this).getImageLoader();
+            companyPicture.setImageUrl((String) companyBannerS, imageLoader);
+
+            companyName .setText(companyTitleS);
+            companyTag  .setText(companyTagLineS.toLowerCase());
+
+
+            companyAbout.setText(companyAboutS.toLowerCase());
+
+            addressLine1.setText(companyCityS.toLowerCase());
+            addressOpp  .setText(companyLandmarkS.toLowerCase());
+            companyState.setText(companyStateS);
+
+
+
+
+
+
+        }
 
 
     }
+
     private   class GetCompanyPosts extends AsyncTask< String, String, String>{
 
 
-        Context context;
-        JSONObject jsonObject;
-        JSONArray jsonArray;
-
-
-        StringBuilder builder = new StringBuilder();
-        BufferedReader bufferedReader;
-        List<NameValuePair> nameValuePairs = new ArrayList<>();
 
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             companyPostsRv.setLayoutManager(new LinearLayoutManager(CompanyProfile.this));
-            postsCompany = new ArrayList<>();
-            postDate = new ArrayList<>();
+
+            jobInfoArray            = new ArrayList<>();
+            postDateArrayJ          = new ArrayList<>();
+            jobPostIdArray          = new ArrayList<>();
 
             postsProgress.setVisibility(View.VISIBLE);
             companyPostsRv.setVisibility(View.GONE);
@@ -628,25 +620,21 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
 
-            if (aboutCompany.size() > 0){
+            if (jobPostIdArray.size() == 0){
+                noCompanyPosts.startAnimation(AnimationUtils.loadAnimation(CompanyProfile.this,R.anim.card_animation));
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        noCompanyPosts.setVisibility(View.VISIBLE);
 
-                if (postsCompany.size() == 0){
-                    noCompanyPosts.startAnimation(AnimationUtils.loadAnimation(CompanyProfile.this,R.anim.card_animation));
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                           noCompanyPosts.setVisibility(View.VISIBLE);
-
-                        }
-                    },500);
-                    postsProgress.setVisibility(View.GONE);
-                }else if (postsCompany.size() > 0 ){
-                    companyPostsAdapter = new PostsCompany(CompanyProfile.this,postDate,postsCompany);
-                    companyPostsRv.setAdapter(companyPostsAdapter);
-                    postsProgress.setVisibility(View.GONE);
-                    companyPostsRv.setVisibility(View.VISIBLE);
-                }
-
+                    }
+                },500);
+                postsProgress.setVisibility(View.GONE);
+            }else if (jobPostIdArray.size() > 0 ){
+                companyPostsAdapter = new PostsCompany(CompanyProfile.this,postDateArrayJ,jobInfoArray);
+                companyPostsRv.setAdapter(companyPostsAdapter);
+                postsProgress.setVisibility(View.GONE);
+                companyPostsRv.setVisibility(View.VISIBLE);
             }else {
 
                 noPostsTitle.setText("Connection Slow");
@@ -665,50 +653,53 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
             }
 
 
-
-
         }
 
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("companyTitle",company));
+            JSONObject  jsonObject;
+            JSONArray   jsonArray;
+
+            StringBuilder builder = new StringBuilder();
+            List<NameValuePair> nameValuePairs = new ArrayList<>();
+            nameValuePairs.add(new BasicNameValuePair("functionname","job_company_id"));
+            nameValuePairs.add(new BasicNameValuePair("company_id",params[0]));
+
 
             try {
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/get_company_posts.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/get_company_posts_from.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
 
                 HttpEntity httpEntity = (HttpEntity)httpResponse.getEntity();
 
-                bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
+                BufferedReader  bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
                 String str = "";
 
                 while ( (str = bufferedReader.readLine()) != null){
                     builder.append(str);
                 }
 
-                jsonObject = new JSONObject();
                 jsonArray = new JSONArray(builder.toString());
 
 
-                int length = jsonArray.length();
 
-                for (int i = 0; i < length; i++){
+                for (int i = 0; i < jsonArray.length(); i++){
 
                     jsonObject = jsonArray.getJSONObject(i);
 
-                    postDate.add(jsonObject.getString("postDate"));
-                    postsCompany.add(jsonObject.getString("jobInfo"));
-
+                    postDateArrayJ.add(jsonObject.getString("postDaate"));
+                    jobInfoArray.add(jsonObject.getString("jobInfo"));
+                    jobPostIdArray.add(jsonObject.getString("jobId"));
 
                 }
 
 
             }catch (Exception e){
-
+                e.printStackTrace();
             }
 
 
@@ -719,6 +710,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
 
     }
+
     private   class GetCompanyBucket extends AsyncTask< String, String, String>{
 
 
@@ -736,10 +728,11 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         protected void onPreExecute() {
             super.onPreExecute();
 
-            saleTitleArray = new ArrayList<String>();
-            saleDiscriptionArray = new ArrayList<String>();
-            postDateArray = new ArrayList<String>();
-            saleID = new ArrayList<String>();
+            saleTitleArray          = new ArrayList<String>();
+            saleDiscriptionArray    = new ArrayList<String>();
+            postDateArrayB          = new ArrayList<String>();
+            saleID                  = new ArrayList<String>();
+
             companyBucket.setLayoutManager(new LinearLayoutManager(CompanyProfile.this));
             bucketProgress.setVisibility(View.VISIBLE);
             companyBucket.setVisibility(View.GONE);
@@ -753,27 +746,22 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
             super.onPostExecute(s);
 
 
+            if (saleTitleArray.size() == 0){
+                noBucketPosts.startAnimation(AnimationUtils.loadAnimation(CompanyProfile.this,R.anim.card_animation));
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        noBucketPosts.setVisibility(View.VISIBLE);
+                    }
+                },500);
+                bucketProgress.setVisibility(View.GONE);
 
-            if (aboutCompany.size() > 0){
+            }else if (saleTitleArray.size() > 0 ){
 
-                if (saleTitleArray.size() == 0){
-                    noBucketPosts.startAnimation(AnimationUtils.loadAnimation(CompanyProfile.this,R.anim.card_animation));
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            noBucketPosts.setVisibility(View.VISIBLE);
-                        }
-                    },500);
-                    bucketProgress.setVisibility(View.GONE);
-
-                }else if (saleTitleArray.size() > 0 ){
-
-                    bucketAdapter = new BucketCompanyAdapter(saleTitleArray,saleDiscriptionArray,postDateArray,saleID);
-                    companyBucket.setAdapter(bucketAdapter);
-                    bucketProgress.setVisibility(View.GONE);
-                    companyBucket.setVisibility(View.VISIBLE);
-
-                }
+                bucketAdapter = new BucketCompanyAdapter(saleTitleArray,saleDiscriptionArray,postDateArrayB,saleID);
+                companyBucket.setAdapter(bucketAdapter);
+                bucketProgress.setVisibility(View.GONE);
+                companyBucket.setVisibility(View.VISIBLE);
 
             }else {
 
@@ -792,30 +780,18 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("companyTitle",company));
+            nameValuePairs.add(new BasicNameValuePair("functionname","bucket_company_id"));
+            nameValuePairs.add(new BasicNameValuePair("company_id",params[0]));
 
             try {
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/get_company_sales.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/get_company_posts_from.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
 
@@ -840,7 +816,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
                     saleTitleArray.add(jsonObject.getString("saleTitle"));
                     saleDiscriptionArray.add(jsonObject.getString("saleDiscription"));
-                    postDateArray.add(jsonObject.getString("saleDate"));
+                    postDateArrayB.add(jsonObject.getString("saleDate"));
                     saleID.add(jsonObject.getString("saleId"));
                 }
 

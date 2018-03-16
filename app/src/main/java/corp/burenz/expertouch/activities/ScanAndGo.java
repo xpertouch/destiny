@@ -55,6 +55,9 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
     String channelId;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,6 +141,8 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
 
         if (bottomStyleSheetQR.getVisibility() != View.VISIBLE){
             super.onBackPressed();
+            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             return;
         }
 

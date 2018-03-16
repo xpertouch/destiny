@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/navigation_scanqr"
-        android:icon="@drawable/notifications"
+        android:icon="@drawable/dashboard_ic"
         android:title="ScanQR" />
 
 

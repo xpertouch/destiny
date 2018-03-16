@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -147,7 +148,7 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
                 },200);
 
 
-                deletionProgressFlipper.showNext();
+
 
 
 
@@ -333,6 +334,8 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
         protected void onPreExecute() {
             super.onPreExecute();
 
+            myPostsHolder.deletionProgressFlipper.showNext();
+
 
 
         }
@@ -358,16 +361,28 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
                         myPostsHolder.deleteMyPostsCardView.setVisibility(View.GONE);
 
 
-                        if (cardCount == 0){
+                        try{
+                            Log.e("removed","size of post " +postId.size() );
 
-                            myPostsHolder.emptyCompany.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_open));
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    myPostsHolder.emptyCompany.setVisibility(View.VISIBLE);
-                                }
-                            },300);
+
+                            /*if there is only post*/
+                            if (postId.size() == 1 ) {
+                                /*and that post contains is removed*/
+                                if (! postId.get(0).contains("removed")){ Log.e("removed","list is not empty yet"); }else{ Log.e("removed","list is empty"); }
+
+                                myPostsHolder.emptyCompany.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_open));
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        myPostsHolder.emptyCompany.setVisibility(View.VISIBLE);
+                                    }
+                                },300);
+                            }
+
+                        }catch (Exception e){
+                         e.printStackTrace();
                         }
+
 
 
 

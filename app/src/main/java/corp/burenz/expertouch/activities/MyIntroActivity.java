@@ -3,15 +3,19 @@ package corp.burenz.expertouch.activities;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -44,6 +48,12 @@ public class MyIntroActivity extends AppCompatActivity {
     Typeface        logoTypeface;
     TextView        nowAnythingTV,clickAwayTV,jobsLocalTV;
 
+    final private int           REQUEST_CODE_ASK_PERMISSIONS = 123;
+    private static final int    MY_CAMERA_REQUEST_CODE = 100;
+
+    int PERMISSION_REQUEST_CODE = 1;
+
+
 
 
     @Override
@@ -52,10 +62,7 @@ public class MyIntroActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_one);
-
-
         initViews();
-
 
 
 
@@ -65,6 +72,8 @@ public class MyIntroActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (layerSeven.getVisibility() == View.VISIBLE){
+
+
 
                     letsGoFinally.setClickable(false);
                     new Handler().postDelayed(new Runnable() {
@@ -94,160 +103,82 @@ public class MyIntroActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v){
 
+                if((Build.VERSION.SDK_INT > 23)){
+                    letsGetGoing.setText("Get Started");
+                    Toast.makeText(MyIntroActivity.this, "below 23", Toast.LENGTH_SHORT).show();
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Snackbar.make(v,"Sit back and Relax While the App Introduces itself",Snackbar.LENGTH_SHORT).show();
-                    }
-                },4000);
+                }else {
+                    letsGetGoing.setText("Grant Permissions");
+                    Toast.makeText(MyIntroActivity.this, "above 23", Toast.LENGTH_SHORT).show();
 
-                Animation slideup  = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.abc_slide_out_top);
+                }
 
-                slideup.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                lowerHalfIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_down_slow));
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        lowerHalfIntro.setVisibility(View.GONE);
-                                    }
-                                },300);
-                            }
-                        },400);
 
-                    }
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        upperHalfintro.setVisibility(View.INVISIBLE);
-                        // call intro 2 function
+                if ( letsGetGoing.getText().toString().contains("Grant") ){
+                    requestForPermissions();
+                    letsGetGoing.setText("Get Started");
+                    Toast.makeText(MyIntroActivity.this, "inside Grant", Toast.LENGTH_SHORT).show();
 
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                               setIntroTwo();
-                            }
-                        },600);
 
-                    }
+                }else{
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+                    Toast.makeText(MyIntroActivity.this, "Outside grant", Toast.LENGTH_SHORT).show();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Snackbar.make(v,"Sit back and Relax While the App Introduces itself",Snackbar.LENGTH_SHORT).show();
+                        }
+                    },4000);
 
-                    }
-                });
+                    Animation slideup  = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.abc_slide_out_top);
 
-                upperHalfintro.startAnimation(slideup);
+                    slideup.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    lowerHalfIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_down_slow));
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            lowerHalfIntro.setVisibility(View.GONE);
+                                        }
+                                    },300);
+                                }
+                            },400);
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            upperHalfintro.setVisibility(View.INVISIBLE);
+                            // call intro 2 function
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    setIntroTwo();
+                                }
+                            },600);
+
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+
+                    upperHalfintro.startAnimation(slideup);
+
+
+                }
 
             }
         });
 
-
-
-
-//        setFlowAnimation();
-//
-//        addSlide(new First());
-//        addSlide(new Second());
-//        addSlide(new Third());
-//        addSlide(new Fourth());
-//        addSlide(new Fifth());
-//        addSlide(new FifthSecond());
-//        addSlide(new Six());
-//
-//
-//        setBarColor(Color.parseColor("#00000000"));
-//        setSeparatorColor(Color.parseColor("#00000000"));
-//
-//        // Hide Skip/Done button.
-//        showSkipButton(false);
-//        setProgressButtonEnabled(false);
-//
-//
-////
-////        addSlide(new SimpleSlide.Builder()
-////                .background(R.color.transparent)
-////                .layout(R.layout.intro_one)
-////                .build());
-////
-////        addSlide(new SimpleSlide.Builder()
-////                .background(R.color.transparent)
-////                .layout(R.layout.intro_two)
-////                .build());
-////
-////        addSlide(new SimpleSlide.Builder()
-////                .background(R.color.transparent)
-////                .layout(R.layout.intro_three)
-////                .build());
-////        addSlide(new SimpleSlide.Builder()
-////                .background(R.color.transparent)
-////                .layout(R.layout.intro_four)
-////                .build());
-////        addSlide(new SimpleSlide.Builder()
-////                .background(R.color.transparent)
-////                .layout(R.layout.intro_five)
-////                .build());
-////        addSlide(new SimpleSlide.Builder()
-////                .background(R.color.transparent)
-////                .layout(R.layout.intro_six)
-////                .build());
-////
-////        setSkipEnabled(false);
-////
-////        /* Enable/disable finish button */
-////        setFinishEnabled(true);
-////
-////        /* Add a navigation policy to define when users can go forward/backward */
-////        setNavigationPolicy(new NavigationPolicy() {
-////            @Override
-////            public boolean canGoForward(int position) {
-////                return true;
-////            }
-////
-////            @Override
-////            public boolean canGoBackward(int position) {
-////                return true;
-////            }
-////        });
-////
-////        /* Add a listener to detect when users try to go to a page they can't go to */
-////        addOnNavigationBlockedListener(new OnNavigationBlockedListener() {
-////            @Override
-////            public void onNavigationBlocked(int position, int direction) {
-////            }
-////        });
-////
-////
-////        /* Add your own page change listeners */
-////        addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
-////            @Override
-////            public void onPageScrolled(final int position, float positionOffset, int positionOffsetPixels) {
-////
-////                new Handler().postDelayed(new Runnable() {
-////                    @Override
-////                    public void run() {
-////
-////                        if (position == 5){
-////                            startActivity(new Intent(MyIntroActivity.this,Registrations.class));
-////                            finish();
-////                        }
-////                    }
-////                },300);
-////
-////            }
-////            @Override
-////            public void onPageSelected(int position) {
-////            }
-////            @Override
-////            public void onPageScrollStateChanged(int state) {
-////            }
-////        });
-////    }
 
     }
 
@@ -266,7 +197,7 @@ public class MyIntroActivity extends AppCompatActivity {
         layerSix            = (LinearLayout)    findViewById(R.id.layerSix);
         layerSeven          = (LinearLayout)    findViewById(R.id.layerSeven);
         mDone               = (LinearLayout)    findViewById(R.id.mDone);
-        letsGetGoing        = (Button)          findViewById(R.id.letsGetGoing);
+        letsGetGoing        = (Button)          findViewById(R.id.letsGetGoingOne);
 
         letsGoFinally       = (Button) findViewById(R.id.letsGoFinally);
         slide_up            = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_up_slow);
@@ -327,7 +258,7 @@ public class MyIntroActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                        dontWorryTV.setVisibility(View.VISIBLE);
-                        tabTwoImage.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
+                        tabTwoImage.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.design_bottom_sheet_slide_in_scan));
                         usesLocationTV.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
                        new Handler().postDelayed(new Runnable() {
                            @Override
@@ -393,7 +324,7 @@ public class MyIntroActivity extends AppCompatActivity {
             public void run() {
                titleThree.setVisibility(View.VISIBLE);
                 subtitleThree.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
-                tabThreePic.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
+                tabThreePic.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.design_bottom_sheet_slide_in_scan));
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -457,7 +388,7 @@ public class MyIntroActivity extends AppCompatActivity {
             public void run() {
                 titleFourIntro.setVisibility(View.VISIBLE);
                 subTitleFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
-                tabFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
+                tabFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.design_bottom_sheet_slide_in_scan));
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -525,7 +456,7 @@ public class MyIntroActivity extends AppCompatActivity {
             public void run() {
                 titleFourIntro.setVisibility(View.VISIBLE);
                 subTitleFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
-                tabFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
+                tabFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.design_bottom_sheet_slide_in_scan));
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -590,7 +521,7 @@ public class MyIntroActivity extends AppCompatActivity {
             public void run() {
                 titleFourIntro.setVisibility(View.VISIBLE);
                 subTitleFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
-                tabFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.card_animation));
+                tabFourIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.design_bottom_sheet_slide_in_scan));
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -634,7 +565,6 @@ public class MyIntroActivity extends AppCompatActivity {
 
 
     }
-
 
     void introSeven(){
 
@@ -680,6 +610,68 @@ public class MyIntroActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+
+    private void checkCameraPermissions(){
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.CAMERA)
+                    != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.CAMERA},
+                        MY_CAMERA_REQUEST_CODE);
+            }
+        }
+
+    }
+
+    private void requestForPermissions() {
+
+        int hasContactPermission = ActivityCompat.checkSelfPermission(MyIntroActivity.this,Manifest.permission.RECEIVE_SMS);
+
+        if(hasContactPermission != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions(MyIntroActivity.this, new String[]   {Manifest.permission.RECEIVE_SMS,Manifest.permission.CAMERA,Manifest.permission.CALL_PHONE}, 123);
+
+        }else {
+            //Toast.makeText(AddContactsActivity.this, "Contact Permission is already granted", Toast.LENGTH_LONG).show();
+            checkCameraPermissions();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_CODE_ASK_PERMISSIONS:
+                // Check if the only required permission has been granted
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.i("Permission", "Contact permission has now been granted. Showing result.");
+                    checkCameraPermissions();
+
+                } else {
+                    Log.i("Permission", "Contact permission was NOT granted.");
+                    checkCameraPermissions();
+
+                }
+                break;
+
+            case MY_CAMERA_REQUEST_CODE:
+
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    Toast.makeText(this, "Camera Granted", Toast.LENGTH_SHORT).show();
+
+
+                } else {
+//                    Toast.makeText(this, "Camera Denied", Toast.LENGTH_SHORT).show();
+
+                }
+
+                break;
+
+
+
+        }
     }
 
 

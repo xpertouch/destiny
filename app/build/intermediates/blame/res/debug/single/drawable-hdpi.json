@@ -96,6 +96,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/archieve.png"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_playlist_add_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/website.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/website.png"
     },
@@ -200,6 +204,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/ic_mail_black_24dp.png"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/dashboard_ic.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/dashboard_ic.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/male.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/male.png"
     },
@@ -218,6 +226,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/selected.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/selected.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_subscriptions_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-hdpi/ic_subscriptions_black_24dp.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-hdpi/edit_pic_blue.png",

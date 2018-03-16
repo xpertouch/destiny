@@ -22,6 +22,13 @@ public class MyCompanyPosts extends AppCompatActivity {
     SharedPreferences myCompanyDetails;
 
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

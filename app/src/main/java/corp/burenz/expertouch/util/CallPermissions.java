@@ -27,7 +27,6 @@ public class CallPermissions extends AppCompatActivity {
     String callIt;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,13 +34,12 @@ public class CallPermissions extends AppCompatActivity {
         imagePermissionItem(getCurrentFocus());
         Bundle callBundle = getIntent().getExtras();
 
-        if (callBundle == null){
+        if (callBundle == null) {
             return;
-        }else{
+        } else {
             callIt = callBundle.getString("callIt");
         }
     }
-
 
 
     public void imagePermissionItem(View view) {
@@ -53,18 +51,13 @@ public class CallPermissions extends AppCompatActivity {
     }
 
 
-
-
     // Called when the user is performing an action which requires the app to read the
     // user's gallery
     @TargetApi(23)
-    public void requestPermissions(String... permission)
-    {
+    public void requestPermissions(String... permission) {
 
-        if(ContextCompat.checkSelfPermission(CallPermissions.this, permission[0]) != PackageManager.PERMISSION_GRANTED)
-        {
-            if(permission[0].equals(Manifest.permission.CALL_PHONE))
-            {
+        if (ContextCompat.checkSelfPermission(CallPermissions.this, permission[0]) != PackageManager.PERMISSION_GRANTED) {
+            if (permission[0].equals(Manifest.permission.CALL_PHONE)) {
                 requestPermissions(new String[]{permission[0]}, READ_GALLERY_PERMISSIONS_REQUEST);
             }
 
@@ -72,15 +65,11 @@ public class CallPermissions extends AppCompatActivity {
     }
 
 
-
-
-
     // Callback with the request from calling requestPermissions(...)
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults)
-    {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
 
-        if(requestCode == READ_GALLERY_PERMISSIONS_REQUEST) {
+        if (requestCode == READ_GALLERY_PERMISSIONS_REQUEST) {
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(CallPermissions.this,
                     Manifest.permission.CALL_PHONE)) {
@@ -90,18 +79,28 @@ public class CallPermissions extends AppCompatActivity {
                     grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                 Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:" + callIt ));
+                intent.setData(Uri.parse("tel:" + callIt));
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
                 startActivity(intent);
                 finish();
 
             } else {
-                Toast.makeText(CallPermissions.this, "You have restricted "+getString(R.string.host)+  " app to access to Calling Feature", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CallPermissions.this, "You have restricted "+getString(R.string.app_name)+  "  to access to Calling Feature", Toast.LENGTH_SHORT).show();
 
                 android.support.v7.app.AlertDialog alertDialog = null;
                 android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(CallPermissions.this,R.style.AppTheme);
                 builder.setTitle("Want to Call Expert From Phone");
-                builder.setMessage("Allow "+getString(R.string.host)+  " app to Call experts from phone. This enables you to Call experts and companies directly from your phone. " +
-                        "Go to Settings to turn on Call Access.\n\nTo enable this, click "+getString(R.string.host)+  " App Settings below and activate Phone under the permissions menu.");
+                builder.setMessage("Allow "+getString(R.string.app_name)+  " app to Call experts from phone. This enables you to Call experts and companies directly from your phone. " +
+                        "Go to Settings to turn on Call Access.\n\nTo enable this, click "+getString(R.string.app_name)+  " Settings below and activate Phone under the permissions menu.");
 
                 builder.setPositiveButton("App Settings", new DialogInterface.OnClickListener() {
                     @Override

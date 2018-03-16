@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.BucketAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/13/2016.
@@ -241,16 +243,15 @@ public  Products(){
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("type","product"));
-            nameValuePairs.add(new BasicNameValuePair("state",userState));
-
+            nameValuePairs.add(new BasicNameValuePair("phone_number",new GuestInformation(getActivity()).getGuestNumber()));
+            nameValuePairs.add(new BasicNameValuePair("type","products"));
 
 
 
             try {
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/get_sales.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/workshop/smart_bucket.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
@@ -298,6 +299,8 @@ public  Products(){
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            Log.e("Responsefromserver",s);
+
 
 
 

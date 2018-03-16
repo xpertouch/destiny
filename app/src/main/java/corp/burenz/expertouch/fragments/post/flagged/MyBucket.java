@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.BucketPostAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/13/2016.
@@ -44,18 +46,12 @@ public class MyBucket extends Fragment {
 
 
     String COMPANY_DETAILS = "myCompanyDetails";
-    SharedPreferences myCompanyDetails;
+    SharedPreferences   myCompanyDetails;
 
-    RelativeLayout bucketLoader;
-    RecyclerView bucketPostsRV;
-    RecyclerView.Adapter adapter;
-
-
-    ArrayList<String> postTitle;
-    ArrayList<String> postId;
-    ArrayList<String> postDates;
-    ArrayList<String> posts;
-    ArrayList<String> totalLikes;
+    RelativeLayout          bucketLoader;
+    RecyclerView            bucketPostsRV;
+    RecyclerView.Adapter    adapter;
+    ArrayList<String>       postTitle,postId,postDates,posts,totalLikes;
 
 
     LinearLayout noBucketPosts;
@@ -90,31 +86,29 @@ public class MyBucket extends Fragment {
 
 
     }
-    class GetMyCompanyPosts extends AsyncTask<String,String,String> {
+    private  class GetMyCompanyPosts extends AsyncTask<String,String,String> {
 
 
 
-        StringBuilder builder  = new StringBuilder();
-        BufferedReader bufferedReader;
-        JSONObject jsonObject;
-        JSONArray jsonArray;
+        StringBuilder   builder  = new StringBuilder();
+        BufferedReader  bufferedReader;
+        JSONObject      jsonObject;
+        JSONArray       jsonArray;
+
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-
-
-
-
 
         @Override
         protected String doInBackground(String... params) {
 
-
-            nameValuePairs.add(new BasicNameValuePair("companyTitle",myCompanyDetails.getString("companyName","Company Name")));
+            /*http://localhost/ver1.1/profile/get_company_posts_from_assoc_id.php?functionname=bucket_assoc_no&assoc_no=9797080059*/
+            nameValuePairs.add(new BasicNameValuePair("functionname","bucket_assoc_no"));
+            nameValuePairs.add(new BasicNameValuePair("assoc_no",new GuestInformation(getActivity()).getGuestNumber()));
 
 
             try{
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/get_company_sales.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/get_company_posts_from.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
@@ -178,11 +172,12 @@ public class MyBucket extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            postDates = new ArrayList<String>();
-            posts = new ArrayList<String>();
-            postId = new ArrayList<String>();
-            postTitle = new ArrayList<String>();
-            totalLikes = new ArrayList<String>();
+
+            postDates       = new ArrayList<String>();
+            posts           = new ArrayList<String>();
+            postId          = new ArrayList<String>();
+            postTitle       = new ArrayList<String>();
+            totalLikes      = new ArrayList<String>();
 
             bucketLoader.setVisibility(View.VISIBLE);
             bucketPostsRV.setVisibility(View.GONE);
@@ -200,6 +195,8 @@ public class MyBucket extends Fragment {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
+            Log.e("r_f_my_bucket",s);
 
             bucketLoader.setVisibility(View.GONE);
 

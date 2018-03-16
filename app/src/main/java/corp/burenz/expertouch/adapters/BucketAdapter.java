@@ -3,6 +3,7 @@ package corp.burenz.expertouch.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -21,9 +22,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
+//import com.android.volley.toolbox.ImageLoader;
 import com.mikepenz.iconics.view.IconicsImageView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -160,7 +164,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         final TextView totalLikesTV;
         final TextView saleDiscription;
         final TextView saleDate;
-        final NetworkImageView saleBanner,attachedBannerView;
+        final ImageView saleBanner,attachedBannerView;
         final ImageView companyProfileB;
         final IconicsImageView shareSaleB;
         LinearLayout styleSheet;
@@ -181,8 +185,6 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         thumbsDownAdd       = holder.thumbsDownAdd;
         totalLikesTV        = holder.totalLikes;
 
-        ImageLoader imageLoader = MySingleton.getInstance(context).getImageLoader();
-        ImageLoader imageLoaderForBanner = MySingleton.getInstance(context).getImageLoader();
 
         Log.e("ADAPt",""+position);
         int FAV_FLAG = 0;
@@ -204,14 +206,19 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         }
 
 
+        holder.imageLoaderForBanner.displayImage(saleBannerArray.get(position),holder.saleBanner);
 
-        holder.saleBanner.setImageUrl((String) saleBannerArray.get(position), imageLoaderForBanner);
+        /* setting the company image*/
+//        holder.saleBanner.setImageUrl((String) saleBannerArray.get(position), holder.imageLoaderForBanner);
+
+
 
         /*checking the banner and setting visibility accordingly*/
         if (attachedBanner.get(position).contains("banners")){
 
             holder.attachedeBannerVH.setVisibility(View.VISIBLE);
-            attachedBannerView.setImageUrl((String)         attachedBanner.get(position), imageLoader);
+//            attachedBannerView.setImageUrl((String)         attachedBanner.get(position), holder.imageLoader);
+            holder.imageLoader.displayImage(attachedBanner.get(position),holder.attachedBannerView);
 
 
             Log.e("sale_banner","Position of sale banner "+position + " "+ saleBannerArray.get(position));
@@ -361,27 +368,30 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-    static class MyBucketHolder extends RecyclerView.ViewHolder {
+     class MyBucketHolder extends RecyclerView.ViewHolder {
 
-            TextView companyTitleB,companyCity,saleTitle,saleDiscription,saleDate;
-            NetworkImageView saleBanner,attachedBannerView;
-            LinearLayout styleSheet, centralContainer, doubleClickArea ;
-            RelativeLayout attachedeBannerVH;
-            ImageView companyProfileB;
-            IconicsImageView shareSaleB;
+            ImageLoader imageLoader,imageLoaderForBanner;
+
+            TextView            companyTitleB,companyCity,saleTitle,saleDiscription,saleDate;
+            ImageView           saleBanner,attachedBannerView;
+            LinearLayout        styleSheet, centralContainer, doubleClickArea ;
+            RelativeLayout      attachedeBannerVH;
+            ImageView           companyProfileB;
+            IconicsImageView    shareSaleB;
             final private ViewFlipper thumbsFlipper;
             final private ImageButton thumbsUpAdd,thumbsDownAdd;
-            ImageButton  awesomeHeartLikes;
-            TextView totalLikes, textViewSupportTV;
+            ImageButton         awesomeHeartLikes;
+            TextView            totalLikes, textViewSupportTV;
 
         public MyBucketHolder(View itemView) {
             super(itemView);
+
             companyTitleB       = (TextView)            itemView.findViewById(R.id.companyTitleB);
             companyCity         = (TextView)            itemView.findViewById(R.id.companyCityB);
             saleTitle           = (TextView)            itemView.findViewById(R.id.saleTitle);
             saleDate            = (TextView)            itemView.findViewById(R.id.saleDate);
             saleDiscription     = (TextView)            itemView.findViewById(R.id.saleDiscription);
-            saleBanner          = (NetworkImageView)    itemView.findViewById(R.id.saleBanner);
+            saleBanner          = (ImageView)           itemView.findViewById(R.id.saleBanner);
             companyProfileB     = (ImageView)           itemView.findViewById(R.id.companyProfileB);
             shareSaleB          = (IconicsImageView)    itemView.findViewById(R.id.shareSalesB);
             thumbsFlipper       = (ViewFlipper)         itemView.findViewById(R.id.thumbsFlipper);
@@ -389,12 +399,19 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             thumbsDownAdd       = (ImageButton)         itemView.findViewById(R.id.thumbsDownAdd);
             totalLikes          = (TextView)            itemView.findViewById(R.id.totalLikesTV);
             styleSheet          = (LinearLayout)        itemView.findViewById(R.id.styleSheet);
-            attachedBannerView  = (NetworkImageView)    itemView.findViewById(R.id.attachedBannerView);
+            attachedBannerView  = (ImageView)           itemView.findViewById(R.id.attachedBannerView);
             textViewSupportTV   = (TextView)            itemView.findViewById(R.id.likes_index_support_tv);
             centralContainer    = (LinearLayout)        itemView.findViewById(R.id.central_container_bucket_posts);
             awesomeHeartLikes   = (ImageButton)         itemView.findViewById(R.id.awesome_heart_on_double_click);
             doubleClickArea     = (LinearLayout)        itemView.findViewById(R.id.double_click_area);
             attachedeBannerVH   = (RelativeLayout)      itemView.findViewById(R.id.attachedBannerHolder);
+
+            // Create global configuration and initialize ImageLoader with this config
+            ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).build();
+            ImageLoader.getInstance().init(config);
+            imageLoader          = ImageLoader.getInstance(); // Get singleton instance
+            imageLoaderForBanner = ImageLoader.getInstance(); // Get singleton instance
+
 
 
         }

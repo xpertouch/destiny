@@ -50,6 +50,7 @@ import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.MyCompanyPosts;
 import corp.burenz.expertouch.adapters.FilterListAdapter;
 import corp.burenz.expertouch.butter.CompanyInformation;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/12/2016.
@@ -270,7 +271,7 @@ public class JobPost extends Fragment implements View.OnClickListener{
     void postBanner(){
 
 
-        flagAddlayout.startAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.md_styled_slide_up_slow));
+        flagAddlayout.startAnimation(AnimationUtils.loadAnimation(getActivity(),R.anim.design_bottom_sheet_slide_in_scan));
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -879,15 +880,15 @@ public class JobPost extends Fragment implements View.OnClickListener{
             companyAdd = getActivity().getSharedPreferences(COMPANY_ADD, 0);
 
 
-            nameValuePairList.add(new BasicNameValuePair("companyTitle", myCompanyDetails.getString("companyName", "noTitle")));
-            nameValuePairList.add(new BasicNameValuePair("jobInfo", companyAdd.getString("add", "Empty Add")));
-            nameValuePairList.add(new BasicNameValuePair("addCatagory", addCatagory));
-            nameValuePairList.add(new BasicNameValuePair("addType", addType));
+            nameValuePairList.add(new BasicNameValuePair("assoc_no", new GuestInformation(getActivity()).getGuestNumber()));
+            nameValuePairList.add(new BasicNameValuePair("job_info", companyAdd.getString("add", "Empty Add")));
+            nameValuePairList.add(new BasicNameValuePair("add_category", addCatagory));
+            nameValuePairList.add(new BasicNameValuePair("add_type", addType));
 
             try {
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host) + "/post_add/post_add.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host) + "/post_add/post_and_notify.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairList));
                 HttpResponse httpResponse = httpClient.execute(httpPost);
                 HttpEntity httpEntity = (HttpEntity) httpResponse.getEntity();
@@ -958,14 +959,14 @@ public class JobPost extends Fragment implements View.OnClickListener{
                 flagPostFlipper.showNext();
 
             } else if (s.contains("crook")) {
-                Toast.makeText(getActivity(), "Your Post Facility has been disabled, Please Contact our Customer Care ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Your Post Facility has been disabled, Please contact our Customer Care ", Toast.LENGTH_SHORT).show();
                 flagPostFlipper.showNext();
                 /*now make him verify his identity*/
                 getActivity().getSharedPreferences(CompanyInformation.COMPANY_DETAILS,0).edit().putBoolean(CompanyInformation.VERIFICATION_STATUS,false).apply();
 
             } else {
 
-                Toast.makeText(getActivity(), "We are having Trouble connecting to the Internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "We are having Trouble connecting to the Internet ", Toast.LENGTH_SHORT).show();
                 flagPostFlipper.showNext();
 
 

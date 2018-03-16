@@ -44,6 +44,9 @@ import java.util.List;
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.Jobs;
 import corp.burenz.expertouch.activities.TermsOfService;
+import corp.burenz.expertouch.butter.MySharedConfig;
+import corp.burenz.expertouch.util.SmsListener;
+import corp.burenz.expertouch.util.SmsReceiver;
 
 /**
  * Created by Developer on 6/29/2016.
@@ -81,6 +84,7 @@ public class Register extends Fragment implements View.OnClickListener {
 
     TextView            registerTrickTitle,registerTrickSubtitle;
     Button              iacceptRegister;
+    String              otpInsideSharedPref;
 
 
     @Nullable
@@ -97,6 +101,24 @@ public class Register extends Fragment implements View.OnClickListener {
             getRegistered.setVisibility(View.VISIBLE);
             }
         },300);
+
+
+
+
+        SmsReceiver.bindListener(new SmsListener() {
+            @Override
+            public void messageReceived(String messageText) {
+                Log.d("Text",messageText);
+
+                if (messageText.contains("1clickAway")){
+                    otpInsideSharedPref = messageText.substring(0,4);
+                    getActivity().getSharedPreferences(MySharedConfig.AutoDetect.AUTO_DETECH_SHARED_PREF,0).edit().putString(MySharedConfig.AutoDetect.OTP_INSIDE,otpInsideSharedPref).apply();
+
+                }
+
+            }
+        });
+
 
 
         animation = AnimationUtils.loadAnimation(getActivity(),R.anim.card_animation);
@@ -143,6 +165,11 @@ public class Register extends Fragment implements View.OnClickListener {
 
         // View Flippers
 
+
+        /*clearing the otp inside for updated auto detect*/
+        getActivity().getSharedPreferences(MySharedConfig.AutoDetect.AUTO_DETECH_SHARED_PREF,0).edit().putString(MySharedConfig.AutoDetect.OTP_INSIDE,"clean").apply();
+        /* clearing the otp inside for updated auto detect */
+
         imageViewGuideLine      = (ViewFlipper) v.findViewById(R.id.imageViewGuideLine);
 
         imageViewGuideLine.setInAnimation(getActivity(),R.anim.fab_open);
@@ -163,8 +190,6 @@ public class Register extends Fragment implements View.OnClickListener {
 
         sendingOTPFlipper       = (ViewFlipper) v.findViewById(R.id.sendingOTPFlipper);
         sendingOTP              = (TextView)v.findViewById(R.id.sendingOTP);
-
-
 
         registerTrickTitle      = (TextView) v.findViewById(R.id.registerTrickTitle);
         registerTrickSubtitle   = (TextView) v.findViewById(R.id.registerTrickSubtitle);
@@ -285,6 +310,45 @@ public class Register extends Fragment implements View.OnClickListener {
     }
 
 
+    private void verificationHere(){
+
+
+        verifyOtp = userData.getString("OTP","9999");
+        String otpEntered = otpEditText.getText().toString();
+
+        if (otpEditText.getText().toString().length()!= 4){
+
+            // INCORRECR OTP
+            Toast.makeText(getActivity(), "Plese Enter a 4 digit OTP", Toast.LENGTH_SHORT).show();
+            editor.putBoolean("VERIFIED",false);
+            editor.commit();
+        }else if (otpEntered.equals(verifyOtp)){
+
+            // ACCESS GRANTED
+
+            editor.putString("userEmail",userEmail);
+            editor.putString("userState",userState);
+            editor.putString("userName",userName);
+            editor.putString("userPassword",password);
+            editor.putBoolean("VERIFIED",true);
+            editor.putBoolean("LOGEDOUT",false);
+            editor.commit();
+            new RegisterUser().execute();
+
+        }else if (otpEntered.equals("9999")){
+            // PROCESSING
+            Toast.makeText(getActivity(), "OTP is on its Way, Please Wait for a moment", Toast.LENGTH_SHORT).show();
+        }
+
+        else  {
+
+            Toast.makeText(getActivity(), "OTP Doesn't Match, you can skip it and verify later", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+
     @Override
     public void onClick(View v) {
 
@@ -313,39 +377,8 @@ public class Register extends Fragment implements View.OnClickListener {
 
 
             case R.id.submitOtp:
-               // OTP is saved somewhere but retrieved here
-
-                verifyOtp = userData.getString("OTP","9999");
-                String otpEntered = otpEditText.getText().toString();
-
-                if (otpEditText.getText().toString().length()!= 4){
-
-                        // INCORRECR OTP
-                        Toast.makeText(getActivity(), "Plese Enter a 4 digit OTP", Toast.LENGTH_SHORT).show();
-                        editor.putBoolean("VERIFIED",false);
-                        editor.commit();
-                }else if (otpEntered.equals(verifyOtp)){
-
-                    // ACCESS GRANTED
-
-                    editor.putString("userEmail",userEmail);
-                    editor.putString("userState",userState);
-                    editor.putString("userName",userName);
-                    editor.putString("userPassword",password);
-                    editor.putBoolean("VERIFIED",true);
-                    editor.putBoolean("LOGEDOUT",false);
-                    editor.commit();
-                    new RegisterUser().execute();
-
-                }else if (otpEntered.equals("9999")){
-                    // PROCESSING
-                    Toast.makeText(getActivity(), "OTP is on its Way, Please Wait for a moment", Toast.LENGTH_SHORT).show();
-                }
-
-                else  {
-
-                        Toast.makeText(getActivity(), "OTP Doesn't Match, you can skip it and verify later", Toast.LENGTH_SHORT).show();
-                    }
+                    // OTP is saved somewhere but retrieved here
+                    verificationHere();
 
                     break;
 
@@ -447,6 +480,8 @@ public class Register extends Fragment implements View.OnClickListener {
                 if (passwordEditText.getText().toString().length() < 8){
                     Toast.makeText(getActivity(), "Password must be at least 8 Characters Long", Toast.LENGTH_SHORT).show();
                 }else{
+
+
                     imageViewGuideLine.showNext();
                     textViewGuideLine.showNext();
                     editTextGuideLine.showNext();
@@ -456,6 +491,34 @@ public class Register extends Fragment implements View.OnClickListener {
                     editor.putString("userPassword",password);
                     editor.apply();
                     otpTextView.setText("Verification Code was sent to " + userEmail + ", In case you didn't get it you can skip for now!");
+
+
+
+                    /*this is where we need to autodetect*/
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            if ( !getActivity().getSharedPreferences(MySharedConfig.AutoDetect.AUTO_DETECH_SHARED_PREF,0).getString(MySharedConfig.AutoDetect.OTP_INSIDE,"clear").equals("clear") ){
+                                /*means there is an otp inside that has been detected*/
+
+                                Toast.makeText(getActivity(), "OTP Auto - Detected Successfully", Toast.LENGTH_SHORT).show();
+                                otpEditText.setText(otpInsideSharedPref);
+                                verificationHere();
+                            }
+
+                        }
+                    },400);
+
+
+
+                    /*autodetech ends here*/
+
+
+
+
+
                 }
                 break;
 
@@ -492,7 +555,7 @@ public class Register extends Fragment implements View.OnClickListener {
 
     }
 
-     class RegisterUser extends  AsyncTask< String, String, String>     {
+     private class RegisterUser extends  AsyncTask< String, String, String>     {
 
         StringBuilder builder = new StringBuilder();
         BufferedReader bufferedReader;
@@ -590,7 +653,7 @@ public class Register extends Fragment implements View.OnClickListener {
 
 
     }
-     class CheckAvailability extends AsyncTask< String, String, String> {
+     private class CheckAvailability extends AsyncTask< String, String, String> {
 
 
         StringBuilder builder = new StringBuilder();

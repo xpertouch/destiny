@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.BucketAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/13/2016.
@@ -236,16 +238,18 @@ public class Food extends Fragment {
         @Override
         protected String doInBackground(String... params) {
 
+            nameValuePairs.add(new BasicNameValuePair("phone_number",new GuestInformation(getActivity()).getGuestNumber()));
             nameValuePairs.add(new BasicNameValuePair("type","food"));
-            nameValuePairs.add(new BasicNameValuePair("state",userState));
 
 
 
 
             try {
 
+                    
+
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/get_sales.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/workshop/smart_bucket.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
@@ -293,165 +297,13 @@ public class Food extends Fragment {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
-
-
-//            saleID.add("50");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcome To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("120");
-//
-//
-//            saleID.add("51");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("130");
-//
-//
-//            saleID.add("52");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("240");
-//
-//
-//            saleID.add("53");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("333");
-//
-//
-//            saleID.add("54");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("6");
-//
-//
-//
-//            saleID.add("55");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcome To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("98");
-//
-//
-//            saleID.add("56");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("1234");
-//
-//
-//            saleID.add("57");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("45");
-//
-//
-//            saleID.add("58");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("22");
-//
-//
-//            saleID.add("59");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("56");
-//
-//            saleID.add("60");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcome To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("98");
-//
-//
-//            saleID.add("61");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("75");
-//
-//
-//            saleID.add("62");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("45");
-//
-//
-//            saleID.add("63");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("22");
-//
-//
-//            saleID.add("64");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("56");
-//
-
+            Log.e("Responsefromserver",s);
 
             if (companyTitles.size() == 0) {
                 myBucketRV.setVisibility(View.GONE);
                 noAdverts.setVisibility(View.VISIBLE);
                 loadProgress.setVisibility(View.GONE);
-
+                Log.e("Responsefromserver","size  of titles == 0");
             } else {
                 myBucketRV.setVisibility(View.VISIBLE);
                 noAdverts.setVisibility(View.GONE);

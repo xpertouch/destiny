@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.BucketAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/13/2016.
@@ -236,8 +238,8 @@ public class EducationBucket extends Fragment {
         @Override
         protected String doInBackground(String... params) {
 
+            nameValuePairs.add(new BasicNameValuePair("phone_number",new GuestInformation(getActivity()).getGuestNumber()));
             nameValuePairs.add(new BasicNameValuePair("type","education"));
-            nameValuePairs.add(new BasicNameValuePair("state",userState));
 
 
 
@@ -245,7 +247,7 @@ public class EducationBucket extends Fragment {
             try {
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/get_sales.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/workshop/smart_bucket.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
@@ -445,6 +447,8 @@ public class EducationBucket extends Fragment {
 //            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
 //            totalLikes.add("56");
 //
+
+            Log.e("Responsefromserver",s);
 
 
             if (companyTitles.size() == 0) {

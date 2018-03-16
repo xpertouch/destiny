@@ -60,6 +60,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/nav_accounts.png"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_subscriptions_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_subscriptions_black_24dp.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/new_hot.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/new_hot.png"
     },
@@ -174,6 +178,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/office.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/office.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/dashboard_ic.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/dashboard_ic.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/not_available_now.png",
@@ -374,6 +382,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/thumbsup_gray.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/thumbsup_gray.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_playlist_add_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_playlist_add_black_24dp.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_airline_seat_recline_extra_black_24dp.png",

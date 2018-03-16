@@ -80,6 +80,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/anim/slide_in_bottom.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/anim/uber_style.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/anim/uber_style.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/anim/right_to_left.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/anim/right_to_left.xml"
     },
@@ -142,6 +146,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/anim/left_to_right.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/anim/left_to_right.xml"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/anim/bounce.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/anim/bounce.xml"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/anim/fadeout_scan.xml",

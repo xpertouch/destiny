@@ -32,20 +32,16 @@ public class MyFavouritesActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     }
 
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
 
-
-
-
+    }
 
     private void initViewPagerAndTabs() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.favouritesViewPager);

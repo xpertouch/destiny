@@ -248,19 +248,19 @@ public final class R {
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent = 0x7f0d0004;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark = 0x7f0f0078;
-        public static final int abc_background_cache_hint_selector_material_light = 0x7f0f0079;
+        public static final int abc_background_cache_hint_selector_material_dark = 0x7f0f0079;
+        public static final int abc_background_cache_hint_selector_material_light = 0x7f0f007a;
         public static final int abc_input_method_navigation_guard = 0x7f0f0001;
-        public static final int abc_primary_text_disable_only_material_dark = 0x7f0f007f;
-        public static final int abc_primary_text_disable_only_material_light = 0x7f0f0080;
-        public static final int abc_primary_text_material_dark = 0x7f0f0081;
-        public static final int abc_primary_text_material_light = 0x7f0f0082;
-        public static final int abc_search_url_text = 0x7f0f0083;
+        public static final int abc_primary_text_disable_only_material_dark = 0x7f0f0080;
+        public static final int abc_primary_text_disable_only_material_light = 0x7f0f0081;
+        public static final int abc_primary_text_material_dark = 0x7f0f0082;
+        public static final int abc_primary_text_material_light = 0x7f0f0083;
+        public static final int abc_search_url_text = 0x7f0f0084;
         public static final int abc_search_url_text_normal = 0x7f0f0002;
         public static final int abc_search_url_text_pressed = 0x7f0f0003;
         public static final int abc_search_url_text_selected = 0x7f0f0004;
-        public static final int abc_secondary_text_material_dark = 0x7f0f0084;
-        public static final int abc_secondary_text_material_light = 0x7f0f0085;
+        public static final int abc_secondary_text_material_dark = 0x7f0f0085;
+        public static final int abc_secondary_text_material_light = 0x7f0f0086;
         public static final int accent_material_dark = 0x7f0f0006;
         public static final int accent_material_light = 0x7f0f0007;
         public static final int background_floating_material_dark = 0x7f0f0008;
@@ -302,8 +302,8 @@ public final class R {
         public static final int secondary_text_disabled_material_light = 0x7f0f0067;
         public static final int switch_thumb_disabled_material_dark = 0x7f0f006b;
         public static final int switch_thumb_disabled_material_light = 0x7f0f006c;
-        public static final int switch_thumb_material_dark = 0x7f0f008f;
-        public static final int switch_thumb_material_light = 0x7f0f0090;
+        public static final int switch_thumb_material_dark = 0x7f0f0090;
+        public static final int switch_thumb_material_light = 0x7f0f0091;
         public static final int switch_thumb_normal_material_dark = 0x7f0f006d;
         public static final int switch_thumb_normal_material_light = 0x7f0f006e;
     }
@@ -415,7 +415,7 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020051;
         public static final int abc_textfield_search_material = 0x7f020052;
-        public static final int indicator_corner_bg = 0x7f0200c8;
+        public static final int indicator_corner_bg = 0x7f0200cb;
     }
     public static final class id {
         public static final int Accordion = 0x7f110057;
@@ -457,19 +457,19 @@ public final class R {
         public static final int contentPanel = 0x7f110076;
         public static final int custom = 0x7f11007d;
         public static final int customPanel = 0x7f11007c;
-        public static final int daimajia_indicator_wrapper = 0x7f1106b2;
-        public static final int daimajia_slider_image = 0x7f110840;
-        public static final int daimajia_slider_viewpager = 0x7f110883;
+        public static final int daimajia_indicator_wrapper = 0x7f1106b0;
+        public static final int daimajia_slider_image = 0x7f11083f;
+        public static final int daimajia_slider_viewpager = 0x7f110882;
         public static final int decor_content_parent = 0x7f11008a;
         public static final int default_activity_button = 0x7f11006f;
-        public static final int default_bottom_left_indicator = 0x7f110886;
-        public static final int default_bottom_right_indicator = 0x7f110885;
-        public static final int default_center_bottom_indicator = 0x7f110884;
-        public static final int default_center_top_indicator = 0x7f110887;
-        public static final int default_center_top_left_indicator = 0x7f110889;
-        public static final int default_center_top_right_indicator = 0x7f110888;
-        public static final int description = 0x7f110843;
-        public static final int description_layout = 0x7f110842;
+        public static final int default_bottom_left_indicator = 0x7f110885;
+        public static final int default_bottom_right_indicator = 0x7f110884;
+        public static final int default_center_bottom_indicator = 0x7f110883;
+        public static final int default_center_top_indicator = 0x7f110886;
+        public static final int default_center_top_left_indicator = 0x7f110888;
+        public static final int default_center_top_right_indicator = 0x7f110887;
+        public static final int description = 0x7f110842;
+        public static final int description_layout = 0x7f110841;
         public static final int disableHome = 0x7f110022;
         public static final int edit_query = 0x7f11008e;
         public static final int end = 0x7f11003a;
@@ -483,7 +483,7 @@ public final class R {
         public static final int invisible = 0x7f11004f;
         public static final int listMode = 0x7f110020;
         public static final int list_item = 0x7f110070;
-        public static final int loading_bar = 0x7f110841;
+        public static final int loading_bar = 0x7f110840;
         public static final int middle = 0x7f110049;
         public static final int multiply = 0x7f11002f;
         public static final int never = 0x7f11004d;

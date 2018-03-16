@@ -488,6 +488,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/edit_pic_blue.png"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_playlist_add_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/ic_playlist_add_black_24dp.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/labours.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/labours.png"
     },
@@ -584,6 +588,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/thumbsup.png"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/dashboard_ic.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/dashboard_ic.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/company.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/company.png"
     },
@@ -618,6 +626,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_brightness_1_black_24dp.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/ic_brightness_1_black_24dp.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_subscriptions_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-ldpi/ic_subscriptions_black_24dp.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-ldpi/swapped_arrows.png",

@@ -16,6 +16,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/fav_alter_white.png"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/dashboard_ic.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/dashboard_ic.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_person_pin_circle_black_24dp.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_person_pin_circle_black_24dp.png"
     },
@@ -142,6 +146,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/shutter_down.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/shutter_down.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_subscriptions_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_subscriptions_black_24dp.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/cabs_vector.png",
@@ -434,6 +442,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/share.png",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/share.png"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_playlist_add_black_24dp.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_playlist_add_black_24dp.png"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/drawable-xxhdpi/artisens_vector.png",

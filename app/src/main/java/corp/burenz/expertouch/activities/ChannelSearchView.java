@@ -2,14 +2,18 @@ package corp.burenz.expertouch.activities;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -194,13 +198,21 @@ public class ChannelSearchView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try{
+            Window window = ChannelSearchView.this.getWindow();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                window.setStatusBarColor(ContextCompat.getColor(ChannelSearchView.this,R.color.white));
+//                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+            }
+        }catch (Exception e ){
+            e.printStackTrace();
+        }
+
+
         setContentView(R.layout.works_space_scroll);
-
-
-//        FirebaseMessaging.getInstance().subscribeToTopic("/topics/news");
-
-//        FirebaseMessaging.getInstance().subscribeToTopic("nono");
-
 
 
         recyclerView    = (RecyclerView) findViewById(R.id.channelListRecyclerView);
@@ -221,10 +233,6 @@ public class ChannelSearchView extends AppCompatActivity {
 
         isSubscribedByMeArrayListS           = new ArrayList<>();
         companyIdArrayListS                  = new ArrayList<>();
-
-
-//        addTemporarly();
-
 
         persistentSearchView = (PersistentSearchView) findViewById(R.id.searchview);
         mSearchTintView = (LinearLayout) findViewById(R.id.view_search_tint);

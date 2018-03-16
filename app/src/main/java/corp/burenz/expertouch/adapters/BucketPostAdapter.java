@@ -229,16 +229,16 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
         public MyPostsHolder(View itemView) {
             super(itemView);
         
-            bucketPostSubtitle = (TextView) itemView.findViewById(R.id.bucketPostSubtitle); 
-            bucketPostTitle = (TextView) itemView.findViewById(R.id.bucketPostTitle);
-            deleteBucketPost = (ImageView) itemView.findViewById(R.id.deleteBucketPost);
-            bucketPostDate = (TextView) itemView.findViewById(R.id.bucketPostDate);
-            bucketPostCard = (CardView) itemView.findViewById(R.id.bucketPostCard);
-            bucketDeletionFlipper = (ViewFlipper) itemView.findViewById(R.id.bucketDeletionFlipper);
-            totalLikesV = (TextView) itemView.findViewById(R.id.totalLikesV);
-            loonelyCompanyBucket = (LinearLayout) itemView.findViewById(R.id.lonelyCompanyBucket);
-            sureDelete = (Button) itemView.findViewById(R.id.sureDelete);
-            noDontDelete = (Button) itemView.findViewById(R.id.noDontDelete);
+            bucketPostSubtitle      = (TextView) itemView.findViewById(R.id.bucketPostSubtitle);
+            bucketPostTitle         = (TextView) itemView.findViewById(R.id.bucketPostTitle);
+            deleteBucketPost        = (ImageView) itemView.findViewById(R.id.deleteBucketPost);
+            bucketPostDate          = (TextView) itemView.findViewById(R.id.bucketPostDate);
+            bucketPostCard          = (CardView) itemView.findViewById(R.id.bucketPostCard);
+            bucketDeletionFlipper   = (ViewFlipper) itemView.findViewById(R.id.bucketDeletionFlipper);
+            totalLikesV             = (TextView) itemView.findViewById(R.id.totalLikesV);
+            loonelyCompanyBucket    = (LinearLayout) itemView.findViewById(R.id.lonelyCompanyBucket);
+            sureDelete              = (Button) itemView.findViewById(R.id.sureDelete);
+            noDontDelete            = (Button) itemView.findViewById(R.id.noDontDelete);
         }
         
 
@@ -333,7 +333,7 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
 
                                     try {
 
-                                        if (postId.size() == 1){
+                                        if (postId.size() < 1){
 
                                             holder.loonelyCompanyBucket.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fab_open));
                                             new Handler().postDelayed(new Runnable() {

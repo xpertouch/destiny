@@ -39,7 +39,7 @@
                         android:layout_height="250dp"
                         android:visibility="visible">
 
-                        <com.android.volley.toolbox.NetworkImageView
+                        <ImageView
                             android:id="@+id/attachedBannerView"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
@@ -280,10 +280,11 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
-                            <com.android.volley.toolbox.NetworkImageView
+                            <ImageView
                                 android:id="@+id/saleBanner"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:src="@raw/web"
                                 android:layout_margin="10dp"
                                 android:scaleType="centerCrop" />
 
@@ -457,14 +458,14 @@
                                 android:id="@+id/saleDiscription"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="5dp"
+                                android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
                                 android:text="Well Gone are the days when you actually had to call all of your  Corporation has gifted us with an awesome Application that shall help you get you work done in seconds. The team of xpertCity wishes yiou all the very Best"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:textColor="@color/cardview_dark_background"
                                 android:textSize="12dp"
-                                android:typeface="sans" />
+                                android:typeface="serif" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"

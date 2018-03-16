@@ -23,7 +23,14 @@ public class Buket extends AppCompatActivity {
 
     private MaterialViewPager mViewPager;
 
-    
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +51,7 @@ public class Buket extends AppCompatActivity {
 
             @Override
             public Fragment getItem(int position) {
-                switch (position % 4) {
+                switch (position % 5) {
 
                     case 0:
                         return new Food();
@@ -70,24 +77,25 @@ public class Buket extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
-                switch (position % 4) {
+                switch (position % 5) {
                     case 0:
-                        return "Food";
+                        return "Food Store";
                     case 1:
-                        return "Offers";
+                        return "Fashion";
                     case 2:
                         return "Education";
                     case 3:
                         return "Health";
                     case 4:
                         return "New Releases";
+                    default:
+                        return "New Releases";
                 }
-                return "";
             }
         });
 
@@ -98,7 +106,7 @@ public class Buket extends AppCompatActivity {
                     case 0:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.red,
-                                getString(R.string.host)+"/other/lifestyle.jpg");
+                                getString(R.string.host)+"/defaults/food.jpg");
 
                     case 1:
                         return HeaderDesign.fromColorResAndUrl(
@@ -106,15 +114,15 @@ public class Buket extends AppCompatActivity {
                                 getString(R.string.host)+"/other/sale.jpg");
                     case 2:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.blue,
+                                R.color.cyan,
                                 getString(R.string.host)+"/other/education.jpg");
                     case 3:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.cyan,
-                                getString(R.string.host)+"/other/health.jpg");
+                                getString(R.string.host)+"/defaults/health.jpg");
                     case 4:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.red,
+                                R.color.green,
                                 getString(R.string.host)+"/other/lifestyle.jpg");
 
 

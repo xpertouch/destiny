@@ -31,6 +31,7 @@ public class PostAdd extends AppCompatActivity {
 
 
 
+
     private void initViewPagerAndTabs() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.postViewPager);
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
@@ -76,9 +77,10 @@ public class PostAdd extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
-
-
-
-
+    }
 }

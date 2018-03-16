@@ -56,6 +56,7 @@ import java.util.List;
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.MyCompanyPosts;
 import corp.burenz.expertouch.butter.CompanyInformation;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/12/2016.
@@ -240,18 +241,20 @@ public class BucketPost extends Fragment {
             myCompanyDetails = getActivity().getSharedPreferences(COMPANY_DETAILS,0);
             companyAdd = getActivity().getSharedPreferences(COMPANY_ADD,0);
 
-
-            nameValuePairList.add(new BasicNameValuePair("companyTitle",myCompanyDetails.getString("companyName","noTitle")));
-            nameValuePairList.add(new BasicNameValuePair("saleTitle",TITTLE));
-            nameValuePairList.add(new BasicNameValuePair("saleDiscription",DISCRIBE));
-            nameValuePairList.add(new BasicNameValuePair("type",type));
+            nameValuePairList.add(new BasicNameValuePair("assoc_no",new GuestInformation(getActivity()).getGuestNumber()));
+            nameValuePairList.add(new BasicNameValuePair("sale_title",TITTLE));
+            nameValuePairList.add(new BasicNameValuePair("sale_desc",DISCRIBE));
+            nameValuePairList.add(new BasicNameValuePair("sale_type",type));
             nameValuePairList.add(new BasicNameValuePair("base64",base64));
+
+
+
             Log.e("BASE64",base64);
 
             try {
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/post_bucket.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/bucket/post_and_notify_bucket.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairList));
                 HttpResponse httpResponse = httpClient.execute(httpPost);
                 HttpEntity httpEntity = (HttpEntity) httpResponse.getEntity();
@@ -300,7 +303,7 @@ public class BucketPost extends Fragment {
                     Toast.makeText(getActivity(), "File Size is Too Large, file size should be approx. less than 2 MB", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(getActivity(), "We are having trouble connecting to the internet, Please check your Connection ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "We are having trouble connecting to the internet, Please check your Connection " , Toast.LENGTH_SHORT).show();
 
                 }
 

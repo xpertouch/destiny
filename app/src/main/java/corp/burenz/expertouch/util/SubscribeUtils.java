@@ -12,7 +12,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-import corp.burenz.expertouch.butter.BasicInformation;
 import corp.burenz.expertouch.butter.GuestInformation;
 
 /**

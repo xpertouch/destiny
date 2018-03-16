@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10/universal-image-loader-1.9.5_a0fa8cfe69a2e47bf1a5be1e8794c969b830d3e4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -11,12 +20,21 @@
         <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f6c23a9c49d0af6746b8a457fa70f3d1af61a995/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5_a0fa8cfe69a2e47bf1a5be1e8794c969b830d3e4.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="58b7d26dc445f9d2bf794e682d49a342a06a0f07">
+        sha1="48f3cdb2cdab84105cc991185a606d0ec3e08fd6">
         <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e10ecdc72746f58f5a9efdbd3dfd414a7c87050a/classes.dex" />
     </item>
 

@@ -55,9 +55,6 @@ public class SkillsAdapter extends RecyclerView.Adapter<SkillsAdapter.SkillViewH
         return skillList.length;
     }
 
-
-
-
     public static class SkillViewHolder extends RecyclerView.ViewHolder {
 
         TextView skillTextView;

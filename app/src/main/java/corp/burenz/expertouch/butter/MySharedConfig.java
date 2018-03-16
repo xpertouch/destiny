@@ -10,7 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 public class MySharedConfig extends AppCompatActivity{
 
 
-    class ExpertPrefs {
+    public  static class AutoDetect {
+        public static String AUTO_DETECH_SHARED_PREF = "autoDetect";
+        public static String OTP_INSIDE = "autoOTP";
+
+
 
 
 

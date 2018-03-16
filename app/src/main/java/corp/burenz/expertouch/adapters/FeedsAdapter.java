@@ -70,7 +70,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
     private ArrayList<String> titleArray, subtitleArray, postDateArray, websiteArray, emailArray, banners;
     private ArrayList<String> callArray, slidingBannerURLS;
-    ArrayList<String> postId;
+    private ArrayList<String> postId;
     private Context context;
     private SharedPreferences userData;
     private View myView;
@@ -79,7 +79,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
     private SliderLayout sliderLayout;
 
 
-    private Intent companyProfileIntent;
     private Animation animation;
     private RecyclerView jobCountsR;
     private RecyclerView.Adapter adapter;
@@ -209,7 +208,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         this.sliderLayout = sliderShow;
 
 
-        companyProfileIntent = new Intent(context,CompanyProfile.class);
 
         cardView.startAnimation(animation);
 
@@ -304,6 +302,9 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
                         context.startActivity(new Intent(context,Hire.class));
+
+
+
                     }
                 });
 
@@ -433,10 +434,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         companyProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                companyProfileIntent.putExtra("companyName",titleArray.get(sharePosition).toString());
-                companyProfileIntent.putExtra("companyState",websiteArray.get(sharePosition).toString());
-                companyProfileIntent.putExtra("companyBanner",banners.get(holder.getAdapterPosition()).toString());
-                context.startActivity(companyProfileIntent);
+                context.startActivity(new Intent(context, CompanyProfile.class).putExtra("companyID","2"));
             }
         });
 

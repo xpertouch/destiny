@@ -35,6 +35,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.MyCompanyPostsAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by xperTouch on 10/12/2016.
@@ -98,14 +99,15 @@ public class MyPosts extends Fragment {
         @Override
         protected String doInBackground(String... params) {
 
-
-            nameValuePairs.add(new BasicNameValuePair("companyTitle",myCompanyDetails.getString("companyName","Company Name")));
+            /*profile/get_company_posts_from_assoc_id.php?functionname=job_assoc_no&assoc_no=9858340826*/
+            nameValuePairs.add(new BasicNameValuePair("functionname","job_assoc_no"));
+            nameValuePairs.add(new BasicNameValuePair("assoc_no",new GuestInformation(getActivity()).getGuestNumber()));
 
 
             try{
 
                 HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/get_company_posts.php");
+                HttpPost httpPost = new HttpPost(getString(R.string.host)+"/profile/get_company_posts_from.php");
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
 

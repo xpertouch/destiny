@@ -263,9 +263,6 @@ public class Jobs extends AppCompatActivity
     }
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         LayoutInflaterCompat.setFactory(getLayoutInflater(), new IconicsLayoutInflater(getDelegate()));
@@ -1248,8 +1245,6 @@ public class Jobs extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
 
-
-
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -1304,11 +1299,15 @@ public class Jobs extends AppCompatActivity
 
                 if (id == R.id.app_bucket) {
                     startActivity(new Intent(Jobs.this,Buket.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                     // Handle the camera action
                 } else if (id == R.id.hire_experts) {
 
 
                     startActivity(new Intent(Jobs.this,Hire.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                     // Handle the camera action
                 } else if (id == R.id.profile) {
 
@@ -1318,20 +1317,28 @@ public class Jobs extends AppCompatActivity
                         if(userData.getBoolean("EXPERT",false)){
 
                             startActivity(new Intent(Jobs.this,Profile.class));
+                            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                         }else if (userData.getBoolean("COMPANY",false)){
 
                             startActivity(new Intent(Jobs.this,MyCompany.class));
+                            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                         }else{
 
                             startActivity(new Intent(Jobs.this,OwnChoice.class));
+                            overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                         }
 
                     }
                     else {
 
                         startActivity(new Intent(Jobs.this,OwnChoice.class));
+                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                     }
 
 
@@ -1340,14 +1347,20 @@ public class Jobs extends AppCompatActivity
                 }else if (id == R.id.exit_app) {
 
                     Jobs.this.finish();
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                 }else if (id == R.id.add_bussiness) {
 
                     startActivity(new Intent(Jobs.this,AddMissingExpertise.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                 } else if (id == R.id.rate_app) {
                     Uri uri = Uri.parse("market://details?id="+getPackageName());
                     startActivity(new Intent(Intent.ACTION_VIEW,uri));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1361,6 +1374,8 @@ public class Jobs extends AppCompatActivity
                 else if (id == R.id.my_favourites) {
 
                     startActivity(new Intent(Jobs.this,MyFavouritesActivity.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
 
                 }  else if (id == R.id.report_company) {
@@ -1370,8 +1385,10 @@ public class Jobs extends AppCompatActivity
                     if (userData.getBoolean("VERIFIED",false)){
 
                         startActivity(new Intent(Jobs.this,ReportCompany.class));
+                        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
-                        }else{
+
+                    }else{
 
                         Toast.makeText(Jobs.this, "Please Verify Your Account First", Toast.LENGTH_SHORT).show();
                         }
@@ -1382,10 +1399,14 @@ public class Jobs extends AppCompatActivity
                 else if (id == R.id.myCalls) {
 
                     startActivity(new Intent(Jobs.this,MyCalls.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                 }else if (id == R.id.help_center) {
 
                     startActivity(new Intent(Jobs.this,HelpCenter.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
 
                 }
@@ -1393,6 +1414,8 @@ public class Jobs extends AppCompatActivity
                 else if (id == R.id.send_a_feedback) {
 
                     startActivity(new Intent(Jobs.this,FeedbackActivity.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
 
                 } else if (id == R.id.update_latest) {
@@ -1405,6 +1428,8 @@ public class Jobs extends AppCompatActivity
                 }else if (id == R.id.terms) {
 
                     startActivity(new Intent(Jobs.this,TermsOfService.class));
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
 
                 }

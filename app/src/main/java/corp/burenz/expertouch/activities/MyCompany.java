@@ -150,6 +150,13 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
     }
 
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
+    }
 
     void addStates(){
         statesArray.add("Select Your State");
