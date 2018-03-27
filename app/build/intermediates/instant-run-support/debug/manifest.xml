@@ -34,8 +34,8 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/ClickAwayTheme" >
-        <activity android:name="corp.burenz.expertouch.activities.ChannelSearchView" >
-        </activity>
+        <activity android:name="corp.burenz.expertouch.activities.ChannelSearchView" />
+        <activity android:name="corp.burenz.expertouch.activities.MyCompanyQR" />
         <activity
             android:name="corp.burenz.expertouch.activities.RateExpertActivity"
             android:screenOrientation="portrait"

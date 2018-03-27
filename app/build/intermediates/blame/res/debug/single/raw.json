@@ -108,6 +108,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/pop.m4a"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/share_rev_web.png",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/share_rev_web.png"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/enabled.mp3",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/enabled.mp3"
     },
@@ -134,6 +138,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/intro_part_two.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/intro_part_two.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/attention.mp3",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/attention.mp3"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/notific.wav",

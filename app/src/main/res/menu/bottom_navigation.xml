@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-        android:id="@+id/navigation_hire"
-        android:icon="@drawable/hire_new"
-        android:title="Hire" />
+        android:id="@+id/channeL_search_view"
+        android:icon="@drawable/new_profile"
+        android:title="Browse Stores" />
+
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/new_profile"
-        android:title="Profile" />
+        android:icon="@drawable/new_iprofile"
+        android:title="My Profile" />
+
 
     <item
         android:id="@+id/navigation_scanqr"
         android:icon="@drawable/dashboard_ic"
-        android:title="ScanQR" />
+        android:title="ScanQR " />
 
 
     <item

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expertHolderLL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/catagoryIMageEQBACK"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle" />
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/catagoryIMageEQ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="9dp"
+            android:src="@drawable/barber" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/adapterBottomDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Sample"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

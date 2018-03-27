@@ -93,7 +93,11 @@ public class SkilledExperts extends AppCompatActivity {
     String INTRODUCE_ME = "introduction";
 
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

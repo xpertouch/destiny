@@ -58,7 +58,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-    ArrayList<String> companyTitleArray,companyCityArray,saleTitleArray,saleDiscriptionArray,saleDateArray,saleBannerArray,saleIds,myLikeIds,totalLikes,attachedBanner;
+    private ArrayList<String> companyTitleArray,companyCityArray,saleTitleArray,saleDiscriptionArray,saleDateArray,saleBannerArray,saleIds,myLikeIds,totalLikes,attachedBanner, companyIDArray;
     Context context;
     Integer newCount;
     String USER_EMAIL = "noemail@example.com";
@@ -92,7 +92,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-    public BucketAdapter(Context context,ArrayList<String> saleIds,ArrayList<String> companyTitleB,ArrayList<String> companyCity,ArrayList<String> saleTitle,ArrayList<String> saleDiscription,ArrayList<String> saleDate,ArrayList<String> saleBanner,ArrayList<String> myLikeIds,ArrayList<String> totalLikes,ArrayList<String> attachedBanner){
+    public BucketAdapter(Context context,ArrayList<String> saleIds,ArrayList<String> companyTitleB,ArrayList<String> companyCity,ArrayList<String> saleTitle,ArrayList<String> saleDiscription,ArrayList<String> saleDate,ArrayList<String> saleBanner,ArrayList<String> myLikeIds,ArrayList<String> totalLikes,ArrayList<String> attachedBanner, ArrayList<String> companyIDArray){
 
         this.context                = context;
         this.saleIds                = saleIds;
@@ -105,6 +105,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         this.myLikeIds              = myLikeIds;
         this.totalLikes             = totalLikes;
         this.attachedBanner         = attachedBanner;
+        this.companyIDArray         = companyIDArray;
     }
 
 
@@ -170,16 +171,10 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         LinearLayout styleSheet;
 
 
-        companyTitleB       = holder.companyTitleB;
-        companyCity         = holder.companyCity;
-        saleTitle           = holder.saleTitle;
+         saleTitle           = holder.saleTitle;
         saleDiscription     = holder.saleDiscription;
         saleDate            = holder.saleDate;
-        saleBanner          = holder.saleBanner;
-        companyProfileB     = holder.companyProfileB;
         shareSaleB          = holder.shareSaleB;
-        attachedBannerView  = holder.attachedBannerView;
-        styleSheet          = holder.styleSheet;
         thumbsUpAdd         = holder.thumbsUpAdd;
         thumbsFlipper       = holder.thumbsFlipper;
         thumbsDownAdd       = holder.thumbsDownAdd;
@@ -193,16 +188,16 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
         for (int i = 0; i < myLikeIds.size();i++){
             if (saleIds.get(position).equals(myLikeIds.get(i))){
-                thumbsDownAdd.setVisibility(View.VISIBLE);
-                thumbsUpAdd.setVisibility(View.GONE);
+                holder.thumbsDownAdd.setVisibility(View.VISIBLE);
+                holder.thumbsUpAdd.setVisibility(View.GONE);
                 FAV_FLAG = 1;
                 break;
             }
 
         }
         if (FAV_FLAG == 0){
-            thumbsUpAdd.setVisibility(View.VISIBLE);
-            thumbsDownAdd.setVisibility(View.GONE);
+            holder.thumbsUpAdd.setVisibility(View.VISIBLE);
+            holder.thumbsDownAdd.setVisibility(View.GONE);
         }
 
 
@@ -235,8 +230,8 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-            companyTitleB.setText(companyTitleArray.get(position));
-            companyCity.setText(companyCityArray.get(position));
+            holder.companyTitleB.setText(companyTitleArray.get(position));
+            holder.companyCity.setText(companyCityArray.get(position));
             saleTitle.setText(saleTitleArray.get(position));
             saleDiscription.setText(saleDiscriptionArray.get(position));
             saleDate.setText(saleDateArray.get(position));
@@ -248,7 +243,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
                     String advert       = "Shared via 1clickAway, Find Best Jobs, Experts and Offers from your City and State. Click on the below link to Download Now\nhttps://play.google.com/store/apps/details?id=corp.burenz.expertouch";
                     String firstString  = "Hey i am sharing with you an advertisement from" +
-                            " \n"+ companyTitleB.getText().toString() +" posted "+saleDateArray.get(position)+"" +
+                            " \n"+ holder.companyTitleB.getText().toString() +" posted "+saleDateArray.get(position)+"" +
                             " where they mentioned "+saleTitleArray.get(position)+" \n "+saleDiscriptionArray.get(position) ;
                     Intent shareIntent = new Intent();
                     shareIntent.setAction(Intent.ACTION_SEND);
@@ -259,15 +254,10 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
                 }
             });
 
-            companyTitleB.setOnClickListener(new View.OnClickListener() {
+            holder.companyTitleB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    Intent companyProfileIntent= new Intent(context,CompanyProfile.class);
-                    companyProfileIntent.putExtra("companyName",companyTitleB.getText().toString());
-                    companyProfileIntent.putExtra("companyState",USER_STATE);
-                    companyProfileIntent.putExtra("companyBanner",saleBannerArray.get(position));
-                    context.startActivity(companyProfileIntent);
+                    context.startActivity(new Intent(context,CompanyProfile.class).putExtra("companyID",companyIDArray.get(position)));
                 }
             });
 
@@ -304,7 +294,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
 
-        thumbsUpAdd.setOnClickListener(new View.OnClickListener() {
+        holder.thumbsUpAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -313,12 +303,12 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             }
         });
 
-        thumbsDownAdd.setOnClickListener(new View.OnClickListener() {
+        holder.thumbsDownAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                thumbsUpAdd.setVisibility(View.VISIBLE);
-                thumbsDownAdd.setVisibility(View.GONE);
+                holder.thumbsUpAdd.setVisibility(View.VISIBLE);
+                holder.thumbsDownAdd.setVisibility(View.GONE);
 
                 newCount = Integer.parseInt(totalLikesTV.getText().toString());
                 newCount--;

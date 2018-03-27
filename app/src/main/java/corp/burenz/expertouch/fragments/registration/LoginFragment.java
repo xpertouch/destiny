@@ -24,6 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -34,17 +36,22 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.HelpCenter;
 import corp.burenz.expertouch.activities.Jobs;
+import corp.burenz.expertouch.butter.GuestInformation;
 
 /**
  * Created by Developer on 6/29/2016.
@@ -53,30 +60,31 @@ import corp.burenz.expertouch.activities.Jobs;
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
-    String userEmail,userPassword;
-    EditText userEmailE, userPasswordE;
-    Button loginUser,createNew;
-    String newPassword;
-    TextView iForgotMyPassword,loginTitle;
-    ViewFlipper proceedLoginFlipper;
-    InputMethodManager im;
-    LinearLayout progerssLayout;
-    TextView takeMetoHelpCenter;
-    LinearLayout loginContainer;
+    String              userEmail,userPassword;
+    EditText            userEmailE, userPasswordE;
+    Button              loginUser,createNew;
+    String              newPassword;
+    TextView            iForgotMyPassword,loginTitle;
+    ViewFlipper         proceedLoginFlipper;
+    InputMethodManager  im;
+    LinearLayout        progerssLayout;
+    TextView            takeMetoHelpCenter;
+    LinearLayout        loginContainer;
+
 
     TextView            progressTitleV  ,progressSubtitleV;
     String              COMPANY_DETAILS = "myCompanyDetails";
     SharedPreferences   myCompanyDetails;
     SharedPreferences.Editor editor;
-    Typeface logoTypeface;
+    Typeface            logoTypeface;
 
-    String MY_PROFILE_DATA = "myProfileInfo";
-    SharedPreferences myProfile;
+    String              MY_PROFILE_DATA = "myProfileInfo";
+    SharedPreferences   myProfile;
     SharedPreferences.Editor myProfileEditor;
 
     ArrayList<String> userState,userName,profile;
     ArrayList<String> companyName,companyTag,companyPhone,companyEmail,companyVisit,companyDiscription,companyState,companyCity,companyLandark,companyBanner,verified;
-    ArrayList<String> fullName,mainExpertise,status,textStatus,noticePeriod,call,email,shortBio,myCurrentState,myExperience,myAge,myExperienceMonths,gender,expertCity,expertSkills,expertProfType,expertProfession,expertPic,expertVisibilty;
+    ArrayList<String> fullName,mainExpertise,status,textStatus,noticePeriod,call,email,shortBio,myCurrentState,myExperience,myAge,myExperienceMonths,gender,expertCity,expertSkills,expertProfType,expertProfession,expertPic,expertVisibilty,subscriptionIDsArray;
 
 
     @Nullable
@@ -160,7 +168,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                         userPassword = userPasswordE.getText().toString();
                         if (userPassword.length() > 7){
                             im.hideSoftInputFromWindow(userEmailE.getWindowToken(),0);
-                            new LoginUser().execute();
+                            try {new LoginUser().execute();}catch (Exception e){e.printStackTrace();}
                         }else {
                             Toast.makeText(getActivity(), "Password length less than 8 Characters", Toast.LENGTH_SHORT).show();
 
@@ -274,12 +282,15 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
                 }else if ( s.equals("1") ){
 
+                    /*get the subscriptions and subscribe to the subscriptions*/
+                    try{    new GetUserSubscriptions().execute(userEmail);    }catch (Exception e){   }
+                    /*it ends here*/
 
                     new GetUserStuff().execute();
 
 
 
-    			}else{
+                }else{
                     proceedLoginFlipper.showNext();
                     Toast.makeText(getActivity(), "We are Having Trouble Connecting to the Internet, Please Try again", Toast.LENGTH_SHORT).show();
 
@@ -361,9 +372,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), "Phone Number Not Registered with us", Toast.LENGTH_SHORT).show();
 
             }else if (s.equals("1")){
-
-
-
 
                 Toast.makeText(getActivity(), "Incorrect Password", Toast.LENGTH_SHORT).show();
 
@@ -485,7 +493,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         }
             
-
+            @Override
             protected void onPostExecute( String s ){
             super.onPostExecute(s);
 
@@ -523,6 +531,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 editor.putBoolean("COMPANY",isCompany);
                 editor.putString("userPassword",userPasswordE.getText().toString());
                 editor.apply();
+
 
 
 
@@ -825,6 +834,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
      }
+
         class GetExpertStuff extends AsyncTask< String, String, String > {
 
 
@@ -1038,7 +1048,93 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         }
 
+        /*gets the subscription ids and subscribes them to the token*/
+        private class GetUserSubscriptions  extends AsyncTask<String, String, String>{
 
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+
+                /*show some progress here*/
+
+                subscriptionIDsArray = new ArrayList<>();
+
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+
+                try {
+                    if (subscriptionIDsArray.size() > 0)
+                        subscribeToBySubscriptions(subscriptionIDsArray);
+
+                } catch (Exception e) {
+                    /*clear the progress and send an error report*/
+
+
+                }
+
+            }
+
+            @Override
+            protected String doInBackground(String... strings) {
+
+                String          urlToHit        = getActivity().getString(R.string.host) + "/workshop/get_my_subscriptions.php";
+                StringBuilder   stringBuilder   = new StringBuilder();
+
+                HttpURLConnection httpURLConnection;
+                URL url;
+
+                /* http://1clickaway.in/ver1.1/workshop/get_my_subscriptions.php?phone_number=9797080059 */
+                try {
+
+                    url = new URL(urlToHit + "?phone_number=" + strings[0]);
+
+                    Log.e("fromURL",urlToHit + "?phone_number=" + new GuestInformation(getActivity()).getGuestNumber());
+                    httpURLConnection = (HttpURLConnection) url.openConnection();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+
+                    String line = "";
+                    while ( (line = bufferedReader.readLine()) != null ){
+                        stringBuilder.append(line).append("\n");
+                    }
+
+                    JSONArray jsonArray  = new JSONArray(stringBuilder.toString());
+
+
+                    for (int i = 0; i < jsonArray.length(); i++){
+                        subscriptionIDsArray.add(jsonArray.getJSONObject(i).getString("id"));
+
+                    }
+
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                return stringBuilder.toString();
+
+            }
+
+
+        }
+
+        void subscribeToBySubscriptions(ArrayList<String> subscriptionIDsArray){
+            FirebaseMessaging firebaseMessaging = FirebaseMessaging.getInstance();
+            for (int i = 0; i < subscriptionIDsArray.size(); i++){
+                firebaseMessaging.subscribeToTopic(subscriptionIDsArray.get(i));
+            }
+
+            Log.w("unSub","job Done Token Cleared");
+
+            /*now switch the user successfully celar the progress */
+
+
+        }
 
 
 

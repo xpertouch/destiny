@@ -8,10 +8,14 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -72,63 +76,67 @@ public class WelcomeActivity extends AppCompatActivity {
         xper.setTypeface(logoTypeface);
 
 
-        CountDownTimer countDownTimer = new CountDownTimer(1000,9000) {
 
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onTick(long millisUntilFinished) {
-
+            public void run() {
+                doTheChecks();
             }
+        },4000);
 
-            @Override
-            public void onFinish() {
 
-                userData = getSharedPreferences(LOCAL_APP_DATA,0);
 
-                // set true
-            if (userData.getBoolean("firstRun",true)){
-                startActivity(new Intent(WelcomeActivity.this,MyIntroActivity.class));
+
+
+
+    }
+
+
+    void doTheChecks(){
+        userData = getSharedPreferences(LOCAL_APP_DATA,0);
+
+        // set true
+        if (userData.getBoolean("firstRun",true)){
+            startActivity(new Intent(WelcomeActivity.this,MyIntroActivity.class));
+            WelcomeActivity.this.finish();
+            overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
+
+        }else {
+            if (userData.getBoolean("LOGEDIN",false)){
+
+                startActivity(new Intent(WelcomeActivity.this, Jobs.class));
                 WelcomeActivity.this.finish();
                 overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
 
-            }else {
-                if (userData.getBoolean("LOGEDIN",false)){
 
-                    startActivity(new Intent(WelcomeActivity.this, Jobs.class));
-                    WelcomeActivity.this.finish();
-                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
+            }else if (userData.getBoolean("LOGEDOUT",false)){
 
-
-                }else if (userData.getBoolean("LOGEDOUT",false)){
-
-                    startActivity(new Intent(WelcomeActivity.this, Registrations.class));
-                    WelcomeActivity.this.finish();
-                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
+                startActivity(new Intent(WelcomeActivity.this, Registrations.class));
+                WelcomeActivity.this.finish();
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
 
 
-                } else {
+            } else {
 
 
-                    if (!userData.getBoolean("VERIFIED",false)){
+                if (!userData.getBoolean("VERIFIED",false)){
 
-                        if (userData.getBoolean("SKIPPEDVERI",false)){
+                    if (userData.getBoolean("SKIPPEDVERI",false)){
 
-                            startActivity(new Intent(WelcomeActivity.this,Jobs.class));
-
-                            WelcomeActivity.this.finish();
-
-                        }else {
-                            startActivity(new Intent(WelcomeActivity.this, Registrations.class));
-                            WelcomeActivity.this.finish();
-                            overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
-
-                        }
-                    }else{
                         startActivity(new Intent(WelcomeActivity.this,Jobs.class));
+
+                        WelcomeActivity.this.finish();
+
+                    }else {
+                        startActivity(new Intent(WelcomeActivity.this, Registrations.class));
                         WelcomeActivity.this.finish();
                         overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
 
                     }
-
+                }else{
+                    startActivity(new Intent(WelcomeActivity.this,Jobs.class));
+                    WelcomeActivity.this.finish();
+                    overridePendingTransition(R.anim.fadein_scan,R.anim.fadein_scan);
 
                 }
 
@@ -136,15 +144,27 @@ public class WelcomeActivity extends AppCompatActivity {
             }
 
 
-            }
+        }
 
-
-
-        };
-
-        countDownTimer.start();
 
     }
+
+
+
+
+    public void presentActivity(View view) {
+        ActivityOptionsCompat options = ActivityOptionsCompat.
+                makeSceneTransitionAnimation(this, view, "transition");
+        int revealX = (int) (view.getX() + view.getWidth() / 2);
+        int revealY = (int) (view.getY() + view.getHeight() / 2);
+
+//        Intent intent = new Intent(this, SecondActivity.class);
+//        intent.putExtra(SecondActivity.EXTRA_CIRCULAR_REVEAL_X, revealX);
+//        intent.putExtra(SecondActivity.EXTRA_CIRCULAR_REVEAL_Y, revealY);
+
+//        ActivityCompat.startActivity(this, intent, options.toBundle());
+    }
+
 
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

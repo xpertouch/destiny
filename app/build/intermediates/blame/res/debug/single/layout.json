@@ -344,6 +344,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/temp_bottom.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/hire_professionals_adapter.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout/hire_professionals_adapter.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout/material_view_pager_viewpager.xml",
         "source": "/home/buren/.android/build-cache/6c5adb113ff5e82af1049ea81e7b9c8941d688ca/output/res/layout/material_view_pager_viewpager.xml"
     },

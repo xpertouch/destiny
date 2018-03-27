@@ -23,6 +23,7 @@ public class GuestInformation {
 
     public String getGuestNumber(){
         return  mContext.getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA, 0).getString("userEmail", "null");
+
     }
 
     public String getGuestName(){

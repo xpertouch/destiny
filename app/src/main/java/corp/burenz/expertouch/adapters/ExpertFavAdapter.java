@@ -31,18 +31,18 @@ import corp.burenz.expertouch.util.MySingleton;
 public class ExpertFavAdapter extends RecyclerView.Adapter<ExpertFavAdapter.MyExpertFavHolder> {
 
     Context context;
+    private String[] expertName,expertExpertise,expertStatus,expertSkills,expertExperience,expertPic,expertId;
 
-    String[] expertName,expertExpertise,expertStatus,expertSkills,expertExperience,expertPic,expertId;
     public ExpertFavAdapter(Context context,String[] expertId,String[] expertName,String[] expertExpertise,String[] expertExperience,String []expertStatus,String []expertSkills,String []expertPic){
 
-        this.context = context;
-        this.expertName = expertName;
-        this.expertExpertise = expertExpertise;
-        this.expertStatus = expertStatus;
-        this.expertSkills = expertSkills;
-        this.expertExperience = expertExperience;
-        this.expertPic = expertPic;
-        this.expertId = expertId;
+        this.context            = context;
+        this.expertName         = expertName;
+        this.expertExpertise    = expertExpertise;
+        this.expertStatus       = expertStatus;
+        this.expertSkills       = expertSkills;
+        this.expertExperience   = expertExperience;
+        this.expertPic          = expertPic;
+        this.expertId           = expertId;
     }
 
     @Override

@@ -2,13 +2,31 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.github.kenglxn.QRGen/android/2.4.0/a292d80a973c993db1993194857cbd40bfd52fa6/android-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a292d80a973c993db1993194857cbd40bfd52fa6">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/pre-dexed/debug/android-2.4.0_b6ba720b466c1fa7930dce6ca1bbcfe9bf880803.jar" />
+    </item>
+    <item
         is-multidex="true"
-        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.github.kenglxn.QRGen/android/2.4.0/a292d80a973c993db1993194857cbd40bfd52fa6/android-2.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10/universal-image-loader-1.9.5_a0fa8cfe69a2e47bf1a5be1e8794c969b830d3e4/classes.dex" />
+        sha1="a292d80a973c993db1993194857cbd40bfd52fa6">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10/android-2.4.0_b6ba720b466c1fa7930dce6ca1bbcfe9bf880803/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9a7323182f6067c84aabfdc1f47ef84c914c27c7">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e10ecdc72746f58f5a9efdbd3dfd414a7c87050a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,21 +39,39 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5_a0fa8cfe69a2e47bf1a5be1e8794c969b830d3e4.jar" />
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/pre-dexed/debug/core-3.3.0_3e31659c0e616fb70c2378f87d0cdeacb5e0a2f9.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.github.kenglxn.QRGen/core/2.4.0/c6be8b43c918e07bcf4425894ed595049f98eabe/core-2.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="48f3cdb2cdab84105cc991185a606d0ec3e08fd6">
-        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e10ecdc72746f58f5a9efdbd3dfd414a7c87050a/classes.dex" />
+        sha1="c6be8b43c918e07bcf4425894ed595049f98eabe">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-2.4.0_4b1fe82f9d3e3c97e13e8f88bd991c05b26dbbe5/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.github.kenglxn.QRGen/core/2.4.0/c6be8b43c918e07bcf4425894ed595049f98eabe/core-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c6be8b43c918e07bcf4425894ed595049f98eabe">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/pre-dexed/debug/core-2.4.0_4b1fe82f9d3e3c97e13e8f88bd991c05b26dbbe5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/buren/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.3.0_3e31659c0e616fb70c2378f87d0cdeacb5e0a2f9/classes.dex" />
     </item>
 
 </items>

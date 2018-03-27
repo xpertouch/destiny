@@ -40,8 +40,31 @@ public class SampleSuggestionsBuilder implements SearchSuggestionsBuilder {
 
     }
 
-    private void createHistory() {
 
+    private void createHistorys() {
+        SearchItem item1 = new SearchItem(
+                "1clickAway Official",
+                "1clickAway",
+                SearchItem.TYPE_SEARCH_ITEM_HISTORY
+        );
+        mHistorySuggestions.add(item1);
+        SearchItem item2 = new SearchItem(
+                "Southtech Solutions",
+                "southtech solutions",
+                SearchItem.TYPE_SEARCH_ITEM_HISTORY
+        );
+        mHistorySuggestions.add(item2);
+        SearchItem item3 = new SearchItem(
+                "Fashion Folks",
+                "fashion folks",
+                SearchItem.TYPE_SEARCH_ITEM_HISTORY
+        );
+        mHistorySuggestions.add(item3);
+    }
+
+
+
+    private void createHistory() {
 
         SearchHistory searchHistory = new SearchHistory(mContext);
 
@@ -54,6 +77,7 @@ public class SampleSuggestionsBuilder implements SearchSuggestionsBuilder {
                mHistorySuggestions.add(new SearchItem(aSearchhistoryArray, aSearchhistoryArray, SearchItem.TYPE_SEARCH_ITEM_HISTORY));
            }
 
+           createHistorys();
            searchHistory.close();
        }catch (Exception e){
            Toast.makeText(mContext, "Bug here " + e.toString(), Toast.LENGTH_SHORT).show();

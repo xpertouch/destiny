@@ -10,12 +10,6 @@
     app:showAsAction="always"
     android:icon="@drawable/filter"/>
 
-    <item
-        android:id="@+id/channeL_search_view"
-        android:orderInCategory="100"
-        android:title="Browse Channels"
-        app:showAsAction="always"
-        android:icon="@drawable/ad_channel"/>
 
 
     <item

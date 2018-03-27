@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.adapter.RecyclerViewMaterialAdapter;
@@ -34,6 +36,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,18 +50,10 @@ import corp.burenz.expertouch.butter.GuestInformation;
 
 public class Food extends Fragment {
 
-    ArrayList<String> companyTitles;
-    ArrayList<String> saleDate;
-    ArrayList<String> saleTitle;
-    ArrayList<String> companyCity;
-    ArrayList<String> saleDiscription;
-    ArrayList<String> saleBanner;
-    ArrayList<String> saleID;
-    ArrayList<String> myLikeIds;
-    ArrayList<String> totalLikes;
-    ArrayList<String> attachedBanner;
-    SharedPreferences userData;
+    ArrayList<String> companyTitles,saleDate,saleTitle,companyCity, saleDiscription, saleBanner, saleID,
+    myLikeIds,totalLikes,attachedBanner, companyIDArray;
 
+    SharedPreferences userData;
     String LOCAL_APP_DATA = "userInformation";
 
     LinearLayout noAdverts;
@@ -69,7 +64,9 @@ public class Food extends Fragment {
     String userState;
     String USER_EMAIL;
 
+    String from = "food";
 
+    SwipeRefreshLayout mySwipeRefreshLayout;
 
 
 
@@ -79,10 +76,31 @@ public class Food extends Fragment {
 
         View v  = inflater.inflate(R.layout.food_bucket,container,false);
 
+        from = getArguments().getString("from");
+
+
+
         myBucketRV = (RecyclerView) v.findViewById(R.id.healthBucketRV);
         myBucketRV.setLayoutManager(new LinearLayoutManager(getActivity()));
         myBucketRV.clearOnScrollListeners();
         myBucketRV.hasFixedSize();
+
+        mySwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefresh);
+
+        mySwipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+
+                        // This method performs the actual data-refresh operation.
+                        // The method calls setRefreshing(false) when it's finished.
+
+                        new GetLikes().execute();
+                    }
+                }
+        );
+
+
 
         loadProgress = (RelativeLayout) v.findViewById(R.id.loadProgressHealth);
         noAdverts  =  (LinearLayout) v.findViewById(R.id.noAdvertHealth);
@@ -119,8 +137,17 @@ public class Food extends Fragment {
             super.onPreExecute();
 
             myLikeIds = new ArrayList<String>();
-            loadProgress.setVisibility(View.VISIBLE);
-            myBucketRV.setVisibility(View.GONE);
+
+            if (loadProgress.getVisibility() == View.VISIBLE){
+
+                loadProgress.setVisibility(View.VISIBLE);
+                myBucketRV.setVisibility(View.GONE);
+
+            }else {
+                loadProgress.setVisibility(View.GONE);
+                myBucketRV.setVisibility(View.VISIBLE);
+
+            }
 
 
         }
@@ -183,7 +210,7 @@ public class Food extends Fragment {
             super.onPostExecute(s);
 
 
-            new BucketLoader(getActivity(),myBucketRV).execute();
+            new BucketLoader(getActivity(),myBucketRV).execute(from);
 
         }
 
@@ -224,27 +251,28 @@ public class Food extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            companyTitles = new ArrayList<>();
-            saleDate = new ArrayList<>();
-            saleTitle = new ArrayList<>();
-            companyCity = new ArrayList<>();
+            companyTitles   = new ArrayList<>();
+            saleDate        = new ArrayList<>();
+            saleTitle       = new ArrayList<>();
+            companyCity     = new ArrayList<>();
             saleDiscription = new ArrayList<>();
-            saleBanner = new ArrayList<>();
-            saleID  =new ArrayList<>();
-            totalLikes  = new ArrayList<>();
-            attachedBanner = new ArrayList<>();
+            saleBanner      = new ArrayList<>();
+            saleID          = new ArrayList<>();
+            totalLikes      = new ArrayList<>();
+            attachedBanner  = new ArrayList<>();
+            companyIDArray  = new ArrayList<>();
         }
 
         @Override
         protected String doInBackground(String... params) {
 
-            nameValuePairs.add(new BasicNameValuePair("phone_number",new GuestInformation(getActivity()).getGuestNumber()));
-            nameValuePairs.add(new BasicNameValuePair("type","food"));
 
 
 
 
             try {
+                nameValuePairs.add(new BasicNameValuePair("phone_number",new GuestInformation(getActivity()).getGuestNumber()));
+                nameValuePairs.add(new BasicNameValuePair("type",params[0]));
 
                     
 
@@ -282,6 +310,7 @@ public class Food extends Fragment {
                     saleBanner.add(jsonObject.getString("companyBanner"));
                     totalLikes.add(jsonObject.getString("totalLikes"));
                     attachedBanner.add(jsonObject.getString("attachedBanner"));
+                    companyIDArray.add(jsonObject.getString("companyID"));
                 }
 
             } catch (HttpHostConnectException e) {
@@ -299,17 +328,21 @@ public class Food extends Fragment {
             super.onPostExecute(s);
             Log.e("Responsefromserver",s);
 
+
             if (companyTitles.size() == 0) {
                 myBucketRV.setVisibility(View.GONE);
                 noAdverts.setVisibility(View.VISIBLE);
                 loadProgress.setVisibility(View.GONE);
                 Log.e("Responsefromserver","size  of titles == 0");
+                mySwipeRefreshLayout.setRefreshing(false);
             } else {
+                mySwipeRefreshLayout.setRefreshing(false);
                 myBucketRV.setVisibility(View.VISIBLE);
                 noAdverts.setVisibility(View.GONE);
                 loadProgress.setVisibility(View.GONE);
 
-                adapter = new BucketAdapter(getActivity(),saleID ,companyTitles, companyCity, saleTitle, saleDiscription, saleDate, saleBanner,myLikeIds,totalLikes,attachedBanner);
+                adapter = new BucketAdapter(getActivity(),saleID ,companyTitles, companyCity, saleTitle,
+                        saleDiscription, saleDate, saleBanner,myLikeIds,totalLikes,attachedBanner,companyIDArray);
                 adapter.notifyDataSetChanged();
                 myBucketRV.setAdapter(new RecyclerViewMaterialAdapter(adapter));
                 MaterialViewPagerHelper.registerRecyclerView(getActivity(),myBucketRV);

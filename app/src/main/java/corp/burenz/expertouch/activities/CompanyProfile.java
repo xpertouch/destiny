@@ -30,6 +30,8 @@ import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -49,6 +51,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -66,7 +69,7 @@ import corp.burenz.expertouch.util.MySingleton;
 
 public class CompanyProfile extends AppCompatActivity implements View.OnClickListener {
 
-    String companyTagLineS, companyAboutS, addVisitS, companyLandmarkS, companyCityS, companyEmailS, companyOppsiteS, companyPhoneS, companyBannerS, companyTitleS, companyStateS;
+    String companyTagLineS, companyAboutS, addVisitS, companyLandmarkS, companyCityS, companyEmailS, companyOppsiteS, companyPhoneS, companyBannerS, companyTitleS, companyStateS,isSubscrribed;
 
     RecyclerView companyPostsRv;
     RecyclerView.Adapter companyPostsAdapter;
@@ -102,6 +105,14 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
     Button subscribeFromProfle, unsubscribeFromProfile;
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,8 +122,6 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         initViews();
 
         if (getIntent().getExtras() == null) {return;}
-
-        /*get company inforamtion from compnayid*/
 
 
         try {new GetCompanyInfo().execute(getIntent().getExtras().getString("companyID", "1"));  } catch (Exception e) {e.printStackTrace();}
@@ -139,6 +148,8 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         noCompanyPosts      = (LinearLayout) findViewById(R.id.noCompanyPosts);
         noBucketPosts       = (LinearLayout) findViewById(R.id.noCompanyBucket);
         companyBucket       = (RecyclerView) findViewById(R.id.companyBucketRV);
+        companyBucket.setNestedScrollingEnabled(false);
+
         bucketProgress      = (RelativeLayout) findViewById(R.id.bucketProgress);
 
         subscribeFromProfle = (Button) findViewById(R.id.subscribeFProfile);
@@ -165,7 +176,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         infoProgress = (RelativeLayout) findViewById(R.id.infoProgress);
         postsProgress = (RelativeLayout) findViewById(R.id.postsProgress);
         companyPostsRv = (RecyclerView) findViewById(R.id.companyPostsRV);
-
+        companyPostsRv.setNestedScrollingEnabled(false);
         userData = getSharedPreferences(LOCAL_APP_DATA, 0);
 
 
@@ -182,22 +193,26 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
 
         userData = getSharedPreferences(LOCAL_APP_DATA, 0);
+        String companyID = getIntent().getExtras().getString("companyID","1").trim();
 
 
         switch (v.getId()) {
 
 
             case R.id.subscribeFProfile:
-                subscribeFromProfle.setVisibility(View.GONE);
-                unsubscribeFromProfile.setVisibility(View.VISIBLE);
+                try{  new SubscriptionUtilities("sub").execute(companyID);
+                    FirebaseMessaging.getInstance().subscribeToTopic(companyID);
+                }catch (Exception e){e.printStackTrace();}
 
                 break;
 
 
 
             case R.id.unsubscribeFProfile:
-                subscribeFromProfle.setVisibility(View.VISIBLE);
-                unsubscribeFromProfile.setVisibility(View.GONE);
+                try{  new SubscriptionUtilities("unsub").execute(companyID);
+                    FirebaseMessaging.getInstance().unsubscribeFromTopic(companyID);
+                }catch (Exception e){e.printStackTrace();}
+
 
                 break;
 
@@ -475,7 +490,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private   class GetCompanyInfo extends AsyncTask<String,String,String>{
+    private  class GetCompanyInfo extends AsyncTask<String,String,String>{
 
 
 
@@ -503,7 +518,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                 HttpURLConnection httpURLConnection;
                 URL url;
 
-                url = new URL( getString(R.string.host)+"/profile/get_company_info_from_id.php?company_id=" + URLEncoder.encode(params[0],"UTF-8"));
+                url = new URL( getString(R.string.host)+"/profile/get_company_info_from_id.php?company_id=" + URLEncoder.encode(params[0],"UTF-8") +"&user_phone=" +new GuestInformation(CompanyProfile.this).getGuestNumber());
                 httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 BufferedReader  bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
@@ -515,6 +530,8 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
 
                 JSONObject jsonObject = new JSONArray(builder.toString()).getJSONObject(0);
+
+                isSubscrribed          =  jsonObject.getString("isSubscribed");
 
                 companyBannerS          = jsonObject.getString("companyBanner");
 
@@ -530,6 +547,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                 companyCityS            = jsonObject.getString("companyCity");
                 companyLandmarkS        = jsonObject.getString("companyLandmark");
                 companyStateS           = jsonObject.getString("companyState");
+
 
 
 
@@ -567,10 +585,8 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
             if(companyTagLineS == null||  companyAboutS == null || companyLandmarkS == null || companyCityS == null || addVisitS == null){
 
                 Toast.makeText(CompanyProfile.this, "Connection too slow, Please Connect to networks and try again " + s, Toast.LENGTH_SHORT).show();
-                /*finish activity if data  == null*/
-//                finish();
-//                return;
-
+                 finish();
+                 return;
             }
 
 
@@ -581,11 +597,19 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
             companyTag  .setText(companyTagLineS.toLowerCase());
 
 
-            companyAbout.setText(companyAboutS.toLowerCase());
+            companyAbout.setText(companyAboutS);
 
-            addressLine1.setText(companyCityS.toLowerCase());
-            addressOpp  .setText(companyLandmarkS.toLowerCase());
+            addressLine1.setText(companyCityS);
+            addressOpp  .setText(companyLandmarkS);
             companyState.setText(companyStateS);
+
+            if ( isSubscrribed.contains("subscribed") ){
+                subscribeFromProfle.setVisibility(View.GONE);
+                unsubscribeFromProfile.setVisibility(View.VISIBLE);
+            }else{
+                subscribeFromProfle.setVisibility(View.VISIBLE);
+                unsubscribeFromProfile.setVisibility(View.GONE);
+            }
 
 
 
@@ -619,6 +643,13 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
+            Log.e("post_C",s);
+
+
+
+            Log.e("myPosts", " Size of job posts " + jobPostIdArray.size());
+
 
             if (jobPostIdArray.size() == 0){
                 noCompanyPosts.startAnimation(AnimationUtils.loadAnimation(CompanyProfile.this,R.anim.card_animation));
@@ -674,10 +705,15 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 HttpResponse httpResponse = (HttpResponse) httpClient.execute(httpPost);
 
+
+                HttpURLConnection httpURLConnection;
+
                 HttpEntity httpEntity = (HttpEntity)httpResponse.getEntity();
 
                 BufferedReader  bufferedReader = new BufferedReader(new InputStreamReader(httpEntity.getContent()));
                 String str = "";
+
+
 
                 while ( (str = bufferedReader.readLine()) != null){
                     builder.append(str);
@@ -686,20 +722,18 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                 jsonArray = new JSONArray(builder.toString());
 
 
-
                 for (int i = 0; i < jsonArray.length(); i++){
-
                     jsonObject = jsonArray.getJSONObject(i);
-
-                    postDateArrayJ.add(jsonObject.getString("postDaate"));
+                    postDateArrayJ.add(jsonObject.getString("postDate"));
                     jobInfoArray.add(jsonObject.getString("jobInfo"));
-                    jobPostIdArray.add(jsonObject.getString("jobId"));
+                    jobPostIdArray.add(jsonObject.getString("postId"));
 
                 }
 
 
             }catch (Exception e){
                 e.printStackTrace();
+                Log.e("myPosts","Exception raised "+ e.toString());
             }
 
 
@@ -714,7 +748,6 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
     private   class GetCompanyBucket extends AsyncTask< String, String, String>{
 
 
-        Context context;
         JSONObject jsonObject;
         JSONArray jsonArray;
 
@@ -745,6 +778,8 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
 
+
+            Log.e("myPosts", " Size of saleTitleArray" + saleTitleArray.size());
 
             if (saleTitleArray.size() == 0){
                 noBucketPosts.startAnimation(AnimationUtils.loadAnimation(CompanyProfile.this,R.anim.card_animation));
@@ -818,6 +853,7 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                     saleDiscriptionArray.add(jsonObject.getString("saleDiscription"));
                     postDateArrayB.add(jsonObject.getString("saleDate"));
                     saleID.add(jsonObject.getString("saleId"));
+
                 }
 
 
@@ -825,11 +861,144 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
 
             }catch (Exception e){
+                Log.e("myposts","Exception here " + e.toString());
 
             }
 
 
             return builder.toString();
+
+        }
+
+
+
+    }
+
+
+    private    class SubscriptionUtilities extends AsyncTask< String, String, String >{
+        /*sub*/
+        String flag;
+
+        public SubscriptionUtilities(String flag) {
+            this.flag = flag;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            if (flag.equals("sub")){
+                unsubscribeFromProfile.setVisibility(View.VISIBLE);
+                subscribeFromProfle.setVisibility(View.GONE);
+            }else {
+
+                unsubscribeFromProfile.setVisibility(View.GONE);
+                subscribeFromProfle.setVisibility(View.VISIBLE);
+
+            }
+
+        }
+
+
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+          /*  strings[0]  = whether subscribe or unsubscribe
+            strings[1]  = companys id      */
+
+            String          urlToHit            =   getString(R.string.host) + "/workshop/subscription_utils.php";
+            StringBuilder   stringBuilder       =   new StringBuilder();
+
+
+            HttpURLConnection httpURLConnection ;
+            URL url;
+
+
+            try {
+
+
+                switch (flag.trim()){
+
+                    case "sub":
+                        url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(flag, "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(CompanyProfile.this).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[0],"UTF-8") );
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(flag, "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(CompanyProfile.this).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[0],"UTF-8") );
+                        break;
+
+                    case "unsub":
+                        url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(flag, "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(CompanyProfile.this).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[0],"UTF-8") );
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(flag, "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(CompanyProfile.this).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[0],"UTF-8") );
+                        break;
+
+                    default:
+                        url = new URL(urlToHit + "?functionname=" + URLEncoder.encode(flag, "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(CompanyProfile.this).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[0],"UTF-8") );
+                        Log.e("channel",urlToHit + "?functionname=" + URLEncoder.encode(flag, "UTF-8") + "&user_phone="+ URLEncoder.encode(new GuestInformation(CompanyProfile.this).getGuestNumber(), "UTF-8") +"&channel_id=" + URLEncoder.encode(strings[0],"UTF-8") );
+
+                }
+
+
+
+
+
+
+                httpURLConnection =  (HttpURLConnection)  url.openConnection();
+
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+                String line = "";
+
+                while(  (line  =    bufferedReader.readLine()) != null   ){
+                    stringBuilder.append(line).append("\n");
+                }
+
+
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return stringBuilder.toString();
+
+
+        }
+
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            switch (s.trim()){
+
+                case "success":
+                    break;
+
+                case "failure":
+
+                    if (flag.equals("sub")){
+                        unsubscribeFromProfile.setVisibility(View.GONE);
+                        subscribeFromProfle.setVisibility(View.VISIBLE);
+                    }else {
+                        unsubscribeFromProfile.setVisibility(View.VISIBLE);
+                        subscribeFromProfle.setVisibility(View.GONE);
+                    }
+
+                    break;
+
+
+
+
+
+
+
+
+
+
+
+            }
+
 
         }
 

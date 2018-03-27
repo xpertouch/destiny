@@ -230,22 +230,24 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
         aboutCard.startAnimation(cardAnimation);
         addresssCard.startAnimation(cardAnimation);
 
-        // Company Title Pannel
+
+        Button generateQR = (Button) findViewById(R.id.generateStoreQR);
+        generateQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MyCompany.this,MyCompanyQR.class));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+            }
+        });
 
 
-//
-//        ImageView editCompanyImage,companyProfilePic;
-//        ViewFlipper companyImageFlipper;
-//        LinearLayout selectCFromGallery,cancelCFrom,UploadCfrom;
-
-
-        
-        editCompanyImage = (ImageView) findViewById(R.id.editCompanyImage);
-        companyPicPreview = (ImageView) findViewById(R.id.companyPicPreview);
-        companyImageFlipper = (ViewFlipper) findViewById(R.id.companyImageFlipper);
-        selectCFromGallery = (ImageButton) findViewById(R.id.selectCFromGallery);
-        cancelCFrom = (ImageButton) findViewById(R.id.cancelCFrom);
-        uploadCfrom = (ImageButton) findViewById(R.id.uploadCfrom);
+        editCompanyImage        = (ImageView) findViewById(R.id.editCompanyImage);
+        companyPicPreview       = (ImageView) findViewById(R.id.companyPicPreview);
+        companyImageFlipper     = (ViewFlipper) findViewById(R.id.companyImageFlipper);
+        selectCFromGallery      = (ImageButton) findViewById(R.id.selectCFromGallery);
+        cancelCFrom             = (ImageButton) findViewById(R.id.cancelCFrom);
+        uploadCfrom             = (ImageButton) findViewById(R.id.uploadCfrom);
         
         editCompanyImage.setOnClickListener(this);
         selectCFromGallery.setOnClickListener(this);

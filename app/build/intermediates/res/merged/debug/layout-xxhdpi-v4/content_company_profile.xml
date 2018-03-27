@@ -431,7 +431,7 @@
                                             android:text="Unsubscribe"
                                             android:textColor="#ffffff"
                                             android:textSize="10sp"
-                                            android:visibility="visible" />
+                                            android:visibility="invisible" />
 
                                         <Button
                                             android:id="@+id/subscribeFProfile"

@@ -118,7 +118,7 @@
         app:persistentSV_editHintTextColor="?android:textColorHint"
         app:persistentSV_editTextColor="?android:textColorPrimary"
         app:persistentSV_homeButtonMode="arrow"
-        app:persistentSV_logoString="BrowseChannels"
+        app:persistentSV_logoString="BrowseStores"
         app:persistentSV_searchCardElevation="2dp"
         app:persistentSV_searchTextColor="?android:textColorPrimary"
         tools:layout_editor_absoluteX="8dp"

@@ -1,6 +1,8 @@
 package corp.burenz.expertouch.adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -8,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +28,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 import corp.burenz.expertouch.R;
+import corp.burenz.expertouch.activities.CompanyProfile;
 import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.util.ChannelHolder;
 import corp.burenz.expertouch.util.MySingleton;
@@ -59,6 +63,8 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
             holder.companyLocationTV.setText(channelHolderList.getCompanyAddress().get(position));
             holder.companyAboutTV.setText(channelHolderList.getCompanyAbout().get(position));
             holder.companyBannerView.setImageUrl(channelHolderList.getCompanyBannerURL().get(position), MySingleton.getInstance(mContext).getImageLoader());
+
+
             Log.e("channel","" +channelHolderList.getCompanyBannerURL());
 
 
@@ -113,6 +119,16 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
         });
 
 
+        holder.channelCardHolder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Activity activity = (Activity) mContext;
+                activity.startActivity(new Intent(mContext, CompanyProfile.class).putExtra("companyID",channelHolderList.getCompanyID().get(position)));
+                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+            }
+        });
+
+
 
 
 
@@ -130,6 +146,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
         TextView            companyTitleTV, companyLocationTV, companyAboutTV;
         Button              subsscribeNow, unSubscribeNow;
         NetworkImageView    companyBannerView;
+        LinearLayout        channelCardHolder;
 
 
 
@@ -144,6 +161,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
             subsscribeNow           =   (Button)            v.findViewById(R.id.subsCribeChannelBtnC);
             unSubscribeNow          =   (Button)            v.findViewById(R.id.unsubscribefromChannelButton);
             companyBannerView       =   (NetworkImageView)  v.findViewById(R.id.realCompanyNetworkImage);
+            channelCardHolder       =   (LinearLayout)      v.findViewById(R.id.channelCardHolder);
         }
     }
 

@@ -86,6 +86,7 @@ public class MyBucket extends Fragment {
 
 
     }
+
     private  class GetMyCompanyPosts extends AsyncTask<String,String,String> {
 
 
@@ -142,11 +143,6 @@ public class MyBucket extends Fragment {
 
 
                 }
-
-
-
-
-
 
 
             } catch (UnsupportedEncodingException e) {

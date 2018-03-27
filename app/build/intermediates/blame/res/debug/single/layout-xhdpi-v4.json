@@ -12,6 +12,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-xhdpi/activity_report_company.xml"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-xhdpi-v4/qr_my_company.xml",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-xhdpi/qr_my_company.xml"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/layout-xhdpi-v4/newfeeds_layout.xml",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/layout-xhdpi/newfeeds_layout.xml"
     },

@@ -51,7 +51,7 @@ public class JobPostDetails  extends AppCompatActivity{
     RecyclerView        listOfUrlsRV;
     TextView            noLinksIfNot, jobInTheDescriptionTV;
 
-
+    String              companyTitleFromServer, postDate, companyBannerURL;
 
 
     @Override
@@ -94,39 +94,7 @@ public class JobPostDetails  extends AppCompatActivity{
 
         if (fromJobsActivity != null){
 
-            postDetailsCompanyTitleTV    .setText( fromJobsActivity.getString("companyTitle","1clickAway Official") );
-            posDetailsPostDetailsTV      .setText( fromJobsActivity.getString("postDate","Yesterday") );
-            companyBannerImage           .setImageUrl(fromJobsActivity.getString("companyBanner","http://1clickaway.in/ver1.1/defaults/company_default.jpg"),MySingleton.getInstance(JobPostDetails.this).getImageLoader());
-            informationToSearch          =  fromJobsActivity.getString("jobInfo","1clickAway Official");
-
-
-            if(informationToSearch.contains("...")){
-
-                new GetJobInformation(JobPostDetails.this).execute(fromJobsActivity.getString("postId","none"));
-
-            }else {
-                jobInTheDescriptionTV.setVisibility(View.VISIBLE);
-                postDetailsTextView.setText(informationToSearch);
-                postDetailsProgress.setVisibility(View.GONE);
-
-                ArrayList<String> listOfUrls = retrieveLinks(informationToSearch);
-
-                if(listOfUrls.size() == 0){
-                    /* no links inside the text*/
-                    noLinksIfNot.setVisibility(View.VISIBLE);
-                    noLinksIfNot.setText("No Links detected in the description...");
-
-                }else {
-
-                    noLinksIfNot.setVisibility(View.GONE);
-                    LinksLayoutAdapter linksLayoutAdapter = new LinksLayoutAdapter(listOfUrls, JobPostDetails.this);
-                    listOfUrlsRV.setLayoutManager(new LinearLayoutManager(JobPostDetails.this));
-                    listOfUrlsRV.setAdapter(linksLayoutAdapter);
-
-                }
-
-
-            }
+            new GetJobInformation(JobPostDetails.this).execute(fromJobsActivity.getString("postId","none"));
 
 
         }
@@ -230,6 +198,12 @@ public class JobPostDetails  extends AppCompatActivity{
             if (completeJobInformationFromInternet != null){
                 informationToSearch = completeJobInformationFromInternet;
                 postDetailsTextView.setText(completeJobInformationFromInternet);
+
+                postDetailsCompanyTitleTV.setText(companyTitleFromServer);
+                posDetailsPostDetailsTV.setText(postDate);
+                companyBannerImage.setImageUrl(companyBannerURL,MySingleton.getInstance(mContext).getImageLoader());
+
+
                 postDetailsTextView.setVisibility(View.VISIBLE);
                 jobInTheDescriptionTV.setVisibility(View.VISIBLE);
 
@@ -271,7 +245,7 @@ public class JobPostDetails  extends AppCompatActivity{
 
             try {
                 url                     = new URL(urlTohit + "?post_id=" + URLEncoder.encode(strings[0],"UTF-8"));
-                Log.e("post_new",urlTohit + "?like=" + URLEncoder.encode(informationToSearch.substring(0,20),"UTF-8") + "&c_t=" + URLEncoder.encode(fromJobsActivity.getString("companyTitle","1clickAway Official"),"UTF-8"));
+//                Log.e("post_new",urlTohit + "?like=" + URLEncoder.encode(informationToSearch.substring(0,20),"UTF-8") + "&c_t=" + URLEncoder.encode(fromJobsActivity.getString("companyTitle","1clickAway Official"),"UTF-8"));
                 httpURLConnection       = (HttpURLConnection) url.openConnection();
 
                 BufferedReader bufferedReader  = new BufferedReader( new InputStreamReader(httpURLConnection.getInputStream()));
@@ -281,12 +255,18 @@ public class JobPostDetails  extends AppCompatActivity{
                     stringBuilder.append(line).append("\n");
                 }
 
+
                 JSONArray jsonArray = new JSONArray(stringBuilder.toString());
                 for (int i = 0; i <= jsonArray.length(); i++ ){
 
+
                     completeJobInformationFromInternet = jsonArray.getJSONObject(0).getString("jobInfo");
+                    companyTitleFromServer  =            jsonArray.getJSONObject(0).getString("companyTitle");
+                    companyBannerURL        =    jsonArray.getJSONObject(0).getString("companyBanner");
+                    postDate                = jsonArray.getJSONObject(0).getString("postDate");
 
                 }
+
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();

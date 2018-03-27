@@ -19,9 +19,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
 
@@ -47,7 +47,7 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
     private ArrayList<String> expertId;
     private LinearLayout expertCard;
     private Animation cardAnimation;
-    private NetworkImageView expertAvtarV;
+    private ImageView expertAvtarV;
     private CircularImageView circularView;
 
 
@@ -94,64 +94,31 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
 
 
     @Override
-    public void onBindViewHolder(ExpertVieweHolder holder, final int position) {
-
-
-        final ViewFlipper statusShutetrFlipper;
-        final ImageView shutterUp,shutterDown;
-        final TextView visitProfile,addExpertOfffline;
-
-        LinearLayout expertCard;
-
-
-        final TextView expertName,expertExpertise,expertCityV,expertStatus,expertSkills;
-
-
-
-
+    public void onBindViewHolder(final ExpertVieweHolder holder, final int position) {
         userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
-        statusShutetrFlipper = holder.statusShutetrFlipper;
-        shutterUp = holder.shutterUp;
-        shutterDown = holder.shutterDown;
-        visitProfile = holder.visitProfile;
-
-        expertName = holder.expertName;
-        expertExpertise = holder.expertExpertise;
-        expertCityV = holder.expertExperience;
-        expertStatus = holder.expertStatus;
-        expertSkills =  holder.expertSkills;
-        addExpertOfffline = holder.addExpertOfffline;
-        expertAvtarV = holder.expertAvtarV;
-        circularView = holder.circularView;
-        expertCard = holder.expertCard;
-
-        ImageLoader imageLoader = MySingleton.getInstance(context).getImageLoader();
 
         cardAnimation = AnimationUtils.loadAnimation(context,R.anim.fab_open);
-  //      expertCard.startAnimation(cardAnimation);
-
-        // setting Text
 
 
         try{
-            expertName.setText(toTitleCase(expertNames.get(position)));
-            expertCityV.setText(toTitleCase(expertCityArray.get(position)));
+            holder.expertName.setText(toTitleCase(expertNames.get(position)));
+            holder.expertCityV.setText(toTitleCase(expertCityArray.get(position)));
 
 
         }catch (Exception e){
-            expertName.setText(expertNames.get(position));
-            expertExpertise.setText(expertMainExpertise.get(position));
+            holder.expertName.setText(expertNames.get(position));
+            holder.expertExpertise.setText(expertMainExpertise.get(position));
 
         }
 
 
-        expertExpertise.setText(expertMainExpertise.get(position));
-        expertStatus.setText(expertCallStatus.get(position));
-        expertSkills.setText(expertSkillsArray.get(position));
+        holder.expertExpertise.setText(expertMainExpertise.get(position));
+        holder.expertStatus.setText(expertCallStatus.get(position));
+        holder.expertSkills.setText(expertSkillsArray.get(position));
 
 
 
-        addExpertOfffline.setOnClickListener(new View.OnClickListener() {
+        holder.addExpertOfffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -159,8 +126,8 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
                 try{
 
 
-                    statusShutetrFlipper.showPrevious();
-                    shutterUp.setVisibility(View.VISIBLE);
+                    holder.statusShutetrFlipper.showPrevious();
+                    holder.shutterUp.setVisibility(View.VISIBLE);
 
                     favourites.writer();
 
@@ -191,18 +158,20 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
         });
 
 
-        expertAvtarV.setImageUrl((String) expertPic.get(position), imageLoader);
+
+        holder.imageLoader.displayImage(expertPic.get(position),holder.expertAvtarV);
+
         // OnClickListners
-        visitProfile.setOnClickListener(new View.OnClickListener() {
+        holder.visitProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                statusShutetrFlipper.showPrevious();
-                shutterUp.setVisibility(View.VISIBLE);
-                visitProfile.setClickable(false);
+                holder.statusShutetrFlipper .showPrevious();
+                holder.shutterUp            .setVisibility(View.VISIBLE);
+                holder.visitProfile.setClickable(false);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        visitProfile.setClickable(true);
+                        holder.visitProfile.setClickable(true);
                     }
                 },500);
 
@@ -227,101 +196,31 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
         });
 
 
-
-//        expertName.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                shutterDown.setVisibility(View.VISIBLE);
-//                statusShutetrFlipper.showNext();
-//                shutterUp.setVisibility(View.GONE);
-//
-//                expertAvtarV.setClickable(false);
-//                expertName.setClickable(false);
-//                expertExpertise.setClickable(false);
-//                expertCityV.setClickable(false);
-//            }
-//        });
-//
-//
-//
-//        expertExpertise.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                shutterDown.setVisibility(View.VISIBLE);
-//                statusShutetrFlipper.showNext();
-//                shutterUp.setVisibility(View.GONE);
-//
-//                expertAvtarV.setClickable(false);
-//                expertName.setClickable(false);
-//                expertExpertise.setClickable(false);
-//                expertCityV.setClickable(false);
-//            }
-//        });
-//
-//
-//        expertCityV.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                shutterDown.setVisibility(View.VISIBLE);
-//                statusShutetrFlipper.showNext();
-//                shutterUp.setVisibility(View.GONE);
-//
-//                expertAvtarV.setClickable(false);
-//                expertName.setClickable(false);
-//                expertExpertise.setClickable(false);
-//                expertCityV.setClickable(false);
-//            }
-//        });
-//
-//
-//
-//
-//        expertAvtarV.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                shutterDown.setVisibility(View.VISIBLE);
-//                statusShutetrFlipper.showNext();
-//                shutterUp.setVisibility(View.GONE);
-//
-//                expertAvtarV.setClickable(false);
-//                expertName.setClickable(false);
-//                expertExpertise.setClickable(false);
-//                expertCityV.setClickable(false);
-//
-//            }
-//        });
-
-        shutterUp.setOnClickListener(new View.OnClickListener() {
+        holder.shutterUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shutterDown.setVisibility(View.VISIBLE);
-                statusShutetrFlipper.showNext();
-                shutterUp.setVisibility(View.GONE);
-                expertAvtarV.setClickable(false);
-                expertName.setClickable(false);
-                expertExpertise.setClickable(false);
-                expertCityV.setClickable(false);
-
-
-
-
-
-
+                holder.shutterDown.setVisibility(View.VISIBLE);
+                holder.statusShutetrFlipper.showNext();
+                holder.shutterUp.setVisibility(View.GONE);
+                holder.expertAvtarV.setClickable(false);
+                holder.expertName.setClickable(false);
+                holder.expertExpertise.setClickable(false);
+                holder.expertCityV.setClickable(false);
             }
         });
 
-        shutterDown.setOnClickListener(new View.OnClickListener() {
+        holder.shutterDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shutterDown.setVisibility(View.GONE);
-                statusShutetrFlipper.showPrevious();
-                shutterUp.setVisibility(View.VISIBLE);
+                holder.shutterDown.setVisibility(View.GONE);
+                holder.statusShutetrFlipper.showPrevious();
+                holder.shutterUp.setVisibility(View.VISIBLE);
 
 
-                expertAvtarV.setClickable(true);
-                expertName.setClickable(true);
-                expertExpertise.setClickable(true);
-                expertCityV.setClickable(true);
+                holder.expertAvtarV.setClickable(true);
+                holder.expertName.setClickable(true);
+                holder.expertExpertise.setClickable(true);
+                holder.expertCityV.setClickable(true);
 
                 Log.e("IDBUG","Expert Id inn expert Card is :" + expertId.get(position));
 
@@ -365,18 +264,20 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
     // V I E W S      H E R E
 
 
-    public static class ExpertVieweHolder extends RecyclerView.ViewHolder {
+    public  class ExpertVieweHolder extends RecyclerView.ViewHolder {
 
         ViewFlipper statusShutetrFlipper;
         ImageView shutterUp,shutterDown;
         TextView visitProfile;
+        ImageLoader imageLoader;
 
         // card textViews
 
-        TextView expertName,expertExpertise,expertExperience,expertSkills,expertStatus,addExpertOfffline;
-        NetworkImageView expertAvtarV;
+        TextView expertName,expertExpertise,expertCityV,expertSkills,expertStatus,addExpertOfffline;
+        ImageView expertAvtarV;
         LinearLayout expertCard;
         CircularImageView circularView;
+
 
 
         public ExpertVieweHolder(View itemView) {
@@ -388,21 +289,18 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
             visitProfile            = (TextView)itemView.findViewById(R.id.visitProfile);
             expertName              = (TextView)itemView.findViewById(R.id.expertName);
             expertExpertise         = (TextView)itemView.findViewById(R.id.expertExpertise);
-            expertExperience        = (TextView)itemView.findViewById(R.id.expertExperience);
+            expertCityV             = (TextView)itemView.findViewById(R.id.expertExperience);
             expertStatus            = (TextView)itemView.findViewById(R.id.expertStatus);
             expertSkills            = (TextView)itemView.findViewById(R.id.expertSkills);
             expertCard              = (LinearLayout) itemView.findViewById(R.id.expertCard);
             addExpertOfffline       = (TextView) itemView.findViewById(R.id.addExpertOffline);
-            expertAvtarV            = (NetworkImageView) itemView.findViewById(R.id.expertAvtarIV);
+            expertAvtarV            = (ImageView) itemView.findViewById(R.id.expertAvtarIV);
             circularView            = (CircularImageView) itemView.findViewById(R.id.circularView);
 
-  //          circularView.setBorderColor(R.color.newVector);
-    //        circularView.setBorderWidth(10);
-//            // Add Shadow with default aram
-//            circularView.addShadow();
-//            // or with custom param
-//            circularView.setShadowRadius(30);
-//            circularView.setShadowColor(Color.WHITE);
+            ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).build();
+            com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(config);
+            imageLoader   = com.nostra13.universalimageloader.core.ImageLoader.getInstance(); // Get singleton instance
+
             circularView.setShadowRadius(50);
             circularView.setShadowColor(Color.RED);
 
@@ -414,8 +312,5 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
     public int getItemCount() {
         return expertId.size();
     }
-
-
-
 
 }

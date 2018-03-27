@@ -113,6 +113,7 @@
     <orderEntry type="library" exported="" name="com.nineoldandroids:library:2.4.0@jar" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:weather-icons-typeface-2.0.10.2" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:foundation-icons-typeface-3.0.0.2" level="project" />
+    <orderEntry type="library" exported="" name="com.github.kenglxn.QRGen:android:2.4.0@jar" level="project" />
     <orderEntry type="library" exported="" name="com.google.firebase:firebase-analytics-impl-10.0.1" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:community-material-typeface-1.7.22.1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-v4-25.1.1" level="project" />
@@ -129,6 +130,7 @@
     <orderEntry type="library" exported="" name="com.android.support:transition-25.1.1" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:meteocons-typeface-1.1.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-compat-25.1.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.zxing:core:3.3.0@jar" level="project" />
     <orderEntry type="library" exported="" name="com.google.firebase:firebase-core-10.0.1" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:google-material-typeface-2.2.0.3.original" level="project" />
     <orderEntry type="library" exported="" name="uk.co.samuelwall:material-tap-target-prompt-1.6.3" level="project" />
@@ -137,10 +139,10 @@
     <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-25.1.1" level="project" />
     <orderEntry type="library" exported="" name="com.github.florent37:materialviewpager-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="com.google.firebase:firebase-analytics-10.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.github.kenglxn.QRGen:core:2.4.0@jar" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" exported="" name="com.mcxiaoke.volley:library:1.0.19@jar" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:typeicons-typeface-2.0.7.2" level="project" />
-    <orderEntry type="library" exported="" name="com.google.zxing:core:3.2.1@jar" level="project" />
     <orderEntry type="library" exported="" name="org.cryse.widget:persistentsearchview-1.0.4" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:devicon-typeface-2.0.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.mikhaellopez:circularimageview-3.0.1" level="project" />

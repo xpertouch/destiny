@@ -91,7 +91,7 @@ public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
                 public void onClick(View view) {
 
                     Log.e("finale","im listening add counts adapter");
-                    mContext.startActivity(new Intent(mContext, JobPostDetails.class).putExtra("companyTitle",companyTitle).putExtra("postDate", postDate).putExtra("jobInfo",jobInformation).putExtra("companyBanner",companyBanner).putExtra("postId",postId));
+                    mContext.startActivity(new Intent(mContext, JobPostDetails.class).putExtra("postId",postId));
 
                 }
             });

@@ -164,36 +164,6 @@ public class ChannelSearchView extends AppCompatActivity {
     }
 
 
-    private void createHistorys() {
-        List<SearchItem> mHistorySuggestions = new ArrayList<SearchItem>();
-        SearchItem item1 = new SearchItem(
-                "Isaac Newton",
-                "Isaac Newton",
-                SearchItem.TYPE_SEARCH_ITEM_HISTORY
-        );
-        mHistorySuggestions.add(item1);
-        SearchItem item2 = new SearchItem(
-                "Albert Einstein",
-                "Albert Einstein",
-                SearchItem.TYPE_SEARCH_ITEM_HISTORY
-        );
-        mHistorySuggestions.add(item2);
-        SearchItem item3 = new SearchItem(
-                "John von Neumann",
-                "John von Neumann",
-                SearchItem.TYPE_SEARCH_ITEM_HISTORY
-        );
-        mHistorySuggestions.add(item3);
-        SearchItem item4 = new SearchItem(
-                "Alan Mathison Turing",
-                "Alan Mathison Turing",
-                SearchItem.TYPE_SEARCH_ITEM_HISTORY
-        );
-        mHistorySuggestions.add(item4);
-    }
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

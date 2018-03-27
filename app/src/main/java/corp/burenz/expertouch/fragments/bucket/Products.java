@@ -47,16 +47,9 @@ import corp.burenz.expertouch.butter.GuestInformation;
 
 public class Products extends Fragment {
 
-    ArrayList<String> companyTitles;
-    ArrayList<String> saleDate;
-    ArrayList<String> saleTitle;
-    ArrayList<String> companyCity;
-    ArrayList<String> saleDiscription;
-    ArrayList<String> saleBanner;
-    ArrayList<String> saleID;
-    ArrayList<String> myLikeIds;
-    ArrayList<String> totalLikes;
-    ArrayList<String> attachedBanner;
+    ArrayList<String> companyTitles,saleDate,saleTitle,companyCity, saleDiscription, saleBanner, saleID,
+            myLikeIds,totalLikes,attachedBanner, companyIDArray;
+
     SharedPreferences userData;
 
     String LOCAL_APP_DATA = "userInformation";
@@ -72,7 +65,7 @@ public class Products extends Fragment {
 
 
 
-public  Products(){
+public  Products(  ){
 
 }
 
@@ -229,15 +222,17 @@ public  Products(){
         protected void onPreExecute() {
             super.onPreExecute();
 
-            companyTitles = new ArrayList<>();
-            saleDate = new ArrayList<>();
-            saleTitle = new ArrayList<>();
-            companyCity = new ArrayList<>();
-            saleDiscription = new ArrayList<>();
-            saleBanner = new ArrayList<>();
-            saleID  =new ArrayList<>();
-            totalLikes  = new ArrayList<>();
-            attachedBanner = new ArrayList<>();
+            companyTitles       = new ArrayList<>();
+            saleDate            = new ArrayList<>();
+            saleTitle           = new ArrayList<>();
+            companyCity         = new ArrayList<>();
+            saleDiscription     = new ArrayList<>();
+            saleBanner          = new ArrayList<>();
+            saleID              = new ArrayList<>();
+            totalLikes          = new ArrayList<>();
+            attachedBanner      = new ArrayList<>();
+            companyIDArray      = new ArrayList<>();
+
         }
 
         @Override
@@ -284,6 +279,7 @@ public  Products(){
                     saleBanner.add(jsonObject.getString("companyBanner"));
                     totalLikes.add(jsonObject.getString("totalLikes"));
                     attachedBanner.add(jsonObject.getString("attachedBanner"));
+                    companyIDArray.add(jsonObject.getString("companyID"));
                 }
 
             } catch (HttpHostConnectException e) {
@@ -301,160 +297,6 @@ public  Products(){
             super.onPostExecute(s);
             Log.e("Responsefromserver",s);
 
-
-
-
-//            saleID.add("50");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcome To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("120");
-//
-//
-//            saleID.add("51");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("130");
-//
-//
-//            saleID.add("52");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("240");
-//
-//
-//            saleID.add("53");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("333");
-//
-//
-//            saleID.add("54");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("6");
-//
-//
-//
-//            saleID.add("55");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcome To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("98");
-//
-//
-//            saleID.add("56");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("1234");
-//
-//
-//            saleID.add("57");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("45");
-//
-//
-//            saleID.add("58");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("22");
-//
-//
-//            saleID.add("59");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("56");
-//
-//            saleID.add("60");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcome To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("98");
-//
-//
-//            saleID.add("61");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("75");
-//
-//
-//            saleID.add("62");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("45");
-//
-//
-//            saleID.add("63");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("22");
-//
-//
-//            saleID.add("64");
-//            companyTitles.add("Burenz Corporation");
-//            saleDate.add("26 November 2016");
-//            saleTitle.add("Welcomw To Burenz Corp");
-//            companyCity.add("Anantnag Jammu and Kashmir");
-//            saleDiscription.add("Well fellows this is a company you would love to Join");
-//            saleBanner.add("http://xpertouch.pe.hu/defaults/company_default.jpg");
-//            totalLikes.add("56");
-//
-
-
             if (companyTitles.size() == 0) {
                 myBucketRV.setVisibility(View.GONE);
                 noAdverts.setVisibility(View.VISIBLE);
@@ -465,7 +307,8 @@ public  Products(){
                 noAdverts.setVisibility(View.GONE);
                 loadProgress.setVisibility(View.GONE);
 
-                adapter = new BucketAdapter(getActivity(),saleID ,companyTitles, companyCity, saleTitle, saleDiscription, saleDate, saleBanner,myLikeIds,totalLikes,attachedBanner);
+                adapter = new BucketAdapter(getActivity(),saleID ,companyTitles, companyCity, saleTitle,
+                        saleDiscription, saleDate, saleBanner,myLikeIds,totalLikes,attachedBanner,companyIDArray);
                 adapter.notifyDataSetChanged();
                 myBucketRV.setAdapter(new RecyclerViewMaterialAdapter(adapter));
                 MaterialViewPagerHelper.registerRecyclerView(getActivity(),myBucketRV);

@@ -66,6 +66,16 @@ public class MyIntroActivity extends AppCompatActivity {
 
 
 
+        if((Build.VERSION.SDK_INT > 23)){
+
+            letsGetGoing.setText("GRANT PERMISSIONS");
+
+        }else {
+            letsGetGoing.setText("GET STARTED");
+
+
+        }
+
 
         letsGoFinally.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,81 +113,79 @@ public class MyIntroActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v){
 
-                if((Build.VERSION.SDK_INT > 23)){
-                    letsGetGoing.setText("Get Started");
-                    Toast.makeText(MyIntroActivity.this, "below 23", Toast.LENGTH_SHORT).show();
-
-                }else {
-                    letsGetGoing.setText("Grant Permissions");
-                    Toast.makeText(MyIntroActivity.this, "above 23", Toast.LENGTH_SHORT).show();
-
-                }
 
 
 
-                if ( letsGetGoing.getText().toString().contains("Grant") ){
+
+                if ( letsGetGoing.getText().toString().contains("PERMISSIONS") ){
+                    letsGetGoing.setText("GET STARTED");
                     requestForPermissions();
-                    letsGetGoing.setText("Get Started");
-                    Toast.makeText(MyIntroActivity.this, "inside Grant", Toast.LENGTH_SHORT).show();
 
 
                 }else{
 
-                    Toast.makeText(MyIntroActivity.this, "Outside grant", Toast.LENGTH_SHORT).show();
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Snackbar.make(v,"Sit back and Relax While the App Introduces itself",Snackbar.LENGTH_SHORT).show();
-                        }
-                    },4000);
+                    /*turn the shutter up*/
 
-                    Animation slideup  = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.abc_slide_out_top);
-
-                    slideup.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    lowerHalfIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_down_slow));
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            lowerHalfIntro.setVisibility(View.GONE);
-                                        }
-                                    },300);
-                                }
-                            },400);
-
-                        }
-
-                        @Override
-                        public void onAnimationEnd(Animation animation) {
-                            upperHalfintro.setVisibility(View.INVISIBLE);
-                            // call intro 2 function
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    setIntroTwo();
-                                }
-                            },600);
-
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(Animation animation) {
-
-                        }
-                    });
-
-                    upperHalfintro.startAnimation(slideup);
-
-
+                    turnUpTheShutter();
                 }
 
             }
         });
+
+
+    }
+
+    private void turnUpTheShutter() {
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                Toast.makeText(MyIntroActivity.this, "Sit back and Relax While the App Introduces itself", Toast.LENGTH_SHORT).show();
+            }
+        },4000);
+
+        Animation slideup  = AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.design_bottom_sheet_slide_out_welcome);
+
+        slideup.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        lowerHalfIntro.startAnimation(AnimationUtils.loadAnimation(MyIntroActivity.this,R.anim.md_styled_slide_down_slow));
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                lowerHalfIntro.setVisibility(View.GONE);
+                            }
+                        },300);
+                    }
+                },400);
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                upperHalfintro.setVisibility(View.INVISIBLE);
+                // call intro 2 function
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        setIntroTwo();
+                    }
+                },600);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        upperHalfintro.startAnimation(slideup);
 
 
     }
@@ -632,11 +640,17 @@ public class MyIntroActivity extends AppCompatActivity {
         int hasContactPermission = ActivityCompat.checkSelfPermission(MyIntroActivity.this,Manifest.permission.RECEIVE_SMS);
 
         if(hasContactPermission != PackageManager.PERMISSION_GRANTED ) {
-            ActivityCompat.requestPermissions(MyIntroActivity.this, new String[]   {Manifest.permission.RECEIVE_SMS,Manifest.permission.CAMERA,Manifest.permission.CALL_PHONE}, 123);
+
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                ActivityCompat.requestPermissions(MyIntroActivity.this, new String[]   {Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.RECEIVE_SMS,Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.CAMERA,Manifest.permission.CALL_PHONE}, 123);
+            }else {
+                ActivityCompat.requestPermissions(MyIntroActivity.this, new String[]   {Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.RECEIVE_SMS,Manifest.permission.CAMERA,Manifest.permission.CALL_PHONE}, 123);
+            }
+
 
         }else {
-            //Toast.makeText(AddContactsActivity.this, "Contact Permission is already granted", Toast.LENGTH_LONG).show();
-            checkCameraPermissions();
+
         }
     }
 
@@ -645,29 +659,12 @@ public class MyIntroActivity extends AppCompatActivity {
         switch (requestCode) {
             case REQUEST_CODE_ASK_PERMISSIONS:
                 // Check if the only required permission has been granted
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Log.i("Permission", "Contact permission has now been granted. Showing result.");
-                    checkCameraPermissions();
 
-                } else {
-                    Log.i("Permission", "Contact permission was NOT granted.");
-                    checkCameraPermissions();
-
-                }
-                break;
-
-            case MY_CAMERA_REQUEST_CODE:
-
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(this, "Camera Granted", Toast.LENGTH_SHORT).show();
-
-
-                } else {
-//                    Toast.makeText(this, "Camera Denied", Toast.LENGTH_SHORT).show();
-
-                }
+                /*start the transition here*/
+                turnUpTheShutter();
 
                 break;
+
 
 
 

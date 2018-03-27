@@ -36,7 +36,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:gravity="center_vertical"
-                    android:text="Post Description"
+                    android:text="Job Description"
                     android:textColor="#ffffff"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -134,7 +134,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="5dp"
-                                        android:text="1clickAway Official"
+                                        android:text="----------------------"
                                         android:textColor="@color/vectorColor"
                                         android:textSize="18sp"
                                         android:textStyle="bold" />
@@ -144,7 +144,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="5dp"
-                                        android:text="Yesterday "
+                                        android:text="------------"
                                         android:textSize="14sp" />
                                 </LinearLayout>
 
@@ -221,7 +221,7 @@
                                         android:layout_marginLeft="10dp"
                                         android:layout_marginRight="10dp"
                                         android:layout_marginTop="7dp"
-                                        android:text="This is where the job discription is showed, Sample text for job post"
+                                        android:text="-------------------"
                                         android:textColor="@color/vectorColor"
                                         android:textSize="22sp"
                                         android:visibility="visible" />

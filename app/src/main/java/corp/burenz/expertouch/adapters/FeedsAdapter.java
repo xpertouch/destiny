@@ -1,6 +1,7 @@
 package corp.burenz.expertouch.adapters;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -33,11 +35,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -70,7 +73,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
     private ArrayList<String> titleArray, subtitleArray, postDateArray, websiteArray, emailArray, banners;
     private ArrayList<String> callArray, slidingBannerURLS;
-    private ArrayList<String> postId;
+    private ArrayList<String> postId, companyIDArray;
     private Context context;
     private SharedPreferences userData;
     private View myView;
@@ -84,7 +87,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
     private RecyclerView.Adapter adapter;
     private String[] finalCount;
 
-    public FeedsAdapter(Context context, ArrayList<String> title, ArrayList<String> subtitle, ArrayList<String> postDate, ArrayList<String> callArray, ArrayList<String> websiteArray, ArrayList<String> emailArray,ArrayList<String> banners, ArrayList<String> postId) {
+    public FeedsAdapter(Context context, ArrayList<String> title, ArrayList<String> subtitle, ArrayList<String> postDate, ArrayList<String> callArray, ArrayList<String> websiteArray, ArrayList<String> emailArray,ArrayList<String> banners, ArrayList<String> postId, ArrayList<String> companyIDArray) {
 
         this.context            = context;
         this.titleArray         = title;
@@ -95,7 +98,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         this.emailArray         = emailArray;
         this.banners            = banners;
         this.postId             = postId;
-
+        this.companyIDArray     = companyIDArray;
 
     }
 
@@ -103,25 +106,27 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
-    public static class FeedsViewHolder extends RecyclerView.ViewHolder {
+    public  class FeedsViewHolder extends RecyclerView.ViewHolder {
 
         TextView            titleTextView, subtitleTextView, textViewDate,showMeMoreTV;
         ImageView           callFeed, mailFeed, visitFeed, shareFeed,companyProfile,saveForOffline;
-        NetworkImageView    mainFrame;
+        ImageView    mainFrame;
         ViewFlipper         newsFeedsFlpper, switchFeeds;
-        CardView            cardView, recommendedCapsulrInjection;
+        CardView            cardView, recommendedCapsulrInjection,hirePannelIALL;
         LinearLayout        sliderPannelLL;
         RecyclerView        jobCountsR;
         final ViewFlipper   offlineFlipper;
         SliderLayout        sliderShow;
-
+        ImageLoader         imageLoader;
+        RecyclerView        hireprofessionlsRV;
+        HireProfessionalsAdapter hireProfessionalsAdapter;
 
 
         public FeedsViewHolder(View itemView) {
             super(itemView);
             sliderPannelLL  = (LinearLayout)        itemView.findViewById(R.id.sliderPannleLL);
             titleTextView   = (TextView)            itemView.findViewById(R.id.textViewTitle);
-            mainFrame       = (NetworkImageView)    itemView.findViewById(R.id.imageViewBirthday);
+            mainFrame       = (ImageView)           itemView.findViewById(R.id.imageViewBirthday);
             newsFeedsFlpper = (ViewFlipper)         itemView.findViewById(R.id.newsFeedsFlipper);
             switchFeeds     = (ViewFlipper)         itemView.findViewById(R.id.switchFeeds);
             callFeed        = (ImageView)           itemView.findViewById(R.id.callFeed);
@@ -131,10 +136,19 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
             textViewDate    = (TextView)            itemView.findViewById(R.id.textViewDate);
             companyProfile  = (ImageView)           itemView.findViewById(R.id.takeMeToProfile);
             cardView        = (CardView)            itemView.findViewById(R.id.cardView);
-            jobCountsR      =  (RecyclerView)       itemView.findViewById(R.id.jobCountsR);
+            jobCountsR      = (RecyclerView)        itemView.findViewById(R.id.jobCountsR);
             saveForOffline  = (ImageView)           itemView.findViewById(R.id.saveForOffline);
             offlineFlipper  = (ViewFlipper)         itemView.findViewById(R.id.offlineFlipper);
             sliderShow      = (SliderLayout)        itemView.findViewById(R.id.slider);
+            hirePannelIALL  = (CardView)            itemView.findViewById(R.id.hirePannelIALL);
+            hireprofessionlsRV = (RecyclerView)     itemView.findViewById(R.id.hireprofessionlsRV);
+
+            hireProfessionalsAdapter = new HireProfessionalsAdapter(context);
+            hireprofessionlsRV.setLayoutManager(new GridLayoutManager(context, 14));
+            hireprofessionlsRV.setAdapter(hireProfessionalsAdapter);
+            ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).build();
+            com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(config);
+            imageLoader   = com.nostra13.universalimageloader.core.ImageLoader.getInstance(); // Get singleton instance
 
             /*recommendedCapsulrInjection =   (CardView) itemView.findViewById(R.id.recommended_capsule_injection);
             showMeMoreTV    =   (TextView)itemView.findViewById(R.id.show_me_more_textview);
@@ -156,7 +170,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         TextView titleTextView, subtitleTextView, postDateTextView;
         final ImageView  callFeed, mailFeed, visitFeed, shareFeed, verifiedImage,companyProfile;
         LinearLayout sliderPannelLL;
-        NetworkImageView mainFrame;
+        ImageView mainFrame;
 
         final Dialog dialog = new Dialog(context);
         final ViewFlipper newsFeedsFlpper, switchFeeds;
@@ -167,7 +181,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         SliderLayout sliderShow;
 
 
-        ImageLoader imageLoader = MySingleton.getInstance(context).getImageLoader();
 
         final ViewFlipper offlineFlipper;
 
@@ -204,7 +217,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         saveForOffline      = holder.saveForOffline;
         offlineFlipper      = holder.offlineFlipper;
         sliderShow          = holder.sliderShow;
-
         this.sliderLayout = sliderShow;
 
 
@@ -253,12 +265,13 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
+        final Activity activity = (Activity) context;
 
 
 
         if (position == 0){
             sliderPannelLL.setVisibility(View.VISIBLE);
-
+            holder.hirePannelIALL.setVisibility(View.VISIBLE);
             DefaultSliderView hireSlide             = new DefaultSliderView(context);
             DefaultSliderView bucketSlide           = new DefaultSliderView(context);
             DefaultSliderView offlineUsageSlide     = new DefaultSliderView(context);
@@ -295,13 +308,12 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
-
-
-
                 hireSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-                        context.startActivity(new Intent(context,Hire.class));
+                        activity.startActivity(new Intent(context,Hire.class));
+                        activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
 
 
@@ -312,7 +324,9 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                 bucketSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-                        context.startActivity(new Intent(context,Buket.class));
+                        activity.startActivity(new Intent(context,Buket.class));
+                        activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                     }
                 });
 
@@ -322,7 +336,9 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                 offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-                        context.startActivity(new Intent(context,MyFavouritesActivity.class));
+                        activity.startActivity(new Intent(context,MyFavouritesActivity.class));
+                        activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                     }
                 });
 
@@ -340,21 +356,29 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                             if(userData.getBoolean("EXPERT",false)){
 
-                                context.startActivity(new Intent(context,Profile.class));
+                                activity.startActivity(new Intent(context,Profile.class));
+                                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                             }else if (userData.getBoolean("COMPANY",false)){
 
-                                context.startActivity(new Intent(context,MyCompany.class));
+                                activity.startActivity(new Intent(context,MyCompany.class));
+                                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                             }else{
 
-                                context.startActivity(new Intent(context,RegisterCompany.class));
+                                activity.startActivity(new Intent(context,RegisterCompany.class));
+                                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                             }
 
                         }
                         else {
 
-                            context.startActivity(new Intent(context,OwnChoice.class));
+                            activity.startActivity(new Intent(context,OwnChoice.class));
+                            activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                         }
 
 
@@ -374,21 +398,29 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                             if(userData.getBoolean("EXPERT",false)){
 
-                                context.startActivity(new Intent(context,Profile.class));
+                                activity.startActivity(new Intent(context,Profile.class));
+                                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                             }else if (userData.getBoolean("COMPANY",false)){
 
-                                context.startActivity(new Intent(context,MyCompany.class));
+                                activity.startActivity(new Intent(context,MyCompany.class));
+                                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
 
                             }else{
 
-                                context.startActivity(new Intent(context,XpertRegistration.class));
+                                activity.startActivity(new Intent(context,XpertRegistration.class));
+                                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                             }
 
                         }
                         else {
 
-                            context.startActivity(new Intent(context,OwnChoice.class));
+                            activity.startActivity(new Intent(context,OwnChoice.class));
+                            activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
                         }
 
                     }
@@ -427,14 +459,16 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         }else{
             sliderPannelLL.setVisibility(View.GONE);
-
+            holder.hirePannelIALL.setVisibility(View.GONE);
         }
 
         final int sharePosition = holder.getAdapterPosition();
         companyProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, CompanyProfile.class).putExtra("companyID","2"));
+                activity.startActivity(new Intent(context, CompanyProfile.class).putExtra("companyID",companyIDArray.get(position)));
+                activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
             }
         });
 
@@ -727,7 +761,8 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         titleTextView.setText(titleArray.get(position).toString());
 
-        mainFrame.setImageUrl((String) banners.get(position), imageLoader);
+        holder.imageLoader.displayImage(banners.get(position),holder.mainFrame);
+
         postDateTextView.setText(postDateArray.get(position).toString());
 
         switchFeeds.setOnClickListener(new View.OnClickListener() {

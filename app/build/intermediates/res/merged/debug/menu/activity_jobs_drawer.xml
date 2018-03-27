@@ -7,10 +7,10 @@
         android:title="Profile and Features">
 
         <menu>
-            <item
+           <!-- <item
                 android:id="@+id/hire_experts"
                 android:icon="@drawable/hire_new"
-                android:title="Hire Experts"  />
+                android:title="Hire Experts"  />-->
             <item
                 android:id="@+id/app_bucket"
                 android:icon="@drawable/ic_whatshot_black_24dp"

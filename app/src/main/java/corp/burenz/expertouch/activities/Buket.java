@@ -3,6 +3,7 @@ package corp.burenz.expertouch.activities;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,8 @@ import corp.burenz.expertouch.fragments.bucket.Products;
 public class Buket extends AppCompatActivity {
 
     private MaterialViewPager mViewPager;
-
+    Boolean fromNotifications  = false;
+    String fromType = "food";
 
     @Override
     public void onBackPressed() {
@@ -32,12 +34,57 @@ public class Buket extends AppCompatActivity {
 
     }
 
+
+    public void checkForNotification(final MaterialViewPager mViewPager, boolean fromNotifications, final String fromType){
+
+        if (!fromNotifications){ return;}
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mViewPager.getViewPager().setCurrentItem(resolveNotificationPosition(fromType));
+            }
+        },500);
+    }
+
+
+    /*returns the page to be set*/
+    public int resolveNotificationPosition(String offerType){
+
+        switch (offerType.trim()){
+            case "food":
+                return 0;
+            case "offer":
+                return 1;
+            case "health":
+                return 2;
+
+            case "education":
+                return 3;
+
+            case "depart":
+                return 4;
+            case "activity":
+                return 5;
+
+            default:
+                return 0;
+        }
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buket);
 
         TextView bucketTitle;
+        Bundle bundle = getIntent().getExtras();
+
+        if ( bundle != null ){fromNotifications = true;
+        fromType = getIntent().getExtras().getString("type");
+        }
 
         Typeface logoTypeface;
         bucketTitle = (TextView) findViewById(R.id.bucketTitle);
@@ -46,29 +93,60 @@ public class Buket extends AppCompatActivity {
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
 
+
         assert mViewPager != null;
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
 
+
             @Override
             public Fragment getItem(int position) {
-                switch (position % 5) {
+                switch (position % 6) {
 
                     case 0:
-                        return new Food();
+                        Bundle agrs0 = new Bundle();
+
+                        Fragment foodFragment = new Food();
+                        agrs0.putString("from","food");
+                        foodFragment.setArguments(agrs0);
+                        return foodFragment;
 
                     case 1:
-                        return new Offers();
+                        Bundle agrs1 = new Bundle();
+                        Fragment offferStore = new Food();
+                        agrs1.putString("from","offer");
+                        offferStore.setArguments(agrs1);
+                        return offferStore;
 
                     case 2:
-                        return new EducationBucket();
+                        Bundle agrs2 = new Bundle();
+                        Fragment educationbucket= new Food();
+                        agrs2.putString("from","health");
+                        educationbucket.setArguments(agrs2);
+                        return educationbucket;
 
                     case 3:
-                        return new Health();
-                    
-                    case 4:
-                        return new Products();
+                        Bundle agrs3 = new Bundle();
 
-                    default:
+                        Fragment healthBucket= new Food();
+                        agrs3.putString("from","education");
+                        healthBucket.setArguments(agrs3);
+                        return healthBucket;
+
+                    case 4:
+                        Bundle agrs4 = new Bundle();
+                        Fragment departBucket = new Food();
+                        agrs4.putString("from","depart");
+                        departBucket.setArguments(agrs4);
+                        return departBucket;
+
+                    case 5:
+                        Bundle agrs5 = new Bundle();
+                        Fragment activityBucket = new Food();
+                        agrs5.putString("from","activity");
+                        activityBucket.setArguments(agrs5);
+                        return activityBucket;
+
+                        default:
                         return new Products();
 
 
@@ -77,22 +155,26 @@ public class Buket extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 5;
+                return 6;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
-                switch (position % 5) {
+                switch (position % 6) {
                     case 0:
                         return "Food Store";
                     case 1:
                         return "Fashion";
                     case 2:
-                        return "Education";
-                    case 3:
                         return "Health";
+
+                    case 3:
+                        return "Education";
+
+                    case 5:
+                        return "Activity";
                     case 4:
-                        return "New Releases";
+                        return "Departmental Store";
                     default:
                         return "New Releases";
                 }
@@ -136,6 +218,9 @@ public class Buket extends AppCompatActivity {
 
         mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
+
+        checkForNotification(mViewPager, fromNotifications, fromType);
+
         mViewPager.getPagerTitleStrip().setTextColor(Color.WHITE);
         mViewPager.getToolbar().setNavigationOnClickListener(new View.OnClickListener() {
             @Override

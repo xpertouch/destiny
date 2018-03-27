@@ -44,6 +44,7 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -70,12 +71,15 @@ import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -127,7 +131,7 @@ public class Jobs extends AppCompatActivity
     SharedPreferences           companyAdds;
     InputMethodManager          im;
     Boolean                     isFabVisible;
-    ArrayList<String>           companyTitles,postDate,callArray,emailArray, websiteArray,jobInfo,banners, addState,addCatagory, addType, postId;
+    ArrayList<String>           companyTitles,postDate,callArray,emailArray, websiteArray,jobInfo,banners, addState,addCatagory, addType, postId,companyIDArray;
 
     TextView                    dontShowAgain,helpCenter;
     ViewFlipper                 verificationBulbFl;
@@ -145,33 +149,48 @@ public class Jobs extends AppCompatActivity
     LinearLayout                whyVerify;
     ViewFlipper                 showTimeFlipper;
     ArrayList<String>           companyTitlesNew ,postDateNew,callArrayNew,emailArrayNew,websiteArrayNew,jobInfoNew,bannersNew,
-                                postIdNew;
+                                postIdNew,companyIDArrayNew;
 
     private BroadcastReceiver   mRegistrationBroadcastReceiver;
     LinearLayout                noAdverts;
-    ProgressBar                 progressBar;
     android.widget.SearchView   searchViewJobs;
-    TextView                    pdStyle;
 
     LinearLayout                bottomBanner,bannerRoom;
     ViewFlipper                 verifyNowFlipper;
     TextView                    noThanksLverify,verifyNow;
     LinearLayout                jobsLayout;
-    RelativeLayout              loadProgress;
     Animation                   animation;
     TextView                    textView638;
     WaveSwipeRefreshLayout      mWaveSwipeRefreshLayout;
 
-    ImageButton                 smartHireLL,smartProfileLL,smartFavouritesLL,smartBucketLL;
+//    ImageButton                 smartHireLL,smartProfileLL,smartFavouritesLL,smartBucketLL;
     Animation                   fab_open, fab_close, rotate_forward, rotate_backward;
     FloatingActionButton        fab,fab1,fab2;
 
     final  int VERIFY_BANNER_TIMEOUT = 6000;
 
+    /*this array is used to get subscription ids to unsuubscribe while switching user*/
+    private     ArrayList<String> subscriptionIDsArray;
+    private LinearLayout logOutContainer,switchUserProgress;
 
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adaptert;
+
+
+
+    void clearMyTokenSubscriptions(ArrayList<String> subscriptionIDsArray){
+        FirebaseMessaging firebaseMessaging = FirebaseMessaging.getInstance();
+        for (int i = 0; i < subscriptionIDsArray.size(); i++){
+            firebaseMessaging.unsubscribeFromTopic(subscriptionIDsArray.get(i));
+        }
+
+        Log.w("unSub","job Done Token Cleared");
+
+        /*now switch the user successfully celar the progress */
+        hideSwitchUserPannel();
+
+    }
 
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -194,7 +213,6 @@ public class Jobs extends AppCompatActivity
         noConnectionLL          = (LinearLayout) findViewById(R.id.noConnectionLinear);
         jobsLayout              = (LinearLayout) findViewById(R.id.jobsLayout);
         noAdverts               = (LinearLayout)findViewById(R.id.noAdverts);
-        loadProgress            = (RelativeLayout)findViewById(R.id.loadProgress);
         fab1                    = (FloatingActionButton) findViewById(R.id.fab1);
         fab2                    = (FloatingActionButton) findViewById(R.id.fab2);
         subOne                  = (LinearLayout) findViewById(R.id.subOne);
@@ -202,12 +220,25 @@ public class Jobs extends AppCompatActivity
         subTwo                  = (LinearLayout) findViewById(R.id.subTwo);
         switchUserLL            = (LinearLayout) findViewById(R.id.switchUserLL);
 
+        Button browseStoresWhenNone = (Button) findViewById(R.id.browseStoresWhenNone);
+        browseStoresWhenNone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Jobs.this,ChannelSearchView.class));
+                overridePendingTransition(R.anim.design_bottom_sheet_slide_in_search,R.anim.fadeout_scan);
+
+            }
+        });
+
         newVersionFoundLL       = (LinearLayout) findViewById(R.id.newVersionFoundLL);
-        smartBucketLL           = (ImageButton) findViewById(R.id.smartBucketLL);
+
+        /*smartBucketLL           = (ImageButton) findViewById(R.id.smartBucketLL);
         smartFavouritesLL       = (ImageButton) findViewById(R.id.smartFavouritesLL);
         smartHireLL             =  (ImageButton) findViewById(R.id.smartHireLL);
         smartProfileLL          = (ImageButton) findViewById(R.id.smartProfileLL);
+        */
         smartBottom             = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+
 
         searchJobOppurtunities  = (LinearLayout) findViewById(R.id.searchJobOppurtunities);
         verificationBulbFl      = (ViewFlipper) findViewById(R.id.verificationBulbF);
@@ -220,10 +251,8 @@ public class Jobs extends AppCompatActivity
 
         noFollowersView         = (LinearLayout) findViewById(R.id.noFollowersView);
 
-
-
-
-
+        switchUserProgress      = (LinearLayout) findViewById(R.id.switchUserProgress);
+        logOutContainer         = (LinearLayout) findViewById(R.id.logOutContainer);
 
 
     }
@@ -270,6 +299,7 @@ public class Jobs extends AppCompatActivity
         setContentView(R.layout.activity_jobs);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_jobs);
         setSupportActionBar(toolbar);
+
         toolbar.setTitle("");
         lollipop(toolbar);
         Iconics.init(Jobs.this);
@@ -281,7 +311,6 @@ public class Jobs extends AppCompatActivity
         TextView xper   = (TextView) findViewById(R.id.xperJobs);
         TextView touch  = (TextView) findViewById(R.id.touchJobs);
         logoTypeface    = Typeface.createFromAsset(Jobs.this.getAssets(), "fonts/forte.ttf");
-        pdStyle         = (TextView) findViewById(R.id.pdStyle);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 
@@ -309,13 +338,13 @@ public class Jobs extends AppCompatActivity
                         return true;
 
 
-                    case R.id.navigation_hire:
+                    case R.id.channeL_search_view:
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                startActivity(new Intent(Jobs.this,Hire.class));
-                                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+                                startActivity(new Intent(Jobs.this,ChannelSearchView.class));
+                                overridePendingTransition(R.anim.design_bottom_sheet_slide_in_search,R.anim.fadeout_scan);
 
                             }
                         },FADE_TIME_OUT);
@@ -432,22 +461,12 @@ public class Jobs extends AppCompatActivity
 //            }
 //        });
 
-        pdStyle.setTypeface(logoTypeface);
-        progressBar = (ProgressBar)findViewById(R.id.testBar);
-//        toolbarTypeFace();
 
 
 
 
-        smartBucketLL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Jobs.this,Buket.class));
-            }
-        });
 
 //        firebase code starts here
-
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -459,7 +478,6 @@ public class Jobs extends AppCompatActivity
                     // gcm successfully registered
                     // now subscribe to `global` topic to receive app wide notifications
                     FirebaseMessaging.getInstance().subscribeToTopic(Config.TOPIC_GLOBAL);
-//                Toast.makeText(context, "inside registeration complete", Toast.LENGTH_SHORT).show();
 
                 } else if (intent.getAction().equals(Config.PUSH_NOTIFICATION)) {
                     // new push notification is received
@@ -487,53 +505,9 @@ public class Jobs extends AppCompatActivity
 
 
 
-        smartFavouritesLL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Jobs.this,MyFavouritesActivity.class));
-            }
-        });
-
-        smartHireLL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent(Jobs.this,Hire.class));
-            }
-        });
-
-        smartProfileLL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-          userData = getSharedPreferences(MySharedConfig.GuestPrefs.LOCAL_APP_DATA,0);
-
-                if (userData.getBoolean("VERIFIED",false)){
-
-
-                    if(userData.getBoolean("EXPERT",false)){
-
-                        startActivity(new Intent(Jobs.this,Profile.class));
-
-                    }else if (userData.getBoolean("COMPANY",false)){
-
-                        startActivity(new Intent(Jobs.this,MyCompany.class));
-
-                    }else{
-
-                        startActivity(new Intent(Jobs.this,OwnChoice.class));
-                    }
-
-                }
-                else {
-
-                    startActivity(new Intent(Jobs.this,OwnChoice.class));
-                }
 
 
 
-            }
-        });
 
 
 
@@ -614,7 +588,8 @@ public class Jobs extends AppCompatActivity
 
 
         whatsNewRecycler        = (RecyclerView)findViewById(R.id.jobsRv);
-        whatsNewRecycler.setLayoutManager(new LinearLayoutManager(Jobs.this));
+        whatsNewRecycler.setNestedScrollingEnabled(true);
+        whatsNewRecycler.setLayoutManager(new LinearLayoutManager(Jobs.this,LinearLayoutManager.VERTICAL, false));
         animation               = AnimationUtils.loadAnimation(Jobs.this,R.anim.card_animation);
 
         noAdverts.startAnimation(animation);
@@ -814,29 +789,6 @@ public class Jobs extends AppCompatActivity
 
 
 
-    private void displayPromptsInJobs(){
-
-        new MaterialTapTargetPrompt.Builder(Jobs.this)
-                .setTarget(findViewById(R.id.channeL_search_view))
-                .setPrimaryText("Now See Jobs only you are interested in")
-                .setSecondaryText("Tap the icon to Browse channels for subscription")
-                .setAutoDismiss(false)
-                .setOnHidePromptListener(new MaterialTapTargetPrompt.OnHidePromptListener() {
-                    @Override
-                    public void onHidePrompt(MotionEvent event, boolean tappedTarget) {
-                        //Do something such as storing a value so that this prompt is never shown again
-
-                    }
-
-                    @Override
-                    public void onHidePromptComplete() {
-
-                    }
-                })
-                .show();
-
-
-    }
 
     public void animateFAB() {
 
@@ -1302,14 +1254,17 @@ public class Jobs extends AppCompatActivity
                     overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                     // Handle the camera action
-                } else if (id == R.id.hire_experts) {
+                }
+                /*else if (id == R.id.hire_experts) {
 
 
                     startActivity(new Intent(Jobs.this,Hire.class));
                     overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                     // Handle the camera action
-                } else if (id == R.id.profile) {
+                }
+                */
+                else if (id == R.id.profile) {
 
                     if (userData.getBoolean("VERIFIED",false)){
 
@@ -1520,9 +1475,14 @@ public class Jobs extends AppCompatActivity
 
             if (companyTitles.size() == 0){
 
-                noAdverts.setVisibility(View.VISIBLE);
-                whatsNewRecycler.setVisibility(View.GONE);
-//                Log.e(TAG," TRAP #1 Set Visibilty jin Here , Count = "+companyTitlesNew.size());
+                if (!mWaveSwipeRefreshLayout.isRefreshing()){
+
+                    noAdverts.setVisibility(View.VISIBLE);
+                    whatsNewRecycler.setVisibility(View.GONE);
+
+                }
+
+
 
             }else{
 
@@ -1534,7 +1494,7 @@ public class Jobs extends AppCompatActivity
 
 
              try{
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId,companyIDArray);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
             }catch (Exception e){
                 e.printStackTrace();
@@ -1553,6 +1513,7 @@ public class Jobs extends AppCompatActivity
             jobInfoNew              = new ArrayList<>();
             bannersNew              = new ArrayList<>();
             postIdNew               = new ArrayList<>();
+            companyIDArrayNew       = new ArrayList<>();
             clearList();
 
 
@@ -1568,6 +1529,7 @@ public class Jobs extends AppCompatActivity
                     websiteArrayNew     .add(addState.get(i));
                     bannersNew          .add(banners.get(i));
                     postIdNew           .add(postId.get(i));
+                    companyIDArrayNew   .add(companyIDArray.get(i));
 
                 }
 
@@ -1595,7 +1557,7 @@ public class Jobs extends AppCompatActivity
             Log.e(TAG,"Filtering State , Rest ALL");
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew,companyIDArrayNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
 
             }catch(Exception e){
@@ -1612,6 +1574,7 @@ public class Jobs extends AppCompatActivity
             bannersNew          = new ArrayList<>();
             jobInfoNew          = new ArrayList<>();
             postIdNew           = new ArrayList<>();
+            companyIDArrayNew   = new ArrayList<>();
 
 
 
@@ -1628,6 +1591,8 @@ public class Jobs extends AppCompatActivity
                     websiteArrayNew     .add(addState.get(i));
                     bannersNew          .add(banners.get(i));
                     postIdNew           .add(postId.get(i));
+                    companyIDArrayNew   .add(companyIDArray.get(i));
+
 
 
 
@@ -1654,7 +1619,7 @@ public class Jobs extends AppCompatActivity
 
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew,companyIDArrayNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
 
             }catch(Exception e){
@@ -1672,6 +1637,7 @@ public class Jobs extends AppCompatActivity
             jobInfoNew          = new ArrayList<>();
             bannersNew          = new ArrayList<>();
             postIdNew           = new ArrayList<>();
+            companyIDArrayNew   = new ArrayList<>();
 
             clearList();
 
@@ -1690,6 +1656,8 @@ public class Jobs extends AppCompatActivity
                         websiteArrayNew     .add(addState.get(i));
                         bannersNew          .add(banners.get(i));
                         postIdNew           .add(postId.get(i));
+                        companyIDArrayNew   .add(companyIDArray.get(i));
+
 
 
                     }
@@ -1726,7 +1694,7 @@ public class Jobs extends AppCompatActivity
             try{
 
             Log.e(TAG,"STACATA , COOL MAN");
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew,companyIDArrayNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
         
             }catch(Exception e){
@@ -1745,7 +1713,7 @@ public class Jobs extends AppCompatActivity
             jobInfoNew          = new ArrayList<>();
             bannersNew          = new ArrayList<>();
             postIdNew           = new ArrayList<>();
-
+            companyIDArrayNew   = new ArrayList<>();
 
             clearList();
 
@@ -1764,6 +1732,8 @@ public class Jobs extends AppCompatActivity
                         websiteArrayNew     .add(addState.get(i));
                         bannersNew          .add(banners.get(i));
                         postIdNew           .add(postId.get(i));
+                        companyIDArrayNew   .add(companyIDArray.get(i));
+
 
 
                     }
@@ -1799,7 +1769,7 @@ public class Jobs extends AppCompatActivity
             
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew, postIdNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew, postIdNew,companyIDArrayNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
         
             }catch(Exception e){
@@ -1817,6 +1787,7 @@ public class Jobs extends AppCompatActivity
             jobInfoNew          = new ArrayList<>();
             bannersNew          = new ArrayList<>();
             postIdNew           = new ArrayList<>();
+            companyIDArrayNew   = new ArrayList<>();
 
 
 
@@ -1840,6 +1811,8 @@ public class Jobs extends AppCompatActivity
                             websiteArrayNew     .add(addState.get(i));
                             bannersNew          .add(banners.get(i));
                             postIdNew           .add(postId.get(i));
+                            companyIDArrayNew   .add(companyIDArray.get(i));
+
 
 
                         }
@@ -1876,7 +1849,7 @@ public class Jobs extends AppCompatActivity
             Log.e(TAG,"ITMSTACATA , FIRE IN THE HOLE");
             try{
 
-            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew);
+            whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitlesNew,jobInfoNew,postDateNew,callArrayNew,websiteArrayNew,emailArrayNew,bannersNew,postIdNew,companyIDArrayNew);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
            
         }catch(Exception e){
@@ -1902,13 +1875,12 @@ public class Jobs extends AppCompatActivity
         jobInfoNew.clear();
         bannersNew.clear();
         postIdNew.clear();
-
+        companyIDArrayNew.clear();
 
 
 
 
     }
-
     void doForSome(){
 
         companyAdds = getSharedPreferences("companyAdds",0);
@@ -1986,9 +1958,6 @@ public class Jobs extends AppCompatActivity
         addType.add("Electronics");
         addType.add("Electrical");
     }
-
-
-
     public void searchView(){
 
         TextView searchViewTint;
@@ -2061,6 +2030,8 @@ public class Jobs extends AppCompatActivity
                 ArrayList<String> finalCallArrayNew     = new ArrayList<>();
                 ArrayList<String> finalBannerArrayNew   = new ArrayList<>();
                 ArrayList<String> finalPostIdNew        = new ArrayList<>();
+                ArrayList<String> finalcompanyIDArray    = new ArrayList<>();
+
 
                 if (feedsFilter.getString("currentState","All States").equals("All States") && feedsFilter.getString("currentCatagory","All Categories").equals("All Categories") && feedsFilter.getString("currentType","All Types").equals("All Types") ) {
 
@@ -2086,6 +2057,8 @@ public class Jobs extends AppCompatActivity
                                 finalWebsiteArrayNew.add(addState.get(i));
                                 finalBannerArrayNew.add(banners.get(i));
                                 finalPostIdNew.add(postId.get(i));
+                                finalcompanyIDArray.add(companyIDArray.get(i));
+
                             }
 
 
@@ -2145,6 +2118,8 @@ public class Jobs extends AppCompatActivity
                                 finalWebsiteArrayNew.add(addState.get(i));
                                 finalBannerArrayNew.add(banners.get(i));
                                 finalPostIdNew.add(postId.get(i));
+                                finalcompanyIDArray.add(companyIDArray.get(i));
+
 
                             }
 
@@ -2177,7 +2152,7 @@ public class Jobs extends AppCompatActivity
 
                 try{
 
-                whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,finalCompanyTitlesNew,finalJobInfoNew,finalPostDateNew,finalCallArrayNew,finalWebsiteArrayNew,finalEmailArrayNew,finalBannerArrayNew,finalPostIdNew);
+                whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,finalCompanyTitlesNew,finalJobInfoNew,finalPostDateNew,finalCallArrayNew,finalWebsiteArrayNew,finalEmailArrayNew,finalBannerArrayNew,finalPostIdNew,finalcompanyIDArray);
                 whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
                 whatsNewRecyclerAdapter.notifyDataSetChanged();
 
@@ -2334,14 +2309,16 @@ public class Jobs extends AppCompatActivity
 
 
 
-        switchDescribeTop = (TextView) findViewById(R.id.switchDescribeTop);
-        switchDescribeBottom = (TextView) findViewById(R.id.switchDescribeBottom);
-        cLoggedInAs = (TextView) findViewById(R.id.cLoggedInAs);
-        logOutAccount = (TextView) findViewById(R.id.logOutAccount);
-        cancelSwitch = (TextView) findViewById(R.id.cancelSwitch);
-        learnMore = (TextView) findViewById(R.id.learnMore);
+        switchDescribeTop       = (TextView) findViewById(R.id.switchDescribeTop);
+        switchDescribeBottom    = (TextView) findViewById(R.id.switchDescribeBottom);
+        cLoggedInAs             = (TextView) findViewById(R.id.cLoggedInAs);
+        logOutAccount           = (TextView) findViewById(R.id.logOutAccount);
+        cancelSwitch            = (TextView) findViewById(R.id.cancelSwitch);
+        learnMore               = (TextView) findViewById(R.id.learnMore);
+
         switchUserLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_up_slow));
         smartBottom.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_down_slow));
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -2437,9 +2414,6 @@ public class Jobs extends AppCompatActivity
 
         }
 
-
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -2454,7 +2428,10 @@ public class Jobs extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                String COMPANY_DETAILS = "myCompanyDetails";
+                /*calling the unsubscription here*/
+
+                try{   new GetUserSubscriptions().execute();     }catch ( Exception e ){  e.printStackTrace(); }
+           /*     String COMPANY_DETAILS = "myCompanyDetails";
                 SharedPreferences myCompanyDetails;
                 final SharedPreferences.Editor myCompanyEditor;
                 myCompanyDetails = getSharedPreferences(COMPANY_DETAILS,0);
@@ -2488,7 +2465,7 @@ public class Jobs extends AppCompatActivity
                     }
                 },500);
 
-
+*/
             }
         });
 
@@ -2638,6 +2615,7 @@ public class Jobs extends AppCompatActivity
 
     }
 
+    /*main class that gets the job feeds generated from custom subscriptions*/
     private class FeedsLoader extends AsyncTask<String,String,String>{
 
 
@@ -2702,7 +2680,6 @@ public class Jobs extends AppCompatActivity
 
             noAdverts.setVisibility(View.GONE);
             mWaveSwipeRefreshLayout.setRefreshing(true);
-            loadProgress.setVisibility(View.VISIBLE);
 
             companyTitles       = new ArrayList<>();
             postDate            = new ArrayList<>();
@@ -2715,9 +2692,7 @@ public class Jobs extends AppCompatActivity
             addCatagory         = new ArrayList<>();
             addType             = new ArrayList<>();
             postId              = new ArrayList<>();
-
-            // loadProgress.setVisibility(View.VISIBLE);
-            //  whatsNewRecycler.setVisibility(View.GONE);
+            companyIDArray      = new ArrayList<>();
 
         }
 
@@ -2764,6 +2739,7 @@ public class Jobs extends AppCompatActivity
                     addCatagory.    add(jsonObject.getString("addCatagory"));
                     addType.        add(jsonObject.getString("addType"));
                     postId         .add(jsonObject.getString("postId"));
+                    companyIDArray .add(jsonObject.getString("companyID"));
                 }
 
             } catch (HttpHostConnectException e)
@@ -2786,8 +2762,7 @@ public class Jobs extends AppCompatActivity
 
                 if (companyTitles.size() == 0){
                     mWaveSwipeRefreshLayout.setRefreshing(false);
-                    loadProgress.setVisibility(View.GONE);
-                    whatsNewRecycler.setVisibility(View.GONE);
+                     whatsNewRecycler.setVisibility(View.GONE);
                     noAdverts.setVisibility(View.VISIBLE);
                      /*see if there are no subscriptions */
                     if (s.contains("no1here")){ noAdverts.setVisibility(View.GONE); noFollowersView.setVisibility(View.VISIBLE);}else {noFollowersView.setVisibility(View.GONE); noAdverts.setVisibility(View.VISIBLE);}
@@ -2805,7 +2780,7 @@ public class Jobs extends AppCompatActivity
 
                     try{
 
-                        whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId);
+                        whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId,companyIDArray);
                         whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
                     }catch(Exception e){
                         e.printStackTrace();
@@ -2832,10 +2807,12 @@ public class Jobs extends AppCompatActivity
 
             mWaveSwipeRefreshLayout.setRefreshing(false);
 
-            loadProgress.setVisibility(View.GONE);
             whatsNewRecycler.setVisibility(View.VISIBLE);
         }
     }
+
+
+    /*class use to get current version and check if now versio has arrived*/
     private class GetCurrentVersion extends AsyncTask< String , String, String >{
 
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -2901,8 +2878,127 @@ public class Jobs extends AppCompatActivity
         }
     }
 
+    /* used to get subscriptions when the user switchs user*/
+    public class GetUserSubscriptions  extends AsyncTask<String, String, String>{
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            /*show some progress here*/
+
+            subscriptionIDsArray = new ArrayList<>();
+
+            logOutContainer.setVisibility(View.GONE);
+            switchUserProgress.setVisibility(View.VISIBLE);
+
+
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            try{
+                if (subscriptionIDsArray.size() > 0)
+                    clearMyTokenSubscriptions(subscriptionIDsArray);
+
+            }catch (Exception e){
+                logOutContainer.setVisibility(View.VISIBLE);
+                switchUserProgress.setVisibility(View.GONE);
+                /*clear the progress and send an error report*/
+                Toast.makeText(Jobs.this, "We are having trouble connecting to the internet, Please try again later", Toast.LENGTH_SHORT).show(); e.printStackTrace();}
+
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+            String          urlToHit        = Jobs.this.getString(R.string.host) + "/workshop/get_my_subscriptions.php";
+            StringBuilder   stringBuilder   = new StringBuilder();
+
+            HttpURLConnection httpURLConnection;
+            URL url;
+
+            /* http://1clickaway.in/ver1.1/workshop/get_my_subscriptions.php?phone_number=9797080059 */
+            try {
+
+                url = new URL(urlToHit + "?phone_number=" + new GuestInformation(Jobs.this).getGuestNumber());
+
+                Log.e("fromURL",urlToHit + "?phone_number=" + new GuestInformation(Jobs.this).getGuestNumber());
+                httpURLConnection = (HttpURLConnection) url.openConnection();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+
+                String line = "";
+                while ( (line = bufferedReader.readLine()) != null ){
+                    stringBuilder.append(line).append("\n");
+                }
+
+                JSONArray jsonArray  = new JSONArray(stringBuilder.toString());
+
+
+                for (int i = 0; i < jsonArray.length(); i++){
+                    subscriptionIDsArray.add(jsonArray.getJSONObject(i).getString("id"));
+
+                }
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            return stringBuilder.toString();
+
+        }
+
+
+    }
 
 
 
+    /*hides the pannel after unsubscribing to the topics*/
+    void hideSwitchUserPannel(){
+
+        String COMPANY_DETAILS = "myCompanyDetails";
+        SharedPreferences myCompanyDetails;
+        final SharedPreferences.Editor myCompanyEditor;
+        myCompanyDetails = getSharedPreferences(COMPANY_DETAILS,0);
+        myCompanyEditor = myCompanyDetails.edit();
+
+
+        switchUserLL.startAnimation(AnimationUtils.loadAnimation(Jobs.this,R.anim.md_styled_slide_down_slow));
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                switchUserLL.setVisibility(View.INVISIBLE);
+                editor = userData.edit();
+                editor.putBoolean("LOGEDOUT",true);
+                editor.putBoolean("EXPERT",false);
+                editor.putBoolean("COMPANY",false);
+                editor.putBoolean("IGOTIT",false);
+                editor.putBoolean("LOGEDIN",false);
+                editor.putBoolean("VERIFIED",false);
+                myCompanyEditor.putBoolean("CVERIFIED",false);
+                myCompanyEditor.putString("COTP","0");
+
+                myCompanyEditor.apply();
+                editor.apply();
+                startActivity(new Intent(Jobs.this,Registrations.class));
+                Jobs.this.finish();
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
+
+            }
+        },500);
+
+
+
+
+    }
 
 }

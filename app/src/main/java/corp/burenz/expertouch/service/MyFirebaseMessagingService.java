@@ -1,12 +1,13 @@
 package corp.burenz.expertouch.service;
 
+import android.app.usage.NetworkStats;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
-
+import corp.burenz.expertouch.activities.Buket;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -15,6 +16,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import corp.burenz.expertouch.activities.JobPostDetails;
 import corp.burenz.expertouch.activities.Jobs;
 import corp.burenz.expertouch.util.Config;
 import corp.burenz.expertouch.util.NotificationUtils;
@@ -54,10 +56,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.e(TAG, "Data Payload: " + remoteMessage.getData().toString());
-
             try {
-
-
                 JSONObject json = new JSONObject(remoteMessage.getData().toString());
                 handleDataMessage(json);
             } catch (Exception e) {
@@ -94,15 +93,23 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             String title = data.getString("title");
             String message = data.getString("message");
             boolean isBackground = data.getBoolean("is_background");
-            String imageUrl = data.getString("image");
+            String imageUrl     = data.getString("image");
+
+
             String timestamp = data.getString("timestamp");
             JSONObject payload = data.getJSONObject("payload");
+
+            Log.e("payload_inside",payload.getString("from"));
+            String storeIcon    = payload.getString("storeIcon");
+
 
             Log.e(TAG, "title: " + title);
             Log.e(TAG, "message: " + message);
             Log.e(TAG, "isBackground: " + isBackground);
             Log.e(TAG, "payload: " + payload.toString());
             Log.e(TAG, "imageUrl: " + imageUrl);
+            Log.e("storeIcon", "storeIcon: " + storeIcon);
+
             Log.e(TAG, "timestamp: " + timestamp);
 
 
@@ -116,16 +123,30 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
                 notificationUtils.playNotificationSound();
             } else {
+                Intent resultIntent;
+
+                if (payload.getString("from").contains("bucket")){
+                    resultIntent = new Intent(getApplicationContext(), Buket.class);
+                    resultIntent.putExtra("type", payload.getString("type"));
+//                    resultIntent.putExtra("type", "education");
+
+                }else{
+                    resultIntent = new Intent(getApplicationContext(), JobPostDetails.class);
+                    resultIntent.putExtra("postId", payload.getString("postId"));
+//                    resultIntent.putExtra("postId", "12");
+
+                }
                 // app is in background, show the notification in notification tray
-                Intent resultIntent = new Intent(getApplicationContext(), Jobs.class);
-                resultIntent.putExtra("message", message);
 
                 // check for image attachment
                 if (TextUtils.isEmpty(imageUrl)) {
-                    showNotificationMessage(getApplicationContext(), title, message, timestamp, resultIntent);
+                    Log.e("imageURL","empty");
+
+                    showNotificationMessage(storeIcon,getApplicationContext(), title, message, timestamp, resultIntent);
                 } else {
                     // image is present, show notification with image
-                    showNotificationMessageWithBigImage(getApplicationContext(), title, message, timestamp, resultIntent, imageUrl);
+                    Log.e("imageURL","present " + imageUrl);
+                    showNotificationMessageWithBigImage(storeIcon, getApplicationContext(), title, message, timestamp, resultIntent, imageUrl);
                 }
             }
         } catch (JSONException e) {
@@ -138,18 +159,18 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     /**
      * Showing notification with text only
      */
-    private void showNotificationMessage(Context context, String title, String message, String timeStamp, Intent intent) {
+    private void showNotificationMessage(String storeIcon, Context context, String title, String message, String timeStamp, Intent intent) {
         notificationUtils = new NotificationUtils(context);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        notificationUtils.showNotificationMessage(title, message, timeStamp, intent);
+        notificationUtils.showNotificationMessage(storeIcon,title, message, timeStamp, intent);
     }
 
-    /**
+    /*
      * Showing notification with text and image
      */
-    private void showNotificationMessageWithBigImage(Context context, String title, String message, String timeStamp, Intent intent, String imageUrl) {
+    private void showNotificationMessageWithBigImage(String storeIcon, Context context, String title, String message, String timeStamp, Intent intent, String imageUrl) {
         notificationUtils = new NotificationUtils(context);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        notificationUtils.showNotificationMessage(title, message, timeStamp, intent, imageUrl);
+        notificationUtils.showNotificationMessage(storeIcon, title, message, timeStamp, intent, imageUrl);
     }
 }

@@ -74,6 +74,9 @@ public class CataAdapter extends RecyclerView.Adapter<CataAdapter.CataViewHolder
 
 
 
+
+
+
     @Override
     public int getItemCount() {
         return 1;

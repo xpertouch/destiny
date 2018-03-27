@@ -29,10 +29,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="visible">
+<!--
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+
+                </LinearLayout>
+
+
+                </android.support.v4.widget.NestedScrollView>
+-->
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/jobsRv"
                     android:layout_width="match_parent"
+                    android:descendantFocusability="blocksDescendants"
                     android:layout_height="match_parent"
                     android:visibility="visible"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -43,51 +66,6 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/loadProgress"
-                    android:visibility="gone"
-                    android:background="#00000000">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:foregroundGravity="center"
-                        android:gravity="center"
-                        android:visibility="invisible">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="xt"
-                            android:id="@+id/pdStyle"
-                            android:gravity="center"
-                            android:layout_gravity="center_horizontal"
-                            android:textColor="#9c9c9c"
-                            android:textSize="20dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:foregroundGravity="center"
-                        android:visibility="invisible">
-
-                        <ProgressBar
-                            style="?android:attr/progressBarStyleLarge"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:id="@+id/testBar"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-                    </LinearLayout>
-                </RelativeLayout>
 
                 <LinearLayout
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -113,13 +91,13 @@
                         />
 
                     <TextView
+                        android:id="@+id/textView291"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Couldn't Connect"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="No Connection"
-                        android:id="@+id/textView291"
-                        android:textSize="15dp"
                         android:textColor="#393939"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -147,15 +125,15 @@
                     android:background="#00000000">
 
                     <ImageView
+                        android:id="@+id/noSearchIV"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginBottom="10dp"
-                        android:scaleType="centerCrop"
 
-                        android:id="@+id/noSearchIV"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_work"
                         app:iiv_color="#000000"
-                        app:iiv_icon="@string/gmd_signal_wifi_off"
-                        android:src="@drawable/no_items" />
+                        app:iiv_icon="@string/gmd_signal_wifi_off" />
 
 
 
@@ -213,25 +191,26 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="You haven't subscribed to any channels yet"
+                            android:text="You haven't subscribed to any stores yet"
                             android:textColor="#000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
-                            android:text="Tap browse channels to get started." />
+                            android:text="Tap browse stores to get started." />
 
 
                     </LinearLayout>
 
 
                     <Button
+                        android:id="@+id/browseStoresWhenNone"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@color/vectorColor"
-                        android:text="Browse Channels"
+                        android:text="Browse Stores"
                         android:textColor="#ffffff" />
 
                 </LinearLayout>
@@ -244,212 +223,7 @@
 
         </RelativeLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="45dp">
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:baselineAligned="true">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
-                    android:id="@+id/textView537" />
-            </LinearLayout>
-        </FrameLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"></LinearLayout>
-
-            <TextView
-                android:id="@+id/textView639"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-
-            <!--
-            <android.support.design.widget.BottomNavigationView
-                android:id="@+id/bottom_navigation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="bottom"
-                android:background="?android:attr/windowBackground"
-                app:layout_behavior=".BottomNavigationBehavior"
-                app:menu="@menu/bottom_navigation" />-->
-
-            <LinearLayout
-                android:id="@+id/smartBottom"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="2dp"
-                android:background="#ffffff"
-                android:orientation="vertical"
-                android:visibility="gone"
-                app:layout_behavior="corp.burenz.expertouch.util.MyLinear">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#d5d5d5"
-                    android:orientation="vertical" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_weight="0.3"
-                        android:background="#e2ffffff"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="45dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                android:id="@+id/smartHireLL"
-                                android:layout_width="fill_parent"
-                                android:layout_height="45dp"
-                                android:layout_gravity="center_horizontal"
-                                android:background="#00000000"
-                                android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:paddingLeft="5dp"
-                                android:paddingRight="5dp"
-                                android:paddingTop="5dp"
-                                android:scaleType="center"
-                                android:src="@drawable/hire_new" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="45dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                android:id="@+id/smartProfileLL"
-                                android:layout_width="fill_parent"
-                                android:layout_height="45dp"
-                                android:layout_gravity="center_horizontal"
-                                android:background="#00000000"
-                                android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:paddingLeft="5dp"
-                                android:paddingRight="5dp"
-                                android:paddingTop="5dp"
-                                android:scaleType="center"
-                                android:src="@drawable/new_profile" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="45dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                android:id="@+id/smartFavouritesLL"
-                                android:layout_width="fill_parent"
-                                android:layout_height="45dp"
-                                android:layout_gravity="center_horizontal"
-                                android:background="#00000000"
-                                android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:paddingLeft="5dp"
-                                android:paddingRight="5dp"
-                                android:paddingTop="5dp"
-                                android:scaleType="center"
-                                android:src="@drawable/fav_altrer" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="50dp"
-                            android:layout_height="45dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <RelativeLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1">
-
-                                <ImageView
-                                    android:id="@+id/imageView215"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/newVector"
-                                    android:scaleType="centerCrop" />
-
-                                <ImageButton
-                                    android:id="@+id/smartBucketLL"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="#00000000"
-                                    android:cropToPadding="true"
-                                    android:paddingLeft="8dp"
-                                    android:paddingRight="8dp"
-                                    android:paddingTop="8dp"
-                                    android:scaleType="center"
-                                    android:src="@drawable/new_hot" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -932,225 +706,244 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/switchUserLL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
-        android:id="@+id/switchUserLL"
-        android:visibility="invisible" >
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
+            android:id="@+id/textView553"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:id="@+id/textView553"
-            android:background="@color/line" />
+            android:background="@color/line"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
-            android:minHeight="200dp">
+            android:minHeight="200dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="50dp"
-                android:layout_marginBottom="10dp">
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView197"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Are You Sure You want to Switch?"
-                    android:id="@+id/textView197"
-                    android:textColor="#252525"
-                    android:textStyle="bold"
-                    android:textSize="14dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginRight="10dp"
+                    android:text="Are You Sure You want to Switch?"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#252525"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/cLoggedInAs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Currently Logged in as Guest"
-                        android:id="@+id/cLoggedInAs"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="@color/vectorColor"
                         android:textSize="14dp" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/switchDescribeTop"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Switching account is simmiler to logging out your account, after you logout yuor account you may lose certin amount of information stored locally in your phone."
-                        android:id="@+id/switchDescribeTop"
+                        android:layout_marginBottom="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
+                        android:text="Switching account is simmiler to logging out your account, after you logout yuor account you may lose certin amount of information stored locally in your phone."
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/switchDescribeBottom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Local data like call logs and favourites saved on your device will be lost"
-                        android:id="@+id/switchDescribeBottom"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:text="Local data like call logs and favourites saved on your device will be lost"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textSize="12dp" />
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/textView567"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Small Text"
-                    android:id="@+id/textView567"
-                    android:background="@color/line"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp" />
+                    android:background="@color/line"
+                    android:text="Small Text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/butttonsContainerSU"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:orientation="horizontal"
+                        android:id="@+id/switchUserProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/logOutContainer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical|right"
                         android:layout_gravity="right"
-                        android:layout_marginTop="5dp" >
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="CANCEL"
                             android:id="@+id/cancelSwitch"
-                            android:layout_marginRight="10dp"
-                            android:typeface="sans"
-                            android:textSize="14dp" />
-
-                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="CANCEL"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="LOG OUT"
+                            android:textSize="14dp"
+                            android:typeface="sans" />
+
+                        <TextView
                             android:id="@+id/logOutAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
+                            android:text="LOG OUT"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textColor="@color/newVector"
-                            android:typeface="sans"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:typeface="sans" />
                     </LinearLayout>
+
+
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:background="#ffffff" >
+            android:background="#ffffff"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="70dp" >
+                android:layout_height="70dp"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:gravity="left" >
+                    android:gravity="left"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="60dp"
                         android:gravity="left"
-                        android:layout_marginLeft="60dp" >
+                        android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Need Help"
                             android:id="@+id/textView573"
-                            android:textSize="17dp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp" />
-
-                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Need Help on Switching Accounts, we are happy to help"
-                            android:id="@+id/textView574"
-                            android:gravity="left|center"
                             android:layout_marginTop="5dp"
-                            android:textSize="12dp"
-                            android:textColor="@color/dim_foreground_disabled_material_light" />
+                            android:text="Need Help"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView574"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left|center"
+                            android:text="Need Help on Switching Accounts, we are happy to help"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dim_foreground_disabled_material_light"
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
-                    android:gravity="top|center_horizontal" >
+                    android:gravity="top|center_horizontal"
+                    android:orientation="horizontal">
 
                     <ViewFlipper
+                        android:id="@+id/switchBulbF"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:id="@+id/switchBulbF"
-                        android:inAnimation="@anim/abc_fade_in"
-                        android:outAnimation="@anim/abc_fade_out"
-                        android:autoStart="true"
                         android:layout_gravity="center_horizontal"
-                        android:flipInterval="1000" >
+                        android:autoStart="true"
+                        android:flipInterval="1000"
+                        android:inAnimation="@anim/abc_fade_in"
+                        android:outAnimation="@anim/abc_fade_out">
 
 
                         <com.mikepenz.iconics.view.IconicsImageView
+                            android:id="@+id/imageView1290"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/imageView1290"
-                            app:iiv_size="35dp"
                             app:iiv_color="#FFEB3B"
                             app:iiv_icon="@string/gmd_lightbulb_outline"
-                            />
+                            app:iiv_size="35dp" />
 
                         <com.mikepenz.iconics.view.IconicsImageView
+                            android:id="@+id/imageView1391"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/imageView1391"
-                            app:iiv_size="35dp"
                             app:iiv_color="@color/vectorColor"
                             app:iiv_icon="@string/gmd_lightbulb_outline"
+                            app:iiv_size="35dp"
 
                             />
                     </ViewFlipper>
@@ -1158,37 +951,37 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/textView575"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView575"
+                android:layout_marginLeft="50dp"
                 android:background="@color/line"
-                android:layout_marginLeft="50dp" />
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:gravity="center_vertical|right"
                     android:layout_gravity="right"
-                    android:layout_marginTop="5dp" >
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/learnMore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="LEARN MORE"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:text="LEARN MORE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@color/newVector"
-                        android:typeface="sans"
                         android:textSize="14dp"
-                        android:id="@+id/learnMore" />
+                        android:typeface="sans" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
