@@ -174,7 +174,7 @@
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="left"
-                                                        android:text="Enter your business type"
+                                                        android:text="Enter your business area"
                                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                                         android:textColor="@color/textColorForRegister"
                                                         android:textSize="22dp"
@@ -335,7 +335,7 @@
                                                         android:layout_gravity="center_horizontal"
                                                         android:layout_marginTop="5dp"
                                                         android:background="#00000000"
-                                                        android:hint="example - resturant, departmental store..."
+                                                        android:hint="example - restaurant, departmental store..."
                                                         android:inputType="textEmailAddress"
                                                         android:maxLines="1"
                                                         android:minHeight="40dp"
@@ -368,7 +368,7 @@
                                                         android:layout_marginTop="5dp"
                                                         android:background="#00000000"
                                                         android:ems="10"
-                                                        android:hint="please enter an active phone number."
+                                                        android:hint="please enter your active phone number."
                                                         android:inputType="phone"
                                                         android:maxLines="1"
                                                         android:minHeight="40dp"
@@ -427,19 +427,19 @@
                                                     android:layout_height="match_parent" >
 
                                                     <EditText
+                                                        android:id="@+id/companyDiscriptionE"
                                                         android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
-                                                        android:inputType="textEmailAddress"
-                                                        android:id="@+id/companyDiscriptionE"
                                                         android:layout_gravity="center_horizontal"
                                                         android:layout_marginTop="5dp"
-                                                        android:textSize="15dp"
-                                                        android:textColorHint="#81ffffff"
-                                                        android:textColor="#f1f1f1"
-                                                        android:minHeight="40dp"
-                                                        android:maxLines="1"
                                                         android:background="#00000000"
-                                                        android:hint="Enter Company About Here" />
+                                                        android:hint="Write some description about your store here."
+                                                        android:inputType="textEmailAddress"
+                                                        android:maxLines="1"
+                                                        android:minHeight="40dp"
+                                                        android:textColor="#f1f1f1"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textSize="15dp" />
 
                                                     <TextView
                                                         android:layout_width="match_parent"
@@ -459,20 +459,20 @@
                                                     android:layout_height="match_parent" >
 
                                                     <EditText
+                                                        android:id="@+id/companyCityE"
                                                         android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
-                                                        android:inputType="textEmailAddress"
-                                                        android:ems="10"
-                                                        android:id="@+id/companyCityE"
                                                         android:layout_gravity="center_horizontal"
                                                         android:layout_marginTop="5dp"
-                                                        android:textSize="15dp"
-                                                        android:textColorHint="#81ffffff"
-                                                        android:textColor="#f1f1f1"
-                                                        android:minHeight="40dp"
-                                                        android:maxLines="1"
                                                         android:background="#00000000"
-                                                        android:hint="Enter Company City Here" />
+                                                        android:ems="10"
+                                                        android:hint="example - electronic city "
+                                                        android:inputType="textEmailAddress"
+                                                        android:maxLines="1"
+                                                        android:minHeight="40dp"
+                                                        android:textColor="#f1f1f1"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textSize="15dp" />
 
                                                     <TextView
                                                         android:layout_width="match_parent"
@@ -492,20 +492,20 @@
                                                     android:layout_height="match_parent" >
 
                                                     <EditText
+                                                        android:id="@+id/companyLandmarkE"
                                                         android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
-                                                        android:inputType="textEmailAddress"
-                                                        android:ems="10"
-                                                        android:id="@+id/companyLandmarkE"
                                                         android:layout_gravity="center_horizontal"
                                                         android:layout_marginTop="5dp"
-                                                        android:textSize="15dp"
-                                                        android:textColorHint="#81ffffff"
-                                                        android:textColor="#f1f1f1"
-                                                        android:minHeight="40dp"
-                                                        android:maxLines="1"
                                                         android:background="#00000000"
-                                                        android:hint="Enter Company landmark Here" />
+                                                        android:ems="10"
+                                                        android:hint="example -  opposite bus stand "
+                                                        android:inputType="textEmailAddress"
+                                                        android:maxLines="1"
+                                                        android:minHeight="40dp"
+                                                        android:textColor="#f1f1f1"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textSize="15dp" />
 
                                                     <TextView
                                                         android:layout_width="match_parent"
@@ -527,20 +527,20 @@
                                                     android:id="@+id/companyWebFeild">
 
                                                     <EditText
+                                                        android:id="@+id/companyVisitE"
                                                         android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
-                                                        android:inputType="textEmailAddress|textWebEmailAddress"
-                                                        android:ems="10"
-                                                        android:id="@+id/companyVisitE"
                                                         android:layout_gravity="center_horizontal"
                                                         android:layout_marginTop="5dp"
-                                                        android:textSize="15dp"
-                                                        android:textColorHint="#81ffffff"
-                                                        android:textColor="#f1f1f1"
-                                                        android:minHeight="40dp"
-                                                        android:maxLines="1"
                                                         android:background="#00000000"
-                                                        android:hint="Enter Company Website Here" />
+                                                        android:ems="10"
+                                                        android:hint="example - www.abcstore.com"
+                                                        android:inputType="textEmailAddress|textWebEmailAddress"
+                                                        android:maxLines="1"
+                                                        android:minHeight="40dp"
+                                                        android:textColor="#f1f1f1"
+                                                        android:textColorHint="#81ffffff"
+                                                        android:textSize="15dp" />
 
                                                     <TextView
                                                         android:layout_width="match_parent"
@@ -610,7 +610,7 @@
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                                    android:text="Please Enter The name Of Your Company / your Business"
+                                                    android:text="Please Enter The name Of your Store"
                                                     android:id="@+id/textView363"
                                                     android:layout_marginTop="5dp"
                                                     android:layout_marginLeft="10dp"
@@ -629,14 +629,14 @@
                                                     android:layout_gravity="left"
                                                     android:textColor="#ffffff"
                                                     android:textSize="14dp"
-                                                    android:text="Enter Company Tag Line"
+                                                    android:text="Enter your business area"
                                                     android:gravity="left" />
 
                                                 <TextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                                    android:text="Enter Your Company Office Number"
+                                                    android:text="Enter your store phone number"
                                                     android:layout_marginTop="5dp"
                                                     android:layout_marginLeft="10dp"
                                                     android:id="@+id/textView365"
@@ -657,13 +657,13 @@
                                                     android:typeface="normal"
                                                     android:textSize="14dp"
                                                     android:gravity="left"
-                                                    android:text="Enter Your Company Email" />
+                                                    android:text="Enter your store email" />
 
                                                 <TextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                                    android:text="Enter Short Discription About Your Company"
+                                                    android:text="Enter Short Description About Your Store"
                                                     android:layout_marginTop="5dp"
                                                     android:layout_marginLeft="10dp"
                                                     android:id="@+id/textView373"
@@ -684,13 +684,13 @@
                                                     android:typeface="normal"
                                                     android:textSize="14dp"
                                                     android:gravity="left"
-                                                    android:text="Enter Company City Name" />
+                                                    android:text="Enter Store City Name" />
 
                                                 <TextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                                    android:text="Enter a Landmark Nearest to Your Company"
+                                                    android:text="Enter a Landmark Nearest to Your Store"
                                                     android:layout_marginTop="5dp"
                                                     android:layout_marginLeft="10dp"
                                                     android:id="@+id/textView375"
@@ -704,7 +704,7 @@
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                                    android:text="Enter Company Website"
+                                                    android:text="Enter Store Website"
                                                     android:layout_marginTop="5dp"
                                                     android:layout_marginLeft="10dp"
                                                     android:id="@+id/textView367"
@@ -719,7 +719,7 @@
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                                    android:text="Select Company State"
+                                                    android:text="Select Store State"
                                                     android:layout_marginTop="5dp"
                                                     android:layout_marginLeft="10dp"
                                                     android:id="@+id/textView376"

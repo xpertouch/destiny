@@ -71,26 +71,25 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
     String companyTagLineS, companyAboutS, addVisitS, companyLandmarkS, companyCityS, companyEmailS, companyOppsiteS, companyPhoneS, companyBannerS, companyTitleS, companyStateS,isSubscrribed;
 
-    RecyclerView companyPostsRv;
-    RecyclerView.Adapter companyPostsAdapter;
+    RecyclerView            companyPostsRv;
+    RecyclerView.Adapter    companyPostsAdapter;
 
-    ArrayList<String> postDateArrayJ,jobPostIdArray, jobInfoArray;
+    ArrayList<String>       postDateArrayJ,jobPostIdArray, jobInfoArray;
 
-    ArrayList<String> saleTitleArray, saleDiscriptionArray, postDateArrayB, saleID;
+    ArrayList<String>       saleTitleArray, saleDiscriptionArray, postDateArrayB, saleID;
 
-    NetworkImageView companyPicture;
-    RecyclerView companyBucket;
-    RecyclerView.Adapter bucketAdapter;
-    RelativeLayout bucketProgress;
+    NetworkImageView        companyPicture;
+    RecyclerView            companyBucket;
+    RecyclerView.Adapter    bucketAdapter;
+    RelativeLayout          bucketProgress;
 
-    TextView companyName, companyTag, companyAbout, addressLine1, addressOpp, companyState;
-    ImageButton callCompany;
-    ImageButton visitCompany;
-    ImageButton mailCompany;
-    LinearLayout shareDetails;
-    TextView callTV, shareTV, mailTV, visitTV, adddressTV, postsTV;
-
-    TextView noPostsTitle, noPostsSubtitle, noBucketTitle, noBucketSubtitle;
+    TextView                companyName, companyTag, companyAbout, addressLine1, addressOpp, companyState;
+    ImageButton             callCompany;
+    ImageButton             visitCompany;
+    ImageButton             mailCompany;
+    LinearLayout            shareDetails;
+    TextView                callTV, shareTV, mailTV, visitTV, adddressTV, postsTV;
+    TextView                noPostsTitle, noPostsSubtitle, noBucketTitle, noBucketSubtitle;
 
 
     String tag, address, Opp, email, call;
@@ -122,7 +121,6 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         initViews();
 
         if (getIntent().getExtras() == null) {return;}
-
 
         try {new GetCompanyInfo().execute(getIntent().getExtras().getString("companyID", "1"));  } catch (Exception e) {e.printStackTrace();}
         try {new GetCompanyPosts().execute(getIntent().getExtras().getString("companyID", "1")); } catch (Exception e) {e.printStackTrace();}
@@ -171,11 +169,12 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
         visitCompany    = (ImageButton) findViewById(R.id.visitFromProfileIB);
         mailCompany     = (ImageButton) findViewById(R.id.mailFromProfileIB);
 
-        shareDetails = (LinearLayout) findViewById(R.id.shareDetails);
-        infoLayout = (LinearLayout) findViewById(R.id.infoLayout);
-        infoProgress = (RelativeLayout) findViewById(R.id.infoProgress);
-        postsProgress = (RelativeLayout) findViewById(R.id.postsProgress);
-        companyPostsRv = (RecyclerView) findViewById(R.id.companyPostsRV);
+        shareDetails        = (LinearLayout) findViewById(R.id.shareDetails);
+        infoLayout          = (LinearLayout) findViewById(R.id.infoLayout);
+        infoProgress        = (RelativeLayout) findViewById(R.id.infoProgress);
+        postsProgress       = (RelativeLayout) findViewById(R.id.postsProgress);
+        companyPostsRv      = (RecyclerView) findViewById(R.id.companyPostsRV);
+
         companyPostsRv.setNestedScrollingEnabled(false);
         userData = getSharedPreferences(LOCAL_APP_DATA, 0);
 
@@ -637,7 +636,6 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
 
             postsProgress.setVisibility(View.VISIBLE);
             companyPostsRv.setVisibility(View.GONE);
-
         }
 
         @Override
@@ -662,7 +660,8 @@ public class CompanyProfile extends AppCompatActivity implements View.OnClickLis
                 },500);
                 postsProgress.setVisibility(View.GONE);
             }else if (jobPostIdArray.size() > 0 ){
-                companyPostsAdapter = new PostsCompany(CompanyProfile.this,postDateArrayJ,jobInfoArray);
+                companyPostsAdapter = new PostsCompany(CompanyProfile.this,postDateArrayJ,jobInfoArray, jobPostIdArray);
+
                 companyPostsRv.setAdapter(companyPostsAdapter);
                 postsProgress.setVisibility(View.GONE);
                 companyPostsRv.setVisibility(View.VISIBLE);

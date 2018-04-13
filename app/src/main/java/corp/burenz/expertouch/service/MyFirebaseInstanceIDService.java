@@ -1,9 +1,12 @@
 package corp.burenz.expertouch.service;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
@@ -34,7 +37,13 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         Intent registrationComplete = new Intent(Config.REGISTRATION_COMPLETE);
         registrationComplete.putExtra("token", refreshedToken);
         LocalBroadcastManager.getInstance(this).sendBroadcast(registrationComplete);
+
+        Toast.makeText(getApplicationContext(), "inside id service", Toast.LENGTH_SHORT).show();
+
     }
+
+
+
 
     private void sendRegistrationToServer(final String token) {
         // sending gcm token to server
@@ -62,8 +71,6 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         editor.commit();
 
     }
-
-
 
 }
 

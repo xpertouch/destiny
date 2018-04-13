@@ -84,7 +84,7 @@
                             android:layout_marginLeft="5dp"
                             android:text="eResolute"
                             android:textColor="@color/vectorColor"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -93,7 +93,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:text="Nawakadal Sringagr"
-                            android:textSize="13sp" />
+                            android:textSize="11sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -145,7 +145,7 @@
                         android:layout_marginTop="2dp"
                         android:text="We are a tech company that deal with "
                         android:textColor="@color/vectorColor"
-                        android:textSize="15sp" />
+                        android:textSize="13sp" />
                 </LinearLayout>
             </LinearLayout>
 

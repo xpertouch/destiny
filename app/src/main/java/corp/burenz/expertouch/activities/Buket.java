@@ -26,6 +26,7 @@ public class Buket extends AppCompatActivity {
     Boolean fromNotifications  = false;
     String fromType = "food";
 
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -52,20 +53,27 @@ public class Buket extends AppCompatActivity {
     public int resolveNotificationPosition(String offerType){
 
         switch (offerType.trim()){
+
             case "food":
                 return 0;
+
             case "offer":
                 return 1;
-            case "health":
+
+            case "travel":
                 return 2;
 
-            case "education":
+            case "health":
                 return 3;
 
-            case "depart":
+            case "education":
                 return 4;
-            case "activity":
+
+            case "depart":
                 return 5;
+
+            case "activity":
+                return 6;
 
             default:
                 return 0;
@@ -87,8 +95,8 @@ public class Buket extends AppCompatActivity {
         }
 
         Typeface logoTypeface;
-        bucketTitle = (TextView) findViewById(R.id.bucketTitle);
-        logoTypeface = Typeface.createFromAsset(Buket.this.getAssets(), "fonts/forte.ttf");
+        bucketTitle     = (TextView) findViewById(R.id.bucketTitle);
+        logoTypeface    =  Typeface.createFromAsset(Buket.this.getAssets(), "fonts/forte.ttf");
         bucketTitle.setTypeface(logoTypeface);
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
@@ -100,11 +108,10 @@ public class Buket extends AppCompatActivity {
 
             @Override
             public Fragment getItem(int position) {
-                switch (position % 6) {
+                switch (position % 7) {
 
                     case 0:
                         Bundle agrs0 = new Bundle();
-
                         Fragment foodFragment = new Food();
                         agrs0.putString("from","food");
                         foodFragment.setArguments(agrs0);
@@ -117,14 +124,24 @@ public class Buket extends AppCompatActivity {
                         offferStore.setArguments(agrs1);
                         return offferStore;
 
+
                     case 2:
+                        Bundle agrs5 = new Bundle();
+                        Fragment travelBucket = new Food();
+                        agrs5.putString("from","travel");
+                        travelBucket.setArguments(agrs5);
+                        return travelBucket;
+
+
+                    case 3:
                         Bundle agrs2 = new Bundle();
                         Fragment educationbucket= new Food();
                         agrs2.putString("from","health");
                         educationbucket.setArguments(agrs2);
                         return educationbucket;
 
-                    case 3:
+
+                    case 4:
                         Bundle agrs3 = new Bundle();
 
                         Fragment healthBucket= new Food();
@@ -132,49 +149,55 @@ public class Buket extends AppCompatActivity {
                         healthBucket.setArguments(agrs3);
                         return healthBucket;
 
-                    case 4:
+                    case 5:
                         Bundle agrs4 = new Bundle();
                         Fragment departBucket = new Food();
                         agrs4.putString("from","depart");
                         departBucket.setArguments(agrs4);
                         return departBucket;
 
-                    case 5:
-                        Bundle agrs5 = new Bundle();
+                    case 6:
+                        Bundle agrs6 = new Bundle();
                         Fragment activityBucket = new Food();
-                        agrs5.putString("from","activity");
-                        activityBucket.setArguments(agrs5);
+                        agrs6.putString("from","activity");
+                        activityBucket.setArguments(agrs6);
                         return activityBucket;
 
                         default:
                         return new Products();
-
 
                 }
             }
 
             @Override
             public int getCount() {
-                return 6;
+                return 7;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
-                switch (position % 6) {
+                switch (position % 7) {
                     case 0:
-                        return "Food Store";
+                        return "Food";
+
                     case 1:
-                        return "Fashion";
+                        return "Clothes";
+
                     case 2:
-                        return "Health";
+                        return "Travel";
 
                     case 3:
+                        return "Health";
+
+                    case 4:
                         return "Education";
 
-                    case 5:
+                    case 6:
                         return "Activity";
-                    case 4:
+
+                    case 5:
                         return "Departmental Store";
+
                     default:
                         return "New Releases";
                 }
@@ -193,11 +216,11 @@ public class Buket extends AppCompatActivity {
                     case 1:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.blue,
-                                getString(R.string.host)+"/other/sale.jpg");
+                                "https://theweekendedition.com.au/wp-content/uploads/sites/6/2017/05/TWe-clothes-market-700x350-c-default.jpg");
                     case 2:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.cyan,
-                                getString(R.string.host)+"/other/education.jpg");
+                                "https://ak6.picdn.net/shutterstock/videos/30467896/thumb/1.jpg");
                     case 3:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.cyan,
@@ -206,6 +229,17 @@ public class Buket extends AppCompatActivity {
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.green,
                                 getString(R.string.host)+"/other/lifestyle.jpg");
+
+                    case 5:
+                        return HeaderDesign.fromColorResAndUrl(
+                                R.color.red,
+                                "http://ak8.picdn.net/shutterstock/videos/15199678/thumb/1.jpg");
+                    case 6:
+                        return HeaderDesign.fromColorResAndUrl(
+                                R.color.red,
+                                "http://dtsavvy.com/wp-content/uploads/2017/06/notifications-011.png");
+
+
 
 
                 }

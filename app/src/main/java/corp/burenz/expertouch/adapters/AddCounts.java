@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.activities.CompanyProfile;
@@ -43,12 +46,14 @@ public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
 
 
 
-    private String companyTitle, jobInformation, postDate, companyBanner, postId;
+    private ArrayList<String> postId;
     private Context mContext;
+    String singlePostId;
 
     AddCounts(String[] textsIGot){
         this.textsIGotS = textsIGot;
     }
+
 
 
     public AddCounts(String[] textsIGot, boolean FROM_JOBS){
@@ -58,24 +63,29 @@ public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
 
     }
 
-    AddCounts(Context mContext, String[] textsIGot, boolean FROM_JOBS, String companyTitle, String postDate, String jobInformation, String companyBanner, String postId){
+    AddCounts(Context mContext, String[] textsIGot, boolean FROM_JOBS, ArrayList<String> postId){
 
         this.textsIGotS         = textsIGot;
         this.FROM_JOBS          = FROM_JOBS;
         this.mContext           = mContext;
-        this.companyTitle       = companyTitle;
-        this.postDate           = postDate;
-        this.jobInformation     = jobInformation;
-        this.companyBanner      = companyBanner;
         this.postId             = postId;
 
+    }
+
+    AddCounts(Context mContext, String[] textsIGot, boolean FROM_JOBS, ArrayList<String> postId, String singlePostId){
+
+        this.textsIGotS         = textsIGot;
+        this.FROM_JOBS          = FROM_JOBS;
+        this.mContext           = mContext;
+        this.postId             = postId;
+        this.singlePostId       = singlePostId;
     }
 
 
 
 
     @Override
-    public void onBindViewHolder(AddCounts.CompanyAdds holder, int position) {
+    public void onBindViewHolder(AddCounts.CompanyAdds holder, final int position) {
 
         holder.textsIGot.setText(Html.fromHtml(textsIGotS[position]));
 
@@ -84,14 +94,17 @@ public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
             /*setting blue color to predict links*/
 //            if (textsIGotS[position].contains("...")){holder.textsIGot.setTextColor(Color.GRAY);}else{holder.textsIGot.setTextColor(Color.BLACK);}
 
-
-
             holder.textsIGot.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
                     Log.e("finale","im listening add counts adapter");
-                    mContext.startActivity(new Intent(mContext, JobPostDetails.class).putExtra("postId",postId));
+                    if (singlePostId!= null){
+                        mContext.startActivity(new Intent(mContext, JobPostDetails.class).putExtra("postId",singlePostId));
+                    }else {
+                        mContext.startActivity(new Intent(mContext, JobPostDetails.class).putExtra("postId",postId.get(position)));
+                    }
+
 
                 }
             });
@@ -122,45 +135,3 @@ public class AddCounts extends RecyclerView.Adapter<AddCounts.CompanyAdds>{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-//public class AddCounts extends ArrayAdapter<String> {
-//
-//    String[] textsiGot;
-//    TextView textsIGotT;
-//
-//    public AddCounts(Context context, String[] textsIGot) {
-//        super(context,R.layout.post_counts,textsIGot);
-//
-//        this.textsiGot = textsIGot;
-//
-//
-//    }
-//
-//
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//
-//
-//        View v = LayoutInflater.from(getContext()).inflate(R.layout.post_counts,parent,false);
-//        textsIGotT = (TextView) v.findViewById(R.id.textIGot);
-//
-//        textsIGotT.setText(textsiGot[position]);
-//
-//
-//
-//        return v;
-//
-//
-//
-//    }
-//}

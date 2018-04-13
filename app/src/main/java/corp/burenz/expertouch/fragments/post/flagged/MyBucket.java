@@ -51,7 +51,7 @@ public class MyBucket extends Fragment {
     RelativeLayout          bucketLoader;
     RecyclerView            bucketPostsRV;
     RecyclerView.Adapter    adapter;
-    ArrayList<String>       postTitle,postId,postDates,posts,totalLikes;
+    ArrayList<String>       postTitle,postId,postDates,posts,totalLikes, bannerIfAny;
 
 
     LinearLayout noBucketPosts;
@@ -138,8 +138,10 @@ public class MyBucket extends Fragment {
                     postId.add(jsonObject.getString("saleId"));
                     postDates.add(jsonObject.getString("saleDate"));
                     postTitle.add(jsonObject.getString("saleTitle"));
+                    bannerIfAny.add(jsonObject.getString("postBanner"));
                     posts.add(jsonObject.getString("saleDiscription"));
                     totalLikes.add(jsonObject.getString("totalLikes"));
+
 
 
                 }
@@ -174,7 +176,7 @@ public class MyBucket extends Fragment {
             postId          = new ArrayList<String>();
             postTitle       = new ArrayList<String>();
             totalLikes      = new ArrayList<String>();
-
+            bannerIfAny     = new ArrayList<String>();
             bucketLoader.setVisibility(View.VISIBLE);
             bucketPostsRV.setVisibility(View.GONE);
 
@@ -202,7 +204,7 @@ public class MyBucket extends Fragment {
 
             }else {
 
-                adapter = new BucketPostAdapter(getActivity(),postTitle,postDates,posts,postId,totalLikes);
+                adapter = new BucketPostAdapter(getActivity(),postTitle,postDates,posts,postId,totalLikes, bannerIfAny);
                 bucketPostsRV.setVisibility(View.VISIBLE);
                 bucketPostsRV.setAdapter(adapter);
 

@@ -169,7 +169,9 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <include layout="@layout/content_jobs"/>
+
+        <include layout="@layout/content_jobs"/>
+
 
 
 

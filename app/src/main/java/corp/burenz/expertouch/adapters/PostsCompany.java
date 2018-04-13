@@ -20,7 +20,7 @@ import corp.burenz.expertouch.R;
 public class PostsCompany extends RecyclerView.Adapter<PostsCompany.MyCompanyPosts> {
 
 
-    ArrayList<String> postDateArray,jobDiscriptionArray;
+    ArrayList<String> postDateArray,jobDiscriptionArray, postIdArray;
     Context context;
 
     @Override
@@ -34,11 +34,11 @@ public class PostsCompany extends RecyclerView.Adapter<PostsCompany.MyCompanyPos
     }
 
 
-    public PostsCompany(Context context,ArrayList<String> postDateArray, ArrayList<String> jobDiscriptionArray) {
-        this.postDateArray = postDateArray;
-        this.jobDiscriptionArray = jobDiscriptionArray;
-        this.context = context;
-
+    public PostsCompany(Context context, ArrayList<String> postDateArray, ArrayList<String> jobDiscriptionArray, ArrayList<String> postIdArray) {
+        this.postDateArray          = postDateArray;
+        this.jobDiscriptionArray    = jobDiscriptionArray;
+        this.context                = context;
+        this.postIdArray            = postIdArray;
     }
 
 
@@ -54,8 +54,8 @@ public class PostsCompany extends RecyclerView.Adapter<PostsCompany.MyCompanyPos
         jobDiscriptionRV = holder.jobDiscriptionRV;
         jobDiscriptionRV.setLayoutManager(new LinearLayoutManager(context));
 
-        postDate.setText(postDateArray.get(position).toString());
-        jobAdapter = new AddCounts(jobDiscriptionArray.get(holder.getAdapterPosition()).toString().split("3xt3"));
+        postDate.setText(postDateArray.get(position));
+        jobAdapter = new AddCounts(context, jobDiscriptionArray.get(holder.getAdapterPosition()).split("3xt3"), true,postIdArray);
         jobDiscriptionRV.setAdapter(jobAdapter);
 
     }

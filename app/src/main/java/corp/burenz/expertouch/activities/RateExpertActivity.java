@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -206,7 +207,14 @@ public class RateExpertActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            progressReview.setVisibility(View.VISIBLE);
+            progressReview.startAnimation(AnimationUtils.loadAnimation(RateExpertActivity.this, R.anim.fadein_scan));
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progressReview       .setVisibility(View.VISIBLE);
+
+                }
+            },500);
 
             /*show the progress*/
 
@@ -218,7 +226,15 @@ public class RateExpertActivity extends AppCompatActivity {
             super.onPostExecute(s);
 //            Toast.makeText(RateExpertActivity.this, s, Toast.LENGTH_SHORT).show();
             /*update the new ratings now */
-            progressReview.setVisibility(View.GONE);
+
+            progressReview.startAnimation(AnimationUtils.loadAnimation(RateExpertActivity.this, R.anim.fadeout_scan));
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progressReview       .setVisibility(View.GONE);
+
+                }
+            },500);
 
             RateExpertActivity.this.finish();
 

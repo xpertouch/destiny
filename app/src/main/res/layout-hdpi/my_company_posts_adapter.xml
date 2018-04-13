@@ -6,9 +6,9 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <android.support.v7.widget.CardView
             android:id="@+id/deleteMypostCardView"
@@ -48,6 +48,13 @@
                         android:textColor="#a0a0a0"
                         android:textSize="10dp" />
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/companyPostImageIfAny"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="TODO HERE" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -359,44 +366,45 @@
         </android.support.v7.widget.CardView>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:gravity="center"
             android:id="@+id/emptyJobs"
-            android:visibility="gone"
-            android:background="#ffffff" >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:minHeight="500dp"
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
                 android:id="@+id/imageView206"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@raw/trash"
+                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
-                android:layout_marginTop="10dp" />
+                android:src="@raw/trash" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Its Lonely Here"
                 android:id="@+id/textView666"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textSize="17dp" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Its Lonely Here"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Looks Like you haven&apos;t post any job Oppurtunities in your Company"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/textView667"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="Looks Like you haven&apos;t post any job Oppurtunities in your Company"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
     </LinearLayout>
 

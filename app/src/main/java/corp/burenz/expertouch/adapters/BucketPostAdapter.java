@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -73,15 +75,15 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
 
 
 
-    public BucketPostAdapter(Context context, ArrayList<String> postTitle ,ArrayList<String> postDates, ArrayList<String> posts,ArrayList<String> postId,ArrayList<String> totalLikes){
+    public BucketPostAdapter(Context context, ArrayList<String> postTitle ,ArrayList<String> postDates, ArrayList<String> posts,ArrayList<String> postId,ArrayList<String> totalLikes, ArrayList<String> bucketBanner){
 
-        this.postDates = postDates;
-        this.posts= posts;
-        this.context = context;
-        this.postTitle = postTitle;
-        this.postId = postId;
-        this.totalLikes = totalLikes;
-        this.bucketBanner = bucketBanner;
+        this.postDates          = postDates;
+        this.posts              = posts;
+        this.context            = context;
+        this.postTitle          = postTitle;
+        this.postId             = postId;
+        this.totalLikes         = totalLikes;
+        this.bucketBanner       = bucketBanner;
     }
 
 
@@ -121,14 +123,25 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
         noDontDelete            = holder.noDontDelete;
 
 
+        if (bucketBanner.get(position).contains("http")){
+            ImageLoader.getInstance().displayImage(bucketBanner.get(position),holder.companyPostImageIfAny);
+
+            holder.companyPostImageIfAny.setVisibility(View.VISIBLE);
+
+        }else {holder.companyPostImageIfAny.setVisibility(View.GONE);}
         loonelyCompanyBucket = holder.loonelyCompanyBucket;
 
         bucketPostDate.setText(postDates.get(position));
         bucketPostTitle.setText(postTitle.get(position));
         bucketPostSubtitle.setText(posts.get(position));
 
+        holder.companyPostImageIfAny.setVisibility(View.VISIBLE);
 
 
+//
+//        if ( bucketBanner.get(position).contains("http")){holder.companyPostImageIfAny.setVisibility(View.VISIBLE);}else{
+//            holder.companyPostImageIfAny.setVisibility(View.GONE);
+//        }
 
 
 
@@ -195,7 +208,7 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
         
         
         
-
+        holder.setIsRecyclable(false);
 
 
 
@@ -205,13 +218,11 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
     public int getItemCount() {
 
         postsLength = postId.size();
-
-
         return postDates.size();
 
     }
 
-    public static class MyPostsHolder extends RecyclerView.ViewHolder {
+    public class MyPostsHolder extends RecyclerView.ViewHolder {
 
         TextView bucketPostDate,bucketPostTitle,bucketPostSubtitle,totalLikesV;
         ImageView deleteBucketPost;
@@ -220,7 +231,8 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
         LinearLayout loonelyCompanyBucket;
         Button sureDelete;
         Button noDontDelete;
-
+        ImageView companyPostImageIfAny;
+        ImageLoader imageLoader;
 
 
 
@@ -239,6 +251,9 @@ public class BucketPostAdapter extends RecyclerView.Adapter<BucketPostAdapter.My
             loonelyCompanyBucket    = (LinearLayout) itemView.findViewById(R.id.lonelyCompanyBucket);
             sureDelete              = (Button) itemView.findViewById(R.id.sureDelete);
             noDontDelete            = (Button) itemView.findViewById(R.id.noDontDelete);
+            companyPostImageIfAny   = (ImageView) itemView.findViewById(R.id.companyPostImageIfAny);
+            imageLoader             = com.nostra13.universalimageloader.core.ImageLoader.getInstance(); // Get singleton instance
+
         }
         
 

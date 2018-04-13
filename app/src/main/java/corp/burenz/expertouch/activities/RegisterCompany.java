@@ -85,7 +85,7 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
 
         InputMethodManager im;
 
-        im = (InputMethodManager)RegisterCompany.this.getSystemService(INPUT_METHOD_SERVICE);
+        im = (InputMethodManager)RegisterCompany.this. getSystemService(INPUT_METHOD_SERVICE);
         im.hideSoftInputFromWindow(companyNameE.getWindowToken(),0);
 
         setTexts();
@@ -309,7 +309,7 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
 
                 companyDiscription = companyDiscriptionE.getText().toString();
 
-                if (companyDiscription.length() > 10 && companyDiscription.length() <40){
+                if (companyDiscription.length() > 10 && companyDiscription.length() < 100){
 
                     companyButtonsFlipper.showNext();
                     companyImagesFlipper.showNext();
@@ -317,7 +317,7 @@ public class RegisterCompany extends AppCompatActivity implements View.OnClickLi
                     companyEditTextFlipper.showNext();
 
                 }else {
-                    Toast.makeText(RegisterCompany.this, "Please describe your company in more than 10 Characters but less than 40 Characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterCompany.this, "Please describe your company in more than 10 Characters but less than 100 Characters", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.companyStateB:

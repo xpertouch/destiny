@@ -51,18 +51,18 @@
         android:layout_gravity="center_horizontal">
 
         <TextView
+            android:id="@+id/textIGot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Need Two Software Enginners for my company, Intreseted persons may drop their resumes at below email address Need Two Software Enginners for my company, "
-            android:id="@+id/textIGot"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:textColor="#4d4d4d"
-            android:textSize="12dp"
             android:layout_marginRight="20dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginTop="5dp"
+            android:text="Need Two Software Enginners for my company, Intreseted persons may drop their resumes at below email address Need Two Software Enginners for my company, "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"
+            android:typeface="sans" />
     </LinearLayout>
 
     <ImageView

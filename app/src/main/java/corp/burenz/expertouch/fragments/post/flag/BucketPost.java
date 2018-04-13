@@ -324,7 +324,7 @@ public class BucketPost extends Fragment {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(getActivity(),MyCompanyPosts.class));
+                        startActivity(new Intent(getActivity(),MyCompanyPosts.class).putExtra("from","bucket"));
                         getActivity().finish();
 
                     }

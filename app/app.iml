@@ -132,6 +132,7 @@
     <orderEntry type="library" exported="" name="com.android.support:support-compat-25.1.1" level="project" />
     <orderEntry type="library" exported="" name="com.google.zxing:core:3.3.0@jar" level="project" />
     <orderEntry type="library" exported="" name="com.google.firebase:firebase-core-10.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.squareup.picasso:picasso:2.5.2@jar" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:google-material-typeface-2.2.0.3.original" level="project" />
     <orderEntry type="library" exported="" name="uk.co.samuelwall:material-tap-target-prompt-1.6.3" level="project" />
     <orderEntry type="library" exported="" name="com.dlazaro66.qrcodereaderview:qrcodereaderview-2.0.3" level="project" />
@@ -156,7 +157,6 @@
     <orderEntry type="library" exported="" name="com.mikepenz:entypo-typeface-1.0.0.2" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:fontawesome-typeface-4.7.0.0" level="project" />
     <orderEntry type="library" exported="" name="com.mikepenz:material-design-iconic-typeface-2.2.0.2" level="project" />
-    <orderEntry type="library" exported="" name="com.squareup.picasso:picasso:2.3.2@jar" level="project" />
     <orderEntry type="library" exported="" name="com.google.firebase:firebase-messaging-10.0.1" level="project" />
     <orderEntry type="library" exported="" name="com.github.bumptech.glide:glide:3.7.0@jar" level="project" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />

@@ -5,32 +5,21 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import android.animation.Animator;
 
-import android.support.v7.widget.DefaultItemAnimator;
-
-import com.google.firebase.messaging.FirebaseMessaging;
-
 import org.cryse.widget.persistentsearch.DefaultVoiceRecognizerDelegate;
 import org.cryse.widget.persistentsearch.PersistentSearchView;
-import org.cryse.widget.persistentsearch.SearchItem;
-import org.cryse.widget.persistentsearch.SearchSuggestionsBuilder;
 import org.cryse.widget.persistentsearch.VoiceRecognitionDelegate;
-import org.cryse.widget.persistentsearch.SearchItem;
-import org.cryse.widget.persistentsearch.SearchSuggestionsBuilder;
 import org.cryse.widget.persistentsearch.PersistentSearchView.SearchListener;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,14 +30,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.ChannelAdaper;
@@ -72,9 +58,12 @@ public class ChannelSearchView extends AppCompatActivity {
     private LinearLayout        mSearchTintView;
 
     LinearLayout showProgressGettingListLinearLayout, noChannelsFoundLinear, noInternetFounfLinear;
-
+    SwipeRefreshLayout swiperefreshForStore;
+    String buildQuery;
 
     void addTemporarly(){
+
+
 
 
         companyTitleArrayList.add("Demo title 1");
@@ -204,14 +193,25 @@ public class ChannelSearchView extends AppCompatActivity {
         isSubscribedByMeArrayListS           = new ArrayList<>();
         companyIdArrayListS                  = new ArrayList<>();
 
-        persistentSearchView = (PersistentSearchView) findViewById(R.id.searchview);
-        mSearchTintView = (LinearLayout) findViewById(R.id.view_search_tint);
+        persistentSearchView    = (PersistentSearchView) findViewById(R.id.searchview);
+        mSearchTintView         = (LinearLayout) findViewById(R.id.view_search_tint);
         showProgressGettingListLinearLayout = (LinearLayout) findViewById(R.id.show_progress_getting_channel);
         noChannelsFoundLinear   =   (LinearLayout) findViewById(R.id.no_channels_result_linear);
         noInternetFounfLinear   =   (LinearLayout) findViewById(R.id.no_internet_found_linear);
+        swiperefreshForStore    =   (SwipeRefreshLayout) findViewById(R.id.swiperefreshForStore);
 
 
+       swiperefreshForStore.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+           @Override
+           public void onRefresh() {
 
+               persistentSearchView.closeSearch();
+               persistentSearchView.clearSuggestions();
+               new GETChannelList().execute("all");
+
+
+           }
+       });
 
 
         new GETChannelList().execute("all");
@@ -300,6 +300,8 @@ public class ChannelSearchView extends AppCompatActivity {
             public void onSearch(String query) {
 
                 Log.e("searchVM","onSearch query=" + query);
+
+                buildQuery = query;
 
                 SearchHistory searchHistory = new SearchHistory(ChannelSearchView.this);
                 searchHistory.writer();
@@ -424,7 +426,8 @@ public class ChannelSearchView extends AppCompatActivity {
                 /*set a progress abr visibilty*/
 
 
-            showProgressGettingListLinearLayout.setVisibility(View.VISIBLE);
+//            showProgressGettingListLinearLayout.setVisibility(View.VISIBLE);
+            swiperefreshForStore.setRefreshing(true);
 
 
 /*
@@ -467,7 +470,8 @@ public class ChannelSearchView extends AppCompatActivity {
             /*this clas is called in onSearch and onCreate*/ /* show a progress and then hides it */
             /*if the query length is 0 then  its hould call all the channelm name*/
 
-            showProgressGettingListLinearLayout.setVisibility(View.GONE);
+//            showProgressGettingListLinearLayout.setVisibility(View.GONE);
+            swiperefreshForStore.setRefreshing(false);
 
             if(companyTitleArrayList.size() == 0){
                 noChannelsFoundLinear.setVisibility(View.VISIBLE);

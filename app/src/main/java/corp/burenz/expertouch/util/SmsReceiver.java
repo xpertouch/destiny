@@ -27,9 +27,11 @@ public class SmsReceiver extends BroadcastReceiver {
 
             String messageBody = smsMessage.getMessageBody();
 
-
+            try{  mListener.messageReceived(messageBody);  }catch (Exception e){e.printStackTrace();}
             //Pass on the text to our listener.
-            mListener.messageReceived(messageBody);
+
+
+
         }
 
     }

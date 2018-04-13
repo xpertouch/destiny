@@ -71,10 +71,16 @@ public class SampleSuggestionsBuilder implements SearchSuggestionsBuilder {
        try {
            searchHistory.writer();
            String  []searchHistoryArray =  searchHistory.getHistoryStringArray().split("\n");
+
 //           Toast.makeText(mContext, searchHistory.getHistoryStringArray(), Toast.LENGTH_SHORT).show();
            if( searchHistoryArray.length == 0 ){return;}
+
            for (String aSearchhistoryArray : searchHistoryArray) {
-               mHistorySuggestions.add(new SearchItem(aSearchhistoryArray, aSearchhistoryArray, SearchItem.TYPE_SEARCH_ITEM_HISTORY));
+                if (aSearchhistoryArray.length() > 0){
+                    mHistorySuggestions.add(new SearchItem(aSearchhistoryArray, aSearchhistoryArray, SearchItem.TYPE_SEARCH_ITEM_HISTORY));
+                }
+
+
            }
 
            createHistorys();

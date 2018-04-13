@@ -18,6 +18,8 @@ import org.json.JSONObject;
 
 import corp.burenz.expertouch.activities.JobPostDetails;
 import corp.burenz.expertouch.activities.Jobs;
+import corp.burenz.expertouch.activities.MyNotifications;
+import corp.burenz.expertouch.activities.WelcomeActivity;
 import corp.burenz.expertouch.util.Config;
 import corp.burenz.expertouch.util.NotificationUtils;
 
@@ -125,6 +127,26 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             } else {
                 Intent resultIntent;
 
+                switch (payload.getString("from")){
+
+                        case "bucket":
+                            resultIntent = new Intent(getApplicationContext(), Buket.class);
+                            resultIntent.putExtra("type", payload.getString("type"));
+                        break;
+
+
+                        case "jobs":
+                            resultIntent = new Intent(getApplicationContext(), JobPostDetails.class);
+                            resultIntent.putExtra("postId", payload.getString("postId"));
+                            break;
+
+                        case "notific":
+                            resultIntent = new Intent(getApplicationContext(), MyNotifications.class);
+                            break;
+                        default:
+                            resultIntent = new Intent(getApplicationContext(), WelcomeActivity.class);
+                }
+/*
                 if (payload.getString("from").contains("bucket")){
                     resultIntent = new Intent(getApplicationContext(), Buket.class);
                     resultIntent.putExtra("type", payload.getString("type"));
@@ -135,7 +157,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                     resultIntent.putExtra("postId", payload.getString("postId"));
 //                    resultIntent.putExtra("postId", "12");
 
-                }
+                }*/
                 // app is in background, show the notification in notification tray
 
                 // check for image attachment

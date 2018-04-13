@@ -41,6 +41,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -110,10 +111,10 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         TextView            titleTextView, subtitleTextView, textViewDate,showMeMoreTV;
         ImageView           callFeed, mailFeed, visitFeed, shareFeed,companyProfile,saveForOffline;
-        ImageView    mainFrame;
+        ImageView           mainFrame;
         ViewFlipper         newsFeedsFlpper, switchFeeds;
         CardView            cardView, recommendedCapsulrInjection,hirePannelIALL;
-        LinearLayout        sliderPannelLL;
+        LinearLayout        sliderPannelLL, bottomPannelHolder;
         RecyclerView        jobCountsR;
         final ViewFlipper   offlineFlipper;
         SliderLayout        sliderShow;
@@ -121,6 +122,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         RecyclerView        hireprofessionlsRV;
         HireProfessionalsAdapter hireProfessionalsAdapter;
 
+        DefaultSliderView hireSlide, bucketSlide, offlineUsageSlide, registerCompanySide, registerExpertSlide, slide6;
 
         public FeedsViewHolder(View itemView) {
             super(itemView);
@@ -142,6 +144,17 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
             sliderShow      = (SliderLayout)        itemView.findViewById(R.id.slider);
             hirePannelIALL  = (CardView)            itemView.findViewById(R.id.hirePannelIALL);
             hireprofessionlsRV = (RecyclerView)     itemView.findViewById(R.id.hireprofessionlsRV);
+            bottomPannelHolder = (LinearLayout)     itemView.findViewById(R.id.bottomPannelHolder);
+//            jobContainerCard   = (CardView)         itemView.findViewById(R.id.jobContainerCard);
+
+
+            hireSlide             = new DefaultSliderView(context);
+            bucketSlide           = new DefaultSliderView(context);
+            offlineUsageSlide     = new DefaultSliderView(context);
+            registerCompanySide   = new DefaultSliderView(context);
+            registerExpertSlide   = new DefaultSliderView(context);
+            slide6                = new DefaultSliderView(context);
+
 
             hireProfessionalsAdapter = new HireProfessionalsAdapter(context);
             hireprofessionlsRV.setLayoutManager(new GridLayoutManager(context, 14));
@@ -184,13 +197,13 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         final ViewFlipper offlineFlipper;
 
-    try {
-        String add = subtitleArray.get(holder.getAdapterPosition());
-        finalCount = add.split("3xt3");
+        try {
+            String add = subtitleArray.get(holder.getAdapterPosition());
+            finalCount = add.split("3xt3");
 
-    }catch (IndexOutOfBoundsException e){
-        Log.e("INDEX ","STUCK OUT OF BOUND ");
-    }
+        }catch (IndexOutOfBoundsException e){
+            Log.e("INDEX ","STUCK OUT OF BOUND ");
+        }
 
 
 
@@ -217,20 +230,13 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         saveForOffline      = holder.saveForOffline;
         offlineFlipper      = holder.offlineFlipper;
         sliderShow          = holder.sliderShow;
-        this.sliderLayout = sliderShow;
-
+        this.sliderLayout   = sliderShow;
 
 
         cardView.startAnimation(animation);
 
-
-
-
-
-
-
 //        adapter = new AddCounts(context,finalCount,true,);
-        adapter =   new AddCounts(context, finalCount, true, titleArray.get(position),postDateArray.get(position),subtitleArray.get(position),banners.get(position), postId.get(position));
+        adapter =   new AddCounts(context, finalCount, true, postId,postId.get(position));
 
         jobCountsR.setLayoutManager(new LinearLayoutManager(context));
         jobCountsR.hasFixedSize();
@@ -264,20 +270,44 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
+        /*set company banners inside*/
+
+/*
+        if (position == 3){
+            subtitleArray.add(3,"https://images.milled.com/2018-02-16/EUyiLA3xiY7bQON4/7lWo8lKi-7v0.jpgsetThis3x2x1");
+        }
+*/
+
+        if (subtitleArray.get(position).contains("setthis3x2x1")){
+
+                 try {
+                     Picasso.with(context).load(subtitleArray.get(position).split("setthis3x2x1")[1].toLowerCase()).into(holder.mainFrame);
+                     Log.e("bannerrr",subtitleArray.get(position).split("setthis3x2x1")[1]);
+                     holder.bottomPannelHolder.setVisibility(View.GONE);
+
+                 }catch (Exception e){
+                     e.printStackTrace();
+                     holder.cardView.setVisibility(View.GONE);
+                     holder.bottomPannelHolder.setVisibility(View.GONE);
+
+                 }
+
+
+        }else {
+
+            holder.cardView.setVisibility(View.VISIBLE);
+            Picasso.with(context).load(banners.get(position)).into(holder.mainFrame);
+            holder.bottomPannelHolder.setVisibility(View.VISIBLE);
+
+        }
+
+        /*only banner s and nothing else else*/
+
 
         final Activity activity = (Activity) context;
-
-
-
         if (position == 0){
             sliderPannelLL.setVisibility(View.VISIBLE);
             holder.hirePannelIALL.setVisibility(View.VISIBLE);
-            DefaultSliderView hireSlide             = new DefaultSliderView(context);
-            DefaultSliderView bucketSlide           = new DefaultSliderView(context);
-            DefaultSliderView offlineUsageSlide     = new DefaultSliderView(context);
-            DefaultSliderView registerCompanySide   = new DefaultSliderView(context);
-            DefaultSliderView registerExpertSlide   = new DefaultSliderView(context);
-            DefaultSliderView slide6                = new DefaultSliderView(context);
 
 
             SharedPreferences sharedPreferences = context.getSharedPreferences(MySharedConfig.BannerPrefs.BANNER_PREF,0);
@@ -285,12 +315,12 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                 BannerUtils.BannerMethods bannerUtils = new BannerUtils(). new BannerMethods(context);
 
-                hireSlide           .image(bannerUtils.getBanner1());
-                bucketSlide         .image(bannerUtils.getBanner2());
-                offlineUsageSlide   .image(bannerUtils.getBanner3());
-                registerCompanySide .image(bannerUtils.getBanner4());
-                registerExpertSlide .image(bannerUtils.getBanner5());
-                slide6              .image(bannerUtils.getBanner6());
+                holder.hireSlide           .image(bannerUtils.getBanner1());
+                holder.bucketSlide         .image(bannerUtils.getBanner2());
+                holder.offlineUsageSlide   .image(bannerUtils.getBanner3());
+                holder.registerCompanySide .image(bannerUtils.getBanner4());
+                holder.registerExpertSlide .image(bannerUtils.getBanner5());
+                holder.slide6              .image(bannerUtils.getBanner6());
 
 
                 Log.e("Banners",  bannerUtils.getBanner1() + bannerUtils.getBanner2() + bannerUtils.getBanner3() + bannerUtils.getBanner4() + bannerUtils.getBanner5());
@@ -299,32 +329,29 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
                 Log.e("Banner","inside deaafult banner");
 
-                hireSlide           .image(R.raw.banner_one);
-                bucketSlide         .image(R.raw.banner_two);
-                offlineUsageSlide   .image(R.raw.banner_three);
-                registerCompanySide .image(R.raw.banner_four);
-                registerExpertSlide .image(R.raw.banner_five);
-                slide6              .image(R.raw.banner_six);
+                holder.hireSlide           .image(R.raw.banner_one);
+                holder.bucketSlide         .image(R.raw.banner_two);
+                holder.offlineUsageSlide   .image(R.raw.banner_three);
+                holder.registerCompanySide .image(R.raw.banner_four);
+                holder.registerExpertSlide .image(R.raw.banner_five);
+                holder.slide6              .image(R.raw.banner_six);
 
 
 
-                hireSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                holder.hireSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-                        activity.startActivity(new Intent(context,Hire.class));
+                        activity.startActivity(new Intent(context,Buket.class).putExtra("type","food"));
                         activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
-
-
-
 
                     }
                 });
 
 
-                bucketSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                holder.bucketSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-                        activity.startActivity(new Intent(context,Buket.class));
+                        activity.startActivity(new Intent(context,Buket.class).putExtra("type","offer"));
                         activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                     }
@@ -333,10 +360,10 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
-                offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                holder.offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-                        activity.startActivity(new Intent(context,MyFavouritesActivity.class));
+                        activity.startActivity(new Intent(context,Buket.class).putExtra("type","education"));
                         activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                     }
@@ -344,12 +371,17 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
 
 
-                registerCompanySide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                holder.registerCompanySide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
 
 
-                        userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
+                        activity.startActivity(new Intent(context,Buket.class).putExtra("type","depart"));
+
+                        activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+
+
+                    /*    userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
 
                         if (userData.getBoolean("VERIFIED",false)){
 
@@ -379,19 +411,17 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                             activity.startActivity(new Intent(context,OwnChoice.class));
                             activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
-                        }
+                        }*/
 
 
                     }
                 });
 
 
-                registerExpertSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                holder.registerExpertSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                     @Override
                     public void onSliderClick(BaseSliderView slider) {
-
-
-                        userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
+                       /* userData = context.getSharedPreferences(LOCAL_APP_DATA,0);
 
                         if (userData.getBoolean("VERIFIED",false)){
 
@@ -422,27 +452,26 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                             activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                         }
+*/
+
+                        activity.startActivity(new Intent(context,Buket.class).putExtra("type",""));
+                        activity.overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                     }
                 });
 
-//            offlineUsageSlide.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-//                @Override
-//                public void onSliderClick(BaseSliderView slider) {
-//                    context.startActivity(new Intent(context,MyFavouritesActivity.class));
-//                }
-//            });
+
 
 
 
             }
 
-            sliderShow.addSlider(hireSlide);
-            sliderShow.addSlider(bucketSlide);
-            sliderShow.addSlider(offlineUsageSlide);
-            sliderShow.addSlider(registerCompanySide);
-            sliderShow.addSlider(registerExpertSlide);
-            sliderShow.addSlider(slide6);
+            sliderShow.addSlider(holder.hireSlide);
+            sliderShow.addSlider(holder.bucketSlide);
+            sliderShow.addSlider(holder.offlineUsageSlide);
+            sliderShow.addSlider(holder.registerCompanySide);
+//            sliderShow.addSlider(holder.registerExpertSlide);
+//            sliderShow.addSlider(holder.slide6);
 
 
 
@@ -477,9 +506,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
             Dialog dialog = new Dialog(context);
             Button cancelVerify, callVerify, iUnderStand;
-
-
-
 
             @Override
             public void onClick(View v) {
@@ -761,7 +787,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         titleTextView.setText(titleArray.get(position).toString());
 
-        holder.imageLoader.displayImage(banners.get(position),holder.mainFrame);
 
         postDateTextView.setText(postDateArray.get(position).toString());
 
@@ -782,9 +807,6 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
 
         return titleArray.size();
     }
-
-
-
 
 
 

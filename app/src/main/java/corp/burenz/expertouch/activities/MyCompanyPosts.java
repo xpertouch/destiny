@@ -35,6 +35,7 @@ public class MyCompanyPosts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_company_posts);
 
+
         initViewPagerAndTabs();
 
 
@@ -51,10 +52,29 @@ public class MyCompanyPosts extends AppCompatActivity {
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
 
 
+
         pagerAdapter.addFragment(new MyPosts(),"MY POSTS");
         pagerAdapter.addFragment(new MyBucket(),"MY PROMOTIONS");
 
         viewPager.setAdapter(pagerAdapter);
+
+
+
+        try{
+
+            if (getIntent().getExtras() != null){
+
+                if( getIntent().getExtras().getString("from").contains("bucket") )  {
+                    viewPager.setCurrentItem(1);
+                }
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.myPostsTabView);
         tabLayout.setupWithViewPager(viewPager);
     }

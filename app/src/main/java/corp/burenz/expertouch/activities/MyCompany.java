@@ -67,6 +67,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import corp.burenz.expertouch.R;
+import corp.burenz.expertouch.util.GetSubscriberCount;
 import corp.burenz.expertouch.util.MySingleton;
 
 public class MyCompany extends AppCompatActivity implements View.OnClickListener {
@@ -146,6 +147,8 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
         setAddress();
         setCompanyAbout();
         setContactText();
+
+        new GetSubscriberCount(MyCompany.this,(TextView) findViewById(R.id.currentSubscriptionCountTV)).execute();
 
     }
 
@@ -267,7 +270,7 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
 
 
         // EditTexts
-        myCompanyTagE = (EditText)findViewById(R.id.myCompanyTagE);
+        myCompanyTagE   = (EditText)findViewById(R.id.myCompanyTagE);
         myCompanyTitleE = (EditText)findViewById(R.id.myCompanyTitleE);
         myCompanyTitleE.setEnabled(false);
 
@@ -278,13 +281,13 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
 
 
         // Company Contact Pannel
-        myCompanyCallV = (TextView)findViewById(R.id.myCompanyCallV);
+        myCompanyCallV  = (TextView)findViewById(R.id.myCompanyCallV);
         myCompanyVisitV = (TextView)findViewById(R.id.myCompanyVisitV);
-        myCompanyMailV = (TextView)findViewById(R.id.myCompanyMailV);
+        myCompanyMailV  = (TextView)findViewById(R.id.myCompanyMailV);
 
-        myCompanyCallE = (EditText)findViewById(R.id.myCompanyCallE);
+        myCompanyCallE  = (EditText)findViewById(R.id.myCompanyCallE);
         myCompanyVisitE = (EditText)findViewById(R.id.myCompanyVisitE);
-        myCompanyMailE = (EditText)findViewById(R.id.myCompanyMailE);
+        myCompanyMailE  = (EditText)findViewById(R.id.myCompanyMailE);
 
 
 
@@ -297,36 +300,36 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
 
 
         // Company Address
-        myCompanyCityV = (TextView)findViewById(R.id.myCompanyCityV);
-        mycompanyLandmarkV = (TextView) findViewById(R.id.myCompanyLandmarkV);
-        myCompanyStateV = (TextView)findViewById(R.id.myCompanyStateV);
+        myCompanyCityV          = (TextView)findViewById(R.id.myCompanyCityV);
+        mycompanyLandmarkV      = (TextView) findViewById(R.id.myCompanyLandmarkV);
+        myCompanyStateV         = (TextView)findViewById(R.id.myCompanyStateV);
 
-        myCompanyCityE = (EditText) findViewById(R.id.myCompanyCityE);
-        mycompanyLandmarkE = (EditText) findViewById(R.id.myCompanyLandmarkE);
-        myCompanyStateS = (Spinner)findViewById(R.id.myCompanyStateS);
+        myCompanyCityE          = (EditText) findViewById(R.id.myCompanyCityE);
+        mycompanyLandmarkE      = (EditText) findViewById(R.id.myCompanyLandmarkE);
+        myCompanyStateS         = (Spinner)findViewById(R.id.myCompanyStateS);
 
 
 
 
 
         // Body Flippers
-        titleFlipper = (ViewFlipper)findViewById(R.id.titleFlipper);
-        contactFlipper = (ViewFlipper)findViewById(R.id.contactFlipper);
-        aboutFlipper = (ViewFlipper)findViewById(R.id.aboutFlipper);
-        addressCFlipper = (ViewFlipper)findViewById(R.id.companyAddressFlipper);
+        titleFlipper            = (ViewFlipper)findViewById(R.id.titleFlipper);
+        contactFlipper          = (ViewFlipper)findViewById(R.id.contactFlipper);
+        aboutFlipper            = (ViewFlipper)findViewById(R.id.aboutFlipper);
+        addressCFlipper         = (ViewFlipper)findViewById(R.id.companyAddressFlipper);
 
 
         // PannelFlippers
-        titlePannelFlipper = (ViewFlipper)findViewById(R.id.titlePannelFlipper);
-        contactPannelFlipper = (ViewFlipper)findViewById(R.id.contactPannelFlipper);
-        aboutPannelFlipper = (ViewFlipper)findViewById(R.id.aboutPannelFlipper);
-        addressPannelFlipper = (ViewFlipper)findViewById(R.id.addressCPannelFlipper);
+        titlePannelFlipper      = (ViewFlipper)findViewById(R.id.titlePannelFlipper);
+        contactPannelFlipper    = (ViewFlipper)findViewById(R.id.contactPannelFlipper);
+        aboutPannelFlipper      = (ViewFlipper)findViewById(R.id.aboutPannelFlipper);
+        addressPannelFlipper    = (ViewFlipper)findViewById(R.id.addressCPannelFlipper);
 
         // editFlipButtons
-        editFlipTitle = (ImageView) findViewById(R.id.editFlipTitle);
-        editFlipAbout = (ImageView) findViewById(R.id.editFlipAbout);
-        editFlipContact = (ImageView) findViewById(R.id.exitFlipContact);
-        editFlipAddressc = (ImageView) findViewById(R.id.editFlipAddressC);
+        editFlipTitle           = (ImageView) findViewById(R.id.editFlipTitle);
+        editFlipAbout           = (ImageView) findViewById(R.id.editFlipAbout);
+        editFlipContact         = (ImageView) findViewById(R.id.exitFlipContact);
+        editFlipAddressc        = (ImageView) findViewById(R.id.editFlipAddressC);
 
 
 
@@ -671,10 +674,10 @@ public class MyCompany extends AppCompatActivity implements View.OnClickListener
     private class UpdateCompanyNameTag extends AsyncTask< String, String, String>{
 
 
-        StringBuilder builder = new StringBuilder();
-        BufferedReader bufferedReader;
+        StringBuilder       builder = new StringBuilder();
+        BufferedReader      bufferedReader;
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        String COMPANY_TAG;
+        String              COMPANY_TAG;
 
 
         @Override

@@ -90,15 +90,23 @@
                                     android:layout_marginTop="20dp"
                                     android:orientation="vertical">
 
-                                    <TextView
-                                        android:id="@+id/myCompanyTitleV"
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="eResolute"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000000"
-                                        android:textStyle="bold"
-                                        android:typeface="serif" />
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/myCompanyTitleV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="eResolute"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="#000000"
+                                            android:textStyle="bold"
+                                            android:typeface="serif" />
+
+                                    </LinearLayout>
 
                                     <TextView
                                         android:id="@+id/myCompanyTagV"
@@ -139,7 +147,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:background="#00000000"
-                                        android:hint="Company Name"
+                                        android:hint="Store Name"
                                         android:minHeight="30dp"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000000"
@@ -151,7 +159,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="#00000000"
-                                        android:hint="Company Tag Line"
+                                        android:hint="Your Business area"
                                         android:minHeight="30dp"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:textColor="@color/vectorColor"
@@ -208,7 +216,7 @@
                                                 android:layout_height="wrap_content"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_marginTop="2dp"
-                                                android:text="Edit Company Tag"
+                                                android:text="Edit busines area"
                                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                                 android:textColor="#ffffff"
                                                 android:textSize="14dp"
@@ -220,7 +228,7 @@
                                                 android:layout_height="wrap_content"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_marginRight="10dp"
-                                                android:text="A Tag repesents the direction of the company"
+                                                android:text="It helps interested people reach to you more easily."
                                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                                 android:textColor="#ffffff"
                                                 android:textIsSelectable="false"
@@ -438,11 +446,11 @@
                                 android:textColor="#000000" />
 
                             <TextView
-                                android:id="@+id/textView78"
+                                android:id="@+id/currentSubscriptionCountTV"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Users can also subscribe by scanning this QRCode"
+                                android:text="Place this QRCode outside your store window"
                                 android:textSize="10sp" />
                         </LinearLayout>
 
@@ -552,7 +560,7 @@
                                         android:textSize="12dp"
                                         android:visibility="visible"
                                         android:layout_gravity="left"
-                                        android:text="Place Call To Company"
+                                        android:text="Place Call To Store"
                                         android:layout_marginLeft="10dp" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -616,7 +624,7 @@
                                         android:textSize="12dp"
                                         android:visibility="visible"
                                         android:layout_gravity="left"
-                                        android:text="Send a mail to Company"
+                                        android:text="Send a mail to Store"
                                         android:layout_marginLeft="10dp" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -680,7 +688,7 @@
                                         android:textSize="12dp"
                                         android:visibility="visible"
                                         android:layout_gravity="left"
-                                        android:text="Visit Official website Of Company"
+                                        android:text="Visit Official website Of Store"
                                         android:layout_marginLeft="10dp" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -755,7 +763,7 @@
                                         android:visibility="visible"
                                         android:layout_gravity="left"
                                         android:layout_marginLeft="10dp"
-                                        android:hint="Company Phone Number"
+                                        android:hint="Store Phone Number"
                                         android:background="#00000000" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -820,7 +828,7 @@
                                         android:visibility="visible"
                                         android:layout_gravity="left"
                                         android:layout_marginLeft="10dp"
-                                        android:hint="Company Email ID"
+                                        android:hint="Store Email ID"
                                         android:background="#00000000" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -885,7 +893,7 @@
                                         android:visibility="visible"
                                         android:layout_gravity="left"
                                         android:layout_marginLeft="10dp"
-                                        android:hint="Company Website"
+                                        android:hint="Store Website"
                                         android:background="#00000000" />
 
                                 </LinearLayout>
@@ -1227,7 +1235,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="This company is Just Fabolous i mean reakly "
+                                        android:text="This store is Just Fabulous i mean reakly "
                                         android:id="@+id/myCompanyAboutV"
                                         android:layout_gravity="center_horizontal"
                                         android:textSize="12dp"
@@ -1286,7 +1294,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:text="About Company"
+                                        android:text="About Store"
                                         android:id="@+id/textView344"
                                         android:textColor="#000000"
                                         android:typeface="serif" />
@@ -1301,7 +1309,7 @@
                                         android:textColor="#b1b1b1"
                                         android:gravity="center"
                                         android:layout_marginTop="5dp"
-                                        android:hint="Enter Company About"
+                                        android:hint="Enter Store Description."
                                         android:background="#00000000"
                                         android:minHeight="40dp" />
                                 </LinearLayout>
@@ -1365,7 +1373,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceSmall"
-                                            android:text="Please mention a short discription about your company"
+                                            android:text="Please mention a short description about your store."
                                             android:id="@+id/textView347"
                                             android:textSize="10dp"
                                             android:textIsSelectable="false"
@@ -1608,15 +1616,15 @@
                                     android:layout_marginTop="10dp">
 
                                     <TextView
+                                        android:id="@+id/textView348"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Company Addresss"
-                                        android:id="@+id/textView348"
                                         android:layout_gravity="center_horizontal"
+                                        android:layout_marginBottom="2dp"
+                                        android:text="Store Addresss"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:textColor="#000000"
                                         android:textSize="16dp"
-                                        android:layout_marginBottom="2dp"
                                         android:typeface="serif" />
 
                                     <TextView
@@ -1694,7 +1702,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Company Addresss"
+                                        android:text="Store Addresss"
                                         android:id="@+id/textView352"
                                         android:layout_gravity="center_horizontal"
                                         android:textColor="#000000"
@@ -1716,7 +1724,7 @@
                                         android:textSize="12dp"
                                         android:background="#00000000"
                                         android:minHeight="30dp"
-                                        android:hint="Enter Company City" />
+                                        android:hint="Enter Store City" />
 
                                     <EditText
                                         android:layout_width="wrap_content"
@@ -1731,7 +1739,7 @@
                                         android:textSize="12dp"
                                         android:background="#00000000"
                                         android:minHeight="30dp"
-                                        android:hint="Enter Some Landmark Nearest To Your Company" />
+                                        android:hint="Enter Some Landmark Nearest To Your Store" />
 
                                     <Spinner
                                         android:layout_width="wrap_content"

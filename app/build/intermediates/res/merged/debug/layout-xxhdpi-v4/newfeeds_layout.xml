@@ -23,8 +23,9 @@
 
         <com.daimajia.slider.library.SliderLayout
             android:id="@+id/slider"
+            app:indicator_visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="140dp">
 
         </com.daimajia.slider.library.SliderLayout>
 
@@ -34,11 +35,12 @@
         android:id="@+id/hirePannelIALL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardElevation="5dp"
-        app:cardBackgroundColor="#fafafa"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp">
+        android:visibility="visible"
+        app:cardBackgroundColor="#fafafa"
+        app:cardElevation="5dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -60,11 +62,10 @@
                 android:scrollbars="none">
 
 
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/hireprofessionlsRV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/hireprofessionlsRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
 
             </HorizontalScrollView>
@@ -75,545 +76,548 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cardView"
-        app:cardElevation="5dp"
-        app:cardBackgroundColor="#fafafa"
+        android:layout_marginBottom="7dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="7dp">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="#fafafa"
+        app:cardElevation="5dp">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="#ffffff">
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewBirthday"
-                    android:src="@raw/sample"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="centerCrop"
-                    android:visibility="visible" />
-
-                <ViewFlipper
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/newsFeedsFlipper"
-                    android:inAnimation="@anim/md_styled_slide_up_slow"
-                    android:outAnimation="@anim/md_styled_slide_down_slow">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#00000000"></LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="fill_parent"
-                            android:layout_weight="1"
-                            android:background="#80000000"></LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="#80000000">
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:background="#00000000"
-                                android:visibility="visible" >
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="#00000000"
-                                    android:gravity="center_vertical|right"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp" >
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Add To My favourites           "
-                                        android:id="@+id/textView192"
-                                        android:textColor="#ffffff"
-                                        android:gravity="center_vertical"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="1dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/line"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="50dp"
-                                    android:layout_height="match_parent"
-                                    android:background="#00000000"
-                                    android:gravity="center_vertical" >
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/saveForOffline"
-                                        android:src="@drawable/fav_alter_white"
-                                        android:padding="10dp"
-                                        android:scaleType="centerInside" />
-
-                                    <ViewFlipper
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/offlineFlipper"
-                                        android:inAnimation="@anim/fab_open"
-                                        android:visibility="gone">
-
-                                        <ImageView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/fav_uncecked"
-                                            android:padding="10dp" />
-
-                                        <ImageView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:id="@+id/imageView91"
-                                            android:src="@drawable/fav_checked"
-                                            android:padding="10dp" />
-                                    </ViewFlipper>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:background="#00000000"
-                                android:visibility="visible" >
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="#00000000"
-                                    android:gravity="center_vertical|right"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Place a call to Advertiser    "
-                                        android:id="@+id/textView199"
-                                        android:textColor="#ffffff"
-                                        android:gravity="center_vertical"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="1dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/line"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"></LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="50dp"
-                                    android:layout_height="match_parent"
-                                    android:background="#00000000"
-                                    android:gravity="center_vertical" >
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/callFeed"
-                                        android:src="@drawable/ic_call_black_24dp"
-                                        android:padding="10dp"
-                                        android:scaleType="centerInside" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:background="#00000000"
-                                android:visibility="visible" >
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center_vertical|right"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Send a Mail to Advertiser    "
-                                        android:id="@+id/textView200"
-                                        android:textColor="#ffffff"
-                                        android:gravity="center_vertical"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="1dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/line"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="50dp"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center_vertical" >
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/mailFeed"
-                                        android:src="@drawable/ic_mail_black_24dp"
-                                        android:padding="10dp"
-                                        android:scaleType="centerInside" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:background="#00000000"
-                                android:visibility="gone" >
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center_vertical|right"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Visit Advertiser Website"
-                                        android:id="@+id/textView202"
-                                        android:textColor="#ffffff"
-                                        android:gravity="center_vertical"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="1dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/line"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="50dp"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center_vertical" >
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/visitFeed"
-                                        android:src="@drawable/state_icon"
-                                        android:padding="10dp" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:background="#00000000"
-                                android:visibility="visible" >
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center_vertical|right"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Share this Advertisement    "
-                                        android:id="@+id/textView201"
-                                        android:textColor="#ffffff"
-                                        android:gravity="center_vertical"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="1dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/line"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="50dp"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center_vertical" >
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/shareFeed"
-                                        android:src="@drawable/ic_share_black_24dp"
-                                        android:padding="10dp"
-                                        android:scaleType="centerInside" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_gravity="left"
-                                android:background="#00000000"
-                                android:visibility="visible" >
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center_vertical|right"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp" >
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Company Profile and Posts"
-                                        android:id="@+id/textView308"
-                                        android:textColor="#ffffff"
-                                        android:gravity="center_vertical"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="1dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/line"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="50dp"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center_vertical" >
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:id="@+id/takeMeToProfile"
-                                        android:padding="10dp"
-                                        android:src="@drawable/add_company_white"
-                                        android:scaleType="centerInside" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </ViewFlipper>
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#e4ffffff"
-            android:focusableInTouchMode="false">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView22"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/line"
-                android:visibility="visible" />
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="#fafafa">
+                android:layout_height="300dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:orientation="vertical"
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="1clickaway Ofiicial"
-                        android:id="@+id/textViewTitle"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="#a0a0a0"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Nov 24 2016"
-                        android:id="@+id/textViewDate"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="#a0a0a0"
-                        android:textSize="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:background="@color/line" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="45dp"
-                    android:layout_height="match_parent"
-                    android:background="#ffffff"
-                    android:layout_marginLeft="5dp" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="40dp"
+                    <ImageView
+                        android:id="@+id/imageViewBirthday"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#fafafa">
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@raw/sample"
+                        android:visibility="visible" />
 
-                        <ViewFlipper
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/switchFeeds"
-                            android:inAnimation="@anim/fab_open"
-                            android:layout_gravity="center">
+                    <ViewFlipper
+                        android:id="@+id/newsFeedsFlipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inAnimation="@anim/md_styled_slide_up_slow"
+                        android:outAnimation="@anim/md_styled_slide_down_slow">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/details"
-                                android:scaleType="center"
-                                android:cropToPadding="true"
-                                android:padding="5dp"
-                                android:layout_gravity="center"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:orientation="vertical"></LinearLayout>
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="match_parent"
-                                android:id="@+id/imageView78"
-                                android:src="@drawable/close"
-                                android:scaleType="center"
-                                android:layout_gravity="center"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        </ViewFlipper>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1"
+                                android:background="#80000000"
+                                android:orientation="vertical"></LinearLayout>
 
-                    </LinearLayout>
-                </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#80000000"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:background="#00000000"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView192"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="Add To My favourites           "
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/line"
+                                        android:orientation="vertical" />
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#00000000"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/saveForOffline"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/fav_alter_white" />
+
+                                        <ViewFlipper
+                                            android:id="@+id/offlineFlipper"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:inAnimation="@anim/fab_open"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:padding="10dp"
+                                                android:src="@drawable/fav_uncecked" />
+
+                                            <ImageView
+                                                android:id="@+id/imageView91"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:padding="10dp"
+                                                android:src="@drawable/fav_checked" />
+                                        </ViewFlipper>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:background="#00000000"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView199"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="Place a call to Advertiser    "
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/line"
+                                        android:orientation="vertical"></LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#00000000"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/callFeed"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_call_black_24dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView200"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="Send a Mail to Advertiser    "
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/line"
+                                        android:orientation="vertical" />
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/mailFeed"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_mail_black_24dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView202"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="Visit Advertiser Website"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/line"
+                                        android:orientation="vertical" />
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/visitFeed"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:src="@drawable/state_icon" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView201"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="Share this Advertisement    "
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/line"
+                                        android:orientation="vertical" />
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/shareFeed"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_share_black_24dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView308"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="Company Profile and Posts"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#ffffff"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/line"
+                                        android:orientation="vertical" />
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/takeMeToProfile"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/add_company_white" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ViewFlipper>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
+                android:id="@+id/bottomPannelHolder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fafafa"
+                android:layout_height="match_parent"
+                android:background="#e4ffffff"
+                android:focusableInTouchMode="false"
+                android:orientation="vertical"
                 android:visibility="visible">
 
-                <android.support.v7.widget.RecyclerView
+                <TextView
+                    android:id="@+id/textView22"
                     android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:id="@+id/jobCountsR"
-                    android:visibility="visible"
-                    android:background="#fafafa" />
+                    android:layout_height="1px"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/line"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:visibility="visible" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fafafa"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="1clickaway Ofiicial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#a0a0a0"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Nov 24 2016"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#a0a0a0"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/line"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:background="#fafafa"
+                            android:orientation="vertical">
+
+                            <ViewFlipper
+                                android:id="@+id/switchFeeds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:inAnimation="@anim/fab_open">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:cropToPadding="true"
+                                    android:padding="5dp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/details" />
+
+                                <ImageView
+                                    android:id="@+id/imageView78"
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:scaleType="center"
+                                    android:src="@drawable/close" />
+
+                            </ViewFlipper>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fafafa"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/jobCountsR"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#fafafa"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
     </android.support.v7.widget.CardView>
 
   <!--  <include layout="@layout/recomendded_follows_adapter" />

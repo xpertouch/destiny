@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -120,6 +121,7 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
         myPostsInMyPosts.setLayoutManager(new LinearLayoutManager(context));
         myPostsInMyPosts.setAdapter(adapter);
         final String removePostId = postId.get(position);
+
 
 
 
@@ -243,25 +245,27 @@ public class MyCompanyPostsAdapter extends RecyclerView.Adapter<MyCompanyPostsAd
 
     public static class MyPostsHolder extends RecyclerView.ViewHolder {
 
-        TextView myPostDateV;
-        ImageButton deleteMyPostsLL;
-        RecyclerView myPostsInMyPosts;
-        CardView deleteMyPostsCardView;
-        LinearLayout emptyCompany;
-        Button yesMSure,noDont;
+        TextView            myPostDateV;
+        ImageButton         deleteMyPostsLL;
+        RecyclerView        myPostsInMyPosts;
+        CardView            deleteMyPostsCardView;
+        LinearLayout        emptyCompany;
+        Button              yesMSure,noDont;
+        ImageView           companyPostImageIfAny;
 
         ViewFlipper deletionProgressFlipper;
         public MyPostsHolder(View itemView) {
             super(itemView);
 
-            myPostDateV                 = (TextView) itemView.findViewById(R.id.myPostDateV);
-            deleteMyPostsLL             = (ImageButton) itemView.findViewById(R.id.deleteMyJobPostLL);
-            myPostsInMyPosts            = (RecyclerView) itemView.findViewById(R.id.myPostInMyPostsRV);
-            deleteMyPostsCardView       = (CardView) itemView.findViewById(R.id.deleteMypostCardView);
-            deletionProgressFlipper     = (ViewFlipper) itemView.findViewById(R.id.deletionProgerssFlipper);
-            emptyCompany                = (LinearLayout) itemView.findViewById(R.id.emptyJobs);
-            yesMSure                    = (Button)itemView.findViewById(R.id.yesMSure);
-            noDont                      = (Button)itemView.findViewById(R.id.noDont);
+            myPostDateV                 = (TextView)        itemView.findViewById(R.id.myPostDateV);
+            deleteMyPostsLL             = (ImageButton)     itemView.findViewById(R.id.deleteMyJobPostLL);
+            myPostsInMyPosts            = (RecyclerView)    itemView.findViewById(R.id.myPostInMyPostsRV);
+            deleteMyPostsCardView       = (CardView)        itemView.findViewById(R.id.deleteMypostCardView);
+            deletionProgressFlipper     = (ViewFlipper)     itemView.findViewById(R.id.deletionProgerssFlipper);
+            emptyCompany                = (LinearLayout)    itemView.findViewById(R.id.emptyJobs);
+            yesMSure                    = (Button)          itemView.findViewById(R.id.yesMSure);
+            noDont                      = (Button)          itemView.findViewById(R.id.noDont);
+            companyPostImageIfAny       = (ImageView)       itemView.findViewById(R.id.companyPostImageIfAny);
 
         }
 

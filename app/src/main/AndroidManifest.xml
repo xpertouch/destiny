@@ -24,6 +24,8 @@
         android:theme="@style/ClickAwayTheme">
 
         <activity android:name=".activities.ChannelSearchView"/>
+        <activity android:name=".activities.MyNotifications"/>
+
         <activity android:name=".activities.MyCompanyQR"/>
 
         <activity android:name=".activities.RateExpertActivity"

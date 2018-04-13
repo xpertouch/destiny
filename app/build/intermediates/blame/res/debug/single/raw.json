@@ -20,6 +20,10 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/insta.jpg"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/edu.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/edu.jpg"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hire.mp3",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hire.mp3"
     },
@@ -60,6 +64,14 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/expert_de.jpg"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/ccbanner_five.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/ccbanner_five.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_thresse.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_thresse.jpg"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/hdp_anim.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/hdp_anim.jpg"
     },
@@ -88,12 +100,20 @@
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/guide.mp3"
     },
     {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/xxxbanner_two.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/xxxbanner_two.jpg"
+    },
+    {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/books_shelf.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/books_shelf.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_five.jpg",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_five.jpg"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/o_bucket.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/o_bucket.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_two.jpg",
@@ -146,6 +166,10 @@
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/notific.wav",
         "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/notific.wav"
+    },
+    {
+        "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/banner_fosssur.jpg",
+        "source": "/home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/raw/banner_fosssur.jpg"
     },
     {
         "merged": "/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/res/merged/debug/raw/twitter.png",

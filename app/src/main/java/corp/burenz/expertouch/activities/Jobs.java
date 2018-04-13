@@ -86,6 +86,7 @@ import java.util.List;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.FeedsAdapter;
+import corp.burenz.expertouch.adapters.MyNotificationAdapter;
 import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.butter.MySharedConfig;
 import corp.burenz.expertouch.util.SendFCMToken;
@@ -104,7 +105,7 @@ public class Jobs extends AppCompatActivity
     SharedPreferences           appVersion;
     LinearLayout                noFollowersView;
     private static final int    MY_CAMERA_REQUEST_CODE = 100;
-
+    private boolean             displayLoading = true;
 
 
     private static int  FADE_TIME_OUT = 300;
@@ -184,7 +185,7 @@ public class Jobs extends AppCompatActivity
         for (int i = 0; i < subscriptionIDsArray.size(); i++){
             firebaseMessaging.unsubscribeFromTopic(subscriptionIDsArray.get(i));
         }
-
+        firebaseMessaging.unsubscribeFromTopic(new GuestInformation(Jobs.this).getGuestNumber());
         Log.w("unSub","job Done Token Cleared");
 
         /*now switch the user successfully celar the progress */
@@ -321,6 +322,7 @@ public class Jobs extends AppCompatActivity
 
 
 
+
                 switch (item.getItemId()){
 
                     case R.id.navigation_bucket:
@@ -355,7 +357,7 @@ public class Jobs extends AppCompatActivity
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                startActivity(new Intent(Jobs.this,MyFavouritesActivity.class));
+                                startActivity(new Intent(Jobs.this,MyNotifications.class));
                                 overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
                             }
@@ -471,8 +473,6 @@ public class Jobs extends AppCompatActivity
             @Override
             public void onReceive(Context context, Intent intent) {
 
-
-
                 // checking for type intent filter
                 if (intent.getAction().equals(Config.REGISTRATION_COMPLETE)) {
                     // gcm successfully registered
@@ -482,10 +482,10 @@ public class Jobs extends AppCompatActivity
                 } else if (intent.getAction().equals(Config.PUSH_NOTIFICATION)) {
                     // new push notification is received
 
+                    try {displayLoading = false;   new FeedsLoader(Jobs.this,whatsNewRecycler).execute();}catch (Exception e){e.printStackTrace();}
+
                     String message = intent.getStringExtra("message");
-
 //                    Toast.makeText(getApplicationContext(), "Push notification: " + message, Toast.LENGTH_LONG).show();
-
 
                 }
             }
@@ -501,13 +501,6 @@ public class Jobs extends AppCompatActivity
 
 
         introduceMe = getSharedPreferences(MySharedConfig.IntroPrefs.INTRODUCE_ME,0);
-
-
-
-
-
-
-
 
 
 
@@ -588,6 +581,8 @@ public class Jobs extends AppCompatActivity
 
 
         whatsNewRecycler        = (RecyclerView)findViewById(R.id.jobsRv);
+        whatsNewRecycler.setNestedScrollingEnabled(false);
+
         whatsNewRecycler.setNestedScrollingEnabled(true);
         whatsNewRecycler.setLayoutManager(new LinearLayoutManager(Jobs.this,LinearLayoutManager.VERTICAL, false));
         animation               = AnimationUtils.loadAnimation(Jobs.this,R.anim.card_animation);
@@ -1206,7 +1201,7 @@ public class Jobs extends AppCompatActivity
 
             if (companyTitles.size() > 0){
                 startActivity(new Intent(Jobs.this,Filter.class));
-                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
+                overridePendingTransition(R.anim.design_bottom_sheet_slide_in_search,R.anim.fadeout_scan);
 
             }else{
                 Toast.makeText(Jobs.this, "Cannot Filter Empty List", Toast.LENGTH_SHORT).show();
@@ -1448,11 +1443,13 @@ public class Jobs extends AppCompatActivity
         // register GCM registration complete receiver
         LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
                 new IntentFilter(Config.REGISTRATION_COMPLETE));
-
         // register new push message receiver
         // by doing this, the activity will be notified each time a new message arrives
         LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
                 new IntentFilter(Config.PUSH_NOTIFICATION));
+
+
+
 
         // clear the notification area when the app is opened
         NotificationUtils.clearNotifications(getApplicationContext());
@@ -1494,6 +1491,7 @@ public class Jobs extends AppCompatActivity
 
 
              try{
+
             whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId,companyIDArray);
             whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
             }catch (Exception e){
@@ -1592,9 +1590,6 @@ public class Jobs extends AppCompatActivity
                     bannersNew          .add(banners.get(i));
                     postIdNew           .add(postId.get(i));
                     companyIDArrayNew   .add(companyIDArray.get(i));
-
-
-
 
                 }
 
@@ -2679,7 +2674,9 @@ public class Jobs extends AppCompatActivity
 
 
             noAdverts.setVisibility(View.GONE);
-            mWaveSwipeRefreshLayout.setRefreshing(true);
+
+            if (displayLoading){mWaveSwipeRefreshLayout.setRefreshing(true);}
+
 
             companyTitles       = new ArrayList<>();
             postDate            = new ArrayList<>();
@@ -2739,6 +2736,9 @@ public class Jobs extends AppCompatActivity
                     addCatagory.    add(jsonObject.getString("addCatagory"));
                     addType.        add(jsonObject.getString("addType"));
                     postId         .add(jsonObject.getString("postId"));
+
+                    Log.e("pie","" +jsonObject.getString("postId"));
+
                     companyIDArray .add(jsonObject.getString("companyID"));
                 }
 
@@ -2779,7 +2779,6 @@ public class Jobs extends AppCompatActivity
 
 
                     try{
-
                         whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,companyTitles,jobInfo,postDate,callArray,addState,emailArray,banners,postId,companyIDArray);
                         whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
                     }catch(Exception e){
@@ -2990,7 +2989,6 @@ public class Jobs extends AppCompatActivity
                 startActivity(new Intent(Jobs.this,Registrations.class));
                 Jobs.this.finish();
                 overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
-
 
 
             }

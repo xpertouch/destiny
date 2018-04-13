@@ -73,16 +73,15 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
 
 
         if( totalLikes.get(position).equals("0")){
-            holder.textViewSupportTV.setText("");
+            holder.textViewSupportTV.setText("Be the first to like");
             holder.totalLikes.setVisibility(View.GONE);
+            holder.totalLikes.setText(totalLikes.get(position));
         }else{
-
             holder.totalLikes.setText(totalLikes.get(position));
             if(totalLikes.get(position).equals("1")){
                 holder.textViewSupportTV.setText("Like");
             }else{
                 holder.textViewSupportTV.setText("users liked this");
-
             }
 
             holder.totalLikes.setVisibility(View.VISIBLE);
@@ -414,6 +413,10 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
         MyBucketHolder  myBucketHolder;
         String             likes;
 
+        StringBuilder       builder ;
+        BufferedReader      bufferedReader;
+        List<NameValuePair> nameValuePairList;
+
 
         public SortLikes(String path, int position, MyBucketHolder myBucketHolder, String likes) {
 
@@ -421,15 +424,19 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             this.position       = position;
             this.myBucketHolder = myBucketHolder;
             this.likes          = likes;
-
-
+            builder = new StringBuilder();
+            nameValuePairList = new ArrayList<>();
 
         }
 
-        StringBuilder builder = new StringBuilder();
-        BufferedReader bufferedReader;
-        List<NameValuePair> nameValuePairList = new ArrayList<>();
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            myBucketHolder.thumbsUpAdd.setEnabled(false);
+            myBucketHolder.thumbsDownAdd.setEnabled(false);
+
+        }
 
         @Override
         protected String doInBackground(String... params) {
@@ -470,14 +477,13 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             return builder.toString();
         }
 
-
-
-
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             Log.e("NEWCOUNT","INSIDE ON POST");
 
+            myBucketHolder.thumbsUpAdd.setEnabled(true);
+            myBucketHolder.thumbsDownAdd.setEnabled(true);
 
             if (!s.contains("1")) {
                 if (!s.contains("0")) {

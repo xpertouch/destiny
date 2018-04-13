@@ -1128,7 +1128,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             for (int i = 0; i < subscriptionIDsArray.size(); i++){
                 firebaseMessaging.subscribeToTopic(subscriptionIDsArray.get(i));
             }
-
+            firebaseMessaging.subscribeToTopic(userEmail);
             Log.w("unSub","job Done Token Cleared");
 
             /*now switch the user successfully celar the progress */

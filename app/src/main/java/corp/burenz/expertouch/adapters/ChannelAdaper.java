@@ -56,13 +56,19 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
     @Override
     public void onBindViewHolder(final ChannelAdaperViewHolder holder, final int position) {
 
-//        holder.companyTitleTV.setText();
             this.holder = holder;
 
-            holder.companyTitleTV.setText(channelHolderList.getCompanyTitle().get(position));
-            holder.companyLocationTV.setText(channelHolderList.getCompanyAddress().get(position));
-            holder.companyAboutTV.setText(channelHolderList.getCompanyAbout().get(position));
-            holder.companyBannerView.setImageUrl(channelHolderList.getCompanyBannerURL().get(position), MySingleton.getInstance(mContext).getImageLoader());
+            try {
+                holder.companyTitleTV.setText(channelHolderList.getCompanyTitle().get(position));
+                holder.companyLocationTV.setText(channelHolderList.getCompanyAddress().get(position));
+                holder.companyAboutTV.setText(channelHolderList.getCompanyAbout().get(position));
+                holder.companyBannerView.setImageUrl(channelHolderList.getCompanyBannerURL().get(position), MySingleton.getInstance(mContext).getImageLoader());
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
 
 
             Log.e("channel","" +channelHolderList.getCompanyBannerURL());

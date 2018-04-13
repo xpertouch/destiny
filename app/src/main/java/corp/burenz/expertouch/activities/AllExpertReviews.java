@@ -32,6 +32,7 @@ import java.util.ArrayList;
 
 import corp.burenz.expertouch.R;
 import corp.burenz.expertouch.adapters.ExpertReviewAdapter;
+import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.butter.MySharedConfig;
 
 /**
@@ -72,8 +73,7 @@ public class AllExpertReviews extends AppCompatActivity {
         onClickListeners();
 
 
-
-         try{ expert_identity = getIntent().getExtras().getString("expertIdentity"); }catch (Exception e){e.printStackTrace();}
+        try{ expert_identity = getIntent().getExtras().getString("expertIdentity"); }catch (Exception e){e.printStackTrace();}
 
         inflate_views();
         onClickListeners();

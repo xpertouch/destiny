@@ -51,7 +51,7 @@ public class MyPosts extends Fragment {
     RecyclerView.Adapter adapter;
     ArrayList<String> postDates;
     ArrayList<String> posts;
-    ArrayList<String> postsId;
+    ArrayList<String> postsId, bannerIfAny;
 
 
     LinearLayout noCompanyPosts;
@@ -193,7 +193,7 @@ public class MyPosts extends Fragment {
                 noCompanyPosts.setVisibility(View.VISIBLE);
             }else{
 
-                adapter = new MyCompanyPostsAdapter(getActivity(),posts,postDates,postsId);
+                adapter = new MyCompanyPostsAdapter(getActivity(), posts, postDates, postsId );
                 myCompanyPostsRV.setAdapter(adapter);
 
             }
