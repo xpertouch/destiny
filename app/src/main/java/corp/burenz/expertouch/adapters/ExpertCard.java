@@ -22,6 +22,7 @@ import android.widget.ViewFlipper;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -159,7 +160,9 @@ public class ExpertCard extends RecyclerView.Adapter<ExpertCard.ExpertVieweHolde
 
 
 
-        holder.imageLoader.displayImage(expertPic.get(position),holder.expertAvtarV);
+//        holder.imageLoader.displayImage(expertPic.get(position),holder.expertAvtarV);
+        Picasso.with(context).load(expertPic.get(position)).into(holder.expertAvtarV);
+
 
         // OnClickListners
         holder.visitProfile.setOnClickListener(new View.OnClickListener() {

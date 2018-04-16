@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="org.cryse.widget:persistentsearchview-1.0.4">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b2e0b76703b0b8fce5e5f8a1c45e6d30548027ef/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/persistentsearchview-1.0.4.aar/48b535e86e8cf84d3fd45f8c547199cd/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/persistentsearchview-1.0.4.aar/48b535e86e8cf84d3fd45f8c547199cd/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -223,29 +223,30 @@
 
 
     <LinearLayout
+        android:id="@+id/subOne"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="185dp"
         android:layout_gravity="bottom|end"
+        android:layout_marginBottom="190dp"
         android:layout_marginRight="70dp"
         android:gravity="center"
-        android:visibility="invisible"
-        android:id="@+id/subOne">
+        android:visibility="invisible">
 
         <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="5dp">
+
             <TextView
+                android:id="@+id/postAddView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="POST ADD"
                 android:layout_margin="5dp"
+                android:text="POST ADD"
                 android:textColor="#908989"
-                android:textStyle="bold"
                 android:textSize="13dp"
-                android:typeface="serif"
-                android:id="@+id/postAddView" />
+                android:textStyle="bold"
+                android:typeface="serif" />
         </android.support.v7.widget.CardView>
 
 
@@ -253,15 +254,15 @@
 
 
     <LinearLayout
+        android:id="@+id/subTwo"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="125dp"
         android:layout_gravity="bottom|end"
+        android:layout_marginBottom="130dp"
         android:layout_marginRight="70dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        android:visibility="invisible"
-        android:id="@+id/subTwo">
+        android:visibility="invisible">
 
         <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
@@ -269,37 +270,30 @@
             app:cardCornerRadius="5dp">
 
             <TextView
+                android:id="@+id/myPostsView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MY POSTS"
                 android:layout_margin="5dp"
+                android:text="MY POSTS"
                 android:textColor="#908989"
-                android:textStyle="bold"
                 android:textSize="13dp"
-                android:typeface="serif"
-                android:id="@+id/myPostsView" />
+                android:textStyle="bold"
+                android:typeface="serif" />
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
 
 
-
-
-
-
-
-
-
-
-
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
-        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
+        android:visibility="visible"
+        app:elevation="5dp"
+        android:elevation="5dp"
         app:layout_behavior=".util.BottomNavigationBehavior"
         app:menu="@menu/bottom_navigation" />
 

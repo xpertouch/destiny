@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.mikepenz:devicon-typeface-2.0.0.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/3dd4114c1edd32ab504e67a1bac101af81df72de/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/3dd4114c1edd32ab504e67a1bac101af81df72de/output/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/devicon-typeface-2.0.0.2.aar/a690775413e96537c7a816b8a47d6887/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/devicon-typeface-2.0.0.2.aar/a690775413e96537c7a816b8a47d6887/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

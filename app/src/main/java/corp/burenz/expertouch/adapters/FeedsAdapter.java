@@ -319,8 +319,8 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                 holder.bucketSlide         .image(bannerUtils.getBanner2());
                 holder.offlineUsageSlide   .image(bannerUtils.getBanner3());
                 holder.registerCompanySide .image(bannerUtils.getBanner4());
-                holder.registerExpertSlide .image(bannerUtils.getBanner5());
-                holder.slide6              .image(bannerUtils.getBanner6());
+//                holder.registerExpertSlide .image(bannerUtils.getBanner5());
+//                holder.slide6              .image(bannerUtils.getBanner6());
 
 
                 Log.e("Banners",  bannerUtils.getBanner1() + bannerUtils.getBanner2() + bannerUtils.getBanner3() + bannerUtils.getBanner4() + bannerUtils.getBanner5());
@@ -333,8 +333,8 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
                 holder.bucketSlide         .image(R.raw.banner_two);
                 holder.offlineUsageSlide   .image(R.raw.banner_three);
                 holder.registerCompanySide .image(R.raw.banner_four);
-                holder.registerExpertSlide .image(R.raw.banner_five);
-                holder.slide6              .image(R.raw.banner_six);
+//                holder.registerExpertSlide .image(R.raw.banner_five);
+//                holder.slide6              .image(R.raw.banner_six);
 
 
 
@@ -785,10 +785,10 @@ public class FeedsAdapter extends RecyclerView.Adapter<FeedsAdapter.FeedsViewHol
         });
 
 
-        titleTextView.setText(titleArray.get(position).toString());
+        titleTextView.setText(titleArray.get(position));
+        postDateTextView.setText(postDateArray.get(position));
 
 
-        postDateTextView.setText(postDateArray.get(position).toString());
 
         switchFeeds.setOnClickListener(new View.OnClickListener() {
             @Override

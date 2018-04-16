@@ -426,7 +426,7 @@ public class ChannelSearchView extends AppCompatActivity {
                 /*set a progress abr visibilty*/
 
 
-//            showProgressGettingListLinearLayout.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.GONE);
             swiperefreshForStore.setRefreshing(true);
 
 
@@ -462,7 +462,7 @@ public class ChannelSearchView extends AppCompatActivity {
             recyclerView.setAdapter(channelAdaper);
 
 
-
+            recyclerView.setVisibility(View.VISIBLE);
             channelAdaper.notifyDataSetChanged();
 
 

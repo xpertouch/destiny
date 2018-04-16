@@ -8,22 +8,22 @@ package com.google.android.gms;
 
 public final class R {
     public static final class id {
-        public static final int auto = 0x7f110035;
-        public static final int center = 0x7f110037;
-        public static final int email = 0x7f110838;
-        public static final int none = 0x7f110024;
-        public static final int normal = 0x7f11001c;
-        public static final int progressBar = 0x7f1103ef;
-        public static final int radio = 0x7f110085;
-        public static final int text = 0x7f11079f;
-        public static final int text2 = 0x7f11079d;
-        public static final int toolbar = 0x7f110054;
-        public static final int wrap_content = 0x7f110034;
+        public static final int auto = 0x7f09005d;
+        public static final int center = 0x7f0900e8;
+        public static final int email = 0x7f0901a8;
+        public static final int none = 0x7f09044f;
+        public static final int normal = 0x7f090450;
+        public static final int progressBar = 0x7f0904a6;
+        public static final int radio = 0x7f0904e6;
+        public static final int text = 0x7f09060a;
+        public static final int text2 = 0x7f09060b;
+        public static final int toolbar = 0x7f0908bb;
+        public static final int wrap_content = 0x7f090924;
     }
     public static final class integer {
-        public static final int google_play_services_version = 0x7f0e0009;
+        public static final int google_play_services_version = 0x7f0a0009;
     }
     public static final class string {
-        public static final int common_google_play_services_unknown_issue = 0x7f0a0013;
+        public static final int common_google_play_services_unknown_issue = 0x7f100048;
     }
 }

@@ -80,7 +80,12 @@ public class ScanAndGo extends Activity implements QRCodeReaderView.OnQRCodeRead
         subscribeToCompanyBT                = (Button)              findViewById(R.id.subsCribeToCompanyBT);
         animateScanner(scannerLine);
 
-
+        findViewById(R.id.closeTheScan).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
 

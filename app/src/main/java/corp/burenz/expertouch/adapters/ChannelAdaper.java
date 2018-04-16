@@ -10,12 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -62,7 +64,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
                 holder.companyTitleTV.setText(channelHolderList.getCompanyTitle().get(position));
                 holder.companyLocationTV.setText(channelHolderList.getCompanyAddress().get(position));
                 holder.companyAboutTV.setText(channelHolderList.getCompanyAbout().get(position));
-                holder.companyBannerView.setImageUrl(channelHolderList.getCompanyBannerURL().get(position), MySingleton.getInstance(mContext).getImageLoader());
+                Picasso.with(mContext).load(channelHolderList.getCompanyBannerURL().get(position)).into(holder.companyBannerView);
 
             }catch (Exception e){
                 e.printStackTrace();
@@ -151,11 +153,8 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
       */
         TextView            companyTitleTV, companyLocationTV, companyAboutTV;
         Button              subsscribeNow, unSubscribeNow;
-        NetworkImageView    companyBannerView;
+        ImageView           companyBannerView;
         LinearLayout        channelCardHolder;
-
-
-
 
 
         ChannelAdaperViewHolder(View v) {
@@ -166,7 +165,7 @@ public class ChannelAdaper extends RecyclerView.Adapter<ChannelAdaper.ChannelAda
             companyAboutTV          =   (TextView)          v.findViewById(R.id.companyAboutTVC);
             subsscribeNow           =   (Button)            v.findViewById(R.id.subsCribeChannelBtnC);
             unSubscribeNow          =   (Button)            v.findViewById(R.id.unsubscribefromChannelButton);
-            companyBannerView       =   (NetworkImageView)  v.findViewById(R.id.realCompanyNetworkImage);
+            companyBannerView       =   (ImageView)         v.findViewById(R.id.realCompanyNetworkImage);
             channelCardHolder       =   (LinearLayout)      v.findViewById(R.id.channelCardHolder);
         }
     }

@@ -1,4 +1,4 @@
-#Thu Apr 12 15:34:49 IST 2018
-base.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2
+#Sun Apr 15 13:04:48 IST 2018
+base.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dexMerger/debug/3
+path.0=classes.dex
 renamed.0=classes.dex
-file.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex

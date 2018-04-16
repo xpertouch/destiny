@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.mikepenz:octicons-typeface-3.2.0.2">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/1a5aa1c446da291dc413f849cca5e21bf159bdad/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/1a5aa1c446da291dc413f849cca5e21bf159bdad/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/octicons-typeface-3.2.0.2.aar/a8e97d980ee313182a9817cd2a5fbd7c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/octicons-typeface-3.2.0.2.aar/a8e97d980ee313182a9817cd2a5fbd7c/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

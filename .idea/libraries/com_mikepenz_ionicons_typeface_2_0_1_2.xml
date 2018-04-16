@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.mikepenz:ionicons-typeface-2.0.1.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/fcc229782463e1d66d2ef29e8bcb1107f0024fd0/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/fcc229782463e1d66d2ef29e8bcb1107f0024fd0/output/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ionicons-typeface-2.0.1.2.aar/454f6a656111276af2eda2b40ccd3e26/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ionicons-typeface-2.0.1.2.aar/454f6a656111276af2eda2b40ccd3e26/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

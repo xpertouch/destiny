@@ -146,7 +146,7 @@ public final class BottomNavigationBehavior<V extends View> extends VerticalScro
     private void ensureOrCancelAnimator(V child) {
         if (mOffsetValueAnimator == null) {
             mOffsetValueAnimator = ViewCompat.animate(child);
-            mOffsetValueAnimator.setDuration(100);
+            mOffsetValueAnimator.setDuration(150);
             mOffsetValueAnimator.setInterpolator(INTERPOLATOR);
         } else {
             mOffsetValueAnimator.cancel();

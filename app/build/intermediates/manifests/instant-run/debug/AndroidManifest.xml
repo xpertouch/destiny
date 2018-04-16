@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="corp.burenz.expertouch"
-    android:versionCode="10"
-    android:versionName="v1.1.0" >
+    android:versionCode="11"
+    android:versionName="v1.2.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="23" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,10 +29,12 @@
 
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/ClickAwayTheme" >
         <activity android:name="corp.burenz.expertouch.activities.ChannelSearchView" />
         <activity android:name="corp.burenz.expertouch.activities.MyNotifications" />
@@ -185,8 +187,11 @@
             </intent-filter>
         </receiver>
 
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="25.4.0" />
         <!--
-         FirebaseMessagingService performs security checks at runtime,
+ FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service
@@ -222,7 +227,6 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="corp.burenz.expertouch" />
             </intent-filter>
@@ -257,8 +261,8 @@
             android:value="@integer/google_play_services_version" />
 
         <provider
-            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
-            android:authorities="corp.burenz.expertouch.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="corp.burenz.expertouch.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 
