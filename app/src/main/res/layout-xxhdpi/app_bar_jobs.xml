@@ -227,7 +227,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="190dp"
+        android:layout_marginBottom="196dp"
         android:layout_marginRight="70dp"
         android:gravity="center"
         android:visibility="invisible">
@@ -258,7 +258,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="138dp"
         android:layout_marginRight="70dp"
         android:layout_marginTop="100dp"
         android:gravity="center"

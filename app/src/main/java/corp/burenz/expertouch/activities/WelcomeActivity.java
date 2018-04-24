@@ -20,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import corp.burenz.expertouch.R;
@@ -32,6 +33,7 @@ public class WelcomeActivity extends AppCompatActivity {
     String LOCAL_APP_DATA = "userInformation";
     SharedPreferences       userData;
     Typeface                logoTypeface;
+    TextView                nowAnythingTV,t1clickawayTV,jobsLSTV;
 
 
     @Override
@@ -39,16 +41,27 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        try{
-            Window window = WelcomeActivity.this.getWindow();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                window.setStatusBarColor(ContextCompat.getColor(WelcomeActivity.this,R.color.black));
-                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            }
-        }catch (Exception e ){
-            e.printStackTrace();
-        }
+        nowAnythingTV = (TextView) findViewById(R.id.nowAnythingTV);
+        t1clickawayTV = (TextView) findViewById(R.id.t1clickawayTV);
+        jobsLSTV      = (TextView) findViewById(R.id.jobsLSTV);
+
+        Typeface welcomeType = Typeface.createFromAsset(WelcomeActivity.this.getAssets(), "fonts/fjalla.otf");
+
+        nowAnythingTV.setTypeface(welcomeType);
+        t1clickawayTV.setTypeface(welcomeType);
+        jobsLSTV.setTypeface(welcomeType);
+
+
+//        try{
+//            Window window = WelcomeActivity.this.getWindow();
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                window.setStatusBarColor(ContextCompat.getColor(WelcomeActivity.this,R.color.colorPrimary));
+//                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            }
+//        }catch (Exception e ){
+//            e.printStackTrace();
+//        }
 
 
         Animation animation = AnimationUtils.loadAnimation(WelcomeActivity.this,R.anim.bounce);
@@ -65,13 +78,33 @@ public class WelcomeActivity extends AppCompatActivity {
         userData = getSharedPreferences(LOCAL_APP_DATA,0);
         if (userData.getBoolean("LOGEDIN",false)){
             if(new GuestInformation(WelcomeActivity.this).getGuestName().split(" ")[0].length() != 0){
-                xper.setText( "Welcome back \n" +  new GuestInformation(WelcomeActivity.this).getGuestName().split(" ")[0]);
+                xper.setText( "Welcome back " +  new GuestInformation(WelcomeActivity.this).getGuestName().split(" ")[0]);
                 logoTypeface = Typeface.createFromAsset(WelcomeActivity.this.getAssets(), "fonts/roboto.ttf");
             }
 
         }
 
+        final LinearLayout locationGif;
 
+        locationGif = (LinearLayout) findViewById(R.id.lcoationGifOnWelcome);
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                locationGif.startAnimation(AnimationUtils.loadAnimation(WelcomeActivity.this ,R.anim.fadeout_scan));
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        locationGif.setVisibility(View.GONE);
+
+                    }
+                },300);
+
+
+            }
+        },3900);
 
         xper.setTypeface(logoTypeface);
 

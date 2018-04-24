@@ -729,6 +729,7 @@ public class Jobs extends AppCompatActivity
 
             introduceMe = getSharedPreferences(MySharedConfig.IntroPrefs.INTRODUCE_ME,0);
             if (!introduceMe.getBoolean("tappedPostFab",false)){
+
                 new MaterialTapTargetPrompt.Builder(Jobs.this)
                         .setTarget(findViewById(R.id.postAddFab))
                         .setAutoDismiss(false)
@@ -774,6 +775,7 @@ public class Jobs extends AppCompatActivity
                             }
                         })
                         .show();
+
 
             }
 

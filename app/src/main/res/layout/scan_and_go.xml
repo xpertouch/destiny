@@ -694,7 +694,19 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_view_scan"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="100dp"
+                        android:scaleType="fitCenter"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/bell"/>
+
+                  <!--  <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
@@ -702,7 +714,7 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginTop="100dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/notifications" />
+                        android:src="@drawable/notifications" />-->
                 </LinearLayout>
 
 

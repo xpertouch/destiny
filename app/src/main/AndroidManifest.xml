@@ -63,6 +63,7 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.WelcomeActivity"
+            android:hardwareAccelerated="false"
             android:screenOrientation="portrait">
 
             <intent-filter>

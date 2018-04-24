@@ -181,7 +181,7 @@ public class Buket extends AppCompatActivity {
                         return "Food";
 
                     case 1:
-                        return "Clothes";
+                        return "Clothing";
 
                     case 2:
                         return "Travel";

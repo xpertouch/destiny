@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -31,6 +32,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -71,13 +73,15 @@ public class BucketPost extends Fragment {
     RadioButton offerRB,productRB,healthRB,educationRb;
     ViewFlipper promotionFlipper;
     LinearLayout flagPromotion;
-    String type = "offer";
+    String type = "clothing";
     String title,discription;
 
     TextView previewDiscriptionTV;
     String COMPANY_ADD  = "companyAdd";
     SharedPreferences companyAdd;
     SharedPreferences.Editor editor;
+
+    RadioGroup typeOfOffer;
 
     public static final int     GALLERY_PICTURE = 1;
     public static final int     READ_GALLERY_PERMISSIONS_REQUEST = 2;
@@ -102,15 +106,16 @@ public class BucketPost extends Fragment {
 
         promotionTitle          = (EditText) v.findViewById(R.id.promotionTitle);
         promotionDiscription    = (EditText) v.findViewById(R.id.promotionDiscription);
-        offerRB                 = (RadioButton) v.findViewById(R.id.offerRB);
-        productRB               = (RadioButton) v.findViewById(R.id.productRB);
+//        offerRB                 = (RadioButton) v.findViewById(R.id.offerRB);
+//        productRB               = (RadioButton) v.findViewById(R.id.productRB);
         flagPromotion           = (LinearLayout) v.findViewById(R.id.flagPromotion);
         promotionFlipper        = (ViewFlipper) v.findViewById(R.id.promotionFlipper);
         healthRB                = (RadioButton) v.findViewById(R.id.healthRB);
-        educationRb             = (RadioButton) v.findViewById(R.id.educationRB);
+//        educationRb             = (RadioButton) v.findViewById(R.id.educationRB);
         previewDiscriptionTV    = (TextView) v.findViewById(R.id.previewDiscriptionTV);
         attachBanner            = (ImageButton) v.findViewById(R.id.attachBanner);
         bannerPreview           = (ImageView) v.findViewById(R.id.bannerPreview);
+        typeOfOffer             = (RadioGroup) v.findViewById(R.id.typeOfOffer);
 
         attachBanner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,60 +125,66 @@ public class BucketPost extends Fragment {
         });
 
 
-        offerRB.setOnClickListener(new View.OnClickListener() {
+//        offerRB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                type = "offer";
+//                offerRB.setChecked(true);
+//                healthRB.setChecked(false);
+//                productRB.setChecked(false);
+//                educationRb.setChecked(false);
+//            }
+//        });
+
+//        productRB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                type = "product";
+//                productRB.setChecked(true);
+//                healthRB.setChecked(false);
+//                educationRb.setChecked(false);
+//                offerRB.setChecked(false);
+//
+//            }
+//        });
+//
+
+
+//        healthRB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                type = "health";
+//                healthRB.setChecked(true);
+//                productRB.setChecked(false);
+//                offerRB.setChecked(false);
+//                educationRb.setChecked(false);
+//
+//            }
+//        });
+
+//        educationRb.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                type = "education";
+//                educationRb.setChecked(true);
+//                productRB.setChecked(false);
+//                offerRB.setChecked(false);
+//                healthRB.setChecked(false);
+//
+//
+//            }
+//        });
+
+
+
+        typeOfOffer.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                type = "offer";
-                offerRB.setChecked(true);
-                healthRB.setChecked(false);
-                productRB.setChecked(false);
-                educationRb.setChecked(false);
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                RadioButton radioButton = (RadioButton)group.findViewById(checkedId);
+                type = (String) radioButton.getText();
             }
         });
-
-        productRB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                type = "product";
-                productRB.setChecked(true);
-                healthRB.setChecked(false);
-                educationRb.setChecked(false);
-                offerRB.setChecked(false);
-
-            }
-        });
-
-
-
-        healthRB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                type = "health";
-                healthRB.setChecked(true);
-                productRB.setChecked(false);
-                offerRB.setChecked(false);
-                educationRb.setChecked(false);
-
-            }
-        });
-
-        educationRb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                type = "education";
-                educationRb.setChecked(true);
-                productRB.setChecked(false);
-                offerRB.setChecked(false);
-                healthRB.setChecked(false);
-
-
-            }
-        });
-
-
-
-
 
         flagPromotion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,17 +210,22 @@ public class BucketPost extends Fragment {
 
                         TITTLE = promotionTitle.getText().toString();
                         DISCRIBE = promotionDiscription.getText().toString();
+                        RadioButton rb = (RadioButton) v.findViewById( typeOfOffer.getCheckedRadioButtonId() );
 
-                        new SendBucket().execute();
+                        new SendBucket().execute( );
 
-
-                      }else {
+                     }else {
                         Toast.makeText(getActivity(), "Promotion Description should be greater than 10 Characters", Toast.LENGTH_SHORT).show();
 
                     }
 
 
                 }else {
+
+
+
+//                    Toast.makeText(getActivity(), "" + , Toast.LENGTH_SHORT).show();
+
 
                     Toast.makeText(getActivity(), "Promotion Title should be greater than 5 Characters", Toast.LENGTH_SHORT).show();
                 }

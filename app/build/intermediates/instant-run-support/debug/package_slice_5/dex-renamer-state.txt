@@ -1,4 +1,0 @@
-#Mon Apr 16 11:26:03 IST 2018
-base.0=/home/buren/AndroidStudioProjects/1clickAway/app/build/intermediates/transforms/dexMerger/debug/6
-path.0=classes.dex
-renamed.0=classes.dex

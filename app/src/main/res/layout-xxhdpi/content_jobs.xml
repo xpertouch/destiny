@@ -638,21 +638,22 @@
                                 android:layout_weight="1" >
 
                                 <LinearLayout
-                                    android:orientation="vertical"
+                                    android:id="@+id/remindMELater"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:id="@+id/remindMELater">
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp">
 
                                     <TextView
+                                        android:id="@+id/textView554"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:text="NEXT TIME"
-                                        android:id="@+id/textView554"
-                                        android:textSize="12dp"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:textColor="#a4ffffff"
+                                        android:textSize="12dp"
                                         android:textStyle="bold" />
                                 </LinearLayout>
 

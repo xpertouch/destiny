@@ -116,61 +116,58 @@
 
 
                             <RadioGroup
-                                android:layout_rowSpan="2"
-                                android:layout_columnSpan="2"
+                                android:id="@+id/typeOfOffer"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Food"
                                     android:id="@+id/foodRB"
-                                    android:checked="false" />
-
-                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Clothes"
+                                    android:checked="false"
+                                    android:text="Food" />
+
+                                <RadioButton
                                     android:id="@+id/offerRB"
-                                    android:checked="true" />
-
-                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Travel"
+                                    android:text="Clothing" />
+
+                                <RadioButton
                                     android:id="@+id/productRB"
-                                    android:checked="false" />
-
-                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Health"
+                                    android:checked="false"
+                                    android:text="Travel" />
+
+                                <RadioButton
                                     android:id="@+id/healthRB"
-                                    android:checked="false" />
-
-                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Education"
+                                    android:checked="false"
+                                    android:text="Health" />
+
+                                <RadioButton
                                     android:id="@+id/departmentalRB"
-                                    android:checked="false" />
-
-                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Departmental Store"
+                                    android:checked="false"
+                                    android:text="Education" />
+
+                                <RadioButton
                                     android:id="@+id/travelRB"
-                                    android:checked="false" />
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="Departmental Store" />
 
 
                                 <RadioButton
+                                    android:id="@+id/activityRB"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Activity"
-                                    android:id="@+id/activityRB"
-                                    android:checked="false" />
+                                    android:checked="false"
+                                    android:text="Activity" />
 
 
                             </RadioGroup>

@@ -1,28 +1,31 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
-INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
-INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
-INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
+INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
+INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
+INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
 MERGED from [com.github.florent37:materialviewpager:1.2.0] /home/buren/.gradle/caches/transforms-1/files-1.1/materialviewpager-1.2.0.aar/f4a1cb70b7f2521542ff36fe81cc25d8/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6] /home/buren/.gradle/caches/transforms-1/files-1.1/WaveSwipeRefreshLayout-1.6.aar/2a896bf112636414270bfdeaf9662827/AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:design:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0fa8db127ad84fcc8c860d47bf7a7795/AndroidManifest.xml:17:1-22:12
+MERGED from [com.airbnb.android:lottie:2.5.4] /home/buren/.gradle/caches/transforms-1/files-1.1/lottie-2.5.4.aar/3fd4e67edf9c5256cec4cbaa730895a0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2435f8eb7452e66ac792a387b374329e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/buren/.gradle/caches/transforms-1/files-1.1/library-5.4.3.aar/c4204bfd25a77e02898fccd6b66161d9/AndroidManifest.xml:17:1-26:12
 MERGED from [uk.co.samuelwall:material-tap-target-prompt:1.6.3] /home/buren/.gradle/caches/transforms-1/files-1.1/material-tap-target-prompt-1.6.3.aar/053ad6855eb3892cb550cfdb440ccfc6/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/8dc5ccd7fd8880c8deff5afc7656aefd/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.ksoichiro:android-observablescrollview:1.6.0] /home/buren/.gradle/caches/transforms-1/files-1.1/android-observablescrollview-1.6.0.aar/45c73d6f0e7c8ec93ab608b27d94d3ab/AndroidManifest.xml:17:1-23:12
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/da801a7402e1cac8491dfbf9e4c8648b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.0.aar/466aa03d2c2767cff1dedb9d43bc4eab/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:16:1-30:12
-MERGED from [com.google.firebase:firebase-core:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.1.aar/2fb5615c9137e5c6fb8236bc8a13bff5/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:16:1-34:12
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:16:1-29:12
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:16:1-50:12
-MERGED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.1.aar/d0531b04bd29e0ede004d9cce6f94a50/AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:16:1-23:12
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-core:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-15.0.0.aar/8d43340b0c6b9d5973c08717f28ecaf7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:17:1-41:12
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/cad2dae28321e3873b983812be4dc20e/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.0.aar/4871af5974cc4e6669222fcc7772e678/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-stats:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.0.aar/0c767f2cbfd8e8cba6e4f262b860b2e8/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/9835da617be6b2008cadb8b3059219ca/AndroidManifest.xml:17:1-22:12
 MERGED from [com.mikhaellopez:circularimageview:3.0.1] /home/buren/.gradle/caches/transforms-1/files-1.1/circularimageview-3.0.1.aar/5929921b9c204c29875224abf601f233/AndroidManifest.xml:2:1-15:12
 MERGED from [com.mikepenz:iconics-core:2.8.2] /home/buren/.gradle/caches/transforms-1/files-1.1/iconics-core-2.8.2.aar/4f0c3352eda9cf36dc5df3963643bfc6/AndroidManifest.xml:2:1-12:12
 MERGED from [com.mikepenz:google-material-typeface:2.2.0.3.original] /home/buren/.gradle/caches/transforms-1/files-1.1/google-material-typeface-2.2.0.3.original.aar/18f5841070bc28edfbd412caecb9cdad/AndroidManifest.xml:17:1-29:12
@@ -40,29 +43,36 @@ MERGED from [com.mikepenz:foundation-icons-typeface:3.0.0.2] /home/buren/.gradle
 MERGED from [com.mikepenz:ionicons-typeface:2.0.1.2] /home/buren/.gradle/caches/transforms-1/files-1.1/ionicons-typeface-2.0.1.2.aar/454f6a656111276af2eda2b40ccd3e26/AndroidManifest.xml:17:1-29:12
 MERGED from [org.cryse.widget:persistentsearchview:1.0.4] /home/buren/.gradle/caches/transforms-1/files-1.1/persistentsearchview-1.0.4.aar/48b535e86e8cf84d3fd45f8c547199cd/AndroidManifest.xml:2:1-14:12
 MERGED from [com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3] /home/buren/.gradle/caches/transforms-1/files-1.1/qrcodereaderview-2.0.3.aar/97a667e6606ec930e295ceeda4541ba2/AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:17:1-31:12
-INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
-INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
-INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
+MERGED from [com.android.support:multidex:1.0.2] /home/buren/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/7f5f4c79087838dc2ce03087696e00c5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/6a0b635a28ad9bc4127a579c3aa560f8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/d00540f6bbdc762b02ca74486fe29e09/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8595cbcc820c14e02865568a768adcd2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/6a84a2872dbce447f951d8f79638a4ec/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/2931141f97936bfac5db3c69ec82b38c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/1244b38cb3c4b2053d70db06250084ce/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2cbb98eae7fa7c4d40ff26772cf34735/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f4fbfe12512ada3495adc350e4d4a88d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-measurement-base:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-15.0.0.aar/df7e7eb08631ec6e2e4ca7cfbb12badb/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a4bbca958d5272bc23e7bfb6127542f7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/18ee67073697be837048d4bf9a1f8a59/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/06386c4d8cb88ca5183d1b6d36a50494/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2a8dd080a71529dae182380d35cc7f96/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
+INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
+INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
 	package
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:4:5-37
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-204:12
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:1-205:12
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:2:11-69
@@ -72,12 +82,12 @@ ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidMani
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:6:22-66
 uses-permission#android.permission.INTERNET
 ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:7:5-67
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:23:5-67
 MERGED from [com.daimajia.slider:library:1.1.5] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/21a6d609b7f4f6e36b197740df375860/AndroidManifest.xml:11:5-67
 MERGED from [com.daimajia.slider:library:1.1.5] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.5.aar/21a6d609b7f4f6e36b197740df375860/AndroidManifest.xml:11:5-67
 	android:name
@@ -102,12 +112,12 @@ ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidMani
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:12:5-79
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:19:5-78
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:12:22-76
 uses-permission#android.permission.CAMERA
@@ -123,37 +133,31 @@ ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:16:22-64
 application
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:19:5-203:19
-MERGED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:22:5-26:19
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:19:5-204:19
+MERGED from [com.airbnb.android:lottie:2.5.4] /home/buren/.gradle/caches/transforms-1/files-1.1/lottie-2.5.4.aar/3fd4e67edf9c5256cec4cbaa730895a0/AndroidManifest.xml:11:5-20
+MERGED from [com.airbnb.android:lottie:2.5.4] /home/buren/.gradle/caches/transforms-1/files-1.1/lottie-2.5.4.aar/3fd4e67edf9c5256cec4cbaa730895a0/AndroidManifest.xml:11:5-20
 MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.0.aar/466aa03d2c2767cff1dedb9d43bc4eab/AndroidManifest.xml:9:5-20
 MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.0.aar/466aa03d2c2767cff1dedb9d43bc4eab/AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:19:5-29:19
-MERGED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:19:5-29:19
-MERGED from [com.google.firebase:firebase-core:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.1.aar/2fb5615c9137e5c6fb8236bc8a13bff5/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-core:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.1.aar/2fb5615c9137e5c6fb8236bc8a13bff5/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:24:5-33:19
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:24:5-33:19
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:28:5-49:19
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:28:5-49:19
-MERGED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.1.aar/d0531b04bd29e0ede004d9cce6f94a50/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.1.aar/d0531b04bd29e0ede004d9cce6f94a50/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:19:5-21:19
-MERGED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-core:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-15.0.0.aar/8d43340b0c6b9d5973c08717f28ecaf7/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-15.0.0.aar/8d43340b0c6b9d5973c08717f28ecaf7/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:28:5-39:19
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:28:5-39:19
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/cad2dae28321e3873b983812be4dc20e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/cad2dae28321e3873b983812be4dc20e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.0.aar/4871af5974cc4e6669222fcc7772e678/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.0.aar/4871af5974cc4e6669222fcc7772e678/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-stats:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.0.aar/0c767f2cbfd8e8cba6e4f262b860b2e8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.0.aar/0c767f2cbfd8e8cba6e4f262b860b2e8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:22:5-26:19
 MERGED from [com.mikhaellopez:circularimageview:3.0.1] /home/buren/.gradle/caches/transforms-1/files-1.1/circularimageview-3.0.1.aar/5929921b9c204c29875224abf601f233/AndroidManifest.xml:11:5-13:38
 MERGED from [com.mikhaellopez:circularimageview:3.0.1] /home/buren/.gradle/caches/transforms-1/files-1.1/circularimageview-3.0.1.aar/5929921b9c204c29875224abf601f233/AndroidManifest.xml:11:5-13:38
 MERGED from [com.mikepenz:google-material-typeface:2.2.0.3.original] /home/buren/.gradle/caches/transforms-1/files-1.1/google-material-typeface-2.2.0.3.original.aar/18f5841070bc28edfbd412caecb9cdad/AndroidManifest.xml:27:5-20
@@ -180,20 +184,8 @@ MERGED from [com.mikepenz:ionicons-typeface:2.0.1.2] /home/buren/.gradle/caches/
 MERGED from [com.mikepenz:ionicons-typeface:2.0.1.2] /home/buren/.gradle/caches/transforms-1/files-1.1/ionicons-typeface-2.0.1.2.aar/454f6a656111276af2eda2b40ccd3e26/AndroidManifest.xml:27:5-20
 MERGED from [org.cryse.widget:persistentsearchview:1.0.4] /home/buren/.gradle/caches/transforms-1/files-1.1/persistentsearchview-1.0.4.aar/48b535e86e8cf84d3fd45f8c547199cd/AndroidManifest.xml:12:5-20
 MERGED from [org.cryse.widget:persistentsearchview:1.0.4] /home/buren/.gradle/caches/transforms-1/files-1.1/persistentsearchview-1.0.4.aar/48b535e86e8cf84d3fd45f8c547199cd/AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-base:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-15.0.0.aar/df7e7eb08631ec6e2e4ca7cfbb12badb/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-15.0.0.aar/df7e7eb08631ec6e2e4ca7cfbb12badb/AndroidManifest.xml:22:5-20
 	android:supportsRtl
 		ADDED from [com.mikhaellopez:circularimageview:3.0.1] /home/buren/.gradle/caches/transforms-1/files-1.1/circularimageview-3.0.1.aar/5929921b9c204c29875224abf601f233/AndroidManifest.xml:13:9-35
 	android:label
@@ -267,251 +259,253 @@ ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:61:13-49
 activity#corp.burenz.expertouch.activities.WelcomeActivity
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:64:9-76:20
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:64:9-77:20
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:66:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:67:13-49
+	android:hardwareAccelerated
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:66:13-48
 	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:65:13-55
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:68:13-72:29
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:69:13-73:29
 action#android.intent.action.MAIN
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:69:17-69
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:70:17-69
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:69:25-66
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:70:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:71:17-77
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:72:17-77
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:71:27-74
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:72:27-74
 activity#corp.burenz.expertouch.activities.JobPostDetails
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:79:9-63
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:80:9-63
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:79:19-60
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:80:19-60
 activity#corp.burenz.expertouch.util.CallPermissions
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:81:9-58
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:82:9-58
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:81:19-55
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:82:19-55
 activity#corp.burenz.expertouch.activities.ExpertDetails
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:82:9-85:69
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:83:9-86:69
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:84:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:85:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:85:13-66
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:86:13-66
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:83:13-53
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:84:13-53
 activity#corp.burenz.expertouch.activities.MoreDetails
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:86:9-88:51
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:87:9-89:51
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:88:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:89:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:87:13-51
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:88:13-51
 activity#corp.burenz.expertouch.activities.SkilledExperts
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:89:9-91:52
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:90:9-92:52
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:91:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:92:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:90:13-54
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:91:13-54
 activity#corp.burenz.expertouch.activities.Jobs
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:92:9-97:20
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:93:9-98:20
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:95:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:96:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:94:13-56
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:95:13-56
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:96:13-70
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:97:13-70
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:93:13-44
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:94:13-44
 activity#corp.burenz.expertouch.activities.Hire
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:99:9-101:52
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:100:9-102:52
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:101:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:102:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:100:13-44
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:101:13-44
 activity#corp.burenz.expertouch.activities.Profile
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:102:9-106:62
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:103:9-107:62
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:104:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:105:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:106:13-59
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:107:13-59
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:105:13-55
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:106:13-55
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:103:13-47
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:104:13-47
 activity#corp.burenz.expertouch.activities.OwnChoice
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:107:9-110:42
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:108:9-111:42
 	android:screenOrientation
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:110:13-49
+	android:label
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:111:13-39
+	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:109:13-49
-	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:110:13-39
-	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:108:13-49
 activity#corp.burenz.expertouch.activities.Filter
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:111:9-114:15
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:112:9-115:15
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:112:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:113:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:111:19-52
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:112:19-52
 activity#corp.burenz.expertouch.activities.XpertRegistration
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:115:9-118:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:116:9-119:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:117:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:118:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:118:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:119:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:116:13-57
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:117:13-57
 activity#corp.burenz.expertouch.activities.CompanyProfile
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:119:9-123:70
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:120:9-124:70
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:122:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:123:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:123:13-67
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:124:13-67
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:121:13-55
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:122:13-55
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:120:13-54
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:121:13-54
 activity#corp.burenz.expertouch.activities.PostAdd
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:124:9-127:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:125:9-128:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:126:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:127:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:127:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:128:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:125:13-47
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:126:13-47
 activity#corp.burenz.expertouch.activities.MyCompany
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:128:9-131:65
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:129:9-132:65
 	android:screenOrientation
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:131:13-49
+	android:label
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:132:13-62
+	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:130:13-49
-	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:131:13-62
-	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:129:13-49
 activity#corp.burenz.expertouch.activities.RegisterCompany
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:132:9-135:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:133:9-136:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:134:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:135:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:135:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:136:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:133:13-55
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:134:13-55
 activity#corp.burenz.expertouch.activities.UpdateApp
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:136:9-138:51
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:137:9-139:51
 	android:screenOrientation
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:139:13-49
+	android:name
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:138:13-49
-	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:137:13-49
 activity#corp.burenz.expertouch.activities.MyFavouritesActivity
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:139:9-142:15
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:140:9-143:15
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:141:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:142:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:140:13-60
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:141:13-60
 activity#corp.burenz.expertouch.activities.MyCalls
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:143:9-144:52
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:144:9-145:52
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:144:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:145:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:143:19-53
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:144:19-53
 activity#corp.burenz.expertouch.activities.SettingsActivity
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:145:9-149:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:146:9-150:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:148:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:149:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:147:13-62
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:148:13-62
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:149:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:150:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:146:13-56
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:147:13-56
 activity#corp.burenz.expertouch.activities.FeedbackActivity
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:150:9-153:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:151:9-154:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:152:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:153:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:153:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:154:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:151:13-56
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:152:13-56
 activity#corp.burenz.expertouch.activities.HelpCenter
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:154:9-59
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:155:9-59
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:154:19-56
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:155:19-56
 activity#corp.burenz.expertouch.activities.AddMissingExpertise
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:155:9-158:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:156:9-159:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:157:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:158:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:158:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:159:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:156:13-59
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:157:13-59
 activity#corp.burenz.expertouch.activities.MyIntroActivity
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:159:9-161:15
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:160:9-162:15
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:160:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:161:13-49
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:159:19-61
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:160:19-61
 activity#corp.burenz.expertouch.activities.VerifyCompany
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:162:9-165:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:163:9-166:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:164:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:165:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:165:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:166:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:163:13-53
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:164:13-53
 activity#corp.burenz.expertouch.activities.MyCompanyPosts
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:166:9-63
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:167:9-63
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:166:19-60
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:167:19-60
 activity#corp.burenz.expertouch.activities.ReportCompany
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:167:9-170:76
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:168:9-171:76
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:169:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:170:13-49
 	android:windowSoftInputMode
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:170:13-73
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:171:13-73
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:168:13-53
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:169:13-53
 activity#corp.burenz.expertouch.activities.Buket
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:171:9-173:15
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:172:9-174:15
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:171:19-51
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:172:19-51
 activity#corp.burenz.expertouch.activities.TermsOfService
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:174:9-177:71
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:175:9-178:71
 	android:screenOrientation
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:175:13-49
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:176:13-49
 	android:label
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:177:13-68
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:178:13-68
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:176:13-54
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:177:13-54
 activity#corp.burenz.expertouch.activities.Workshop
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:179:9-66
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:180:9-66
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:179:19-54
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:180:19-54
 service#corp.burenz.expertouch.service.MyFirebaseInstanceIDService
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:181:9-186:19
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:182:9-187:19
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:182:13-64
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:183:13-64
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:183:13-185:29
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:184:13-186:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:184:17-79
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:185:17-79
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:184:25-77
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:185:25-77
 service#corp.burenz.expertouch.service.MyFirebaseMessagingService
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:188:9-193:19
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:189:9-194:19
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:189:13-63
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:190:13-63
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:190:13-192:29
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:191:13-193:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:191:17-77
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:192:17-77
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:191:25-75
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:192:25-75
 receiver#corp.burenz.expertouch.util.SmsReceiver
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:195:9-199:20
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:196:9-200:20
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:195:19-51
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:196:19-51
 intent-filter#android.provider.Telephony.SMS_RECEIVED
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:196:13-198:29
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:197:13-199:29
 action#android.provider.Telephony.SMS_RECEIVED
-ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:197:17-81
+ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:198:17-81
 	android:name
-		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:197:25-79
+		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml:198:25-79
 uses-sdk
 INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
@@ -520,40 +514,46 @@ MERGED from [com.github.florent37:materialviewpager:1.2.0] /home/buren/.gradle/c
 MERGED from [com.github.florent37:materialviewpager:1.2.0] /home/buren/.gradle/caches/transforms-1/files-1.1/materialviewpager-1.2.0.aar/f4a1cb70b7f2521542ff36fe81cc25d8/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6] /home/buren/.gradle/caches/transforms-1/files-1.1/WaveSwipeRefreshLayout-1.6.aar/2a896bf112636414270bfdeaf9662827/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6] /home/buren/.gradle/caches/transforms-1/files-1.1/WaveSwipeRefreshLayout-1.6.aar/2a896bf112636414270bfdeaf9662827/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:design:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0fa8db127ad84fcc8c860d47bf7a7795/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0fa8db127ad84fcc8c860d47bf7a7795/AndroidManifest.xml:20:5-44
+MERGED from [com.airbnb.android:lottie:2.5.4] /home/buren/.gradle/caches/transforms-1/files-1.1/lottie-2.5.4.aar/3fd4e67edf9c5256cec4cbaa730895a0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.airbnb.android:lottie:2.5.4] /home/buren/.gradle/caches/transforms-1/files-1.1/lottie-2.5.4.aar/3fd4e67edf9c5256cec4cbaa730895a0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2435f8eb7452e66ac792a387b374329e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2435f8eb7452e66ac792a387b374329e/AndroidManifest.xml:20:5-44
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/buren/.gradle/caches/transforms-1/files-1.1/library-5.4.3.aar/c4204bfd25a77e02898fccd6b66161d9/AndroidManifest.xml:22:5-24:41
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/buren/.gradle/caches/transforms-1/files-1.1/library-5.4.3.aar/c4204bfd25a77e02898fccd6b66161d9/AndroidManifest.xml:22:5-24:41
 MERGED from [uk.co.samuelwall:material-tap-target-prompt:1.6.3] /home/buren/.gradle/caches/transforms-1/files-1.1/material-tap-target-prompt-1.6.3.aar/053ad6855eb3892cb550cfdb440ccfc6/AndroidManifest.xml:23:5-25:41
 MERGED from [uk.co.samuelwall:material-tap-target-prompt:1.6.3] /home/buren/.gradle/caches/transforms-1/files-1.1/material-tap-target-prompt-1.6.3.aar/053ad6855eb3892cb550cfdb440ccfc6/AndroidManifest.xml:23:5-25:41
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/8dc5ccd7fd8880c8deff5afc7656aefd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/8dc5ccd7fd8880c8deff5afc7656aefd/AndroidManifest.xml:20:5-44
 MERGED from [com.github.ksoichiro:android-observablescrollview:1.6.0] /home/buren/.gradle/caches/transforms-1/files-1.1/android-observablescrollview-1.6.0.aar/45c73d6f0e7c8ec93ab608b27d94d3ab/AndroidManifest.xml:21:5-43
 MERGED from [com.github.ksoichiro:android-observablescrollview:1.6.0] /home/buren/.gradle/caches/transforms-1/files-1.1/android-observablescrollview-1.6.0.aar/45c73d6f0e7c8ec93ab608b27d94d3ab/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/da801a7402e1cac8491dfbf9e4c8648b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/da801a7402e1cac8491dfbf9e4c8648b/AndroidManifest.xml:20:5-44
 MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.0.aar/466aa03d2c2767cff1dedb9d43bc4eab/AndroidManifest.xml:5:5-7:41
 MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/library-1.1.0.aar/466aa03d2c2767cff1dedb9d43bc4eab/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-core:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.1.aar/2fb5615c9137e5c6fb8236bc8a13bff5/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-core:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.1.aar/2fb5615c9137e5c6fb8236bc8a13bff5/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.1.aar/d0531b04bd29e0ede004d9cce6f94a50/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.1.aar/d0531b04bd29e0ede004d9cce6f94a50/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:21:5-23:54
+MERGED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-15.0.0.aar/8d43340b0c6b9d5973c08717f28ecaf7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-core-15.0.0.aar/8d43340b0c6b9d5973c08717f28ecaf7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/cad2dae28321e3873b983812be4dc20e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.0.aar/cad2dae28321e3873b983812be4dc20e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.0.aar/4871af5974cc4e6669222fcc7772e678/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.0.aar/4871af5974cc4e6669222fcc7772e678/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.0.aar/0c767f2cbfd8e8cba6e4f262b860b2e8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.0.aar/0c767f2cbfd8e8cba6e4f262b860b2e8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/9835da617be6b2008cadb8b3059219ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/9835da617be6b2008cadb8b3059219ca/AndroidManifest.xml:20:5-44
 MERGED from [com.mikhaellopez:circularimageview:3.0.1] /home/buren/.gradle/caches/transforms-1/files-1.1/circularimageview-3.0.1.aar/5929921b9c204c29875224abf601f233/AndroidManifest.xml:7:5-9:41
 MERGED from [com.mikhaellopez:circularimageview:3.0.1] /home/buren/.gradle/caches/transforms-1/files-1.1/circularimageview-3.0.1.aar/5929921b9c204c29875224abf601f233/AndroidManifest.xml:7:5-9:41
 MERGED from [com.mikepenz:iconics-core:2.8.2] /home/buren/.gradle/caches/transforms-1/files-1.1/iconics-core-2.8.2.aar/4f0c3352eda9cf36dc5df3963643bfc6/AndroidManifest.xml:8:5-10:41
@@ -588,24 +588,36 @@ MERGED from [org.cryse.widget:persistentsearchview:1.0.4] /home/buren/.gradle/ca
 MERGED from [org.cryse.widget:persistentsearchview:1.0.4] /home/buren/.gradle/caches/transforms-1/files-1.1/persistentsearchview-1.0.4.aar/48b535e86e8cf84d3fd45f8c547199cd/AndroidManifest.xml:8:5-10:41
 MERGED from [com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3] /home/buren/.gradle/caches/transforms-1/files-1.1/qrcodereaderview-2.0.3.aar/97a667e6606ec930e295ceeda4541ba2/AndroidManifest.xml:8:5-10:41
 MERGED from [com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3] /home/buren/.gradle/caches/transforms-1/files-1.1/qrcodereaderview-2.0.3.aar/97a667e6606ec930e295ceeda4541ba2/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:multidex:1.0.2] /home/buren/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/7f5f4c79087838dc2ce03087696e00c5/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /home/buren/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/7f5f4c79087838dc2ce03087696e00c5/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/6a0b635a28ad9bc4127a579c3aa560f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/6a0b635a28ad9bc4127a579c3aa560f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/d00540f6bbdc762b02ca74486fe29e09/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/d00540f6bbdc762b02ca74486fe29e09/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8595cbcc820c14e02865568a768adcd2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8595cbcc820c14e02865568a768adcd2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/6a84a2872dbce447f951d8f79638a4ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/6a84a2872dbce447f951d8f79638a4ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/2931141f97936bfac5db3c69ec82b38c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/2931141f97936bfac5db3c69ec82b38c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/1244b38cb3c4b2053d70db06250084ce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/1244b38cb3c4b2053d70db06250084ce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2cbb98eae7fa7c4d40ff26772cf34735/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2cbb98eae7fa7c4d40ff26772cf34735/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f4fbfe12512ada3495adc350e4d4a88d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f4fbfe12512ada3495adc350e4d4a88d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-15.0.0.aar/df7e7eb08631ec6e2e4ca7cfbb12badb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-15.0.0.aar/df7e7eb08631ec6e2e4ca7cfbb12badb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a4bbca958d5272bc23e7bfb6127542f7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a4bbca958d5272bc23e7bfb6127542f7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/18ee67073697be837048d4bf9a1f8a59/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/18ee67073697be837048d4bf9a1f8a59/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/06386c4d8cb88ca5183d1b6d36a50494/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/06386c4d8cb88ca5183d1b6d36a50494/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2a8dd080a71529dae182380d35cc7f96/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/buren/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2a8dd080a71529dae182380d35cc7f96/AndroidManifest.xml:20:5-44
 INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
@@ -614,157 +626,139 @@ INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidM
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 		ADDED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
 		INJECTED from /home/buren/AndroidStudioProjects/1clickAway/app/src/main/AndroidManifest.xml
-meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/0d6da29d4fb028735bd5be457c319cce/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.4.0.aar/a03ea168f60de1b480b210ff50aecc42/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.4.0.aar/f1b2ea1849ae036f7e5d1cac7effe34e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/15404d34e9fecdef3cce24cd70f35334/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/7fc413a8b0d653c29a52cecc169ae090/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/d6a4eb9ec0a13853669cecd40b28cd41/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/ce2cfc7d1112220be53c9cf47c0af56f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/8d006963d0518ec00f265ca5aa5e2105/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/ca607a9a3e717af8178ddfff8ab32aee/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/576b8526bf47e46543f06649c71d0c0e/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/50d9e0815521cc9c1bb1f76ca9b6f25f/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/ff91341b59c037f1fd8cf7fd489c2578/AndroidManifest.xml:26:9-28:38
-	android:value
-		ADDED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:28:13-35
-	android:name
-		ADDED from [com.android.support:design:25.4.0] /home/buren/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/ddcddfaeb136f5b27177ec1a6267d225/AndroidManifest.xml:27:13-51
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:23:9-27:19
+ADDED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:28:9-34:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:23:88-111
+		ADDED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.1.aar/782f462123bf0de4b6bdcbbc5a8a6ce4/AndroidManifest.xml:23:18-87
+		ADDED from [com.google.firebase:firebase-messaging:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-messaging-15.0.0.aar/a6b8828f8622e6dcec0387f81b74db11/AndroidManifest.xml:29:13-82
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:21:5-67
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:24:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:22:22-65
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:25:22-65
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:29:9-33:20
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:29:9-33:20
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:30:13-85
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:34:9-42:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:37:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:35:13-100
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:39:13-41:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:40:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:40:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:27:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.1.aar/50f32aac4f69d1c32d7c7ce5921f6de4/AndroidManifest.xml:27:7-137
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:44:9-47:40
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:35:9-38:40
+MERGED from [com.google.firebase:firebase-analytics-impl:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-15.0.0.aar/04b3fd1d4a9357fb30e561b8b4688889/AndroidManifest.xml:35:9-38:40
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:32:88-110
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:46:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:32:111-135
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.1.aar/bfed1a3f4c73c6150a7fc7286a029f1b/AndroidManifest.xml:32:16-87
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:22:5-81
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:22:22-79
-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:24:5-109
-	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:24:72-107
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:24:17-71
-permission#corp.burenz.expertouch.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:24:5-109
-	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:24:72-107
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:24:17-71
-uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:26:5-78
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:26:22-76
-uses-permission#corp.burenz.expertouch.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:26:5-78
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:26:22-76
-receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:30:9-35:20
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:50:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:30:85-108
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:51:13-37
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:30:109-169
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:30:19-84
+		ADDED from [com.google.firebase:firebase-analytics:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-analytics-15.0.0.aar/ff9718fd516a27090ed4464b9ea0542a/AndroidManifest.xml:49:13-87
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:26:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:29:9-63
+permission#corp.burenz.expertouch.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:29:9-63
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:32:22-76
+uses-permission#corp.burenz.expertouch.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:32:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:35:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:38:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:36:13-78
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:31:13-34:29
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:39:13-43:29
 intent-filter#com.google.android.c2dm.intent.RECEIVE+corp.burenz.expertouch
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:31:13-34:29
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:39:13-43:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:32:17-80
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:40:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:32:25-78
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:40:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:33:17-60
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:42:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:33:27-58
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:42:27-58
 category#corp.burenz.expertouch
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:33:17-60
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:42:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:33:27-58
-receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:39:9-119
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:39:93-117
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:39:19-92
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:42:27-58
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:43:9-47:19
+ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:50:9-56:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:43:83-106
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.1.aar/e747c51941fe5942960ba1ce209eb3ea/AndroidManifest.xml:43:18-82
+		ADDED from [com.google.firebase:firebase-iid:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-iid-15.0.0.aar/96ba92e1977459b24367b8b7d8d647c1/AndroidManifest.xml:51:13-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:6:9-194
+ADDED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:8:9-12:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:6:144-168
+		ADDED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:11:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:6:169-192
+		ADDED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:12:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.1.aar/2aec0c981141ed7260569a667ec94703/AndroidManifest.xml:6:79-143
+		ADDED from [com.google.firebase:firebase-common:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/firebase-common-15.0.0.aar/bfba336ae3ad92064f9c2c357a2553bf/AndroidManifest.xml:9:13-77
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.2.1] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.1.aar/3738e12317821864dedf10b5d9e97946/AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:15.0.0] /home/buren/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.0.aar/1ffd374bdb2eb8efe26f5d79013bcddd/AndroidManifest.xml:24:13-58
