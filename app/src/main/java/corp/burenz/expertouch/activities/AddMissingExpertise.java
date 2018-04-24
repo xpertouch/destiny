@@ -39,6 +39,8 @@ public class AddMissingExpertise extends AppCompatActivity {
 
     ViewFlipper addMissingFlipper;
 
+
+
     SharedPreferences userData;
     String LOCAL_APP_DATA = "userInformation";
 
