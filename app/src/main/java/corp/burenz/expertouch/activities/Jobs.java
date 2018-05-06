@@ -32,6 +32,7 @@ import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -581,9 +582,8 @@ public class Jobs extends AppCompatActivity
 
 
         whatsNewRecycler        = (RecyclerView)findViewById(R.id.jobsRv);
-        whatsNewRecycler.setNestedScrollingEnabled(false);
-
-        whatsNewRecycler.setNestedScrollingEnabled(true);
+//        whatsNewRecycler.setNestedScrollingEnabled(false);
+        whatsNewRecycler.setHasFixedSize(true);
         whatsNewRecycler.setLayoutManager(new LinearLayoutManager(Jobs.this,LinearLayoutManager.VERTICAL, false));
         animation               = AnimationUtils.loadAnimation(Jobs.this,R.anim.card_animation);
 
@@ -2151,6 +2151,7 @@ public class Jobs extends AppCompatActivity
 
                 whatsNewRecyclerAdapter = new FeedsAdapter(Jobs.this,finalCompanyTitlesNew,finalJobInfoNew,finalPostDateNew,finalCallArrayNew,finalWebsiteArrayNew,finalEmailArrayNew,finalBannerArrayNew,finalPostIdNew,finalcompanyIDArray);
                 whatsNewRecycler.setAdapter(whatsNewRecyclerAdapter);
+                whatsNewRecycler.addItemDecoration(new DividerItemDecoration(Jobs.this, DividerItemDecoration.VERTICAL));
                 whatsNewRecyclerAdapter.notifyDataSetChanged();
 
                 }catch(Exception e){

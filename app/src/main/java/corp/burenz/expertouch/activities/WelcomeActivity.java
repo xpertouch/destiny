@@ -41,6 +41,15 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().setFlags(
+                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+            );
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        }
+
+
         nowAnythingTV = (TextView) findViewById(R.id.nowAnythingTV);
         t1clickawayTV = (TextView) findViewById(R.id.t1clickawayTV);
         jobsLSTV      = (TextView) findViewById(R.id.jobsLSTV);

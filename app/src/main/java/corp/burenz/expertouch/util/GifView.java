@@ -44,7 +44,7 @@ public class GifView extends View {
 
     private void init(Context context){
 
-            InputStream gifInputStream = context.getResources().openRawResource(R.raw.loop_on);
+            InputStream gifInputStream = context.getResources().openRawResource(R.raw.loop_onn);
             gifMovie = Movie.decodeStream(gifInputStream);
 
             movieWidth = gifMovie.width();

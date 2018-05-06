@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -17,6 +18,15 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:background="#d2d2d2">
+
+<!--        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            android:scaleType="centerCrop"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/globe"/>-->
 
         <corp.burenz.expertouch.util.GifView
             android:layout_width="match_parent"

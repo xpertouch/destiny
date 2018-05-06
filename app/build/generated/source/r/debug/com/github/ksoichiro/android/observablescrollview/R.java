@@ -8,19 +8,19 @@ package com.github.ksoichiro.android.observablescrollview;
 
 public final class R {
     public static final class attr {
-        public static final int layoutManager = 0x7f0400e9;
-        public static final int reverseLayout = 0x7f04015a;
-        public static final int spanCount = 0x7f040179;
-        public static final int stackFromEnd = 0x7f04017f;
+        public static final int layoutManager = 0x7f0400ee;
+        public static final int reverseLayout = 0x7f04015f;
+        public static final int spanCount = 0x7f04017f;
+        public static final int stackFromEnd = 0x7f040185;
     }
     public static final class dimen {
         public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f07008e;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f090319;
+        public static final int item_touch_helper_previous_elevation = 0x7f09031d;
     }
     public static final class styleable {
-        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f0400a7, 0x7f0400a8, 0x7f0400a9, 0x7f0400aa, 0x7f0400ab, 0x7f0400e9, 0x7f04015a, 0x7f040179, 0x7f04017f };
+        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f0400aa, 0x7f0400ab, 0x7f0400ac, 0x7f0400ad, 0x7f0400ae, 0x7f0400ee, 0x7f04015f, 0x7f04017f, 0x7f040185 };
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_android_descendantFocusability = 1;
         public static final int RecyclerView_fastScrollEnabled = 2;

@@ -35,17 +35,22 @@
                         android:visibility="visible">
 
                         <android.support.v7.widget.RecyclerView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"/>
+                            android:id="@+id/jobsRv"
+                            android:layout_width="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:layout_height="wrap_content"
+
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                            android:visibility="visible"/>
+
                     </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
 
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/jobsRv"
-                        android:layout_width="match_parent"
-                        android:descendantFocusability="blocksDescendants"
-                        android:layout_height="match_parent"
-                        android:visibility="visible"
-                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+
+
 
                     <LinearLayout
                         android:orientation="vertical"
