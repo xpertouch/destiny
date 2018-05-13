@@ -12,34 +12,64 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="duration" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/NotificationUtils.java" line="221" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/MyCompanyPosts.java" line="62" />
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java" line="472" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java" line="473" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01383f6e-def6-4a2c-bdb9-4c7699eebcb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_identifier_15_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_15_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_15_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_measurement_base_15_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_stats_15_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_15_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_15_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_15_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_15_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_core_15_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_15_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_interop_15_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_measurement_connector_15_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_measurement_connector_impl_15_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_15_0_2.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/pin_map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_eminayar_interactioncards_cardhelper_0_0_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_location_15_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_maps_15_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_places_placereport_15_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/CheckMySubscription.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/DataFromPlaces.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/DataParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/DownloadURL.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/EnableNotifications.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetNearbyPlacesData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetPlaceIdFromKey.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetPlaceInformation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/MapsSubscriptionUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/MyPannelModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/SearchLocationAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/SearchPlaces.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/maps/MapsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_arrow_back_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_info_outline_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_launcher_background.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_launcher_foreground.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_location_on_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_menu_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_my_location_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_notifications_active_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_notifications_none_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_restaurant_menu_black_24dp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_search_maps.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_maps.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_places.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_location.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_identifier_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_measurement_base_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_stats_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_core_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_messaging_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/generated/res/google-services/debug/values/values.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
@@ -53,118 +83,172 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/transition/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/transition/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$color.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$color.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/astuetz/pagerslidingtabstrip/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$color.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/daimajia/slider/library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/florent37/materialviewpager/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/github/ksoichiro/android/observablescrollview/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/community_material_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/devicon_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/entypo_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/fontawesome_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/foundation_icons_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/google_material_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/ionicons_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/material_design_iconic_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/meteocons_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/octicons_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/typeicons_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/weather_icons_typeface_library/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikhaellopez/circularimageview/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikhaellopez/circularimageview/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikhaellopez/circularimageview/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikhaellopez/circularimageview/R$styleable.class" />
@@ -184,13 +268,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AddMissingExpertise$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AddMissingExpertise$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AddMissingExpertise$AddExpertise.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AddMissingExpertise$AddExpertise.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AddMissingExpertise.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AddMissingExpertise.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews$GetExpertReviews.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews$GetExpertReviews.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews$GetIndividualRatings.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews$GetIndividualRatings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews$IsReviewedByMe.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews$IsReviewedByMe.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/AllExpertReviews.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Buket.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/ChannelSearchView$GETChannelList.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/ChannelSearchView$GETChannelList.class" />
@@ -220,9 +305,31 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/JobPostDetails$GetJobInformation.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/JobPostDetails$GetJobInformation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/JobPostDetails.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/JobPostDetails.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$12.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$16$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$16$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$19.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$20$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$20$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$20$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$20$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$22$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$22$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$23$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$23$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$24$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$24$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$24.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$26$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$26$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$26.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$27.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$28.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$28.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$29.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$29.class" />
@@ -248,6 +355,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$FeedsLoader$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$FeedsLoader$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$FeedsLoader$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$FeedsLoader$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$FeedsLoader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Jobs$FeedsLoader.class" />
@@ -286,7 +395,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/RegisterCompany$AddCompany.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/RegisterCompany$AddCompany.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/RegisterCompany$CheckCompany.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/RegisterCompany$CheckCompany.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/RegisterCompany.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/RegisterCompany.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Registrations$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Registrations$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Registrations.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Registrations.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/ReportCompany$GetCompanyList.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/ReportCompany$GetCompanyList.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/ReportCompany$SendReport.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/ReportCompany$SendReport.class" />
@@ -295,6 +403,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$CheckAvailability.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$CheckAvailability.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$UpdateLocals.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity$UpdateLocals.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/SettingsActivity.class" />
@@ -309,46 +418,67 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/VerifyCompany$SendTrue.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/VerifyCompany$SendTrue.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/VerifyCompany$UpdateImage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/VerifyCompany$UpdateImage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/VerifyCompany.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/VerifyCompany.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/WelcomeActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/WelcomeActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/WelcomeActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/WelcomeActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Workshop.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/Workshop.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/XpertRegistration$RegisterExpert.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/XpertRegistration$RegisterExpert.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/XpertRegistration.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/activities/XpertRegistration.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/AddCounts$CompanyAdds.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/AddCounts$CompanyAdds.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/AddCounts.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/AddCounts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$MyBucketHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$MyBucketHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$SortLikes.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter$SortLikes.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketCompanyAdapter$BucketPostHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketCompanyAdapter$BucketPostHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketCompanyAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketCompanyAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketPostAdapter$DeleteMyPost.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketPostAdapter$DeleteMyPost.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketPostAdapter$MyPostsHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketPostAdapter$MyPostsHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketPostAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/BucketPostAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CallsToAdapter$MyCallsMade.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CallsToAdapter$MyCallsMade.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CallsToAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CallsToAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CataAdapter$CataViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CataAdapter$CataViewHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CataAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/CataAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ChannelAdaper$ChannelAdaperViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ChannelAdaper$ChannelAdaperViewHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ChannelAdaper$SubscriptionUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ChannelAdaper$SubscriptionUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ChannelAdaper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ChannelAdaper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertCard$ExpertVieweHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertCard$ExpertVieweHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertCard.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertCard.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertFavAdapter$MyExpertFavHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertFavAdapter$MyExpertFavHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertFavAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertFavAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertReviewAdapter$ReviewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertReviewAdapter$ReviewHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertReviewAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/ExpertReviewAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$MyFavourteAdds.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter$MyFavourteAdds.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FavouriteCompaniesAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$FeedsViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter$FeedsViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FeedsAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FilterListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FilterListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FullDiscriptionAdapter$FullViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FullDiscriptionAdapter$FullViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FullDiscriptionAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/FullDiscriptionAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/HelpCenterAdapter$ConfusionHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/HelpCenterAdapter$ConfusionHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/HelpCenterAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/HelpCenterAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/LinksLayoutAdapter$LinksViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/LinksLayoutAdapter$LinksViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/LinksLayoutAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/LinksLayoutAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyCompanyPostsAdapter$DeleteMyPost.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyCompanyPostsAdapter$DeleteMyPost.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyCompanyPostsAdapter$MyPostsHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyCompanyPostsAdapter$MyPostsHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyCompanyPostsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyCompanyPostsAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyProfileAdapt$ProfileViewholder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyProfileAdapt$ProfileViewholder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyProfileAdapt.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MyProfileAdapt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MySpinnerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/MySpinnerAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/PostsCompany$MyCompanyPosts.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/PostsCompany$MyCompanyPosts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/PostsCompany.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/PostsCompany.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/SkillsAdapter$SkillViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/SkillsAdapter$SkillViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/SkillsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/adapters/SkillsAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/bucket/EducationBucket$BucketLoader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/bucket/EducationBucket$BucketLoader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/bucket/EducationBucket$GetLikes.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/bucket/EducationBucket$GetLikes.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/bucket/EducationBucket.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/bucket/EducationBucket.class" />
@@ -368,10 +498,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/calllogs/CallsToExpert.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/calllogs/CallsToExpert.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/favorites/CompanyFavFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/favorites/CompanyFavFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/favorites/ExpertsFavFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/favorites/ExpertsFavFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Fifth.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Fifth.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/FifthSecond.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/FifthSecond.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/First.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/First.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Fourth.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Fourth.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Second.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Second.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Six.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Six.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Third.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/intro/Third.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/mainframes/Catagories.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/mainframes/Catagories.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/mainframes/MyProfile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/mainframes/MyProfile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/mainframes/WhatNew.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/mainframes/WhatNew.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/more/Address.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/more/Address.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/more/Education.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/more/Education.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/more/GeneralDetails.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/more/GeneralDetails.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/post/flag/BucketPost$SendBucket.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/post/flag/BucketPost$SendBucket.class" />
@@ -398,22 +535,28 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/registration/ResetPassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/fragments/registration/ResetPassword.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/util/GifView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/util/GifView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/util/SendFCMToken.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/util/SendFCMToken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/util/Utils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/corp/burenz/expertouch/util/Utils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jp/co/recruit_lifestyle/android/widget/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/cryse/widget/persistentsearch/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/uk/co/samuelwall/materialtaptargetprompt/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/uk/co/samuelwall/materialtaptargetprompt/R$attr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/uk/co/samuelwall/materialtaptargetprompt/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/uk/co/samuelwall/materialtaptargetprompt/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/uk/co/samuelwall/materialtaptargetprompt/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/uk/co/samuelwall/materialtaptargetprompt/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/raw/loop_on.gif" afterPath="$PROJECT_DIR$/app/src/main/res/raw/loop_on.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
@@ -454,20 +597,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/jp/co/recruit_lifestyle/android/widget/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/jp/co/recruit_lifestyle/android/widget/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/org/cryse/widget/persistentsearch/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/org/cryse/widget/persistentsearch/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/uk/co/samuelwall/materialtaptargetprompt/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/uk/co/samuelwall/materialtaptargetprompt/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Registrations.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Registrations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/WelcomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/WelcomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/GifView.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/GifView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/content_jobs.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/content_jobs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/login_fragment_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/login_fragment_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/register_fragment_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/register_fragment_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/BucketAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/BucketAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_search_black_24dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_search_black_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/food_bucket.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/food_bucket.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_skilled.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_skilled.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/bucket_adapter.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/bucket_adapter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <list id="cac22c8b-1650-4743-8fd9-2d9998ebfef0" name="Failed commit: Default" comment="initiial commit">
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-11-18-22-47-41-281.rawproto" afterPath="" />
@@ -517,135 +661,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_main.xml">
+      <file leaf-file-name="list_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_jobs.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_jobs.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_jobs.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/content_jobs.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="e#330#370#0" expanded="true" />
-                <element signature="e#838#878#0" expanded="true" />
-                <element signature="e#1768#1808#0" expanded="true" />
-                <element signature="e#2260#2300#0" expanded="true" />
-                <element signature="e#3278#3307#0" expanded="true" />
-                <element signature="e#5217#5257#0" expanded="true" />
-                <element signature="e#5838#5867#0" expanded="true" />
-                <element signature="e#24349#24380#0" expanded="true" />
-                <element signature="e#24917#24948#0" expanded="true" />
-                <element signature="e#47846#47877#0" expanded="true" />
-                <element signature="e#48347#48378#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jobs.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Jobs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="198" column="35" lean-forward="true" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
+            <state relative-caret-position="294">
+              <caret line="241" column="10" lean-forward="true" selection-start-line="241" selection-start-column="10" selection-end-line="241" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1525545863333" expanded="false" signature="26869:29296" ph="..." />
+                <element signature="e#9329#9605#0" expanded="true" />
+                <element signature="e#9604#9605#0" expanded="true" />
+                <marker date="1526209954795" expanded="false" signature="26884:29311" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register_fragment_layout.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/register_fragment_layout.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_fragment_layout.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/login_fragment_layout.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4182">
-              <caret line="246" column="39" lean-forward="false" selection-start-line="246" selection-start-column="39" selection-end-line="246" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Registrations.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Registrations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WelcomeActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/WelcomeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -664,27 +703,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon</find>
-      <find>iconTin</find>
-      <find>url</find>
-      <find>Url</find>
-      <find>dis</find>
-      <find>Picasso</find>
-      <find>anima</find>
-      <find>onBackPre</find>
-      <find>layou</find>
-      <find>setText</find>
-      <find>layout</find>
-      <find>flag</find>
-      <find>rb</find>
-      <find>gif</find>
-      <find>Welc</find>
-      <find>tap</find>
-      <find>Material</find>
-      <find>implementation</find>
-      <find>vector</find>
-      <find>noti</find>
-      <find>no</find>
       <find>MaterialTapTargetPrompt</find>
       <find>intent</find>
       <find>jobsRV</find>
@@ -694,6 +712,27 @@
       <find>adapter</find>
       <find>setA</find>
       <find>nested</find>
+      <find>Visibi</find>
+      <find>ImageButt</find>
+      <find>awesomeHeartLikes</find>
+      <find>playAni</find>
+      <find>loa</find>
+      <find>&lt;pro</find>
+      <find>Lot</find>
+      <find>cardv</find>
+      <find>cardView</find>
+      <find>font</find>
+      <find>location</find>
+      <find>getMyLocation</find>
+      <find>maps</find>
+      <find>com.google.android.gms:play-services-maps</find>
+      <find>channe</find>
+      <find>MapsA</find>
+      <find>Chann</find>
+      <find>places</find>
+      <find>onBackpre</find>
+      <find>key</find>
+      <find>override</find>
     </findStrings>
     <replaceStrings>
       <replace>ScanAndGo.this</replace>
@@ -871,10 +910,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processDebugGoogleServices" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1442,10 +1477,6 @@
                 <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processReleaseGoogleServices" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of root project '1clickAway'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
@@ -1563,10 +1594,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="processDebugGoogleServices" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -2130,10 +2157,6 @@
                 <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="processReleaseGoogleServices" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of project ':app'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="properties" />
@@ -2463,21 +2486,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/my_company_posts_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/my_company_posts_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/my_company_posts_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/bucket_post_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/BucketPostAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/AddCounts.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/newfeeds_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/RegisterCompany.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_my_company.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/SampleSuggestionsBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/works_space_scroll.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inverse_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/RateExpertActivity.java" />
-        <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ChannelSearchView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
@@ -2490,7 +2498,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/FeedsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/app_bar_jobs.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/post_bucket.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/BucketPost.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/LocationGif.java" />
@@ -2504,16 +2511,32 @@
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/SkilledExperts.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/nav_header_jobs.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/AddMissingExpertise.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/GifView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/WelcomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Registrations.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/register_fragment_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/login_fragment_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/content_jobs.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/bucket_adapter.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/BucketAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-mdpi/food_bucket.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_skilled.xml" />
+        <option value="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardhelper-0.0.0.1.aar/9d4214c26b43c7fc48c54074a8ece680/res/values/values.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetNearbyPlacesData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/SearchLocationAdapter.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/SearchPlaces.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search_places.xml" />
+        <option value="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetPlaceIdFromKey.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/maps/MapsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/search_location.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java" />
       </list>
     </option>
   </component>
@@ -2541,54 +2564,78 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
+      <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="1clickAway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uk.co.samuelwall:material-tap-target-prompt-1.6.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="1clickAway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uk.co.samuelwall:material-tap-target-prompt-1.6.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="1clickAway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expertouch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1clickAway" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expertouch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="1clickAway" />
@@ -2602,36 +2649,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1clickAway" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1clickAway" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="device.picker.selection" value="10.25.252.70:4444" />
+    <property name="device.picker.selection" value="192.168.1.106:4444" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../KeyStrore/newKey.jks" />
     <property name="SearchEverywhereHistoryKey" value="color&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/values/colors.xml&#10;attr&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/values/attrs.xml&#10;dimens&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/values/dimens.xml&#10;va&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/google-services/debug/values/values.xml&#10;values&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/google-services/debug/values/values.xml&#10;colors&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/values/colors.xml&#10;Jobs&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java&#10;Network&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/build/generated/res/pngs/debug/drawable-mdpi-v21/network.xml&#10;Integer&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/res/values/integers.xml&#10;Jobpos&#9;FILE&#9;file:///home/buren/AndroidStudioProjects/1clickAway/app/src/main/java/corp/burenz/expertouch/activities/JobPostDetails.java" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
@@ -2648,17 +2669,25 @@
     <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="corp.burenz.expertouch.maps" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="corp.burenz.expertouch.map_utils" />
+      <recent name="corp.burenz.expertouch.maps" />
       <recent name="corp.burenz.expertouch.util" />
       <recent name="corp.burenz.expertouch.activities" />
       <recent name="corp.burenz.expertouch.fragments.bucket" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/anim" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout-xhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-mdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2744,7 +2773,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525589956331" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526209964048" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2792,7 +2821,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525589956332" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526209964048" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2954,7 +2983,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1525589956335" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526209964056" />
       </method>
     </configuration>
     <list size="1">
@@ -3105,7 +3134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524551593422</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Stablizing company profile">
+      <created>1525590009112</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1525590009112</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3119,16 +3155,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50479233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.50479233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31948882" sideWeight="0.47996858" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="355" y="53" width="423" height="661" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4345048" sideWeight="0.5059195" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24388319" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17916338" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34340224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.4882445" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -3137,7 +3173,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1526232" sideWeight="0.50911856" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.124797404" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="209" y="32" width="300" height="626" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1878453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2596685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991317" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3153,6 +3189,7 @@
       <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2452978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33386582" sideWeight="0.47996858" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="156" y="613" width="138" height="56" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31948882" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3250,355 +3287,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="android-dummy:///home/buren/AndroidStudioProjects/1clickAway//Theme Editor">
-      <provider selected="true" editor-type-id="themeEditor">
-        <state theme-name="AppTheme" module-name="app" proportion="0.67" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="66" lean-forward="false" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2435f8eb7452e66ac792a387b374329e/res/values-v26/values-v26.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/ExpertCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="181" column="10" lean-forward="false" selection-start-line="181" selection-start-column="10" selection-end-line="181" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/FeedsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12376">
-          <caret line="802" column="5" lean-forward="false" selection-start-line="802" selection-start-column="5" selection-end-line="802" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/BottomNavigationBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="193" column="41" lean-forward="false" selection-start-line="193" selection-start-column="41" selection-end-line="193" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/ChannelAdaper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="167" column="87" lean-forward="false" selection-start-line="167" selection-start-column="87" selection-end-line="167" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/channel_adapter.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/FeedbackActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/JobPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5032">
-          <caret line="347" column="45" lean-forward="false" selection-start-line="347" selection-start-column="45" selection-end-line="347" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/post_bucket.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="25" lean-forward="false" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/post/flag/BucketPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_main_frame.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/location.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/LocationGif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="52" column="50" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="135" column="27" lean-forward="false" selection-start-line="135" selection-start-column="27" selection-end-line="135" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/notification_adapter.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/670c11dbb2dc469b8903adbb4700f825/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="245" column="4" lean-forward="false" selection-start-line="245" selection-start-column="4" selection-end-line="245" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/main_frame.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3989" lean-forward="false" selection-start-line="0" selection-start-column="3989" selection-end-line="0" selection-end-column="3989" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/bell.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/ScanAndGo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/no_notifications.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/scan_and_go.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11832">
-          <caret line="696" column="20" lean-forward="false" selection-start-line="696" selection-start-column="20" selection-end-line="706" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_notifications.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="30" lean-forward="false" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-tap-target-prompt-1.6.3.aar/053ad6855eb3892cb550cfdb440ccfc6/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2435f8eb7452e66ac792a387b374329e/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="250" column="4" lean-forward="false" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/SkilledExperts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2312">
-          <caret line="189" column="43" lean-forward="false" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_jobs_drawer.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/app_bar_jobs.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="3111">
-          <caret line="183" column="43" lean-forward="false" selection-start-line="183" selection-start-column="43" selection-end-line="183" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/nav_header_jobs.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/review_layout.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/AddMissingExpertise.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/android/view/Window.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="173" column="16" lean-forward="false" selection-start-line="173" selection-start-column="16" selection-end-line="173" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_welcome.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_welcome.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/util/GifView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/WelcomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Registrations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/register_fragment_layout.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3606,7 +3299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3617,7 +3309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4182">
           <caret line="246" column="39" lean-forward="false" selection-start-line="246" selection-start-column="39" selection-end-line="246" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3628,7 +3319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3639,6 +3329,209 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_welcome.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/BucketPostAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="126" column="45" lean-forward="false" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/adapters/BucketAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4165">
+          <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Registrations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Buket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="123" column="54" lean-forward="false" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/bucket_adapter.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="58" lean-forward="false" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/fragments/bucket/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="76" column="50" lean-forward="false" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-mdpi/food_bucket.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding>
+            <element signature="e#1113#3868#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_hire.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_skilled.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="100" column="24" lean-forward="true" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardhelper-0.0.0.1.aar/9d4214c26b43c7fc48c54074a8ece680/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="123" lean-forward="false" selection-start-line="6" selection-start-column="123" selection-end-line="6" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/2435f8eb7452e66ac792a387b374329e/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="250" column="4" lean-forward="false" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/DataFromPlaces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/CheckMySubscription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/DataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/MyPannelModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/MapsSubscriptionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1822">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_info_outline_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_arrow_back_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_add_missing_expertise.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="48" column="42" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -3648,40 +3541,175 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="181" column="60" lean-forward="false" selection-start-line="181" selection-start-column="60" selection-end-line="181" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/android/content/Intent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="77" column="31" lean-forward="false" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/SearchLocationAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="29" column="93" lean-forward="false" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
           <folding>
-            <element signature="e#330#370#0" expanded="true" />
-            <element signature="e#838#878#0" expanded="true" />
-            <element signature="e#1768#1808#0" expanded="true" />
-            <element signature="e#2260#2300#0" expanded="true" />
-            <element signature="e#3278#3307#0" expanded="true" />
-            <element signature="e#5217#5257#0" expanded="true" />
-            <element signature="e#5838#5867#0" expanded="true" />
-            <element signature="e#24349#24380#0" expanded="true" />
-            <element signature="e#24917#24948#0" expanded="true" />
-            <element signature="e#47846#47877#0" expanded="true" />
-            <element signature="e#48347#48378#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/SearchPlaces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_places.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/DownloadURL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/EnableNotifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetNearbyPlacesData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetPlaceIdFromKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="38" column="180" lean-forward="false" selection-start-line="38" selection-start-column="177" selection-end-line="38" selection-end-column="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/map_utils/GetPlaceInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/maps/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="790" column="9" lean-forward="true" selection-start-line="790" selection-start-column="9" selection-end-line="790" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_search_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_search_maps.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_search_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_search_maps.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_search_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_location.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="113" column="48" lean-forward="true" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="93" column="17" lean-forward="false" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/corp/burenz/expertouch/activities/Jobs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="198" column="35" lean-forward="true" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
+        <state relative-caret-position="294">
+          <caret line="241" column="10" lean-forward="true" selection-start-line="241" selection-start-column="10" selection-end-line="241" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1525545863333" expanded="false" signature="26869:29296" ph="..." />
+            <element signature="e#9329#9605#0" expanded="true" />
+            <element signature="e#9604#9605#0" expanded="true" />
+            <marker date="1526209954795" expanded="false" signature="26884:29311" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>

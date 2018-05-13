@@ -90,6 +90,7 @@ import corp.burenz.expertouch.adapters.FeedsAdapter;
 import corp.burenz.expertouch.adapters.MyNotificationAdapter;
 import corp.burenz.expertouch.butter.GuestInformation;
 import corp.burenz.expertouch.butter.MySharedConfig;
+import corp.burenz.expertouch.maps.MapsActivity;
 import corp.burenz.expertouch.util.SendFCMToken;
 import corp.burenz.expertouch.util.BannerUtils;
 import corp.burenz.expertouch.util.Config;
@@ -226,8 +227,8 @@ public class Jobs extends AppCompatActivity
         browseStoresWhenNone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Jobs.this,ChannelSearchView.class));
-                overridePendingTransition(R.anim.design_bottom_sheet_slide_in_search,R.anim.fadeout_scan);
+                startActivity(new Intent(Jobs.this,MapsActivity.class));
+                overridePendingTransition(R.anim.fadein_scan,R.anim.fadeout_scan);
 
             }
         });
@@ -346,7 +347,7 @@ public class Jobs extends AppCompatActivity
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                startActivity(new Intent(Jobs.this,ChannelSearchView.class));
+                                startActivity(new Intent(Jobs.this,MapsActivity.class));
                                 overridePendingTransition(R.anim.design_bottom_sheet_slide_in_search,R.anim.fadeout_scan);
 
                             }

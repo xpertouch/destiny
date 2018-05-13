@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="gone"
+    android:id="@+id/listViewInsideAC"
+    android:background="#00000000"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content" android:layout_width="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_location_on_black_24dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cityTitleLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electronic City Banglore Phase 1 Nea.."
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/cityAddressTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electronic City Banglore Head Office  Banglu.."
+            android:textColor="#747474"
+            android:textSize="12dp" />
+          <TextView
+              android:layout_marginTop="10dp"
+              android:background="#bebebe"
+              android:layout_width="match_parent"
+              android:layout_height="1dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

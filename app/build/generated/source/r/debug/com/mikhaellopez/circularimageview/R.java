@@ -8,15 +8,15 @@ package com.mikhaellopez.circularimageview;
 
 public final class R {
     public static final class attr {
-        public static final int civ_border = 0x7f040060;
-        public static final int civ_border_color = 0x7f040061;
-        public static final int civ_border_width = 0x7f040062;
-        public static final int civ_shadow = 0x7f040063;
-        public static final int civ_shadow_color = 0x7f040064;
-        public static final int civ_shadow_radius = 0x7f040065;
+        public static final int civ_border = 0x7f04006a;
+        public static final int civ_border_color = 0x7f04006b;
+        public static final int civ_border_width = 0x7f04006c;
+        public static final int civ_shadow = 0x7f04006d;
+        public static final int civ_shadow_color = 0x7f04006e;
+        public static final int civ_shadow_radius = 0x7f04006f;
     }
     public static final class styleable {
-        public static final int[] CircularImageView = { 0x7f040060, 0x7f040061, 0x7f040062, 0x7f040063, 0x7f040064, 0x7f040065 };
+        public static final int[] CircularImageView = { 0x7f04006a, 0x7f04006b, 0x7f04006c, 0x7f04006d, 0x7f04006e, 0x7f04006f };
         public static final int CircularImageView_civ_border = 0;
         public static final int CircularImageView_civ_border_color = 1;
         public static final int CircularImageView_civ_border_width = 2;

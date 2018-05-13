@@ -18,6 +18,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -41,6 +46,7 @@
         <activity android:name="corp.burenz.expertouch.activities.ChannelSearchView" />
         <activity android:name="corp.burenz.expertouch.activities.MyNotifications" />
         <activity android:name="corp.burenz.expertouch.activities.MyCompanyQR" />
+        <activity android:name="corp.burenz.expertouch.maps.MapsActivity" />
         <activity
             android:name="corp.burenz.expertouch.activities.RateExpertActivity"
             android:screenOrientation="portrait"
@@ -52,12 +58,10 @@
         <activity
             android:name="corp.burenz.expertouch.activities.ExpertReviews"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|adjustPan" >
-        </activity>
+            android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
             android:name="corp.burenz.expertouch.activities.ScanAndGo"
-            android:label="ScanAndGo" >
-        </activity>
+            android:label="ScanAndGo" />
         <activity
             android:name="corp.burenz.expertouch.activities.Registrations"
             android:hardwareAccelerated="false"
@@ -93,8 +97,7 @@
             android:name="corp.burenz.expertouch.activities.Jobs"
             android:label="@string/title_activity_jobs"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
             android:name="corp.burenz.expertouch.activities.Hire"
             android:screenOrientation="portrait" />
@@ -172,6 +175,7 @@
             android:label="@string/title_activity_terms_of_service"
             android:screenOrientation="portrait" />
         <activity android:name="corp.burenz.expertouch.activities.Workshop" />
+        <activity android:name="corp.burenz.expertouch.map_utils.SearchPlaces" />
 
         <service android:name="corp.burenz.expertouch.service.MyFirebaseInstanceIDService" >
             <intent-filter>
@@ -189,6 +193,18 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
         <!--
              FirebaseMessagingService performs security checks at runtime,

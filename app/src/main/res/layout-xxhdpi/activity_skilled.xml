@@ -471,37 +471,54 @@
             android:layout_marginTop="10dp" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/skilledProgress"
-        android:visibility="gone">
+            <RelativeLayout
+                android:id="@+id/skilledProgress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:foregroundGravity="center"
-            android:gravity="center" >
+                <LinearLayout
+                    android:id="@+id/putSkeltonHere"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="90dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-        </LinearLayout>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        android:scaleType="centerCrop"
+                        app:lottie_rawRes="@raw/skeleton_frame_loadingg"
+                        />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:foregroundGravity="center" >
 
-            <ProgressBar
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:id="@+id/progressBar3"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-        </LinearLayout>
-    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="35dp"
+                        android:visibility="gone"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
 
 </LinearLayout>
 

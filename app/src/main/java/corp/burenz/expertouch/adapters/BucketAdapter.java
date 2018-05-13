@@ -23,6 +23,7 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 //import com.android.volley.toolbox.ImageLoader;
+import com.airbnb.lottie.LottieAnimationView;
 import com.mikepenz.iconics.view.IconicsImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -274,7 +275,30 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             @Override
             public void onClick(View view) {
 
-                if(isDoubleClick[0]){holder.awesomeHeartLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+                if(isDoubleClick[0]){
+                    holder.awesomeHeartLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
+                    holder.awesomeHeartLikes.playAnimation();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                        }
+                    },300);
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            holder.awesomeHeartLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.fadeout_scan));
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    holder.awesomeHeartLikes.setVisibility(View.INVISIBLE);
+
+                                }
+                            },300);
+
+                        }
+                    },500);
+                    //                    holder.awesomeHeartLikes.startAnimation(AnimationUtils.loadAnimation(context,R.anim.card_animation));
 
                     if(holder.thumbsDownAdd.getVisibility() != View.VISIBLE)
                     likeThePost(holder, position);
@@ -369,7 +393,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             IconicsImageView    shareSaleB;
             final private ViewFlipper thumbsFlipper;
             final private ImageButton thumbsUpAdd,thumbsDownAdd;
-            ImageButton         awesomeHeartLikes;
+            LottieAnimationView      awesomeHeartLikes;
             TextView            totalLikes, textViewSupportTV;
 
         public MyBucketHolder(View itemView) {
@@ -391,7 +415,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.MyBucketHo
             attachedBannerView  = (ImageView)           itemView.findViewById(R.id.attachedBannerView);
             textViewSupportTV   = (TextView)            itemView.findViewById(R.id.likes_index_support_tv);
             centralContainer    = (LinearLayout)        itemView.findViewById(R.id.central_container_bucket_posts);
-            awesomeHeartLikes   = (ImageButton)         itemView.findViewById(R.id.awesome_heart_on_double_click);
+            awesomeHeartLikes   = (LottieAnimationView) itemView.findViewById(R.id.awesome_heart_on_double_click);
             doubleClickArea     = (LinearLayout)        itemView.findViewById(R.id.double_click_area);
             attachedeBannerVH   = (RelativeLayout)      itemView.findViewById(R.id.attachedBannerHolder);
 
